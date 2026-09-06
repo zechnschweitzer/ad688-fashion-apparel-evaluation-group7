@@ -13,7 +13,7 @@ format:
     theme:
       - cosmo
       - brand
-    css: 
+    css: styles.css
     toc: true
 
 
