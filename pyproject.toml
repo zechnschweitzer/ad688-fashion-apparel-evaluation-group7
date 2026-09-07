@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "ad688-fashion-apparel-evaluation-group7"
+version = "0.1.0"
+description = "AD688 O1 Project - Group 7"
+authors = ["Zech Schweitzer <321160736+zechnschweitzer@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
