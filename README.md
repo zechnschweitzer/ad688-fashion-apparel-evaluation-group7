@@ -1,1 +1,0 @@
-# ad688-apparel-fashion-evaluation-group7-
