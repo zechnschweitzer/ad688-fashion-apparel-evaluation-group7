@@ -1,5 +1,5 @@
 ---
-title: "ad688-fashion-apparel-evaluation-group7"
+title: "AD688: Fashion and Apparel Career Evaluation - Group 7"
 ---
 
 This is a Quarto website.
