@@ -26,7 +26,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -165,11 +184,11 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="literature-review" class="level2">
 <h2 class="anchored" data-anchor-id="literature-review">Literature Review</h2>
-<p>Umamaheswaran et al.&nbsp;(2023) looked at what employers ask for in business analytics postings and found a consistent mix: big data, business intelligence, and analytical technique on one side, communication and stakeholder management on the other. That matters for how we think about readiness. Knowing the software is not enough on its own; an analyst also has to understand the business problem and explain results to people who are not going to read the code.</p>
-<p>Apparel retail is a fitting test case for that combination. Forecasting, inventory, pricing, and supply chain decisions all show up as recurring analytical needs in clothing retail, and IBISWorld (2025) backs that up with broader industry context on clothing and clothing accessory retailers. Demand in this sector moves fast and shifts with the seasons, which is part of why data-supported decisions carry more weight here than they might in a slower-moving industry.</p>
-<p>Retail hiring overall backs up the case for treating analytics as its own career path within the industry. The Planet Group (2025) found that retail hiring has gotten more selective even as it leans harder into technology, analytics, and customer experience. So while fewer people may be getting hired overall, the analytical roles that support pricing, inventory, operations, and customer decisions do not seem to be losing ground.</p>
-<p>Job postings themselves give a more concrete look at what these roles ask for. Scanning ZipRecruiter listings, SQL, Excel, and a visualization tool like Tableau or Power BI show up repeatedly, alongside the usual asks for analytical and communication skills (ZipRecruiter, 2026a). We are treating this as a starting point rather than a finding, since individual job postings vary a lot by employer, seniority, and timing.</p>
-<p>The same postings also show a fair amount of spread in pay and remote availability (ZipRecruiter, 2026b). Salary and remote work are not the central question we are asking, but they are useful context for judging how attractive a given role is. Once we are working with the MET Employability Career Match data, we will be able to check whether these early patterns hold up within our apparel retail scope specifically.</p>
+<p><span class="citation" data-cites="umamaheswaran2023">@umamaheswaran2023</span> looked at what employers ask for in business analytics postings and found a consistent mix: big data, business intelligence, and analytical technique on one side, communication and stakeholder management on the other. That matters for how we think about readiness. Knowing the software is not enough on its own; an analyst also has to understand the business problem and explain results to people who are not going to read the code.</p>
+<p>Apparel retail is a fitting test case for that combination. Forecasting, inventory, pricing, and supply chain decisions all show up as recurring analytical needs in clothing retail, and <span class="citation" data-cites="ibisworld2025">@ibisworld2025</span> backs that up with broader industry context on clothing and clothing accessory retailers. Demand in this sector moves fast and shifts with the seasons, which is part of why data-supported decisions carry more weight here than they might in a slower-moving industry.</p>
+<p>Retail hiring overall backs up the case for treating analytics as its own career path within the industry. <span class="citation" data-cites="planetgroup2025">@planetgroup2025</span> found that retail hiring has gotten more selective even as it leans harder into technology, analytics, and customer experience. So while fewer people may be getting hired overall, the analytical roles that support pricing, inventory, operations, and customer decisions do not seem to be losing ground.</p>
+<p>Job postings themselves give a more concrete look at what these roles ask for. Scanning ZipRecruiter listings, SQL, Excel, and a visualization tool like Tableau or Power BI show up repeatedly, alongside the usual asks for analytical and communication skills <span class="citation" data-cites="ziprecruiter2026a">[@ziprecruiter2026a]</span>. We are treating this as a starting point rather than a finding, since individual job postings vary a lot by employer, seniority, and timing.</p>
+<p>The same postings also show a fair amount of spread in pay and remote availability <span class="citation" data-cites="ziprecruiter2026b">[@ziprecruiter2026b]</span>. Salary and remote work are not the central question we are asking, but they are useful context for judging how attractive a given role is. Once we are working with the MET Employability Career Match data, we will be able to check whether these early patterns hold up within our apparel retail scope specifically.</p>
 <p>Across these sources, the same picture keeps showing up: business/data analyst roles need technical skill, analytical thinking, and the ability to work with the business side, all at once. What none of this tells us yet is which of those skills matter most specifically in apparel retail, or how close our own skills already are to that bar. That gap is what this project is built to close.</p>
 </section>
 <section id="target-user" class="level2">
@@ -186,11 +205,9 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
-<p>IBISWorld. (2025). <em>Clothing and clothing accessory retailers in the US</em>. https://www.ibisworld.com/united-states/industry/clothing-and-clothing-accessory-retailers/2048/</p>
-<p>The Planet Group. (2025). <em>Retail workforce report 2025</em>. https://www.theplanetgroup.com/job-reports/retail-jobs-report-2025</p>
-<p>Umamaheswaran, S., Fernandes, S., Venkatesh, V. G., Avula, N., &amp; Shi, Y. (2023). What do employers look for in “business analytics” roles? – A skill mining analysis. <em>Information Systems Frontiers</em>. https://doi.org/10.1007/s10796-023-10437-y</p>
-<p>ZipRecruiter. (2026a). <em>Work from home retail analyst jobs</em>. https://www.ziprecruiter.com/Jobs/Work-From-Home-Retail-Analyst</p>
-<p>ZipRecruiter. (2026b). <em>Retail data analyst remote jobs</em>. https://www.ziprecruiter.com/Jobs/Retail-Data-Analyst-Remote</p>
+<div id="refs" role="list">
+
+</div>
 
 
 </section>
