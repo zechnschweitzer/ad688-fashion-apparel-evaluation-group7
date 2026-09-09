@@ -1,10 +1,11 @@
 project:
   type: website
 
+bibliography: references.bib
+csl: apa-cv.csl
+
 website:
-    title: "Career Pathway and Industry Scope"
-    bibliography: references.bib
-    csl: apa-cv.csl
+  title: "AD688: Fashion and Apparel Career Evaluation - Group 7"
   navbar:
     left:
       - href: index.qmd
@@ -20,6 +21,3 @@ format:
       - brand
     css: styles.css
     toc: true
-
-
-
