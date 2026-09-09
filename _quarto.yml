@@ -2,7 +2,7 @@ project:
   type: website
 
 bibliography: references.bib
-csl: apa-cv.csl
+csl: csl/apa-cv.csl
 
 website:
   title: "AD688: Fashion and Apparel Career Evaluation - Group 7"
