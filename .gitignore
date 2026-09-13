@@ -1,3 +1,5 @@
 /.quarto/
 **/*.quarto_ipynb
 .env
+data/MET_CareerCompass_2026/
+MET_CareerCompass_2026/
