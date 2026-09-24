@@ -67,10 +67,15 @@ df[["TITLE_CLEAN", "COMPANY_NAME", "CITY_NAME", "STATE_NAME"]]
 ## Clean Skills Fields
 
 ```{python}
+import json
+
 def clean_skill_list(value):
     if pd.isna(value) or value == "":
         return []
-    return [s.strip() for s in str(value).split(",") if s.strip()]
+    try:
+        return json.loads(value)
+    except (json.JSONDecodeError, TypeError):
+        return []
 
 df["SKILLS_LIST"] = df["SKILLS_NAME"].apply(clean_skill_list)
 df["SOFTWARE_SKILLS_LIST"] = df["SOFTWARE_SKILLS_NAME"].apply(clean_skill_list)
