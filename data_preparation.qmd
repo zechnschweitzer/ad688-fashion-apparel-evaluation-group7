@@ -1,6 +1,6 @@
 ---
 title: "Data Preparation"
-author: "Alyssa Quigley"
+author: "Alyssa Quigley, Ankita Roy, Zechariah Schweitzer, Sara Scribner"
 format:
   html:
     toc: true
