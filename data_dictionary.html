@@ -273,6 +273,10 @@ ul.task-list li input[type="checkbox"] {
 <section id="skills" class="level2">
 <h2 class="anchored" data-anchor-id="skills">Skills</h2>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Field</th>
@@ -281,16 +285,12 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td>SKILLS_NAME</td>
-<td>General skills listed in the posting</td>
+<td>SKILLS_LIST</td>
+<td>Cleaned list of general skills (parsed from JSON, e.g.&nbsp;[‘Power BI’, ‘Analytics’])</td>
 </tr>
 <tr class="even">
-<td>SPECIALIZED_SKILLS_NAME</td>
-<td>Specialized/technical skills listed</td>
-</tr>
-<tr class="odd">
-<td>SOFTWARE_SKILLS_NAME</td>
-<td>Software tools listed</td>
+<td>SOFTWARE_SKILLS_LIST</td>
+<td>Cleaned list of software tools (parsed from JSON)</td>
 </tr>
 </tbody>
 </table>
