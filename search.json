@@ -121,56 +121,56 @@
   {
     "objectID": "data_preparation.html",
     "href": "data_preparation.html",
-    "title": "Data Preperation",
+    "title": "Data Preparation",
     "section": "",
     "text": "import pandas as pd\n\ndf = pd.read_csv(\"data/interim/apparel_analyst_filtered.csv\")\nprint(f\"Loaded {len(df)} rows, {len(df.columns)} columns\")\ndf.info()\n\nLoaded 19 rows, 125 columns\n&lt;class 'pandas.DataFrame'&gt;\nRangeIndex: 19 entries, 0 to 18\nColumns: 125 entries, ID to COMPANY_CLEAN\ndtypes: float64(38), int64(2), str(85)\nmemory usage: 18.7 KB"
   },
   {
     "objectID": "data_preparation.html#load-the-filtered-dataset",
     "href": "data_preparation.html#load-the-filtered-dataset",
-    "title": "Data Preperation",
+    "title": "Data Preparation",
     "section": "",
     "text": "import pandas as pd\n\ndf = pd.read_csv(\"data/interim/apparel_analyst_filtered.csv\")\nprint(f\"Loaded {len(df)} rows, {len(df.columns)} columns\")\ndf.info()\n\nLoaded 19 rows, 125 columns\n&lt;class 'pandas.DataFrame'&gt;\nRangeIndex: 19 entries, 0 to 18\nColumns: 125 entries, ID to COMPANY_CLEAN\ndtypes: float64(38), int64(2), str(85)\nmemory usage: 18.7 KB"
   },
   {
     "objectID": "data_preparation.html#clean-salary-fields",
     "href": "data_preparation.html#clean-salary-fields",
-    "title": "Data Preperation",
+    "title": "Data Preparation",
     "section": "Clean Salary Fields",
     "text": "Clean Salary Fields\n\ndf[\"SALARY_FROM\"] = pd.to_numeric(df[\"SALARY_FROM\"], errors=\"coerce\")\ndf[\"SALARY_TO\"] = pd.to_numeric(df[\"SALARY_TO\"], errors=\"coerce\")\n\nmedian_from = df[\"SALARY_FROM\"].median()\nmedian_to = df[\"SALARY_TO\"].median()\ndf[\"SALARY_FROM\"] = df[\"SALARY_FROM\"].fillna(median_from)\ndf[\"SALARY_TO\"] = df[\"SALARY_TO\"].fillna(median_to)\n\nprint(f\"Median SALARY_FROM used for fill: {median_from}\")\nprint(f\"Median SALARY_TO used for fill: {median_to}\")\ndf[[\"TITLE_CLEAN\", \"COMPANY_NAME\", \"SALARY_FROM\", \"SALARY_TO\"]]\n\nMedian SALARY_FROM used for fill: 85300.0\nMedian SALARY_TO used for fill: 138222.0\n\n\n\n\n\n\n\n\n\nTITLE_CLEAN\nCOMPANY_NAME\nSALARY_FROM\nSALARY_TO\n\n\n\n\n0\nSenior Business Intelligence & Data Analyst - ...\nJobs.tjx.com\n85300.0\n138222.0\n\n\n1\nSr Region Operations Analyst - Sierra\nTJX\n85300.0\n138222.0\n\n\n2\nProduct Manager, Enterprise Analytics\nVuoriinc\n85300.0\n138222.0\n\n\n3\nPrincipal, Data Analytics and Engineering\nMacy's\n85300.0\n138222.0\n\n\n4\nMedia Marketing Sr. Manager, Analytics\nRalph Lauren\n85000.0\n161444.0\n\n\n5\nSr. Manager, Ecommerce Analytics\nVuoriinc\n85300.0\n138222.0\n\n\n6\nSr. Manager, Global Finance Business Analyst\nVuoriinc\n85300.0\n138222.0\n\n\n7\nSr. FP&A Manager, Systems & Analytics\nVuoriinc\n85300.0\n138222.0\n\n\n8\nMerchandising Data Analyst\nCareers.michaels.com\n85300.0\n138222.0\n\n\n9\nSenior Analyst, Merchandise Flow & Analytics\nTJX\n85300.0\n138222.0\n\n\n10\nManager, Digital Consumer Analytics\nAdidas\n85300.0\n138222.0\n\n\n11\nSr Region Operations Analyst - Sierra\nTJX\n85600.0\n109200.0\n\n\n12\nSenior Business Intelligence & Data Analyst - ...\nJobs.tjx.com\n85300.0\n138222.0\n\n\n13\nManager, Digital Analytics\nAdidas\n85300.0\n138222.0\n\n\n14\nMedia Marketing Sr. Manager, Analytics\nRalph Lauren\n85000.0\n161444.0\n\n\n15\nSr. Data Analyst\nFoot Locker\n95000.0\n115000.0\n\n\n16\nManager, Digital Marketing Analytics\nAdidas\n85300.0\n138222.0\n\n\n17\nData Analyst 3 - Store Operations\nNordstrom\n85300.0\n138222.0\n\n\n18\nDirector, Wholesale Sales Planning & Analytics\nVuoriinc\n85300.0\n138222.0"
   },
   {
     "objectID": "data_preparation.html#clean-experience-fields",
     "href": "data_preparation.html#clean-experience-fields",
-    "title": "Data Preperation",
+    "title": "Data Preparation",
     "section": "Clean Experience Fields",
     "text": "Clean Experience Fields\n\ndf[\"MIN_YEARS_EXPERIENCE\"] = pd.to_numeric(df[\"MIN_YEARS_EXPERIENCE\"], errors=\"coerce\")\ndf[\"MAX_YEARS_EXPERIENCE\"] = pd.to_numeric(df[\"MAX_YEARS_EXPERIENCE\"], errors=\"coerce\")\n\ndf[\"MIN_YEARS_EXPERIENCE\"] = df[\"MIN_YEARS_EXPERIENCE\"].fillna(0)\ndf[\"MAX_YEARS_EXPERIENCE\"] = df[\"MAX_YEARS_EXPERIENCE\"].fillna(df[\"MIN_YEARS_EXPERIENCE\"])\n\ndf[[\"TITLE_CLEAN\", \"MIN_YEARS_EXPERIENCE\", \"MAX_YEARS_EXPERIENCE\"]]\n\n\n\n\n\n\n\n\nTITLE_CLEAN\nMIN_YEARS_EXPERIENCE\nMAX_YEARS_EXPERIENCE\n\n\n\n\n0\nSenior Business Intelligence & Data Analyst - ...\n0.0\n1.0\n\n\n1\nSr Region Operations Analyst - Sierra\n0.0\n1.0\n\n\n2\nProduct Manager, Enterprise Analytics\n5.0\n5.0\n\n\n3\nPrincipal, Data Analytics and Engineering\n0.0\n1.0\n\n\n4\nMedia Marketing Sr. Manager, Analytics\n0.0\n0.0\n\n\n5\nSr. Manager, Ecommerce Analytics\n0.0\n0.0\n\n\n6\nSr. Manager, Global Finance Business Analyst\n0.0\n0.0\n\n\n7\nSr. FP&A Manager, Systems & Analytics\n0.0\n0.0\n\n\n8\nMerchandising Data Analyst\n0.0\n1.0\n\n\n9\nSenior Analyst, Merchandise Flow & Analytics\n0.0\n1.0\n\n\n10\nManager, Digital Consumer Analytics\n5.0\n5.0\n\n\n11\nSr Region Operations Analyst - Sierra\n0.0\n0.0\n\n\n12\nSenior Business Intelligence & Data Analyst - ...\n0.0\n1.0\n\n\n13\nManager, Digital Analytics\n0.0\n0.0\n\n\n14\nMedia Marketing Sr. Manager, Analytics\n0.0\n0.0\n\n\n15\nSr. Data Analyst\n0.0\n0.0\n\n\n16\nManager, Digital Marketing Analytics\n0.0\n1.0\n\n\n17\nData Analyst 3 - Store Operations\n0.0\n0.0\n\n\n18\nDirector, Wholesale Sales Planning & Analytics\n0.0\n0.0"
   },
   {
     "objectID": "data_preparation.html#clean-geography-fields",
     "href": "data_preparation.html#clean-geography-fields",
-    "title": "Data Preperation",
+    "title": "Data Preparation",
     "section": "Clean Geography Fields",
     "text": "Clean Geography Fields\n\nfor col in [\"CITY_NAME\", \"STATE_NAME\"]:\n    df[col] = df[col].astype(str).str.strip()\n    df[col] = df[col].replace(\"\", \"Unknown\").replace(\"nan\", \"Unknown\")\n\ndf[[\"TITLE_CLEAN\", \"COMPANY_NAME\", \"CITY_NAME\", \"STATE_NAME\"]]\n\n\n\n\n\n\n\n\nTITLE_CLEAN\nCOMPANY_NAME\nCITY_NAME\nSTATE_NAME\n\n\n\n\n0\nSenior Business Intelligence & Data Analyst - ...\nJobs.tjx.com\nFramingham\nMassachusetts\n\n\n1\nSr Region Operations Analyst - Sierra\nTJX\nFramingham\nMassachusetts\n\n\n2\nProduct Manager, Enterprise Analytics\nVuoriinc\nCarlsbad\nCalifornia\n\n\n3\nPrincipal, Data Analytics and Engineering\nMacy's\nLong Island City\nNew York\n\n\n4\nMedia Marketing Sr. Manager, Analytics\nRalph Lauren\nNew York\nNY\n\n\n5\nSr. Manager, Ecommerce Analytics\nVuoriinc\nCarlsbad\nCalifornia\n\n\n6\nSr. Manager, Global Finance Business Analyst\nVuoriinc\nCarlsbad\nCalifornia\n\n\n7\nSr. FP&A Manager, Systems & Analytics\nVuoriinc\nCarlsbad\nCalifornia\n\n\n8\nMerchandising Data Analyst\nCareers.michaels.com\nIrving\nTexas\n\n\n9\nSenior Analyst, Merchandise Flow & Analytics\nTJX\nFramingham\nMassachusetts\n\n\n10\nManager, Digital Consumer Analytics\nAdidas\nPortland\nOregon\n\n\n11\nSr Region Operations Analyst - Sierra\nTJX\nHome Office Framingham Ma 550\nCochituate Rd\n\n\n12\nSenior Business Intelligence & Data Analyst - ...\nJobs.tjx.com\nFramingham\nMassachusetts\n\n\n13\nManager, Digital Analytics\nAdidas\nPortland\nOregon\n\n\n14\nMedia Marketing Sr. Manager, Analytics\nRalph Lauren\nNew York\nNY\n\n\n15\nSr. Data Analyst\nFoot Locker\nNew York\nNY\n\n\n16\nManager, Digital Marketing Analytics\nAdidas\nPortland\nOregon\n\n\n17\nData Analyst 3 - Store Operations\nNordstrom\nNaN\nNaN\n\n\n18\nDirector, Wholesale Sales Planning & Analytics\nVuoriinc\nCarlsbad\nCalifornia"
   },
   {
     "objectID": "data_preparation.html#clean-skills-fields",
     "href": "data_preparation.html#clean-skills-fields",
-    "title": "Data Preperation",
+    "title": "Data Preparation",
     "section": "Clean Skills Fields",
     "text": "Clean Skills Fields\n\ndef clean_skill_list(value):\n    if pd.isna(value) or value == \"\":\n        return []\n    return [s.strip() for s in str(value).split(\",\") if s.strip()]\n\ndf[\"SKILLS_LIST\"] = df[\"SKILLS_NAME\"].apply(clean_skill_list)\ndf[\"SOFTWARE_SKILLS_LIST\"] = df[\"SOFTWARE_SKILLS_NAME\"].apply(clean_skill_list)\n\nprint(f\"Postings with at least one listed skill: {(df['SKILLS_LIST'].str.len() &gt; 0).sum()}\")\ndf[[\"TITLE_CLEAN\", \"SKILLS_LIST\", \"SOFTWARE_SKILLS_LIST\"]]\n\nPostings with at least one listed skill: 19\n\n\n\n\n\n\n\n\n\nTITLE_CLEAN\nSKILLS_LIST\nSOFTWARE_SKILLS_LIST\n\n\n\n\n0\nSenior Business Intelligence & Data Analyst - ...\n[[]]\n[[]]\n\n\n1\nSr Region Operations Analyst - Sierra\n[[]]\n[[]]\n\n\n2\nProduct Manager, Enterprise Analytics\n[[\"Power BI\", \"Data Governance\", \"Anomaly Dete...\n[[\"Power BI\"]]\n\n\n3\nPrincipal, Data Analytics and Engineering\n[[\"Snowflake Schema\", \"SQL (Programming Langua...\n[[\"Snowflake Schema\", \"SQL (Programming Langua...\n\n\n4\nMedia Marketing Sr. Manager, Analytics\n[[\"Print Media\", \"Media Strategy\", \"Brand Posi...\n[[]]\n\n\n5\nSr. Manager, Ecommerce Analytics\n[[\"Power BI\", \"Microsoft Excel\", \"Data Analysi...\n[[\"Power BI\", \"Microsoft Excel\"]]\n\n\n6\nSr. Manager, Global Finance Business Analyst\n[[\"Microsoft Dynamics 365\", \"Accounting Inform...\n[[\"Microsoft Dynamics 365\"]]\n\n\n7\nSr. FP&A Manager, Systems & Analytics\n[[\"Power BI\", \"Microsoft Excel\", \"SQL (Program...\n[[\"Power BI\", \"Microsoft Excel\", \"SQL (Program...\n\n\n8\nMerchandising Data Analyst\n[[\"Power BI\", \"Microsoft Excel\", \"SQL (Program...\n[[\"Power BI\", \"Microsoft Excel\", \"SQL (Program...\n\n\n9\nSenior Analyst, Merchandise Flow & Analytics\n[[]]\n[[]]\n\n\n10\nManager, Digital Consumer Analytics\n[[\"SQL (Programming Language)\", \"Databricks\", ...\n[[\"SQL (Programming Language)\", \"Databricks\"]]\n\n\n11\nSr Region Operations Analyst - Sierra\n[[\"Microsoft Office\", \"Reporting and Analysis\"...\n[[\"Microsoft Office\"]]\n\n\n12\nSenior Business Intelligence & Data Analyst - ...\n[[]]\n[[]]\n\n\n13\nManager, Digital Analytics\n[[\"Power BI\", \"Adobe Analytics\", \"Python (Prog...\n[[\"Power BI\", \"Adobe Analytics\", \"Python (Prog...\n\n\n14\nMedia Marketing Sr. Manager, Analytics\n[[\"Print Media\", \"Media Strategy\", \"Brand Posi...\n[[]]\n\n\n15\nSr. Data Analyst\n[[\"Power BI\", \"SQL (Programming Language)\", \"M...\n[[\"Power BI\", \"SQL (Programming Language)\", \"M...\n\n\n16\nManager, Digital Marketing Analytics\n[[\"SQL (Programming Language)\", \"Digital Marke...\n[[\"SQL (Programming Language)\"]]\n\n\n17\nData Analyst 3 - Store Operations\n[[\"Microsoft Office\", \"SQL (Programming Langua...\n[[\"Microsoft Office\", \"SQL (Programming Langua...\n\n\n18\nDirector, Wholesale Sales Planning & Analytics\n[[\"Power BI\", \"Python (Programming Language)\",...\n[[\"Power BI\", \"Python (Programming Language)\",..."
   },
   {
     "objectID": "data_preparation.html#save-the-cleaned-dataset",
     "href": "data_preparation.html#save-the-cleaned-dataset",
-    "title": "Data Preperation",
+    "title": "Data Preparation",
     "section": "Save the Cleaned Dataset",
     "text": "Save the Cleaned Dataset\n\nimport os\nos.makedirs(\"data/processed\", exist_ok=True)\ndf.to_csv(\"data/processed/apparel_analyst_clean.csv\", index=False)\nprint(f\"Saved cleaned dataset: {len(df)} rows\")\n\nSaved cleaned dataset: 19 rows"
   },
   {
     "objectID": "data_preparation.html#note-on-sample-size",
     "href": "data_preparation.html#note-on-sample-size",
-    "title": "Data Preperation",
+    "title": "Data Preparation",
     "section": "Note on Sample Size",
     "text": "Note on Sample Size\nThe final cleaned dataset contains 19 job postings. This reflects a known limitation of NAICS-based industry classification: many analytics roles at apparel/retail companies are tagged under unrelated NAICS codes rather than under clothing retail codes specifically. To compensate, this dataset combines NAICS 458 (Clothing, Clothing Accessories, Shoe, and Jewelry Retailers) with an exact-match list of known apparel/fashion company names, then filters to narrow analyst job titles (business analyst, data analyst). The resulting sample size is small but each row is a verified, legitimate match."
   }
