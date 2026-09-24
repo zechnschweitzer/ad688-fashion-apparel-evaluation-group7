@@ -12,6 +12,16 @@ website:
         text: Home
       - href: introduction.qmd
         text: Introduction
+      - href: data_preparation.qmd
+        text: Data Preperation
+      - href: market_baseline.qmd
+        text: Market Baseline
+      - href: skill_gap_analysis.qmd
+        text: Skill Gap Analysis
+      - href: career_evaluation.qmd
+        text: Career Evaluation
+      - href: final_recommendations.qmd
+        text: Final Recommendations
      
 
 format:

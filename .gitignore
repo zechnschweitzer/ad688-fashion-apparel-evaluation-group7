@@ -1,6 +1,8 @@
-/.quarto/
+﻿/.quarto/
 **/*.quarto_ipynb
 .env
 data/raw/
 .venv/
 *.parquet
+data/MET_CareerCompass_2026/
+MET_CareerCompass_2026/
