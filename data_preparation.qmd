@@ -55,6 +55,12 @@ for col in ["CITY_NAME", "STATE_NAME"]:
     df[col] = df[col].astype(str).str.strip()
     df[col] = df[col].replace("", "Unknown").replace("nan", "Unknown")
 
+# Manual fix: ID 352216 has a malformed LOCATION field (TJX corporate
+# address split incorrectly into CITY_NAME/STATE_NAME). Corrected using
+# other TJX postings in this dataset, which are consistently Framingham, MA.
+df.loc[df["ID"] == 352216, "CITY_NAME"] = "Framingham"
+df.loc[df["ID"] == 352216, "STATE_NAME"] = "Massachusetts"
+
 df[["TITLE_CLEAN", "COMPANY_NAME", "CITY_NAME", "STATE_NAME"]]
 ```
 
