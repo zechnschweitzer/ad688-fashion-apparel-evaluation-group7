@@ -4,7 +4,7 @@ Live Website: https://zechnschweitzer.github.io/ad688-fashion-apparel-evaluation
 Project Overview
 Target Career Pathway: Business/Data Analyst roles
 
-Industry: Apparel and Fashion Retail (NAICS 4481)
+Industry: Apparel and Fashion Retail (NAICS 458 — Clothing, Clothing Accessories, Shoe, and Jewelry Retailers)
 
 Target Audience: BU MET students exploring analytics career paths
 
