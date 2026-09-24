@@ -13,7 +13,7 @@ website:
       - href: introduction.qmd
         text: Introduction
       - href: data_preparation.qmd
-        text: Data Preperation
+        text: Data Preparation
       - href: market_baseline.qmd
         text: Market Baseline
       - href: skill_gap_analysis.qmd
