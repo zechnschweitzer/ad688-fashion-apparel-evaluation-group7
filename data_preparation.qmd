@@ -53,7 +53,7 @@ df[["TITLE_CLEAN", "MIN_YEARS_EXPERIENCE", "MAX_YEARS_EXPERIENCE"]]
 ```{python}
 for col in ["CITY_NAME", "STATE_NAME"]:
     df[col] = df[col].astype(str).str.strip()
-    df[col] = df[col].replace("", "Unknown").replace("nan", "Unknown")
+    df[col] = df[col].replace("", "Unknown").replace("nan", "Unknown").fillna("Unknown")
 
 # Manual fix: ID 352216 has a malformed LOCATION field (TJX corporate
 # address split incorrectly into CITY_NAME/STATE_NAME). Corrected using
