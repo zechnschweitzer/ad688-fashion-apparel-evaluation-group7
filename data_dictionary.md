@@ -43,9 +43,8 @@ title matching. 19 verified rows.
 
 | Field | Description |
 |---|---|
-| SKILLS_NAME | General skills listed in the posting |
-| SPECIALIZED_SKILLS_NAME | Specialized/technical skills listed |
-| SOFTWARE_SKILLS_NAME | Software tools listed |
+| SKILLS_LIST | Cleaned list of general skills (parsed from JSON, e.g. ['Power BI', 'Analytics']) |
+| SOFTWARE_SKILLS_LIST | Cleaned list of software tools (parsed from JSON) |
 
 ## Remote/Onsite
 
@@ -70,3 +69,4 @@ title matching. 19 verified rows.
 | NAICS_2022_6_NAME | Industry name for the NAICS code |
 | SOC_5 | 5-digit SOC occupation code |
 | SOC_5_NAME | Occupation name for the SOC code |
+
