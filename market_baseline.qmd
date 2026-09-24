@@ -1,3 +1,350 @@
 ---
-title: Market Baseline
+title: "Market Baseline"
+format:
+  html:
+    toc: true
+execute:
+  echo: true
+  eval: true
 ---
+
+## Market Overview
+
+This page summarizes the baseline characteristics of the selected apparel and fashion analytics job market. The final filtered dataset contains 19 verified job postings based on the team's selected NAICS 458 scope and an additional exact-match list of known apparel and fashion employers.
+
+Because the market definition is intentionally narrow, the results should be interpreted as a descriptive snapshot of the selected apparel and fashion analytics market rather than as estimates of the broader analytics labor market.
+
+```{python}
+import os
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Final cleaned dataset
+clean_df = pd.read_csv("data/processed/apparel_analyst_clean.csv")
+
+# Filtered dataset before missing salary and experience values were filled
+raw_df = pd.read_csv("data/interim/apparel_analyst_filtered.csv")
+
+# Folder for figures used on the website
+os.makedirs("figures/market_baseline", exist_ok=True)
+
+print(f"Total postings in the market baseline: {len(clean_df)}")
+```
+
+## Job Volume by Title or Segment
+
+Job titles provide an initial view of the types of analytics roles represented within the selected apparel and fashion market.
+
+```{python}
+from matplotlib.ticker import MaxNLocator
+
+title_counts = (
+    clean_df["TITLE_CLEAN"]
+    .dropna()
+    .value_counts()
+    .head(10)
+    .sort_values()
+)
+
+plt.figure(figsize=(10, 6))
+title_counts.plot(kind="barh")
+
+plt.title(
+    "Top Job Titles in Apparel Analytics",
+    fontsize=14,
+    pad=12
+)
+plt.xlabel("Number of Job Postings")
+plt.ylabel("Job Title")
+
+plt.gca().xaxis.set_major_locator(MaxNLocator(integer=True))
+
+plt.tight_layout()
+
+plt.savefig(
+    "figures/market_baseline/job_volume_by_title.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+
+plt.show()
+```
+
+The 19-posting sample contains a mix of analyst, business intelligence, ecommerce analytics, merchandise analytics, and senior analytics roles. Most job titles appear only once, suggesting that the selected market is relatively specialized and fragmented rather than concentrated around a single standardized title. A small number of titles appear more than once, but overall the postings span several analytics-related functions within apparel and fashion retail.
+
+## Salary Distribution
+
+Salary information is incomplete in the filtered dataset. Only postings with an originally reported salary range are included in this analysis. Missing salaries that were filled during data preparation are excluded here so that the distribution reflects observed compensation information rather than imputed values.
+
+```{python}
+salary_df = raw_df.copy()
+
+salary_df["SALARY_FROM"] = pd.to_numeric(
+    salary_df["SALARY_FROM"],
+    errors="coerce"
+)
+
+salary_df["SALARY_TO"] = pd.to_numeric(
+    salary_df["SALARY_TO"],
+    errors="coerce"
+)
+
+salary_observed = salary_df.dropna(
+    subset=["SALARY_FROM", "SALARY_TO"]
+).copy()
+
+salary_observed["SALARY_MIDPOINT"] = (
+    salary_observed["SALARY_FROM"] +
+    salary_observed["SALARY_TO"]
+) / 2
+
+print(
+    f"Postings with observed salary ranges: "
+    f"{len(salary_observed)} of {len(raw_df)}"
+)
+
+salary_observed[
+    ["TITLE_CLEAN", "SALARY_FROM", "SALARY_TO", "SALARY_MIDPOINT"]
+]
+```
+
+```{python}
+plt.figure(figsize=(7, 5))
+
+plt.boxplot(
+    salary_observed["SALARY_MIDPOINT"].dropna(),
+    vert=True
+)
+
+plt.title("Distribution of Observed Salary Midpoints")
+plt.ylabel("Annual Salary ($)")
+plt.xticks([1], ["Observed salary postings"])
+plt.ticklabel_format(style="plain", axis="y")
+plt.tight_layout()
+
+plt.savefig(
+    "figures/market_baseline/salary_distribution.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+
+plt.show()
+```
+
+Only 4 of the 19 postings contain an observed salary range, so the salary results should be interpreted cautiously. Among those postings, the available salary ranges indicate meaningful variation in compensation, but the small number of observations is not sufficient to characterize compensation across the entire selected market. The chart therefore summarizes only salaries explicitly available in the underlying postings.
+
+## Location Patterns
+
+Geographic information is available for most postings. A small amount of additional standardization is applied below to consolidate obvious differences in state and city labels.
+
+```{python}
+location_df = raw_df.copy()
+
+location_df["STATE_CLEAN"] = (
+    location_df["STATE_NAME"]
+    .fillna("Unknown")
+    .astype(str)
+    .str.strip()
+)
+
+location_df["CITY_CLEAN"] = (
+    location_df["CITY_NAME"]
+    .fillna("Unknown")
+    .astype(str)
+    .str.strip()
+)
+
+# Consolidate obvious inconsistent labels
+location_df["STATE_CLEAN"] = location_df["STATE_CLEAN"].replace({
+    "NY": "New York",
+    "Cochituate Rd": "Massachusetts"
+})
+
+location_df["CITY_CLEAN"] = location_df["CITY_CLEAN"].replace({
+    "Home Office Framingham Ma 550": "Framingham"
+})
+
+state_counts = (
+    location_df["STATE_CLEAN"]
+    .value_counts()
+    .sort_values()
+)
+
+state_counts
+```
+
+```{python}
+plt.figure(figsize=(8, 5))
+state_counts.plot(kind="barh")
+
+plt.title("Job Postings by State")
+plt.xlabel("Number of Job Postings")
+plt.ylabel("State")
+plt.tight_layout()
+
+plt.savefig(
+    "figures/market_baseline/location_patterns.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+
+plt.show()
+```
+
+The postings are concentrated in a relatively small number of locations. California, Massachusetts, New York, and Oregon account for most of the observed opportunities in the sample. This concentration appears to reflect the locations of the apparel and fashion employers represented in the filtered dataset rather than a geographically representative view of the broader analytics labor market.
+
+## Experience Requirement Distribution
+
+Experience requirements are also incomplete in the source data. This analysis uses only the experience values that were present before missing values were filled during data preparation.
+
+```{python}
+experience_df = raw_df.copy()
+
+experience_df["MIN_YEARS_EXPERIENCE"] = pd.to_numeric(
+    experience_df["MIN_YEARS_EXPERIENCE"],
+    errors="coerce"
+)
+
+observed_experience = experience_df[
+    experience_df["MIN_YEARS_EXPERIENCE"].notna()
+].copy()
+
+experience_counts = (
+    observed_experience["MIN_YEARS_EXPERIENCE"]
+    .value_counts()
+    .sort_index()
+)
+
+print(
+    f"Postings with observed minimum experience requirements: "
+    f"{len(observed_experience)} of {len(raw_df)}"
+)
+
+experience_counts
+```
+
+```{python}
+plt.figure(figsize=(7, 5))
+
+experience_counts.plot(kind="bar")
+
+plt.title("Observed Minimum Experience Requirements")
+plt.xlabel("Minimum Years of Experience Recorded")
+plt.ylabel("Number of Job Postings")
+plt.xticks(rotation=0)
+plt.tight_layout()
+
+plt.savefig(
+    "figures/market_baseline/experience_distribution.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+
+plt.show()
+```
+
+Minimum experience information is available for 9 of the 19 postings. Most of the observed records contain a minimum value of zero years, while a smaller number indicate a five-year minimum. These values should be interpreted as the experience values recorded in the source data. Because experience information is missing for more than half of the sample, the results should not be generalized to all postings in the selected market.
+
+## Remote vs Onsite Patterns
+
+Remote-work information is limited in the dataset. Rather than treating missing values as onsite positions, postings without a reported work arrangement are retained as a separate "Not specified" category.
+
+```{python}
+remote_df = raw_df.copy()
+
+remote_df["WORK_ARRANGEMENT"] = (
+    remote_df["REMOTE_TYPE_NAME"]
+    .fillna("Not specified")
+    .astype(str)
+    .str.strip()
+)
+
+remote_df["WORK_ARRANGEMENT"] = remote_df["WORK_ARRANGEMENT"].replace({
+    "": "Not specified",
+    "Unknown": "Not specified"
+})
+
+remote_counts = (
+    remote_df["WORK_ARRANGEMENT"]
+    .value_counts()
+    .sort_values()
+)
+
+remote_counts
+```
+
+```{python}
+plt.figure(figsize=(7, 5))
+remote_counts.plot(kind="barh")
+
+plt.title("Reported Work Arrangement")
+plt.xlabel("Number of Job Postings")
+plt.ylabel("Work Arrangement")
+plt.tight_layout()
+
+plt.savefig(
+    "figures/market_baseline/remote_onsite_patterns.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+
+plt.show()
+```
+
+Work-arrangement information is not reported for most of the postings in the sample. Among postings with an identifiable arrangement, hybrid positions appear more frequently than fully remote positions. However, because the majority of records do not specify a remote or onsite classification, the available data does not support a strong conclusion about the overall prevalence of remote, hybrid, or onsite work in this market.
+
+## Top Employers
+
+Employer names are standardized below to consolidate a small number of obvious duplicate labels before comparing hiring activity.
+
+```{python}
+employer_df = clean_df.copy()
+
+employer_df["EMPLOYER"] = (
+    employer_df["COMPANY_CLEAN"]
+    .fillna(employer_df["COMPANY_NAME"])
+    .astype(str)
+    .str.strip()
+    .str.lower()
+)
+
+employer_df["EMPLOYER"] = employer_df["EMPLOYER"].replace({
+    "jobs.tjx.com": "tjx",
+    "careers.michaels.com": "michaels"
+})
+
+employer_counts = (
+    employer_df["EMPLOYER"]
+    .value_counts()
+    .head(10)
+    .sort_values()
+)
+
+employer_counts
+```
+
+```{python}
+plt.figure(figsize=(8, 5))
+employer_counts.plot(kind="barh")
+
+plt.title("Top Employers in the Selected Market")
+plt.xlabel("Number of Job Postings")
+plt.ylabel("Employer")
+plt.tight_layout()
+
+plt.savefig(
+    "figures/market_baseline/top_employers.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+
+plt.show()
+```
+
+Hiring activity in the selected sample is concentrated among a small number of apparel and retail employers. Vuori, TJX, and Adidas account for multiple postings, while several other companies appear only once. The concentration should be interpreted within the context of the small, intentionally filtered sample rather than as a ranking of hiring activity across the entire apparel and fashion industry.
+
+## Baseline Summary
+
+The baseline analysis shows a small but diverse market for analytics-related roles within the selected apparel and fashion industry scope. Job titles span business intelligence, merchandising, ecommerce, finance, operations, and other analytics functions. The available postings are geographically concentrated, and several employers contribute multiple opportunities.
+
+The analysis also highlights important data-availability limitations. Salary, experience, and remote-work information are missing for substantial portions of the 19-posting sample. For this reason, those sections use observed values where possible and explicitly retain or disclose missing information rather than interpreting imputed values as original posting characteristics. The findings should therefore be viewed as a descriptive baseline for the selected market and as a foundation for the later skill-gap and career-evaluation stages of the project.
