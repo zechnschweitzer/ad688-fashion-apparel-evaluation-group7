@@ -1,0 +1,94 @@
+﻿---
+title: "Data Preperation"
+author: "Alyssa Quigley"
+format:
+  html:
+    toc: true
+execute:
+  echo: true
+  eval: true
+  freeze: auto
+---
+
+## Load the Filtered Dataset
+
+```{python}
+import pandas as pd
+
+df = pd.read_csv("data/interim/apparel_analyst_filtered.csv")
+print(f"Loaded {len(df)} rows, {len(df.columns)} columns")
+df.info()
+```
+
+## Clean Salary Fields
+
+```{python}
+df["SALARY_FROM"] = pd.to_numeric(df["SALARY_FROM"], errors="coerce")
+df["SALARY_TO"] = pd.to_numeric(df["SALARY_TO"], errors="coerce")
+
+median_from = df["SALARY_FROM"].median()
+median_to = df["SALARY_TO"].median()
+df["SALARY_FROM"] = df["SALARY_FROM"].fillna(median_from)
+df["SALARY_TO"] = df["SALARY_TO"].fillna(median_to)
+
+print(f"Median SALARY_FROM used for fill: {median_from}")
+print(f"Median SALARY_TO used for fill: {median_to}")
+df[["TITLE_CLEAN", "COMPANY_NAME", "SALARY_FROM", "SALARY_TO"]]
+```
+
+## Clean Experience Fields
+
+```{python}
+df["MIN_YEARS_EXPERIENCE"] = pd.to_numeric(df["MIN_YEARS_EXPERIENCE"], errors="coerce")
+df["MAX_YEARS_EXPERIENCE"] = pd.to_numeric(df["MAX_YEARS_EXPERIENCE"], errors="coerce")
+
+df["MIN_YEARS_EXPERIENCE"] = df["MIN_YEARS_EXPERIENCE"].fillna(0)
+df["MAX_YEARS_EXPERIENCE"] = df["MAX_YEARS_EXPERIENCE"].fillna(df["MIN_YEARS_EXPERIENCE"])
+
+df[["TITLE_CLEAN", "MIN_YEARS_EXPERIENCE", "MAX_YEARS_EXPERIENCE"]]
+```
+
+## Clean Geography Fields
+
+```{python}
+for col in ["CITY_NAME", "STATE_NAME"]:
+    df[col] = df[col].astype(str).str.strip()
+    df[col] = df[col].replace("", "Unknown").replace("nan", "Unknown")
+
+df[["TITLE_CLEAN", "COMPANY_NAME", "CITY_NAME", "STATE_NAME"]]
+```
+
+## Clean Skills Fields
+
+```{python}
+def clean_skill_list(value):
+    if pd.isna(value) or value == "":
+        return []
+    return [s.strip() for s in str(value).split(",") if s.strip()]
+
+df["SKILLS_LIST"] = df["SKILLS_NAME"].apply(clean_skill_list)
+df["SOFTWARE_SKILLS_LIST"] = df["SOFTWARE_SKILLS_NAME"].apply(clean_skill_list)
+
+print(f"Postings with at least one listed skill: {(df['SKILLS_LIST'].str.len() > 0).sum()}")
+df[["TITLE_CLEAN", "SKILLS_LIST", "SOFTWARE_SKILLS_LIST"]]
+```
+
+## Save the Cleaned Dataset
+
+```{python}
+import os
+os.makedirs("data/processed", exist_ok=True)
+df.to_csv("data/processed/apparel_analyst_clean.csv", index=False)
+print(f"Saved cleaned dataset: {len(df)} rows")
+```
+
+## Note on Sample Size
+
+The final cleaned dataset contains 19 job postings. This reflects a known
+limitation of NAICS-based industry classification: many analytics roles at
+apparel/retail companies are tagged under unrelated NAICS codes rather than
+under clothing retail codes specifically. To compensate, this dataset combines
+NAICS 458 (Clothing, Clothing Accessories, Shoe, and Jewelry Retailers) with
+an exact-match list of known apparel/fashion company names, then filters to
+narrow analyst job titles (business analyst, data analyst). The resulting
+sample size is small but each row is a verified, legitimate match.
