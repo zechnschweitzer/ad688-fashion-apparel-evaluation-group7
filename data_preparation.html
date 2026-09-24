@@ -218,7 +218,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="load-the-filtered-dataset" class="level2">
 <h2 class="anchored" data-anchor-id="load-the-filtered-dataset">Load the Filtered Dataset</h2>
-<div id="df10abfe" class="cell" data-execution_count="1">
+<div id="28396a4f" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"data/interim/apparel_analyst_filtered.csv"</span>)</span>
@@ -236,7 +236,7 @@ memory usage: 18.7 KB</code></pre>
 </section>
 <section id="clean-salary-fields" class="level2">
 <h2 class="anchored" data-anchor-id="clean-salary-fields">Clean Salary Fields</h2>
-<div id="606faed7" class="cell" data-execution_count="2">
+<div id="56b227da" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"SALARY_FROM"</span>] <span class="op">=</span> pd.to_numeric(df[<span class="st">"SALARY_FROM"</span>], errors<span class="op">=</span><span class="st">"coerce"</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"SALARY_TO"</span>] <span class="op">=</span> pd.to_numeric(df[<span class="st">"SALARY_TO"</span>], errors<span class="op">=</span><span class="st">"coerce"</span>)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -409,7 +409,7 @@ Median SALARY_TO used for fill: 138222.0</code></pre>
 </section>
 <section id="clean-experience-fields" class="level2">
 <h2 class="anchored" data-anchor-id="clean-experience-fields">Clean Experience Fields</h2>
-<div id="49899aa8" class="cell" data-execution_count="3">
+<div id="cd022487" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"MIN_YEARS_EXPERIENCE"</span>] <span class="op">=</span> pd.to_numeric(df[<span class="st">"MIN_YEARS_EXPERIENCE"</span>], errors<span class="op">=</span><span class="st">"coerce"</span>)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"MAX_YEARS_EXPERIENCE"</span>] <span class="op">=</span> pd.to_numeric(df[<span class="st">"MAX_YEARS_EXPERIENCE"</span>], errors<span class="op">=</span><span class="st">"coerce"</span>)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -554,7 +554,7 @@ Median SALARY_TO used for fill: 138222.0</code></pre>
 </section>
 <section id="clean-geography-fields" class="level2">
 <h2 class="anchored" data-anchor-id="clean-geography-fields">Clean Geography Fields</h2>
-<div id="e765fd8e" class="cell" data-execution_count="4">
+<div id="4e0d7766" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> col <span class="kw">in</span> [<span class="st">"CITY_NAME"</span>, <span class="st">"STATE_NAME"</span>]:</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    df[col] <span class="op">=</span> df[col].astype(<span class="bu">str</span>).<span class="bu">str</span>.strip()</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    df[col] <span class="op">=</span> df[col].replace(<span class="st">""</span>, <span class="st">"Unknown"</span>).replace(<span class="st">"nan"</span>, <span class="st">"Unknown"</span>)</span>
@@ -717,7 +717,7 @@ Median SALARY_TO used for fill: 138222.0</code></pre>
 </section>
 <section id="clean-skills-fields" class="level2">
 <h2 class="anchored" data-anchor-id="clean-skills-fields">Clean Skills Fields</h2>
-<div id="dd377c5b" class="cell" data-execution_count="5">
+<div id="d2a64775" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> clean_skill_list(value):</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> pd.isna(value) <span class="kw">or</span> value <span class="op">==</span> <span class="st">""</span>:</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> []</span>
@@ -868,7 +868,7 @@ Median SALARY_TO used for fill: 138222.0</code></pre>
 </section>
 <section id="save-the-cleaned-dataset" class="level2">
 <h2 class="anchored" data-anchor-id="save-the-cleaned-dataset">Save the Cleaned Dataset</h2>
-<div id="1618aeb5" class="cell" data-execution_count="6">
+<div id="75d706c5" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>os.makedirs(<span class="st">"data/processed"</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>df.to_csv(<span class="st">"data/processed/apparel_analyst_clean.csv"</span>, index<span class="op">=</span><span class="va">False</span>)</span>

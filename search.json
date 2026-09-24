@@ -7,6 +7,69 @@
     "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   },
   {
+    "objectID": "data_dictionary.html",
+    "href": "data_dictionary.html",
+    "title": "Data Dictionary � apparel_analyst_clean.csv",
+    "section": "",
+    "text": "Cleaned dataset for Business/Data Analyst roles within NAICS 458 (Clothing, Clothing Accessories, Shoe, and Jewelry Retailers), filtered using NAICS 458 + an exact-match apparel brand list + narrow analyst title matching. 19 verified rows.\n\n\n\n\n\nField\nDescription\n\n\n\n\nID\nUnique job posting identifier\n\n\nTITLE_CLEAN\nStandardized/cleaned job title\n\n\nTITLE_RAW\nOriginal job title as posted\n\n\nCOMPANY_NAME\nEmployer name\n\n\nCOMPANY_CLEAN\nStandardized employer name\n\n\nPOSTED\nDate the job was posted\n\n\n\n\n\n\n\n\n\nField\nDescription\n\n\n\n\nSALARY\nOriginal salary text as posted\n\n\nSALARY_FROM\nLower bound of posted salary range\n\n\nSALARY_TO\nUpper bound of posted salary range\n\n\nORIGINAL_PAY_PERIOD\nPay period as posted (e.g. hourly, annual)\n\n\n\n\n\n\n\n\n\nField\nDescription\n\n\n\n\nMIN_YEARS_EXPERIENCE\nMinimum years of experience required\n\n\nMAX_YEARS_EXPERIENCE\nMaximum years of experience required\n\n\n\n\n\n\n\n\n\nField\nDescription\n\n\n\n\nMIN_EDULEVELS_NAME\nMinimum education level required\n\n\nMAX_EDULEVELS_NAME\nMaximum education level required\n\n\n\n\n\n\n\n\n\nField\nDescription\n\n\n\n\nSKILLS_NAME\nGeneral skills listed in the posting\n\n\nSPECIALIZED_SKILLS_NAME\nSpecialized/technical skills listed\n\n\nSOFTWARE_SKILLS_NAME\nSoftware tools listed\n\n\n\n\n\n\n\n\n\n\n\n\n\nField\nDescription\n\n\n\n\nREMOTE_TYPE_NAME\nWork arrangement (Remote, Hybrid, On-site, Unknown)\n\n\n\n\n\n\n\n\n\nField\nDescription\n\n\n\n\nCITY_NAME\nCity of the job posting\n\n\nSTATE_NAME\nState of the job posting\n\n\nCOUNTY_NAME\nCounty of the job posting\n\n\nMSA_NAME\nMetropolitan Statistical Area name\n\n\n\n\n\n\n\n\n\nField\nDescription\n\n\n\n\nNAICS_2022_6\n6-digit NAICS 2022 industry code\n\n\nNAICS_2022_6_NAME\nIndustry name for the NAICS code\n\n\nSOC_5\n5-digit SOC occupation code\n\n\nSOC_5_NAME\nOccupation name for the SOC code"
+  },
+  {
+    "objectID": "data_dictionary.html#identification",
+    "href": "data_dictionary.html#identification",
+    "title": "Data Dictionary � apparel_analyst_clean.csv",
+    "section": "",
+    "text": "Field\nDescription\n\n\n\n\nID\nUnique job posting identifier\n\n\nTITLE_CLEAN\nStandardized/cleaned job title\n\n\nTITLE_RAW\nOriginal job title as posted\n\n\nCOMPANY_NAME\nEmployer name\n\n\nCOMPANY_CLEAN\nStandardized employer name\n\n\nPOSTED\nDate the job was posted"
+  },
+  {
+    "objectID": "data_dictionary.html#salary",
+    "href": "data_dictionary.html#salary",
+    "title": "Data Dictionary � apparel_analyst_clean.csv",
+    "section": "",
+    "text": "Field\nDescription\n\n\n\n\nSALARY\nOriginal salary text as posted\n\n\nSALARY_FROM\nLower bound of posted salary range\n\n\nSALARY_TO\nUpper bound of posted salary range\n\n\nORIGINAL_PAY_PERIOD\nPay period as posted (e.g. hourly, annual)"
+  },
+  {
+    "objectID": "data_dictionary.html#experience",
+    "href": "data_dictionary.html#experience",
+    "title": "Data Dictionary � apparel_analyst_clean.csv",
+    "section": "",
+    "text": "Field\nDescription\n\n\n\n\nMIN_YEARS_EXPERIENCE\nMinimum years of experience required\n\n\nMAX_YEARS_EXPERIENCE\nMaximum years of experience required"
+  },
+  {
+    "objectID": "data_dictionary.html#education",
+    "href": "data_dictionary.html#education",
+    "title": "Data Dictionary � apparel_analyst_clean.csv",
+    "section": "",
+    "text": "Field\nDescription\n\n\n\n\nMIN_EDULEVELS_NAME\nMinimum education level required\n\n\nMAX_EDULEVELS_NAME\nMaximum education level required"
+  },
+  {
+    "objectID": "data_dictionary.html#skills",
+    "href": "data_dictionary.html#skills",
+    "title": "Data Dictionary � apparel_analyst_clean.csv",
+    "section": "",
+    "text": "Field\nDescription\n\n\n\n\nSKILLS_NAME\nGeneral skills listed in the posting\n\n\nSPECIALIZED_SKILLS_NAME\nSpecialized/technical skills listed\n\n\nSOFTWARE_SKILLS_NAME\nSoftware tools listed"
+  },
+  {
+    "objectID": "data_dictionary.html#remoteonsite",
+    "href": "data_dictionary.html#remoteonsite",
+    "title": "Data Dictionary � apparel_analyst_clean.csv",
+    "section": "",
+    "text": "Field\nDescription\n\n\n\n\nREMOTE_TYPE_NAME\nWork arrangement (Remote, Hybrid, On-site, Unknown)"
+  },
+  {
+    "objectID": "data_dictionary.html#location",
+    "href": "data_dictionary.html#location",
+    "title": "Data Dictionary � apparel_analyst_clean.csv",
+    "section": "",
+    "text": "Field\nDescription\n\n\n\n\nCITY_NAME\nCity of the job posting\n\n\nSTATE_NAME\nState of the job posting\n\n\nCOUNTY_NAME\nCounty of the job posting\n\n\nMSA_NAME\nMetropolitan Statistical Area name"
+  },
+  {
+    "objectID": "data_dictionary.html#industry-occupation",
+    "href": "data_dictionary.html#industry-occupation",
+    "title": "Data Dictionary � apparel_analyst_clean.csv",
+    "section": "",
+    "text": "Field\nDescription\n\n\n\n\nNAICS_2022_6\n6-digit NAICS 2022 industry code\n\n\nNAICS_2022_6_NAME\nIndustry name for the NAICS code\n\n\nSOC_5\n5-digit SOC occupation code\n\n\nSOC_5_NAME\nOccupation name for the SOC code"
+  },
+  {
     "objectID": "introduction.html",
     "href": "introduction.html",
     "title": "Career Pathway and Industry Scope",
