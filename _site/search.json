@@ -1,5 +1,47 @@
 [
   {
+    "objectID": "skill_gap_analysis.html",
+    "href": "skill_gap_analysis.html",
+    "title": "Skill Gap Analysis",
+    "section": "",
+    "text": "This page compares the skills most commonly requested in our filtered apparel and fashion analytics job postings against the team’s current skill levels, to identify where the team is well-positioned and where there are gaps worth addressing."
+  },
+  {
+    "objectID": "skill_gap_analysis.html#overview",
+    "href": "skill_gap_analysis.html#overview",
+    "title": "Skill Gap Analysis",
+    "section": "",
+    "text": "This page compares the skills most commonly requested in our filtered apparel and fashion analytics job postings against the team’s current skill levels, to identify where the team is well-positioned and where there are gaps worth addressing."
+  },
+  {
+    "objectID": "skill_gap_analysis.html#most-in-demand-skills",
+    "href": "skill_gap_analysis.html#most-in-demand-skills",
+    "title": "Skill Gap Analysis",
+    "section": "Most In-Demand Skills",
+    "text": "Most In-Demand Skills\nSkill fields were parsed from each posting’s listed skills. Counts reflect how many of the 19 filtered postings mention each skill at least once.\n\n\n\n\n\n\n\n\n\nPower BI and SQL are the most frequently requested skills, each appearing in 7 of the 19 postings, followed by Python and Microsoft Excel in 5 postings each. Digital Marketing appears in 4 postings. The remaining skills appear in 2 to 3 postings each, reflecting a mix of technical, analytical, and communication-related requirements across the sample."
+  },
+  {
+    "objectID": "skill_gap_analysis.html#team-skill-comparison",
+    "href": "skill_gap_analysis.html#team-skill-comparison",
+    "title": "Skill Gap Analysis",
+    "section": "Team Skill Comparison",
+    "text": "Team Skill Comparison\nEach team member self-rated their proficiency (1 = Beginner, 5 = Expert) on the eight most in-demand skills identified above.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAs a team, Data Analysis and Excel show the strongest average proficiency (4.0 and 4.25 respectively), reflecting consistent comfort across all four members. Power BI and Python show the lowest average proficiency (2.75 each), both sitting below the “Intermediate” level as a team average. Digital Marketing shows the widest spread across the team, ranging from 2 (Beginner) to 4 (Advanced), reflecting the team’s mixed backgrounds."
+  },
+  {
+    "objectID": "skill_gap_analysis.html#skill-gaps",
+    "href": "skill_gap_analysis.html#skill-gaps",
+    "title": "Skill Gap Analysis",
+    "section": "Skill Gaps",
+    "text": "Skill Gaps\nComparing market demand (posting frequency) against team proficiency highlights where the team is well-covered and where gaps exist relative to what the market is asking for.\nPower BI is the single largest gap: it is tied for the most in-demand skill in the market (7 of 19 postings) but has the lowest average team proficiency (2.75). SQL, the other most in-demand skill (7 of 19 postings), sits at a moderate team average (3.25), suggesting a smaller but still real gap. Python, requested in 5 postings, also averages only 2.75 across the team.\nBy contrast, Excel and Data Analysis, both requested in the market, are also the team’s strongest areas, so no meaningful gap exists there. Digital Marketing is requested in 4 postings and shows uneven team coverage (one member at Beginner, others Intermediate to Advanced), which is a gap for some but not all team members individually."
+  },
+  {
+    "objectID": "skill_gap_analysis.html#improvement-plan",
+    "href": "skill_gap_analysis.html#improvement-plan",
+    "title": "Skill Gap Analysis",
+    "section": "Improvement Plan",
+    "text": "Improvement Plan\nBased on the gaps identified above, the team’s priorities for skill-building are:\n\nPower BI — the clearest gap given how frequently it appears in postings relative to team proficiency. Short, structured resources (Microsoft’s free Power BI learning path, or a guided project rebuilding one of this project’s own charts in Power BI) would directly address this.\nSQL — a moderate gap; practicing with the project’s own filtered dataset (writing queries against apparel_analyst_clean.csv loaded into a local SQLite database) ties skill-building directly to the project itself.\nPython — similarly moderate; continuing to build on the pandas work already done in data_preparation.qmd and this page is a natural, low-cost way to keep strengthening this skill through the remainder of the project.\n\nTo close these gaps as a team, members with higher individual proficiency in a given skill (e.g. whoever rated highest in SQL or Power BI) could briefly walk the others through their approach when relevant project tasks come up, rather than treating skill-building as a separate exercise from the coursework itself."
+  },
+  {
     "objectID": "introduction.html",
     "href": "introduction.html",
     "title": "Career Pathway and Industry Scope",
@@ -250,47 +292,5 @@
     "title": "Market Baseline",
     "section": "Baseline Summary",
     "text": "Baseline Summary\nThe market baseline provides a descriptive snapshot of analytics-related opportunities within the selected apparel and fashion industry scope. The final dataset contains 19 verified job postings and shows that analytics work appears across several functional areas, including business intelligence, merchandising, ecommerce, finance, operations, and marketing.\nHiring activity is concentrated among a small group of employers and locations. Vuori and TJX each account for 5 postings, while California and Massachusetts each account for 5 postings. New York and Oregon also represent notable hiring locations within the sample.\nSeveral variables have substantial missing information. Only 4 postings contain observed salary ranges, 9 contain recorded minimum experience requirements, and 4 contain an identifiable work arrangement. These limitations are retained explicitly in the analysis rather than treating imputed or missing values as if they were directly reported by employers.\nOverall, the findings should be interpreted as a baseline for this narrowly defined apparel and fashion analytics market rather than as estimates of the broader analytics labor market. The results provide a foundation for the later skill-gap and career-evaluation stages of the project."
-  },
-  {
-    "objectID": "skill_gap_analysis.html",
-    "href": "skill_gap_analysis.html",
-    "title": "Skill Gap Analysis",
-    "section": "",
-    "text": "This page compares the skills most commonly requested in our filtered apparel and fashion analytics job postings against the team’s current skill levels, to identify where the team is well-positioned and where there are gaps worth addressing."
-  },
-  {
-    "objectID": "skill_gap_analysis.html#overview",
-    "href": "skill_gap_analysis.html#overview",
-    "title": "Skill Gap Analysis",
-    "section": "",
-    "text": "This page compares the skills most commonly requested in our filtered apparel and fashion analytics job postings against the team’s current skill levels, to identify where the team is well-positioned and where there are gaps worth addressing."
-  },
-  {
-    "objectID": "skill_gap_analysis.html#most-in-demand-skills",
-    "href": "skill_gap_analysis.html#most-in-demand-skills",
-    "title": "Skill Gap Analysis",
-    "section": "Most In-Demand Skills",
-    "text": "Most In-Demand Skills\nSkill fields were parsed from each posting’s listed skills. Counts reflect how many of the 19 filtered postings mention each skill at least once.\n\n\n\n\n\n\n\n\n\nPower BI and SQL are the most frequently requested skills, each appearing in 7 of the 19 postings, followed by Python and Microsoft Excel in 5 postings each. Digital Marketing appears in 4 postings. The remaining skills appear in 2 to 3 postings each, reflecting a mix of technical, analytical, and communication-related requirements across the sample."
-  },
-  {
-    "objectID": "skill_gap_analysis.html#team-skill-comparison",
-    "href": "skill_gap_analysis.html#team-skill-comparison",
-    "title": "Skill Gap Analysis",
-    "section": "Team Skill Comparison",
-    "text": "Team Skill Comparison\nEach team member self-rated their proficiency (1 = Beginner, 5 = Expert) on the eight most in-demand skills identified above.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAs a team, Data Analysis and Excel show the strongest average proficiency (4.0 and 4.25 respectively), reflecting consistent comfort across all four members. Power BI and Python show the lowest average proficiency (2.75 each), both sitting below the “Intermediate” level as a team average. Digital Marketing shows the widest spread across the team, ranging from 2 (Beginner) to 4 (Advanced), reflecting the team’s mixed backgrounds."
-  },
-  {
-    "objectID": "skill_gap_analysis.html#improvement-plan",
-    "href": "skill_gap_analysis.html#improvement-plan",
-    "title": "Skill Gap Analysis",
-    "section": "Improvement Plan",
-    "text": "Improvement Plan\nBased on the gaps identified above, the team’s priorities for skill-building are:\n\nPower BI — the clearest gap given how frequently it appears in postings relative to team proficiency. Short, structured resources (Microsoft’s free Power BI learning path, or a guided project rebuilding one of this project’s own charts in Power BI) would directly address this.\nSQL — a moderate gap; practicing with the project’s own filtered dataset (writing queries against apparel_analyst_clean.csv loaded into a local SQLite database) ties skill-building directly to the project itself.\nPython — similarly moderate; continuing to build on the pandas work already done in data_preparation.qmd and this page is a natural, low-cost way to keep strengthening this skill through the remainder of the project.\n\nTo close these gaps as a team, members with higher individual proficiency in a given skill (e.g. whoever rated highest in SQL or Power BI) could briefly walk the others through their approach when relevant project tasks come up, rather than treating skill-building as a separate exercise from the coursework itself."
-  },
-  {
-    "objectID": "skill_gap_analysis.html#skill-gaps",
-    "href": "skill_gap_analysis.html#skill-gaps",
-    "title": "Skill Gap Analysis",
-    "section": "Skill Gaps",
-    "text": "Skill Gaps\nComparing market demand (posting frequency) against team proficiency highlights where the team is well-covered and where gaps exist relative to what the market is asking for.\nPower BI is the single largest gap: it is tied for the most in-demand skill in the market (7 of 19 postings) but has the lowest average team proficiency (2.75). SQL, the other most in-demand skill (7 of 19 postings), sits at a moderate team average (3.25), suggesting a smaller but still real gap. Python, requested in 5 postings, also averages only 2.75 across the team.\nBy contrast, Excel and Data Analysis, both requested in the market, are also the team’s strongest areas, so no meaningful gap exists there. Digital Marketing is requested in 4 postings and shows uneven team coverage (one member at Beginner, others Intermediate to Advanced), which is a gap for some but not all team members individually."
   }
 ]
