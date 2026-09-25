@@ -26,8 +26,11 @@ website:
 
 format:
   html:
-    theme:
-      - yeti
-      - brand
+    theme: yeti
     css: styles.css
     toc: true
+
+execute: 
+  echo: true
+  eval: true
+  code-fold: true
