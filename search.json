@@ -1,87 +1,94 @@
 [
   {
-    "objectID": "market_baseline.html",
-    "href": "market_baseline.html",
-    "title": "Market Baseline",
+    "objectID": "skill_gap_analysis.html",
+    "href": "skill_gap_analysis.html",
+    "title": "Skill Gap Analysis",
     "section": "",
-    "text": "This page summarizes the baseline characteristics of the selected apparel and fashion analytics job market. The final filtered dataset contains 19 verified job postings based on the team’s selected NAICS 458 scope and an additional exact-match list of known apparel and fashion employers.\nBecause the market definition is intentionally narrow, the results should be interpreted as a descriptive snapshot of the selected apparel and fashion analytics market rather than as estimates of the broader analytics labor market."
+    "text": "This page compares the skills most commonly requested in our filtered apparel and fashion analytics job postings against the team’s current skill levels, to identify where the team is well-positioned and where there are gaps worth addressing."
   },
   {
-    "objectID": "market_baseline.html#market-overview",
-    "href": "market_baseline.html#market-overview",
-    "title": "Market Baseline",
+    "objectID": "skill_gap_analysis.html#overview",
+    "href": "skill_gap_analysis.html#overview",
+    "title": "Skill Gap Analysis",
     "section": "",
-    "text": "This page summarizes the baseline characteristics of the selected apparel and fashion analytics job market. The final filtered dataset contains 19 verified job postings based on the team’s selected NAICS 458 scope and an additional exact-match list of known apparel and fashion employers.\nBecause the market definition is intentionally narrow, the results should be interpreted as a descriptive snapshot of the selected apparel and fashion analytics market rather than as estimates of the broader analytics labor market."
+    "text": "This page compares the skills most commonly requested in our filtered apparel and fashion analytics job postings against the team’s current skill levels, to identify where the team is well-positioned and where there are gaps worth addressing."
   },
   {
-    "objectID": "market_baseline.html#job-volume-by-title-or-segment",
-    "href": "market_baseline.html#job-volume-by-title-or-segment",
-    "title": "Market Baseline",
-    "section": "Job Volume by Title or Segment",
-    "text": "Job Volume by Title or Segment\nJob titles provide an initial view of the types of analytics roles represented within the selected apparel and fashion market.\n\n\n\n\n\n\n\n\n\nThe 19-posting sample contains a mix of analyst, business intelligence, ecommerce analytics, merchandise analytics, and senior analytics roles. Most job titles appear only once, suggesting that the selected market is relatively specialized and fragmented rather than concentrated around a single standardized title. A small number of titles appear more than once, but overall the postings span several analytics-related functions within apparel and fashion retail."
+    "objectID": "skill_gap_analysis.html#most-in-demand-skills",
+    "href": "skill_gap_analysis.html#most-in-demand-skills",
+    "title": "Skill Gap Analysis",
+    "section": "Most In-Demand Skills",
+    "text": "Most In-Demand Skills\nSkill fields were parsed from each posting’s listed skills. Counts reflect how many of the 19 filtered postings mention each skill at least once.\n\n\n\n\n\n\n\n\n\nPower BI and SQL are the most frequently requested skills, each appearing in 7 of the 19 postings, followed by Python and Microsoft Excel in 5 postings each. Digital Marketing appears in 4 postings. The remaining skills appear in 2 to 3 postings each, reflecting a mix of technical, analytical, and communication-related requirements across the sample."
   },
   {
-    "objectID": "market_baseline.html#salary-distribution",
-    "href": "market_baseline.html#salary-distribution",
-    "title": "Market Baseline",
-    "section": "Salary Distribution",
-    "text": "Salary Distribution\nSalary information is incomplete in the filtered dataset. Only postings with an originally reported salary range are included in this analysis. Missing salaries that were filled during data preparation are excluded so that the results reflect observed compensation information rather than imputed values.\n\n\nPostings with observed salary ranges: 4 of 19\n\n\n\n\n\n\n\n\n\n\n\nOnly 4 of the 19 postings contain an observed salary range, so the salary findings should be interpreted cautiously. The available postings show variation in both the lower and upper ends of reported compensation, but the small number of observations is not sufficient to characterize salary levels across the full selected apparel and fashion analytics market. The chart therefore presents only compensation that was explicitly reported in the source postings."
+    "objectID": "skill_gap_analysis.html#team-skill-comparison",
+    "href": "skill_gap_analysis.html#team-skill-comparison",
+    "title": "Skill Gap Analysis",
+    "section": "Team Skill Comparison",
+    "text": "Team Skill Comparison\nEach team member self-rated their proficiency (1 = Beginner, 5 = Expert) on the eight most in-demand skills identified above.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAs a team, Data Analysis and Excel show the strongest average proficiency (4.0 and 4.25 respectively), reflecting consistent comfort across all four members. Power BI and Python show the lowest average proficiency (2.75 each), both sitting below the “Intermediate” level as a team average. Digital Marketing shows the widest spread across the team, ranging from 2 (Beginner) to 4 (Advanced), reflecting the team’s mixed backgrounds."
   },
   {
-    "objectID": "market_baseline.html#location-patterns",
-    "href": "market_baseline.html#location-patterns",
-    "title": "Market Baseline",
-    "section": "Location Patterns",
-    "text": "Location Patterns\nGeographic information is available for most postings. A small amount of additional standardization is applied below to consolidate obvious differences in state and city labels.\n\n\n\n\n\n\n\n\n\nThe 19-posting sample is concentrated in a small number of states. California and Massachusetts each account for 5 postings, followed by New York with 4 and Oregon with 3. Texas contributes 1 posting, while 1 record does not contain a usable state value. This geographic concentration appears to reflect the locations of the apparel and fashion employers represented in the filtered sample rather than a geographically representative view of the broader analytics labor market."
+    "objectID": "skill_gap_analysis.html#skill-gaps",
+    "href": "skill_gap_analysis.html#skill-gaps",
+    "title": "Skill Gap Analysis",
+    "section": "Skill Gaps",
+    "text": "Skill Gaps\nComparing market demand (posting frequency) against team proficiency highlights where the team is well-covered and where gaps exist relative to what the market is asking for.\nPower BI is the single largest gap: it is tied for the most in-demand skill in the market (7 of 19 postings) but has the lowest average team proficiency (2.75). SQL, the other most in-demand skill (7 of 19 postings), sits at a moderate team average (3.25), suggesting a smaller but still real gap. Python, requested in 5 postings, also averages only 2.75 across the team.\nBy contrast, Excel and Data Analysis, both requested in the market, are also the team’s strongest areas, so no meaningful gap exists there. Digital Marketing is requested in 4 postings and shows uneven team coverage (one member at Beginner, others Intermediate to Advanced), which is a gap for some but not all team members individually."
   },
   {
-    "objectID": "market_baseline.html#experience-requirement-distribution",
-    "href": "market_baseline.html#experience-requirement-distribution",
-    "title": "Market Baseline",
-    "section": "Experience Requirement Distribution",
-    "text": "Experience Requirement Distribution\nExperience requirements are incomplete in the source data. This analysis uses only minimum experience values that were present in the filtered dataset before missing values were filled during data preparation.\n\n\nPostings with observed minimum experience requirements: 9 of 19\n\n\n\n\n\n\n\n\n\n\n\nMinimum experience information is available for 9 of the 19 postings. Among those records, 7 postings show a recorded minimum of 0 years and 2 postings show a minimum of 5 years. Because experience information is missing for more than half of the sample, these values should be interpreted as the requirements recorded in the available source data rather than as a complete representation of experience expectations across the selected market."
+    "objectID": "skill_gap_analysis.html#improvement-plan",
+    "href": "skill_gap_analysis.html#improvement-plan",
+    "title": "Skill Gap Analysis",
+    "section": "Improvement Plan",
+    "text": "Improvement Plan\nBased on the gaps identified above, the team’s priorities for skill-building are:\n\nPower BI — the clearest gap given how frequently it appears in postings relative to team proficiency. Short, structured resources (Microsoft’s free Power BI learning path, or a guided project rebuilding one of this project’s own charts in Power BI) would directly address this.\nSQL — a moderate gap; practicing with the project’s own filtered dataset (writing queries against apparel_analyst_clean.csv loaded into a local SQLite database) ties skill-building directly to the project itself.\nPython — similarly moderate; continuing to build on the pandas work already done in data_preparation.qmd and this page is a natural, low-cost way to keep strengthening this skill through the remainder of the project.\n\nTo close these gaps as a team, members with higher individual proficiency in a given skill (e.g. whoever rated highest in SQL or Power BI) could briefly walk the others through their approach when relevant project tasks come up, rather than treating skill-building as a separate exercise from the coursework itself."
   },
   {
-    "objectID": "market_baseline.html#remote-vs-onsite-patterns",
-    "href": "market_baseline.html#remote-vs-onsite-patterns",
-    "title": "Market Baseline",
-    "section": "Remote vs Onsite Patterns",
-    "text": "Remote vs Onsite Patterns\nWork-arrangement information is limited in the source data. Rather than assuming that postings with missing remote-status information are onsite roles, records without a reported work arrangement are retained as a separate “Not specified” category.\n\n\nPostings with an identifiable work arrangement: 4 of 19\n\n\n\n\n\n\n\n\n\n\n\nAn identifiable work arrangement is available for only 4 of the 19 postings. Three postings are classified as hybrid and one as fully remote. The remaining 15 postings either do not report a work arrangement or contain an unknown value. No posting in the available sample is explicitly classified as onsite. Because work-arrangement information is unavailable for most of the sample, these results should not be used to infer the overall prevalence of remote, hybrid, or onsite work in the selected market."
-  },
-  {
-    "objectID": "market_baseline.html#top-employers",
-    "href": "market_baseline.html#top-employers",
-    "title": "Market Baseline",
-    "section": "Top Employers",
-    "text": "Top Employers\nEmployer names are standardized below to consolidate obvious duplicate labels before comparing hiring activity within the selected market.\n\n\nEmployers represented in the sample: 8\n\n\n\n\n\n\n\n\n\n\n\nHiring activity in the selected sample is concentrated among a small number of apparel and retail employers. Vuori and TJX each account for 5 postings, followed by Adidas with 3 and Ralph Lauren with 2. Nordstrom, Foot Locker, Michaels, and Macy’s each contribute 1 posting. These counts should be interpreted within the context of the small, intentionally filtered dataset rather than as a ranking of overall hiring activity across the apparel and fashion industry."
-  },
-  {
-    "objectID": "market_baseline.html#baseline-summary",
-    "href": "market_baseline.html#baseline-summary",
-    "title": "Market Baseline",
-    "section": "Baseline Summary",
-    "text": "Baseline Summary\nThe market baseline provides a descriptive snapshot of analytics-related opportunities within the selected apparel and fashion industry scope. The final dataset contains 19 verified job postings and shows that analytics work appears across several functional areas, including business intelligence, merchandising, ecommerce, finance, operations, and marketing.\nHiring activity is concentrated among a small group of employers and locations. Vuori and TJX each account for 5 postings, while California and Massachusetts each account for 5 postings. New York and Oregon also represent notable hiring locations within the sample.\nSeveral variables have substantial missing information. Only 4 postings contain observed salary ranges, 9 contain recorded minimum experience requirements, and 4 contain an identifiable work arrangement. These limitations are retained explicitly in the analysis rather than treating imputed or missing values as if they were directly reported by employers.\nOverall, the findings should be interpreted as a baseline for this narrowly defined apparel and fashion analytics market rather than as estimates of the broader analytics labor market. The results provide a foundation for the later skill-gap and career-evaluation stages of the project."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "AD688: Fashion and Apparel Career Evaluation - Group 7",
+    "objectID": "introduction.html",
+    "href": "introduction.html",
+    "title": "Career Pathway and Industry Scope",
     "section": "",
-    "text": "This project evaluates analytics-related career opportunities within the apparel and fashion industry using job-posting data from the MET Career Compass dataset.\nThe analysis focuses on a narrowly defined market built around NAICS 458 and a verified list of apparel and fashion employers. The current filtered dataset contains 19 job postings and is intended to provide a descriptive view of the selected market rather than represent the broader analytics labor market."
+    "text": "Target career pathway: Business/Data Analyst roles\nIndustry code: NAICS 458 (Clothing, Clothing Accessories, Shoe, and Jewelry Retailers), within the broader apparel and fashion retail sector\nIndustry label: Apparel and Fashion Retail"
   },
   {
-    "objectID": "index.html#project-overview",
-    "href": "index.html#project-overview",
-    "title": "AD688: Fashion and Apparel Career Evaluation - Group 7",
-    "section": "",
-    "text": "This project evaluates analytics-related career opportunities within the apparel and fashion industry using job-posting data from the MET Career Compass dataset.\nThe analysis focuses on a narrowly defined market built around NAICS 458 and a verified list of apparel and fashion employers. The current filtered dataset contains 19 job postings and is intended to provide a descriptive view of the selected market rather than represent the broader analytics labor market."
+    "objectID": "introduction.html#research-rationale",
+    "href": "introduction.html#research-rationale",
+    "title": "Career Pathway and Industry Scope",
+    "section": "Research Rationale",
+    "text": "Research Rationale\nBusiness and data analysts turn operational data into decisions organizations can act on. Apparel retail is a good place to study that work, since retailers are constantly reacting to seasonal demand, shifting consumer preferences, inventory limits, pricing calls, and supply chain pressure. Those conditions give analytical skills a direct, visible role in how the business runs.\nFor a student weighing an analytics career, it is not always obvious which skills employers actually care about, or whether their coursework and experience line up with what the job market expects. A title like “business analyst” or “data analyst” hides a lot of variation: some mix of technical ability, analytical thinking, communication, and business judgment, and the exact mix shifts by employer. This project tries to pin down which skills matter most for business/data analyst roles in apparel retail specifically, then checks that list against our own team’s current skills.\nThat is what separates this from a plain labor-market summary: it is meant to work as a career evaluation tool. A student should be able to look at it and see what employers are asking for, where their own strengths already line up, and what still needs work before they apply."
   },
   {
-    "objectID": "index.html#project-sections",
-    "href": "index.html#project-sections",
-    "title": "AD688: Fashion and Apparel Career Evaluation - Group 7",
-    "section": "Project Sections",
-    "text": "Project Sections\nUse the navigation bar above to explore the project:\n\nIntroduction — project scope, career pathway, and industry context\nData Preparation — filtering, cleaning, and preparation of the analytical dataset\nMarket Baseline — current job volume, salary, geography, experience, work arrangement, and employer patterns\nSkill Gap Analysis — comparison of market skill requirements with relevant career skills\nCareer Evaluation — evaluation of career opportunities using the project findings\nFinal Recommendations — overall conclusions and recommendations\n\nThe Market Baseline currently provides the descriptive foundation for the later skill-gap and career-evaluation stages of the project."
+    "objectID": "introduction.html#literature-review",
+    "href": "introduction.html#literature-review",
+    "title": "Career Pathway and Industry Scope",
+    "section": "Literature Review",
+    "text": "Literature Review\nUmamaheswaran et al. (2023) looked at what employers ask for in business analytics postings and found a consistent mix: big data, business intelligence, and analytical technique on one side, communication and stakeholder management on the other. That matters for how we think about readiness. Knowing the software is not enough on its own; an analyst also has to understand the business problem and explain results to people who are not going to read the code.\nApparel retail is a fitting test case for that combination. Forecasting, inventory, pricing, and supply chain decisions all show up as recurring analytical needs in clothing retail, and IBISWorld (2025) backs that up with broader industry context on clothing and clothing accessory retailers. Demand in this sector moves fast and shifts with the seasons, which is part of why data-supported decisions carry more weight here than they might in a slower-moving industry.\nRetail hiring overall backs up the case for treating analytics as its own career path within the industry. The Planet Group (2025) found that retail hiring has gotten more selective even as it leans harder into technology, analytics, and customer experience. So while fewer people may be getting hired overall, the analytical roles that support pricing, inventory, operations, and customer decisions do not seem to be losing ground.\nJob postings themselves give a more concrete look at what these roles ask for. Scanning ZipRecruiter listings, SQL, Excel, and a visualization tool like Tableau or Power BI show up repeatedly, alongside the usual asks for analytical and communication skills (ZipRecruiter, 2026b). We are treating this as a starting point rather than a finding, since individual job postings vary a lot by employer, seniority, and timing.\nThe same postings also show a fair amount of spread in pay and remote availability (ZipRecruiter, 2026a). Salary and remote work are not the central question we are asking, but they are useful context for judging how attractive a given role is. Once we are working with the MET Employability Career Match data, we will be able to check whether these early patterns hold up within our apparel retail scope specifically.\nAcross these sources, the same picture keeps showing up: business/data analyst roles need technical skill, analytical thinking, and the ability to work with the business side, all at once. What none of this tells us yet is which of those skills matter most specifically in apparel retail, or how close our own skills already are to that bar. That gap is what this project is built to close."
+  },
+  {
+    "objectID": "introduction.html#target-user",
+    "href": "introduction.html#target-user",
+    "title": "Career Pathway and Industry Scope",
+    "section": "Target User",
+    "text": "Target User\nThis product is aimed at BU MET students who are exploring analytics career paths and want a clearer picture of which industries and skills to prioritize. Our goal is to help someone in this position understand what a business/data analyst role in apparel retail actually looks like, so they can decide whether it fits their interests and know what to learn next if it does."
+  },
+  {
+    "objectID": "introduction.html#product-question",
+    "href": "introduction.html#product-question",
+    "title": "Career Pathway and Industry Scope",
+    "section": "Product Question",
+    "text": "Product Question\nWhich skills are most valued for business/data analyst roles in apparel retail and how well does our team’s current skill set match those demands?"
+  },
+  {
+    "objectID": "introduction.html#met-employability-career-match-fields-we-expect-to-use",
+    "href": "introduction.html#met-employability-career-match-fields-we-expect-to-use",
+    "title": "Career Pathway and Industry Scope",
+    "section": "MET Employability Career Match Fields We Expect to Use",
+    "text": "MET Employability Career Match Fields We Expect to Use\nWe plan to use title/normalized_title, naics_code, skills, annual_salary_min/annual_salary_max, remote_status, city/state, and soc_code. These fields should let us see which skills and pay levels matter most for business/data analyst roles in apparel retail."
+  },
+  {
+    "objectID": "introduction.html#references",
+    "href": "introduction.html#references",
+    "title": "Career Pathway and Industry Scope",
+    "section": "References",
+    "text": "References\n\n\nIBISWorld. (2025). Clothing and clothing accessory retailers in the US. https://www.ibisworld.com/united-states/industry/clothing-and-clothing-accessory-retailers/2048/\n\n\nThe Planet Group. (2025). Retail workforce report 2025. https://www.theplanetgroup.com/job-reports/retail-jobs-report-2025\n\n\nUmamaheswaran, S., Fernandes, S., Venkatesh, V. G., Avula, N., & Shi, Y. (2023). What do employers look for in \"business analytics\" roles? – a skill mining analysis. Information Systems Frontiers. https://doi.org/10.1007/s10796-023-10437-y\n\n\nZipRecruiter. (2026a). Retail data analyst remote jobs. https://www.ziprecruiter.com/Jobs/Retail-Data-Analyst-Remote\n\n\nZipRecruiter. (2026b). Work from home retail analyst jobs. https://www.ziprecruiter.com/Jobs/Work-From-Home-Retail-Analyst"
   },
   {
     "objectID": "data_dictionary.html",
@@ -147,67 +154,18 @@
     "text": "Field\nDescription\n\n\n\n\nNAICS_2022_6\n6-digit NAICS 2022 industry code\n\n\nNAICS_2022_6_NAME\nIndustry name for the NAICS code\n\n\nSOC_5\n5-digit SOC occupation code\n\n\nSOC_5_NAME\nOccupation name for the SOC code"
   },
   {
-    "objectID": "introduction.html",
-    "href": "introduction.html",
-    "title": "Career Pathway and Industry Scope",
-    "section": "",
-    "text": "Target career pathway: Business/Data Analyst roles\nIndustry code: NAICS 458 (Clothing, Clothing Accessories, Shoe, and Jewelry Retailers), within the broader apparel and fashion retail sector\nIndustry label: Apparel and Fashion Retail"
-  },
-  {
-    "objectID": "introduction.html#research-rationale",
-    "href": "introduction.html#research-rationale",
-    "title": "Career Pathway and Industry Scope",
-    "section": "Research Rationale",
-    "text": "Research Rationale\nBusiness and data analysts turn operational data into decisions organizations can act on. Apparel retail is a good place to study that work, since retailers are constantly reacting to seasonal demand, shifting consumer preferences, inventory limits, pricing calls, and supply chain pressure. Those conditions give analytical skills a direct, visible role in how the business runs.\nFor a student weighing an analytics career, it is not always obvious which skills employers actually care about, or whether their coursework and experience line up with what the job market expects. A title like “business analyst” or “data analyst” hides a lot of variation: some mix of technical ability, analytical thinking, communication, and business judgment, and the exact mix shifts by employer. This project tries to pin down which skills matter most for business/data analyst roles in apparel retail specifically, then checks that list against our own team’s current skills.\nThat is what separates this from a plain labor-market summary: it is meant to work as a career evaluation tool. A student should be able to look at it and see what employers are asking for, where their own strengths already line up, and what still needs work before they apply."
-  },
-  {
-    "objectID": "introduction.html#literature-review",
-    "href": "introduction.html#literature-review",
-    "title": "Career Pathway and Industry Scope",
-    "section": "Literature Review",
-    "text": "Literature Review\nUmamaheswaran et al. (2023) looked at what employers ask for in business analytics postings and found a consistent mix: big data, business intelligence, and analytical technique on one side, communication and stakeholder management on the other. That matters for how we think about readiness. Knowing the software is not enough on its own; an analyst also has to understand the business problem and explain results to people who are not going to read the code.\nApparel retail is a fitting test case for that combination. Forecasting, inventory, pricing, and supply chain decisions all show up as recurring analytical needs in clothing retail, and IBISWorld (2025) backs that up with broader industry context on clothing and clothing accessory retailers. Demand in this sector moves fast and shifts with the seasons, which is part of why data-supported decisions carry more weight here than they might in a slower-moving industry.\nRetail hiring overall backs up the case for treating analytics as its own career path within the industry. The Planet Group (2025) found that retail hiring has gotten more selective even as it leans harder into technology, analytics, and customer experience. So while fewer people may be getting hired overall, the analytical roles that support pricing, inventory, operations, and customer decisions do not seem to be losing ground.\nJob postings themselves give a more concrete look at what these roles ask for. Scanning ZipRecruiter listings, SQL, Excel, and a visualization tool like Tableau or Power BI show up repeatedly, alongside the usual asks for analytical and communication skills (ZipRecruiter, 2026b). We are treating this as a starting point rather than a finding, since individual job postings vary a lot by employer, seniority, and timing.\nThe same postings also show a fair amount of spread in pay and remote availability (ZipRecruiter, 2026a). Salary and remote work are not the central question we are asking, but they are useful context for judging how attractive a given role is. Once we are working with the MET Employability Career Match data, we will be able to check whether these early patterns hold up within our apparel retail scope specifically.\nAcross these sources, the same picture keeps showing up: business/data analyst roles need technical skill, analytical thinking, and the ability to work with the business side, all at once. What none of this tells us yet is which of those skills matter most specifically in apparel retail, or how close our own skills already are to that bar. That gap is what this project is built to close."
-  },
-  {
-    "objectID": "introduction.html#target-user",
-    "href": "introduction.html#target-user",
-    "title": "Career Pathway and Industry Scope",
-    "section": "Target User",
-    "text": "Target User\nThis product is aimed at BU MET students who are exploring analytics career paths and want a clearer picture of which industries and skills to prioritize. Our goal is to help someone in this position understand what a business/data analyst role in apparel retail actually looks like, so they can decide whether it fits their interests and know what to learn next if it does."
-  },
-  {
-    "objectID": "introduction.html#product-question",
-    "href": "introduction.html#product-question",
-    "title": "Career Pathway and Industry Scope",
-    "section": "Product Question",
-    "text": "Product Question\nWhich skills are most valued for business/data analyst roles in apparel retail and how well does our team’s current skill set match those demands?"
-  },
-  {
-    "objectID": "introduction.html#met-employability-career-match-fields-we-expect-to-use",
-    "href": "introduction.html#met-employability-career-match-fields-we-expect-to-use",
-    "title": "Career Pathway and Industry Scope",
-    "section": "MET Employability Career Match Fields We Expect to Use",
-    "text": "MET Employability Career Match Fields We Expect to Use\nWe plan to use title/normalized_title, naics_code, skills, annual_salary_min/annual_salary_max, remote_status, city/state, and soc_code. These fields should let us see which skills and pay levels matter most for business/data analyst roles in apparel retail."
-  },
-  {
-    "objectID": "introduction.html#references",
-    "href": "introduction.html#references",
-    "title": "Career Pathway and Industry Scope",
-    "section": "References",
-    "text": "References\n\n\nIBISWorld. (2025). Clothing and clothing accessory retailers in the US. https://www.ibisworld.com/united-states/industry/clothing-and-clothing-accessory-retailers/2048/\n\n\nThe Planet Group. (2025). Retail workforce report 2025. https://www.theplanetgroup.com/job-reports/retail-jobs-report-2025\n\n\nUmamaheswaran, S., Fernandes, S., Venkatesh, V. G., Avula, N., & Shi, Y. (2023). What do employers look for in \"business analytics\" roles? – a skill mining analysis. Information Systems Frontiers. https://doi.org/10.1007/s10796-023-10437-y\n\n\nZipRecruiter. (2026a). Retail data analyst remote jobs. https://www.ziprecruiter.com/Jobs/Retail-Data-Analyst-Remote\n\n\nZipRecruiter. (2026b). Work from home retail analyst jobs. https://www.ziprecruiter.com/Jobs/Work-From-Home-Retail-Analyst"
-  },
-  {
     "objectID": "data_preparation.html",
     "href": "data_preparation.html",
     "title": "Data Preparation",
     "section": "",
-    "text": "import pandas as pd\n\ndf = pd.read_csv(\"data/interim/apparel_analyst_filtered.csv\")\nprint(f\"Loaded {len(df)} rows, {len(df.columns)} columns\")\ndf.info()\n\nLoaded 19 rows, 125 columns\n&lt;class 'pandas.DataFrame'&gt;\nRangeIndex: 19 entries, 0 to 18\nColumns: 125 entries, ID to COMPANY_CLEAN\ndtypes: float64(38), int64(2), str(85)\nmemory usage: 18.7 KB"
+    "text": "import pandas as pd\n\ndf = pd.read_csv(\"data/interim/apparel_analyst_filtered.csv\")\nprint(f\"Loaded {len(df)} rows, {len(df.columns)} columns\")\ndf.info()\n\nLoaded 19 rows, 125 columns\n&lt;class 'pandas.DataFrame'&gt;\nRangeIndex: 19 entries, 0 to 18\nColumns: 125 entries, ID to COMPANY_CLEAN\ndtypes: float64(38), int64(2), str(85)\nmemory usage: 122.6 KB"
   },
   {
     "objectID": "data_preparation.html#load-the-filtered-dataset",
     "href": "data_preparation.html#load-the-filtered-dataset",
     "title": "Data Preparation",
     "section": "",
-    "text": "import pandas as pd\n\ndf = pd.read_csv(\"data/interim/apparel_analyst_filtered.csv\")\nprint(f\"Loaded {len(df)} rows, {len(df.columns)} columns\")\ndf.info()\n\nLoaded 19 rows, 125 columns\n&lt;class 'pandas.DataFrame'&gt;\nRangeIndex: 19 entries, 0 to 18\nColumns: 125 entries, ID to COMPANY_CLEAN\ndtypes: float64(38), int64(2), str(85)\nmemory usage: 18.7 KB"
+    "text": "import pandas as pd\n\ndf = pd.read_csv(\"data/interim/apparel_analyst_filtered.csv\")\nprint(f\"Loaded {len(df)} rows, {len(df.columns)} columns\")\ndf.info()\n\nLoaded 19 rows, 125 columns\n&lt;class 'pandas.DataFrame'&gt;\nRangeIndex: 19 entries, 0 to 18\nColumns: 125 entries, ID to COMPANY_CLEAN\ndtypes: float64(38), int64(2), str(85)\nmemory usage: 122.6 KB"
   },
   {
     "objectID": "data_preparation.html#clean-salary-fields",
@@ -252,45 +210,87 @@
     "text": "Note on Sample Size\nThe final cleaned dataset contains 19 job postings. This reflects a known limitation of NAICS-based industry classification: many analytics roles at apparel/retail companies are tagged under unrelated NAICS codes rather than under clothing retail codes specifically. To compensate, this dataset combines NAICS 458 (Clothing, Clothing Accessories, Shoe, and Jewelry Retailers) with an exact-match list of known apparel/fashion company names, then filters to narrow analyst job titles (business analyst, data analyst). The resulting sample size is small but each row is a verified, legitimate match."
   },
   {
-    "objectID": "skill_gap_analysis.html",
-    "href": "skill_gap_analysis.html",
-    "title": "Skill Gap Analysis",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "AD688: Fashion and Apparel Career Evaluation - Group 7",
     "section": "",
-    "text": "This page compares the skills most commonly requested in our filtered apparel and fashion analytics job postings against the team’s current skill levels, to identify where the team is well-positioned and where there are gaps worth addressing."
+    "text": "This project evaluates analytics-related career opportunities within the apparel and fashion industry using job-posting data from the MET Career Compass dataset.\nThe analysis focuses on a narrowly defined market built around NAICS 458 and a verified list of apparel and fashion employers. The current filtered dataset contains 19 job postings and is intended to provide a descriptive view of the selected market rather than represent the broader analytics labor market."
   },
   {
-    "objectID": "skill_gap_analysis.html#overview",
-    "href": "skill_gap_analysis.html#overview",
-    "title": "Skill Gap Analysis",
+    "objectID": "index.html#project-overview",
+    "href": "index.html#project-overview",
+    "title": "AD688: Fashion and Apparel Career Evaluation - Group 7",
     "section": "",
-    "text": "This page compares the skills most commonly requested in our filtered apparel and fashion analytics job postings against the team’s current skill levels, to identify where the team is well-positioned and where there are gaps worth addressing."
+    "text": "This project evaluates analytics-related career opportunities within the apparel and fashion industry using job-posting data from the MET Career Compass dataset.\nThe analysis focuses on a narrowly defined market built around NAICS 458 and a verified list of apparel and fashion employers. The current filtered dataset contains 19 job postings and is intended to provide a descriptive view of the selected market rather than represent the broader analytics labor market."
   },
   {
-    "objectID": "skill_gap_analysis.html#most-in-demand-skills",
-    "href": "skill_gap_analysis.html#most-in-demand-skills",
-    "title": "Skill Gap Analysis",
-    "section": "Most In-Demand Skills",
-    "text": "Most In-Demand Skills\nSkill fields were parsed from each posting’s listed skills. Counts reflect how many of the 19 filtered postings mention each skill at least once.\n\n\n\n\n\n\n\n\n\nPower BI and SQL are the most frequently requested skills, each appearing in 7 of the 19 postings, followed by Python and Microsoft Excel in 5 postings each. Digital Marketing appears in 4 postings. The remaining skills appear in 2 to 3 postings each, reflecting a mix of technical, analytical, and communication-related requirements across the sample."
+    "objectID": "index.html#project-sections",
+    "href": "index.html#project-sections",
+    "title": "AD688: Fashion and Apparel Career Evaluation - Group 7",
+    "section": "Project Sections",
+    "text": "Project Sections\nUse the navigation bar above to explore the project:\n\nIntroduction — project scope, career pathway, and industry context\nData Preparation — filtering, cleaning, and preparation of the analytical dataset\nMarket Baseline — current job volume, salary, geography, experience, work arrangement, and employer patterns\nSkill Gap Analysis — comparison of market skill requirements with relevant career skills\nCareer Evaluation — evaluation of career opportunities using the project findings\nFinal Recommendations — overall conclusions and recommendations\n\nThe Market Baseline currently provides the descriptive foundation for the later skill-gap and career-evaluation stages of the project."
   },
   {
-    "objectID": "skill_gap_analysis.html#team-skill-comparison",
-    "href": "skill_gap_analysis.html#team-skill-comparison",
-    "title": "Skill Gap Analysis",
-    "section": "Team Skill Comparison",
-    "text": "Team Skill Comparison\nEach team member self-rated their proficiency (1 = Beginner, 5 = Expert) on the eight most in-demand skills identified above.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAs a team, Data Analysis and Excel show the strongest average proficiency (4.0 and 4.25 respectively), reflecting consistent comfort across all four members. Power BI and Python show the lowest average proficiency (2.75 each), both sitting below the “Intermediate” level as a team average. Digital Marketing shows the widest spread across the team, ranging from 2 (Beginner) to 4 (Advanced), reflecting the team’s mixed backgrounds."
+    "objectID": "market_baseline.html",
+    "href": "market_baseline.html",
+    "title": "Market Baseline",
+    "section": "",
+    "text": "This page summarizes the baseline characteristics of the selected apparel and fashion analytics job market. The final filtered dataset contains 19 verified job postings based on the team’s selected NAICS 458 scope and an additional exact-match list of known apparel and fashion employers.\nBecause the market definition is intentionally narrow, the results should be interpreted as a descriptive snapshot of the selected apparel and fashion analytics market rather than as estimates of the broader analytics labor market."
   },
   {
-    "objectID": "skill_gap_analysis.html#skill-gaps",
-    "href": "skill_gap_analysis.html#skill-gaps",
-    "title": "Skill Gap Analysis",
-    "section": "Skill Gaps",
-    "text": "Skill Gaps\nComparing market demand (posting frequency) against team proficiency highlights where the team is well-covered and where gaps exist relative to what the market is asking for.\nPower BI is the single largest gap: it is tied for the most in-demand skill in the market (7 of 19 postings) but has the lowest average team proficiency (2.75). SQL, the other most in-demand skill (7 of 19 postings), sits at a moderate team average (3.25), suggesting a smaller but still real gap. Python, requested in 5 postings, also averages only 2.75 across the team.\nBy contrast, Excel and Data Analysis, both requested in the market, are also the team’s strongest areas, so no meaningful gap exists there. Digital Marketing is requested in 4 postings and shows uneven team coverage (one member at Beginner, others Intermediate to Advanced), which is a gap for some but not all team members individually."
+    "objectID": "market_baseline.html#market-overview",
+    "href": "market_baseline.html#market-overview",
+    "title": "Market Baseline",
+    "section": "",
+    "text": "This page summarizes the baseline characteristics of the selected apparel and fashion analytics job market. The final filtered dataset contains 19 verified job postings based on the team’s selected NAICS 458 scope and an additional exact-match list of known apparel and fashion employers.\nBecause the market definition is intentionally narrow, the results should be interpreted as a descriptive snapshot of the selected apparel and fashion analytics market rather than as estimates of the broader analytics labor market."
   },
   {
-    "objectID": "skill_gap_analysis.html#improvement-plan",
-    "href": "skill_gap_analysis.html#improvement-plan",
-    "title": "Skill Gap Analysis",
-    "section": "Improvement Plan",
-    "text": "Improvement Plan\nBased on the gaps identified above, the team’s priorities for skill-building are:\n\nPower BI — the clearest gap given how frequently it appears in postings relative to team proficiency. Short, structured resources (Microsoft’s free Power BI learning path, or a guided project rebuilding one of this project’s own charts in Power BI) would directly address this.\nSQL — a moderate gap; practicing with the project’s own filtered dataset (writing queries against apparel_analyst_clean.csv loaded into a local SQLite database) ties skill-building directly to the project itself.\nPython — similarly moderate; continuing to build on the pandas work already done in data_preparation.qmd and this page is a natural, low-cost way to keep strengthening this skill through the remainder of the project.\n\nTo close these gaps as a team, members with higher individual proficiency in a given skill (e.g. whoever rated highest in SQL or Power BI) could briefly walk the others through their approach when relevant project tasks come up, rather than treating skill-building as a separate exercise from the coursework itself."
+    "objectID": "market_baseline.html#job-volume-by-title-or-segment",
+    "href": "market_baseline.html#job-volume-by-title-or-segment",
+    "title": "Market Baseline",
+    "section": "Job Volume by Title or Segment",
+    "text": "Job Volume by Title or Segment\nJob titles provide an initial view of the types of analytics roles represented within the selected apparel and fashion market.\n\n\n\n\n\n\n\n\n\nThe 19-posting sample contains a mix of analyst, business intelligence, ecommerce analytics, merchandise analytics, and senior analytics roles. Most job titles appear only once, suggesting that the selected market is relatively specialized and fragmented rather than concentrated around a single standardized title. A small number of titles appear more than once, but overall the postings span several analytics-related functions within apparel and fashion retail."
+  },
+  {
+    "objectID": "market_baseline.html#salary-distribution",
+    "href": "market_baseline.html#salary-distribution",
+    "title": "Market Baseline",
+    "section": "Salary Distribution",
+    "text": "Salary Distribution\nSalary information is incomplete in the filtered dataset. Only postings with an originally reported salary range are included in this analysis. Missing salaries that were filled during data preparation are excluded so that the results reflect observed compensation information rather than imputed values.\n\n\nPostings with observed salary ranges: 4 of 19\n\n\n\n\n\n\n\n\n\n\n\nOnly 4 of the 19 postings contain an observed salary range, so the salary findings should be interpreted cautiously. The available postings show variation in both the lower and upper ends of reported compensation, but the small number of observations is not sufficient to characterize salary levels across the full selected apparel and fashion analytics market. The chart therefore presents only compensation that was explicitly reported in the source postings."
+  },
+  {
+    "objectID": "market_baseline.html#location-patterns",
+    "href": "market_baseline.html#location-patterns",
+    "title": "Market Baseline",
+    "section": "Location Patterns",
+    "text": "Location Patterns\nGeographic information is available for most postings. A small amount of additional standardization is applied below to consolidate obvious differences in state and city labels.\n\n\n\n\n\n\n\n\n\nThe 19-posting sample is concentrated in a small number of states. California and Massachusetts each account for 5 postings, followed by New York with 4 and Oregon with 3. Texas contributes 1 posting, while 1 record does not contain a usable state value. This geographic concentration appears to reflect the locations of the apparel and fashion employers represented in the filtered sample rather than a geographically representative view of the broader analytics labor market."
+  },
+  {
+    "objectID": "market_baseline.html#experience-requirement-distribution",
+    "href": "market_baseline.html#experience-requirement-distribution",
+    "title": "Market Baseline",
+    "section": "Experience Requirement Distribution",
+    "text": "Experience Requirement Distribution\nExperience requirements are incomplete in the source data. This analysis uses only minimum experience values that were present in the filtered dataset before missing values were filled during data preparation.\n\n\nPostings with observed minimum experience requirements: 9 of 19\n\n\n\n\n\n\n\n\n\n\n\nMinimum experience information is available for 9 of the 19 postings. Among those records, 7 postings show a recorded minimum of 0 years and 2 postings show a minimum of 5 years. Because experience information is missing for more than half of the sample, these values should be interpreted as the requirements recorded in the available source data rather than as a complete representation of experience expectations across the selected market."
+  },
+  {
+    "objectID": "market_baseline.html#remote-vs-onsite-patterns",
+    "href": "market_baseline.html#remote-vs-onsite-patterns",
+    "title": "Market Baseline",
+    "section": "Remote vs Onsite Patterns",
+    "text": "Remote vs Onsite Patterns\nWork-arrangement information is limited in the source data. Rather than assuming that postings with missing remote-status information are onsite roles, records without a reported work arrangement are retained as a separate “Not specified” category.\n\n\nPostings with an identifiable work arrangement: 4 of 19\n\n\n\n\n\n\n\n\n\n\n\nAn identifiable work arrangement is available for only 4 of the 19 postings. Three postings are classified as hybrid and one as fully remote. The remaining 15 postings either do not report a work arrangement or contain an unknown value. No posting in the available sample is explicitly classified as onsite. Because work-arrangement information is unavailable for most of the sample, these results should not be used to infer the overall prevalence of remote, hybrid, or onsite work in the selected market."
+  },
+  {
+    "objectID": "market_baseline.html#top-employers",
+    "href": "market_baseline.html#top-employers",
+    "title": "Market Baseline",
+    "section": "Top Employers",
+    "text": "Top Employers\nEmployer names are standardized below to consolidate obvious duplicate labels before comparing hiring activity within the selected market.\n\n\nEmployers represented in the sample: 8\n\n\n\n\n\n\n\n\n\n\n\nHiring activity in the selected sample is concentrated among a small number of apparel and retail employers. Vuori and TJX each account for 5 postings, followed by Adidas with 3 and Ralph Lauren with 2. Nordstrom, Foot Locker, Michaels, and Macy’s each contribute 1 posting. These counts should be interpreted within the context of the small, intentionally filtered dataset rather than as a ranking of overall hiring activity across the apparel and fashion industry."
+  },
+  {
+    "objectID": "market_baseline.html#baseline-summary",
+    "href": "market_baseline.html#baseline-summary",
+    "title": "Market Baseline",
+    "section": "Baseline Summary",
+    "text": "Baseline Summary\nThe market baseline provides a descriptive snapshot of analytics-related opportunities within the selected apparel and fashion industry scope. The final dataset contains 19 verified job postings and shows that analytics work appears across several functional areas, including business intelligence, merchandising, ecommerce, finance, operations, and marketing.\nHiring activity is concentrated among a small group of employers and locations. Vuori and TJX each account for 5 postings, while California and Massachusetts each account for 5 postings. New York and Oregon also represent notable hiring locations within the sample.\nSeveral variables have substantial missing information. Only 4 postings contain observed salary ranges, 9 contain recorded minimum experience requirements, and 4 contain an identifiable work arrangement. These limitations are retained explicitly in the analysis rather than treating imputed or missing values as if they were directly reported by employers.\nOverall, the findings should be interpreted as a baseline for this narrowly defined apparel and fashion analytics market rather than as estimates of the broader analytics labor market. The results provide a foundation for the later skill-gap and career-evaluation stages of the project."
   }
 ]
