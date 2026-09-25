@@ -250,5 +250,40 @@
     "title": "Market Baseline",
     "section": "Baseline Summary",
     "text": "Baseline Summary\nThe market baseline provides a descriptive snapshot of analytics-related opportunities within the selected apparel and fashion industry scope. The final dataset contains 19 verified job postings and shows that analytics work appears across several functional areas, including business intelligence, merchandising, ecommerce, finance, operations, and marketing.\nHiring activity is concentrated among a small group of employers and locations. Vuori and TJX each account for 5 postings, while California and Massachusetts each account for 5 postings. New York and Oregon also represent notable hiring locations within the sample.\nSeveral variables have substantial missing information. Only 4 postings contain observed salary ranges, 9 contain recorded minimum experience requirements, and 4 contain an identifiable work arrangement. These limitations are retained explicitly in the analysis rather than treating imputed or missing values as if they were directly reported by employers.\nOverall, the findings should be interpreted as a baseline for this narrowly defined apparel and fashion analytics market rather than as estimates of the broader analytics labor market. The results provide a foundation for the later skill-gap and career-evaluation stages of the project."
+  },
+  {
+    "objectID": "skill_gap_analysis.html",
+    "href": "skill_gap_analysis.html",
+    "title": "Skill Gap Analysis",
+    "section": "",
+    "text": "This page compares the skills most commonly requested in our filtered apparel and fashion analytics job postings against the team’s current skill levels, to identify where the team is well-positioned and where there are gaps worth addressing."
+  },
+  {
+    "objectID": "skill_gap_analysis.html#overview",
+    "href": "skill_gap_analysis.html#overview",
+    "title": "Skill Gap Analysis",
+    "section": "",
+    "text": "This page compares the skills most commonly requested in our filtered apparel and fashion analytics job postings against the team’s current skill levels, to identify where the team is well-positioned and where there are gaps worth addressing."
+  },
+  {
+    "objectID": "skill_gap_analysis.html#most-in-demand-skills",
+    "href": "skill_gap_analysis.html#most-in-demand-skills",
+    "title": "Skill Gap Analysis",
+    "section": "Most In-Demand Skills",
+    "text": "Most In-Demand Skills\nSkill fields were parsed from each posting’s listed skills. Counts reflect how many of the 19 filtered postings mention each skill at least once.\n\n\n\n\n\n\n\n\n\nPower BI and SQL are the most frequently requested skills, each appearing in 7 of the 19 postings, followed by Python and Microsoft Excel in 5 postings each. Digital Marketing appears in 4 postings. The remaining skills appear in 2 to 3 postings each, reflecting a mix of technical, analytical, and communication-related requirements across the sample."
+  },
+  {
+    "objectID": "skill_gap_analysis.html#team-skill-comparison",
+    "href": "skill_gap_analysis.html#team-skill-comparison",
+    "title": "Skill Gap Analysis",
+    "section": "Team Skill Comparison",
+    "text": "Team Skill Comparison\nThis section is pending team self-assessments (1-5 proficiency scale) for the skills identified above. Once collected, this section will compare team skill levels against market demand using a heatmap, following the same approach as the class example."
+  },
+  {
+    "objectID": "skill_gap_analysis.html#improvement-plan",
+    "href": "skill_gap_analysis.html#improvement-plan",
+    "title": "Skill Gap Analysis",
+    "section": "Improvement Plan",
+    "text": "Improvement Plan\nTo be completed once the team skill comparison above is available: which skills each member should prioritize, what resources could help close identified gaps, and how the team can collaborate to build missing skills."
   }
 ]
