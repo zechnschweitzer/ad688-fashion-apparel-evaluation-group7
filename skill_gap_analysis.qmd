@@ -19,14 +19,16 @@ This page compares the skills most commonly requested in our filtered apparel an
 import ast
 import os
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
+import plotly.express as px
+import plotly.graph_objects as go
 from collections import Counter
-from matplotlib.ticker import MaxNLocator
 
 clean_df = pd.read_csv("data/processed/apparel_analyst_clean.csv")
 
 os.makedirs("figures/skill_gap_analysis", exist_ok=True)
+
+PLOTLY_TEMPLATE = "plotly_white"
+PLOTLY_COLOR = "#2C6E8C"
 ```
 
 ## Most In-Demand Skills
@@ -48,36 +50,34 @@ skill_counts = Counter(all_skills)
 
 top_skills = (
     pd.Series(skill_counts)
-    .sort_values()
+    .sort_values(ascending=True)
     .tail(15)
 )
 
-plt.figure(figsize=(8, 6))
-
-top_skills.plot(kind="barh")
-
-plt.title(
-    "Most In-Demand Skills in Apparel Analytics Postings",
-    fontsize=12,
-    pad=10
+fig_top_skills = px.bar(
+    x=top_skills.values,
+    y=top_skills.index,
+    orientation="h",
+    template=PLOTLY_TEMPLATE,
+    color_discrete_sequence=[PLOTLY_COLOR],
+    labels={
+        "x": "Number of Postings Mentioning Skill",
+        "y": "Skill"
+    },
+    title="Most In-Demand Skills in Apparel Analytics Postings"
 )
 
-plt.xlabel("Number of Postings Mentioning Skill")
-plt.ylabel("Skill")
-
-plt.gca().xaxis.set_major_locator(
-    MaxNLocator(integer=True)
+fig_top_skills.update_layout(
+    title_x=0.5,
+    height=500
 )
 
-plt.tight_layout()
-
-plt.savefig(
+fig_top_skills.write_image(
     "figures/skill_gap_analysis/top_skills.png",
-    dpi=300,
-    bbox_inches="tight"
+    scale=2
 )
 
-plt.show()
+fig_top_skills.show()
 ```
 
 Power BI and SQL are the most frequently requested skills, each appearing in 7 of the 19 postings, followed by Python and Microsoft Excel in 5 postings each. Digital Marketing appears in 4 postings. The remaining skills appear in 2 to 3 postings each, reflecting a mix of technical, analytical, and communication-related requirements across the sample.
@@ -104,63 +104,60 @@ skills_data = {
 df_skills = pd.DataFrame(skills_data)
 df_skills.set_index("Name", inplace=True)
 
-plt.figure(figsize=(9, 5))
-
-sns.heatmap(
+fig_heatmap = px.imshow(
     df_skills,
-    annot=True,
-    cmap="coolwarm",
-    linewidths=0.5,
-    vmin=1,
-    vmax=5
+    text_auto=True,
+    color_continuous_scale="RdBu_r",
+    zmin=1,
+    zmax=5,
+    template=PLOTLY_TEMPLATE,
+    labels=dict(color="Proficiency"),
+    title="Team Skill Levels (1 = Beginner, 5 = Expert)"
 )
 
-plt.title(
-    "Team Skill Levels (1 = Beginner, 5 = Expert)",
-    fontsize=12,
-    pad=10
+fig_heatmap.update_layout(
+    title_x=0.5,
+    height=450
 )
 
-plt.tight_layout()
-
-plt.savefig(
+fig_heatmap.write_image(
     "figures/skill_gap_analysis/team_skill_heatmap.png",
-    dpi=300,
-    bbox_inches="tight"
+    scale=2
 )
 
-plt.show()
+fig_heatmap.show()
 ```
 
 ```{python}
 #| echo: false
 
-team_avg = df_skills.mean().sort_values()
+team_avg = df_skills.mean().sort_values(ascending=True)
 
-plt.figure(figsize=(7, 4.5))
-
-team_avg.plot(kind="barh")
-
-plt.title(
-    "Average Team Proficiency by Skill",
-    fontsize=12,
-    pad=10
+fig_avg = px.bar(
+    x=team_avg.values,
+    y=team_avg.index,
+    orientation="h",
+    template=PLOTLY_TEMPLATE,
+    color_discrete_sequence=[PLOTLY_COLOR],
+    labels={
+        "x": "Average Proficiency (1-5)",
+        "y": "Skill"
+    },
+    title="Average Team Proficiency by Skill",
+    range_x=[0, 5]
 )
 
-plt.xlabel("Average Proficiency (1-5)")
-plt.ylabel("Skill")
+fig_avg.update_layout(
+    title_x=0.5,
+    height=400
+)
 
-plt.xlim(0, 5)
-
-plt.tight_layout()
-
-plt.savefig(
+fig_avg.write_image(
     "figures/skill_gap_analysis/team_average_proficiency.png",
-    dpi=300,
-    bbox_inches="tight"
+    scale=2
 )
 
-plt.show()
+fig_avg.show()
 ```
 
 As a team, Data Analysis and Excel show the strongest average proficiency (4.0 and 4.25 respectively), reflecting consistent comfort across all four members. Power BI and Python show the lowest average proficiency (2.75 each), both sitting below the "Intermediate" level as a team average. Digital Marketing shows the widest spread across the team, ranging from 2 (Beginner) to 4 (Advanced), reflecting the team's mixed backgrounds.

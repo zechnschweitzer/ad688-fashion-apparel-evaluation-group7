@@ -18,14 +18,14 @@
     "href": "skill_gap_analysis.html#most-in-demand-skills",
     "title": "Skill Gap Analysis",
     "section": "Most In-Demand Skills",
-    "text": "Most In-Demand Skills\nSkill fields were parsed from each posting’s listed skills. Counts reflect how many of the 19 filtered postings mention each skill at least once.\n\n\n\n\n\n\n\n\n\nPower BI and SQL are the most frequently requested skills, each appearing in 7 of the 19 postings, followed by Python and Microsoft Excel in 5 postings each. Digital Marketing appears in 4 postings. The remaining skills appear in 2 to 3 postings each, reflecting a mix of technical, analytical, and communication-related requirements across the sample."
+    "text": "Most In-Demand Skills\nSkill fields were parsed from each posting’s listed skills. Counts reflect how many of the 19 filtered postings mention each skill at least once.\n\n\n                            \n                                            \n\n\nPower BI and SQL are the most frequently requested skills, each appearing in 7 of the 19 postings, followed by Python and Microsoft Excel in 5 postings each. Digital Marketing appears in 4 postings. The remaining skills appear in 2 to 3 postings each, reflecting a mix of technical, analytical, and communication-related requirements across the sample."
   },
   {
     "objectID": "skill_gap_analysis.html#team-skill-comparison",
     "href": "skill_gap_analysis.html#team-skill-comparison",
     "title": "Skill Gap Analysis",
     "section": "Team Skill Comparison",
-    "text": "Team Skill Comparison\nEach team member self-rated their proficiency (1 = Beginner, 5 = Expert) on the eight most in-demand skills identified above.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAs a team, Data Analysis and Excel show the strongest average proficiency (4.0 and 4.25 respectively), reflecting consistent comfort across all four members. Power BI and Python show the lowest average proficiency (2.75 each), both sitting below the “Intermediate” level as a team average. Digital Marketing shows the widest spread across the team, ranging from 2 (Beginner) to 4 (Advanced), reflecting the team’s mixed backgrounds."
+    "text": "Team Skill Comparison\nEach team member self-rated their proficiency (1 = Beginner, 5 = Expert) on the eight most in-demand skills identified above.\n\n\n                            \n                                            \n\n\n\n\n                            \n                                            \n\n\nAs a team, Data Analysis and Excel show the strongest average proficiency (4.0 and 4.25 respectively), reflecting consistent comfort across all four members. Power BI and Python show the lowest average proficiency (2.75 each), both sitting below the “Intermediate” level as a team average. Digital Marketing shows the widest spread across the team, ranging from 2 (Beginner) to 4 (Advanced), reflecting the team’s mixed backgrounds."
   },
   {
     "objectID": "skill_gap_analysis.html#skill-gaps",
