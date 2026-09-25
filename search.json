@@ -250,5 +250,40 @@
     "title": "Data Preparation",
     "section": "Note on Sample Size",
     "text": "Note on Sample Size\nThe final cleaned dataset contains 19 job postings. This reflects a known limitation of NAICS-based industry classification: many analytics roles at apparel/retail companies are tagged under unrelated NAICS codes rather than under clothing retail codes specifically. To compensate, this dataset combines NAICS 458 (Clothing, Clothing Accessories, Shoe, and Jewelry Retailers) with an exact-match list of known apparel/fashion company names, then filters to narrow analyst job titles (business analyst, data analyst). The resulting sample size is small but each row is a verified, legitimate match."
+  },
+  {
+    "objectID": "skill_gap_analysis.html",
+    "href": "skill_gap_analysis.html",
+    "title": "Skill Gap Analysis",
+    "section": "",
+    "text": "This page compares the skills most commonly requested in our filtered apparel and fashion analytics job postings against the team’s current skill levels, to identify where the team is well-positioned and where there are gaps worth addressing."
+  },
+  {
+    "objectID": "skill_gap_analysis.html#overview",
+    "href": "skill_gap_analysis.html#overview",
+    "title": "Skill Gap Analysis",
+    "section": "",
+    "text": "This page compares the skills most commonly requested in our filtered apparel and fashion analytics job postings against the team’s current skill levels, to identify where the team is well-positioned and where there are gaps worth addressing."
+  },
+  {
+    "objectID": "skill_gap_analysis.html#most-in-demand-skills",
+    "href": "skill_gap_analysis.html#most-in-demand-skills",
+    "title": "Skill Gap Analysis",
+    "section": "Most In-Demand Skills",
+    "text": "Most In-Demand Skills\nSkill fields were parsed from each posting’s listed skills. Counts reflect how many of the 19 filtered postings mention each skill at least once.\n\n\n\n\n\n\n\n\n\nPower BI and SQL are the most frequently requested skills, each appearing in 7 of the 19 postings, followed by Python and Microsoft Excel in 5 postings each. Digital Marketing appears in 4 postings. The remaining skills appear in 2 to 3 postings each, reflecting a mix of technical, analytical, and communication-related requirements across the sample."
+  },
+  {
+    "objectID": "skill_gap_analysis.html#team-skill-comparison",
+    "href": "skill_gap_analysis.html#team-skill-comparison",
+    "title": "Skill Gap Analysis",
+    "section": "Team Skill Comparison",
+    "text": "Team Skill Comparison\nThis section is pending team self-assessments (1-5 proficiency scale) for the skills identified above. Once collected, this section will compare team skill levels against market demand using a heatmap, following the same approach as the class example."
+  },
+  {
+    "objectID": "skill_gap_analysis.html#improvement-plan",
+    "href": "skill_gap_analysis.html#improvement-plan",
+    "title": "Skill Gap Analysis",
+    "section": "Improvement Plan",
+    "text": "Improvement Plan\nTo be completed once the team skill comparison above is available: which skills each member should prioritize, what resources could help close identified gaps, and how the team can collaborate to build missing skills."
   }
 ]
