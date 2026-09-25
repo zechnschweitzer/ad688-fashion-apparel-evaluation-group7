@@ -1,3 +1,11 @@
 ---
 title: Market Baseline
 ---
+
+<!--
+NOTE (2026-09-24): This page uses data/interim/apparel_analyst_filtered.csv
+(NAICS 458 + exact-match apparel brand list + narrow analyst-title matching,
+19 verified rows) as the working dataset, rather than job_postings_cleaned.csv.
+That file was found to be unfiltered for apparel (all rows tagged NAICS 611400,
+broad "Analyst" title matches only) and needs Sara's review when she's back.
+-->
