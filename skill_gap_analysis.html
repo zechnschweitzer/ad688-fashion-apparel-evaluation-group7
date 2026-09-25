@@ -142,6 +142,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
   <li><a href="#most-in-demand-skills" id="toc-most-in-demand-skills" class="nav-link" data-scroll-target="#most-in-demand-skills">Most In-Demand Skills</a></li>
   <li><a href="#team-skill-comparison" id="toc-team-skill-comparison" class="nav-link" data-scroll-target="#team-skill-comparison">Team Skill Comparison</a></li>
+  <li><a href="#skill-gaps" id="toc-skill-gaps" class="nav-link" data-scroll-target="#skill-gaps">Skill Gaps</a></li>
   <li><a href="#improvement-plan" id="toc-improvement-plan" class="nav-link" data-scroll-target="#improvement-plan">Improvement Plan</a></li>
   </ul>
 </nav>
@@ -175,7 +176,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="most-in-demand-skills" class="level2">
 <h2 class="anchored" data-anchor-id="most-in-demand-skills">Most In-Demand Skills</h2>
 <p>Skill fields were parsed from each posting’s listed skills. Counts reflect how many of the 19 filtered postings mention each skill at least once.</p>
-<div id="85bfc28d" class="cell" data-execution_count="2">
+<div id="9409bead" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -188,11 +189,42 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="team-skill-comparison" class="level2">
 <h2 class="anchored" data-anchor-id="team-skill-comparison">Team Skill Comparison</h2>
-<p><em>This section is pending team self-assessments (1-5 proficiency scale) for the skills identified above. Once collected, this section will compare team skill levels against market demand using a heatmap, following the same approach as the class example.</em></p>
+<p>Each team member self-rated their proficiency (1 = Beginner, 5 = Expert) on the eight most in-demand skills identified above.</p>
+<div id="c677ab68" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="skill_gap_analysis_files/figure-html/cell-4-output-1.png" width="781" height="477" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="c3490c37" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="skill_gap_analysis_files/figure-html/cell-5-output-1.png" width="669" height="422" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>As a team, Data Analysis and Excel show the strongest average proficiency (4.0 and 4.25 respectively), reflecting consistent comfort across all four members. Power BI and Python show the lowest average proficiency (2.75 each), both sitting below the “Intermediate” level as a team average. Digital Marketing shows the widest spread across the team, ranging from 2 (Beginner) to 4 (Advanced), reflecting the team’s mixed backgrounds.</p>
+</section>
+<section id="skill-gaps" class="level2">
+<h2 class="anchored" data-anchor-id="skill-gaps">Skill Gaps</h2>
+<p>Comparing market demand (posting frequency) against team proficiency highlights where the team is well-covered and where gaps exist relative to what the market is asking for.</p>
+<p>Power BI is the single largest gap: it is tied for the most in-demand skill in the market (7 of 19 postings) but has the lowest average team proficiency (2.75). SQL, the other most in-demand skill (7 of 19 postings), sits at a moderate team average (3.25), suggesting a smaller but still real gap. Python, requested in 5 postings, also averages only 2.75 across the team.</p>
+<p>By contrast, Excel and Data Analysis, both requested in the market, are also the team’s strongest areas, so no meaningful gap exists there. Digital Marketing is requested in 4 postings and shows uneven team coverage (one member at Beginner, others Intermediate to Advanced), which is a gap for some but not all team members individually.</p>
 </section>
 <section id="improvement-plan" class="level2">
 <h2 class="anchored" data-anchor-id="improvement-plan">Improvement Plan</h2>
-<p><em>To be completed once the team skill comparison above is available: which skills each member should prioritize, what resources could help close identified gaps, and how the team can collaborate to build missing skills.</em></p>
+<p>Based on the gaps identified above, the team’s priorities for skill-building are:</p>
+<ul>
+<li><strong>Power BI</strong> — the clearest gap given how frequently it appears in postings relative to team proficiency. Short, structured resources (Microsoft’s free Power BI learning path, or a guided project rebuilding one of this project’s own charts in Power BI) would directly address this.</li>
+<li><strong>SQL</strong> — a moderate gap; practicing with the project’s own filtered dataset (writing queries against <code>apparel_analyst_clean.csv</code> loaded into a local SQLite database) ties skill-building directly to the project itself.</li>
+<li><strong>Python</strong> — similarly moderate; continuing to build on the pandas work already done in <code>data_preparation.qmd</code> and this page is a natural, low-cost way to keep strengthening this skill through the remainder of the project.</li>
+</ul>
+<p>To close these gaps as a team, members with higher individual proficiency in a given skill (e.g.&nbsp;whoever rated highest in SQL or Power BI) could briefly walk the others through their approach when relevant project tasks come up, rather than treating skill-building as a separate exercise from the coursework itself.</p>
 
 
 </section>
