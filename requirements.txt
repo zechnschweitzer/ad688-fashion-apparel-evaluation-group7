@@ -13,3 +13,4 @@ pyparsing==3.3.2
 python-dateutil==2.9.0.post0
 seaborn==0.13.2
 six==1.17.0
+kaleido==1.4.0
