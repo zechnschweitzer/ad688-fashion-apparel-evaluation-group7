@@ -1,10 +1,87 @@
 [
   {
+    "objectID": "market_baseline.html",
+    "href": "market_baseline.html",
+    "title": "Market Baseline",
+    "section": "",
+    "text": "This page summarizes the baseline characteristics of the selected apparel and fashion analytics job market. The final filtered dataset contains 19 verified job postings based on the team’s selected NAICS 458 scope and an additional exact-match list of known apparel and fashion employers.\nBecause the market definition is intentionally narrow, the results should be interpreted as a descriptive snapshot of the selected apparel and fashion analytics market rather than as estimates of the broader analytics labor market."
+  },
+  {
+    "objectID": "market_baseline.html#market-overview",
+    "href": "market_baseline.html#market-overview",
+    "title": "Market Baseline",
+    "section": "",
+    "text": "This page summarizes the baseline characteristics of the selected apparel and fashion analytics job market. The final filtered dataset contains 19 verified job postings based on the team’s selected NAICS 458 scope and an additional exact-match list of known apparel and fashion employers.\nBecause the market definition is intentionally narrow, the results should be interpreted as a descriptive snapshot of the selected apparel and fashion analytics market rather than as estimates of the broader analytics labor market."
+  },
+  {
+    "objectID": "market_baseline.html#job-volume-by-title-or-segment",
+    "href": "market_baseline.html#job-volume-by-title-or-segment",
+    "title": "Market Baseline",
+    "section": "Job Volume by Title or Segment",
+    "text": "Job Volume by Title or Segment\nJob titles provide an initial view of the types of analytics roles represented within the selected apparel and fashion market.\n\n\n\n\n\n\n\n\n\nThe 19-posting sample contains a mix of analyst, business intelligence, ecommerce analytics, merchandise analytics, and senior analytics roles. Most job titles appear only once, suggesting that the selected market is relatively specialized and fragmented rather than concentrated around a single standardized title. A small number of titles appear more than once, but overall the postings span several analytics-related functions within apparel and fashion retail."
+  },
+  {
+    "objectID": "market_baseline.html#salary-distribution",
+    "href": "market_baseline.html#salary-distribution",
+    "title": "Market Baseline",
+    "section": "Salary Distribution",
+    "text": "Salary Distribution\nSalary information is incomplete in the filtered dataset. Only postings with an originally reported salary range are included in this analysis. Missing salaries that were filled during data preparation are excluded so that the results reflect observed compensation information rather than imputed values.\n\n\nPostings with observed salary ranges: 4 of 19\n\n\n\n\n\n\n\n\n\n\n\nOnly 4 of the 19 postings contain an observed salary range, so the salary findings should be interpreted cautiously. The available postings show variation in both the lower and upper ends of reported compensation, but the small number of observations is not sufficient to characterize salary levels across the full selected apparel and fashion analytics market. The chart therefore presents only compensation that was explicitly reported in the source postings."
+  },
+  {
+    "objectID": "market_baseline.html#location-patterns",
+    "href": "market_baseline.html#location-patterns",
+    "title": "Market Baseline",
+    "section": "Location Patterns",
+    "text": "Location Patterns\nGeographic information is available for most postings. A small amount of additional standardization is applied below to consolidate obvious differences in state and city labels.\n\n\n\n\n\n\n\n\n\nThe 19-posting sample is concentrated in a small number of states. California and Massachusetts each account for 5 postings, followed by New York with 4 and Oregon with 3. Texas contributes 1 posting, while 1 record does not contain a usable state value. This geographic concentration appears to reflect the locations of the apparel and fashion employers represented in the filtered sample rather than a geographically representative view of the broader analytics labor market."
+  },
+  {
+    "objectID": "market_baseline.html#experience-requirement-distribution",
+    "href": "market_baseline.html#experience-requirement-distribution",
+    "title": "Market Baseline",
+    "section": "Experience Requirement Distribution",
+    "text": "Experience Requirement Distribution\nExperience requirements are incomplete in the source data. This analysis uses only minimum experience values that were present in the filtered dataset before missing values were filled during data preparation.\n\n\nPostings with observed minimum experience requirements: 9 of 19\n\n\n\n\n\n\n\n\n\n\n\nMinimum experience information is available for 9 of the 19 postings. Among those records, 7 postings show a recorded minimum of 0 years and 2 postings show a minimum of 5 years. Because experience information is missing for more than half of the sample, these values should be interpreted as the requirements recorded in the available source data rather than as a complete representation of experience expectations across the selected market."
+  },
+  {
+    "objectID": "market_baseline.html#remote-vs-onsite-patterns",
+    "href": "market_baseline.html#remote-vs-onsite-patterns",
+    "title": "Market Baseline",
+    "section": "Remote vs Onsite Patterns",
+    "text": "Remote vs Onsite Patterns\nWork-arrangement information is limited in the source data. Rather than assuming that postings with missing remote-status information are onsite roles, records without a reported work arrangement are retained as a separate “Not specified” category.\n\n\nPostings with an identifiable work arrangement: 4 of 19\n\n\n\n\n\n\n\n\n\n\n\nAn identifiable work arrangement is available for only 4 of the 19 postings. Three postings are classified as hybrid and one as fully remote. The remaining 15 postings either do not report a work arrangement or contain an unknown value. No posting in the available sample is explicitly classified as onsite. Because work-arrangement information is unavailable for most of the sample, these results should not be used to infer the overall prevalence of remote, hybrid, or onsite work in the selected market."
+  },
+  {
+    "objectID": "market_baseline.html#top-employers",
+    "href": "market_baseline.html#top-employers",
+    "title": "Market Baseline",
+    "section": "Top Employers",
+    "text": "Top Employers\nEmployer names are standardized below to consolidate obvious duplicate labels before comparing hiring activity within the selected market.\n\n\nEmployers represented in the sample: 8\n\n\n\n\n\n\n\n\n\n\n\nHiring activity in the selected sample is concentrated among a small number of apparel and retail employers. Vuori and TJX each account for 5 postings, followed by Adidas with 3 and Ralph Lauren with 2. Nordstrom, Foot Locker, Michaels, and Macy’s each contribute 1 posting. These counts should be interpreted within the context of the small, intentionally filtered dataset rather than as a ranking of overall hiring activity across the apparel and fashion industry."
+  },
+  {
+    "objectID": "market_baseline.html#baseline-summary",
+    "href": "market_baseline.html#baseline-summary",
+    "title": "Market Baseline",
+    "section": "Baseline Summary",
+    "text": "Baseline Summary\nThe market baseline provides a descriptive snapshot of analytics-related opportunities within the selected apparel and fashion industry scope. The final dataset contains 19 verified job postings and shows that analytics work appears across several functional areas, including business intelligence, merchandising, ecommerce, finance, operations, and marketing.\nHiring activity is concentrated among a small group of employers and locations. Vuori and TJX each account for 5 postings, while California and Massachusetts each account for 5 postings. New York and Oregon also represent notable hiring locations within the sample.\nSeveral variables have substantial missing information. Only 4 postings contain observed salary ranges, 9 contain recorded minimum experience requirements, and 4 contain an identifiable work arrangement. These limitations are retained explicitly in the analysis rather than treating imputed or missing values as if they were directly reported by employers.\nOverall, the findings should be interpreted as a baseline for this narrowly defined apparel and fashion analytics market rather than as estimates of the broader analytics labor market. The results provide a foundation for the later skill-gap and career-evaluation stages of the project."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "AD688: Fashion and Apparel Career Evaluation - Group 7",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "This project evaluates analytics-related career opportunities within the apparel and fashion industry using job-posting data from the MET Career Compass dataset.\nThe analysis focuses on a narrowly defined market built around NAICS 458 and a verified list of apparel and fashion employers. The current filtered dataset contains 19 job postings and is intended to provide a descriptive view of the selected market rather than represent the broader analytics labor market."
+  },
+  {
+    "objectID": "index.html#project-overview",
+    "href": "index.html#project-overview",
+    "title": "AD688: Fashion and Apparel Career Evaluation - Group 7",
+    "section": "",
+    "text": "This project evaluates analytics-related career opportunities within the apparel and fashion industry using job-posting data from the MET Career Compass dataset.\nThe analysis focuses on a narrowly defined market built around NAICS 458 and a verified list of apparel and fashion employers. The current filtered dataset contains 19 job postings and is intended to provide a descriptive view of the selected market rather than represent the broader analytics labor market."
+  },
+  {
+    "objectID": "index.html#project-sections",
+    "href": "index.html#project-sections",
+    "title": "AD688: Fashion and Apparel Career Evaluation - Group 7",
+    "section": "Project Sections",
+    "text": "Project Sections\nUse the navigation bar above to explore the project:\n\nIntroduction — project scope, career pathway, and industry context\nData Preparation — filtering, cleaning, and preparation of the analytical dataset\nMarket Baseline — current job volume, salary, geography, experience, work arrangement, and employer patterns\nSkill Gap Analysis — comparison of market skill requirements with relevant career skills\nCareer Evaluation — evaluation of career opportunities using the project findings\nFinal Recommendations — overall conclusions and recommendations\n\nThe Market Baseline currently provides the descriptive foundation for the later skill-gap and career-evaluation stages of the project."
   },
   {
     "objectID": "data_dictionary.html",

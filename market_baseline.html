@@ -134,8 +134,21 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#market-overview" id="toc-market-overview" class="nav-link active" data-scroll-target="#market-overview">Market Overview</a></li>
+  <li><a href="#job-volume-by-title-or-segment" id="toc-job-volume-by-title-or-segment" class="nav-link" data-scroll-target="#job-volume-by-title-or-segment">Job Volume by Title or Segment</a></li>
+  <li><a href="#salary-distribution" id="toc-salary-distribution" class="nav-link" data-scroll-target="#salary-distribution">Salary Distribution</a></li>
+  <li><a href="#location-patterns" id="toc-location-patterns" class="nav-link" data-scroll-target="#location-patterns">Location Patterns</a></li>
+  <li><a href="#experience-requirement-distribution" id="toc-experience-requirement-distribution" class="nav-link" data-scroll-target="#experience-requirement-distribution">Experience Requirement Distribution</a></li>
+  <li><a href="#remote-vs-onsite-patterns" id="toc-remote-vs-onsite-patterns" class="nav-link" data-scroll-target="#remote-vs-onsite-patterns">Remote vs Onsite Patterns</a></li>
+  <li><a href="#top-employers" id="toc-top-employers" class="nav-link" data-scroll-target="#top-employers">Top Employers</a></li>
+  <li><a href="#baseline-summary" id="toc-baseline-summary" class="nav-link" data-scroll-target="#baseline-summary">Baseline Summary</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -159,8 +172,124 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="market-overview" class="level2">
+<h2 class="anchored" data-anchor-id="market-overview">Market Overview</h2>
+<p>This page summarizes the baseline characteristics of the selected apparel and fashion analytics job market. The final filtered dataset contains 19 verified job postings based on the team’s selected NAICS 458 scope and an additional exact-match list of known apparel and fashion employers.</p>
+<p>Because the market definition is intentionally narrow, the results should be interpreted as a descriptive snapshot of the selected apparel and fashion analytics market rather than as estimates of the broader analytics labor market.</p>
+</section>
+<section id="job-volume-by-title-or-segment" class="level2">
+<h2 class="anchored" data-anchor-id="job-volume-by-title-or-segment">Job Volume by Title or Segment</h2>
+<p>Job titles provide an initial view of the types of analytics roles represented within the selected apparel and fashion market.</p>
+<div id="0d28f782" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="market_baseline_files/figure-html/cell-3-output-1.png" width="781" height="518" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The 19-posting sample contains a mix of analyst, business intelligence, ecommerce analytics, merchandise analytics, and senior analytics roles. Most job titles appear only once, suggesting that the selected market is relatively specialized and fragmented rather than concentrated around a single standardized title. A small number of titles appear more than once, but overall the postings span several analytics-related functions within apparel and fashion retail.</p>
+</section>
+<section id="salary-distribution" class="level2">
+<h2 class="anchored" data-anchor-id="salary-distribution">Salary Distribution</h2>
+<p>Salary information is incomplete in the filtered dataset. Only postings with an originally reported salary range are included in this analysis. Missing salaries that were filled during data preparation are excluded so that the results reflect observed compensation information rather than imputed values.</p>
+<div id="accd6953" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-stdout">
+<pre><code>Postings with observed salary ranges: 4 of 19</code></pre>
+</div>
+</div>
+<div id="ef45d5a1" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="market_baseline_files/figure-html/cell-5-output-1.png" width="809" height="518" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Only 4 of the 19 postings contain an observed salary range, so the salary findings should be interpreted cautiously. The available postings show variation in both the lower and upper ends of reported compensation, but the small number of observations is not sufficient to characterize salary levels across the full selected apparel and fashion analytics market. The chart therefore presents only compensation that was explicitly reported in the source postings.</p>
+</section>
+<section id="location-patterns" class="level2">
+<h2 class="anchored" data-anchor-id="location-patterns">Location Patterns</h2>
+<p>Geographic information is available for most postings. A small amount of additional standardization is applied below to consolidate obvious differences in state and city labels.</p>
+<div id="3dbc563c" class="cell" data-execution_count="6">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="market_baseline_files/figure-html/cell-7-output-1.png" width="667" height="422" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The 19-posting sample is concentrated in a small number of states. California and Massachusetts each account for 5 postings, followed by New York with 4 and Oregon with 3. Texas contributes 1 posting, while 1 record does not contain a usable state value. This geographic concentration appears to reflect the locations of the apparel and fashion employers represented in the filtered sample rather than a geographically representative view of the broader analytics labor market.</p>
+</section>
+<section id="experience-requirement-distribution" class="level2">
+<h2 class="anchored" data-anchor-id="experience-requirement-distribution">Experience Requirement Distribution</h2>
+<p>Experience requirements are incomplete in the source data. This analysis uses only minimum experience values that were present in the filtered dataset before missing values were filled during data preparation.</p>
+<div id="77b375bc" class="cell" data-execution_count="7">
+<div class="cell-output cell-output-stdout">
+<pre><code>Postings with observed minimum experience requirements: 9 of 19</code></pre>
+</div>
+</div>
+<div id="73b93d78" class="cell" data-execution_count="8">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="market_baseline_files/figure-html/cell-9-output-1.png" width="614" height="422" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Minimum experience information is available for 9 of the 19 postings. Among those records, 7 postings show a recorded minimum of 0 years and 2 postings show a minimum of 5 years. Because experience information is missing for more than half of the sample, these values should be interpreted as the requirements recorded in the available source data rather than as a complete representation of experience expectations across the selected market.</p>
+</section>
+<section id="remote-vs-onsite-patterns" class="level2">
+<h2 class="anchored" data-anchor-id="remote-vs-onsite-patterns">Remote vs Onsite Patterns</h2>
+<p>Work-arrangement information is limited in the source data. Rather than assuming that postings with missing remote-status information are onsite roles, records without a reported work arrangement are retained as a separate “Not specified” category.</p>
+<div id="1d2880dc" class="cell" data-execution_count="9">
+<div class="cell-output cell-output-stdout">
+<pre><code>Postings with an identifiable work arrangement: 4 of 19</code></pre>
+</div>
+</div>
+<div id="f650a4d6" class="cell" data-execution_count="10">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="market_baseline_files/figure-html/cell-11-output-1.png" width="618" height="422" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>An identifiable work arrangement is available for only 4 of the 19 postings. Three postings are classified as hybrid and one as fully remote. The remaining 15 postings either do not report a work arrangement or contain an unknown value. No posting in the available sample is explicitly classified as onsite. Because work-arrangement information is unavailable for most of the sample, these results should not be used to infer the overall prevalence of remote, hybrid, or onsite work in the selected market.</p>
+</section>
+<section id="top-employers" class="level2">
+<h2 class="anchored" data-anchor-id="top-employers">Top Employers</h2>
+<p>Employer names are standardized below to consolidate obvious duplicate labels before comparing hiring activity within the selected market.</p>
+<div id="55b7b5a9" class="cell" data-execution_count="11">
+<div class="cell-output cell-output-stdout">
+<pre><code>Employers represented in the sample: 8</code></pre>
+</div>
+</div>
+<div id="661f9715" class="cell" data-execution_count="12">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="market_baseline_files/figure-html/cell-13-output-1.png" width="667" height="451" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Hiring activity in the selected sample is concentrated among a small number of apparel and retail employers. Vuori and TJX each account for 5 postings, followed by Adidas with 3 and Ralph Lauren with 2. Nordstrom, Foot Locker, Michaels, and Macy’s each contribute 1 posting. These counts should be interpreted within the context of the small, intentionally filtered dataset rather than as a ranking of overall hiring activity across the apparel and fashion industry.</p>
+</section>
+<section id="baseline-summary" class="level2">
+<h2 class="anchored" data-anchor-id="baseline-summary">Baseline Summary</h2>
+<p>The market baseline provides a descriptive snapshot of analytics-related opportunities within the selected apparel and fashion industry scope. The final dataset contains 19 verified job postings and shows that analytics work appears across several functional areas, including business intelligence, merchandising, ecommerce, finance, operations, and marketing.</p>
+<p>Hiring activity is concentrated among a small group of employers and locations. Vuori and TJX each account for 5 postings, while California and Massachusetts each account for 5 postings. New York and Oregon also represent notable hiring locations within the sample.</p>
+<p>Several variables have substantial missing information. Only 4 postings contain observed salary ranges, 9 contain recorded minimum experience requirements, and 4 contain an identifiable work arrangement. These limitations are retained explicitly in the analysis rather than treating imputed or missing values as if they were directly reported by employers.</p>
+<p>Overall, the findings should be interpreted as a baseline for this narrowly defined apparel and fashion analytics market rather than as estimates of the broader analytics labor market. The results provide a foundation for the later skill-gap and career-evaluation stages of the project.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
