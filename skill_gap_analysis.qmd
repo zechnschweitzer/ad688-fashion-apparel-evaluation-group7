@@ -164,18 +164,23 @@ As a team, Data Analysis and Excel show the strongest average proficiency (4.0 a
 
 ## Skill Gaps
 
-Comparing market demand (posting frequency) against team proficiency highlights where the team is well-covered and where gaps exist relative to what the market is asking for.
+Comparing market demand (posting frequency) against team proficiency highlights where the team is well-covered and where gaps exist, both as a team and for each individual member.
 
-Power BI is the single largest gap: it is tied for the most in-demand skill in the market (7 of 19 postings) but has the lowest average team proficiency (2.75). SQL, the other most in-demand skill (7 of 19 postings), sits at a moderate team average (3.25), suggesting a smaller but still real gap. Python, requested in 5 postings, also averages only 2.75 across the team.
+At the team level, Power BI is the largest gap: it is tied for the most in-demand skill in the market (7 of 19 postings) but has the lowest average team proficiency (2.75). SQL, the other most in-demand skill (7 of 19 postings), sits at a moderate team average (3.25). Python, requested in 5 postings, also averages only 2.75 across the team. By contrast, Excel and Data Analysis are both requested in the market and are also the team's strongest areas, so no meaningful gap exists there.
 
-By contrast, Excel and Data Analysis, both requested in the market, are also the team's strongest areas, so no meaningful gap exists there. Digital Marketing is requested in 4 postings and shows uneven team coverage (one member at Beginner, others Intermediate to Advanced), which is a gap for some but not all team members individually.
+At the individual level, the gaps differ by person:
+
+- **Alyssa** is at Intermediate (3) in Power BI, SQL, and Python, the three most in-demand technical skills, while strongest in Data Analysis, Stakeholder Management, and Project Management (all 4). Power BI and SQL are the clearest priorities, since they are both Intermediate despite being the two most requested skills in the market.
+- **Ankita** shows the same pattern as Alyssa in the technical skills (3 in Power BI, SQL, and Python), with Digital Marketing as her lowest individual rating (2). Since Power BI and SQL carry the highest market demand, they are the higher-priority gap relative to Digital Marketing.
+- **Sara** has the largest individual gap in Power BI (2, Beginner), the single lowest score on the team for the most in-demand skill, and is also lowest on Python (2). She is strongest in Excel (5) and rates highly in Digital Marketing (4), Stakeholder Management (4), and Data Analysis (4).
+- **Zech** has the strongest overall technical profile, rating Advanced (4) in SQL, Project Management, and Data Analysis. His lowest ratings are Power BI (3) and Digital Marketing (3), making Power BI his one notable gap relative to the market's top-requested skill.
 
 ## Improvement Plan
 
-Based on the gaps identified above, the team's priorities for skill-building are:
+Based on the gaps above, individual priorities are:
 
-- **Power BI** — the clearest gap given how frequently it appears in postings relative to team proficiency. Short, structured resources (Microsoft's free Power BI learning path, or a guided project rebuilding one of this project's own charts in Power BI) would directly address this.
-- **SQL** — a moderate gap; practicing with the project's own filtered dataset (writing queries against `apparel_analyst_clean.csv` loaded into a local SQLite database) ties skill-building directly to the project itself.
-- **Python** — similarly moderate; continuing to build on the pandas work already done in `data_preparation.qmd` and this page is a natural, low-cost way to keep strengthening this skill through the remainder of the project.
+- **Alyssa and Ankita** — prioritize Power BI and SQL, both currently Intermediate despite being the two most requested skills in the market. Microsoft's free Power BI learning path, and practicing SQL queries directly against the project's own `apparel_analyst_clean.csv` dataset, would tie skill-building directly to the project.
+- **Sara** — prioritize Power BI first, as the team's lowest individual rating on the market's most in-demand skill, followed by Python. Given her existing strength in Excel, a Power BI path that builds on familiar spreadsheet concepts (e.g. Microsoft's Excel-to-Power-BI transition materials) may be the fastest route in.
+- **Zech** — prioritize Power BI, the one skill where his rating trails his otherwise strong technical profile. Given his existing SQL proficiency, focusing on Power BI's data-modeling features (which build on relational concepts he already knows) is a natural next step.
 
-To close these gaps as a team, members with higher individual proficiency in a given skill (e.g. whoever rated highest in SQL or Power BI) could briefly walk the others through their approach when relevant project tasks come up, rather than treating skill-building as a separate exercise from the coursework itself.
+Across the team, Power BI is the single most consistent gap, since every member rated it at 3 or below while it ties for the highest market demand. Team members with relatively higher proficiency in a given skill (e.g. Zech in SQL, Sara in Excel) can informally support others when related project tasks come up, rather than treating skill-building as separate from the coursework itself.
