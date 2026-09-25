@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Alyssa Quigley">
+<meta name="author" content="Alyssa Quigley, Ankita Roy, Zechariah Schweitzer, Sara Scribner">
 
-<title>data_preparation – AD688: Fashion and Apparel Career Evaluation - Group 7</title>
+<title>Data Preparation – AD688: Fashion and Apparel Career Evaluation - Group 7</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -111,7 +111,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
 
+
+
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
 
 
 <link rel="stylesheet" href="styles.css">
@@ -144,7 +147,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./data_preparation.html" aria-current="page"> 
-<span class="menu-text">Data Preperation</span></a>
+<span class="menu-text">Data Preparation</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./market_baseline.html"> 
@@ -193,7 +196,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Data Preperation</h1>
+<h1 class="title">Data Preparation</h1>
 </div>
 
 
@@ -203,7 +206,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Alyssa Quigley </p>
+             <p>Alyssa Quigley, Ankita Roy, Zechariah Schweitzer, Sara Scribner </p>
           </div>
   </div>
     
@@ -218,7 +221,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="load-the-filtered-dataset" class="level2">
 <h2 class="anchored" data-anchor-id="load-the-filtered-dataset">Load the Filtered Dataset</h2>
-<div id="41229f3b" class="cell" data-execution_count="1">
+<div id="24f80676" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"data/interim/apparel_analyst_filtered.csv"</span>)</span>
@@ -236,7 +239,7 @@ memory usage: 122.6 KB</code></pre>
 </section>
 <section id="clean-salary-fields" class="level2">
 <h2 class="anchored" data-anchor-id="clean-salary-fields">Clean Salary Fields</h2>
-<div id="45107c3a" class="cell" data-execution_count="2">
+<div id="0f875360" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"SALARY_FROM"</span>] <span class="op">=</span> pd.to_numeric(df[<span class="st">"SALARY_FROM"</span>], errors<span class="op">=</span><span class="st">"coerce"</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"SALARY_TO"</span>] <span class="op">=</span> pd.to_numeric(df[<span class="st">"SALARY_TO"</span>], errors<span class="op">=</span><span class="st">"coerce"</span>)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -252,7 +255,7 @@ memory usage: 122.6 KB</code></pre>
 <pre><code>Median SALARY_FROM used for fill: 85300.0
 Median SALARY_TO used for fill: 138222.0</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="8">
+<div class="cell-output cell-output-display" data-execution_count="20">
 <div>
 
 
@@ -409,7 +412,7 @@ Median SALARY_TO used for fill: 138222.0</code></pre>
 </section>
 <section id="clean-experience-fields" class="level2">
 <h2 class="anchored" data-anchor-id="clean-experience-fields">Clean Experience Fields</h2>
-<div id="68b65a90" class="cell" data-execution_count="3">
+<div id="d5f058a5" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"MIN_YEARS_EXPERIENCE"</span>] <span class="op">=</span> pd.to_numeric(df[<span class="st">"MIN_YEARS_EXPERIENCE"</span>], errors<span class="op">=</span><span class="st">"coerce"</span>)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"MAX_YEARS_EXPERIENCE"</span>] <span class="op">=</span> pd.to_numeric(df[<span class="st">"MAX_YEARS_EXPERIENCE"</span>], errors<span class="op">=</span><span class="st">"coerce"</span>)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -417,7 +420,7 @@ Median SALARY_TO used for fill: 138222.0</code></pre>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"MAX_YEARS_EXPERIENCE"</span>] <span class="op">=</span> df[<span class="st">"MAX_YEARS_EXPERIENCE"</span>].fillna(df[<span class="st">"MIN_YEARS_EXPERIENCE"</span>])</span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>df[[<span class="st">"TITLE_CLEAN"</span>, <span class="st">"MIN_YEARS_EXPERIENCE"</span>, <span class="st">"MAX_YEARS_EXPERIENCE"</span>]]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="9">
+<div class="cell-output cell-output-display" data-execution_count="21">
 <div>
 
 
@@ -554,13 +557,19 @@ Median SALARY_TO used for fill: 138222.0</code></pre>
 </section>
 <section id="clean-geography-fields" class="level2">
 <h2 class="anchored" data-anchor-id="clean-geography-fields">Clean Geography Fields</h2>
-<div id="79b2b99d" class="cell" data-execution_count="4">
+<div id="90e71fb0" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> col <span class="kw">in</span> [<span class="st">"CITY_NAME"</span>, <span class="st">"STATE_NAME"</span>]:</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    df[col] <span class="op">=</span> df[col].astype(<span class="bu">str</span>).<span class="bu">str</span>.strip()</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    df[col] <span class="op">=</span> df[col].replace(<span class="st">""</span>, <span class="st">"Unknown"</span>).replace(<span class="st">"nan"</span>, <span class="st">"Unknown"</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    df[col] <span class="op">=</span> df[col].replace(<span class="st">""</span>, <span class="st">"Unknown"</span>).replace(<span class="st">"nan"</span>, <span class="st">"Unknown"</span>).fillna(<span class="st">"Unknown"</span>)</span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>df[[<span class="st">"TITLE_CLEAN"</span>, <span class="st">"COMPANY_NAME"</span>, <span class="st">"CITY_NAME"</span>, <span class="st">"STATE_NAME"</span>]]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="10">
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Manual fix: ID 352216 has a malformed LOCATION field (TJX corporate</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co"># address split incorrectly into CITY_NAME/STATE_NAME). Corrected using</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co"># other TJX postings in this dataset, which are consistently Framingham, MA.</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>df.loc[df[<span class="st">"ID"</span>] <span class="op">==</span> <span class="dv">352216</span>, <span class="st">"CITY_NAME"</span>] <span class="op">=</span> <span class="st">"Framingham"</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>df.loc[df[<span class="st">"ID"</span>] <span class="op">==</span> <span class="dv">352216</span>, <span class="st">"STATE_NAME"</span>] <span class="op">=</span> <span class="st">"Massachusetts"</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>df[[<span class="st">"TITLE_CLEAN"</span>, <span class="st">"COMPANY_NAME"</span>, <span class="st">"CITY_NAME"</span>, <span class="st">"STATE_NAME"</span>]]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="22">
 <div>
 
 
@@ -656,8 +665,8 @@ Median SALARY_TO used for fill: 138222.0</code></pre>
 <th data-quarto-table-cell-role="th">11</th>
 <td>Sr Region Operations Analyst - Sierra</td>
 <td>TJX</td>
-<td>Home Office Framingham Ma 550</td>
-<td>Cochituate Rd</td>
+<td>Framingham</td>
+<td>Massachusetts</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">12</th>
@@ -698,8 +707,8 @@ Median SALARY_TO used for fill: 138222.0</code></pre>
 <th data-quarto-table-cell-role="th">17</th>
 <td>Data Analyst 3 - Store Operations</td>
 <td>Nordstrom</td>
-<td>NaN</td>
-<td>NaN</td>
+<td>Unknown</td>
+<td>Unknown</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">18</th>
@@ -717,21 +726,26 @@ Median SALARY_TO used for fill: 138222.0</code></pre>
 </section>
 <section id="clean-skills-fields" class="level2">
 <h2 class="anchored" data-anchor-id="clean-skills-fields">Clean Skills Fields</h2>
-<div id="c508ca62" class="cell" data-execution_count="5">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> clean_skill_list(value):</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> pd.isna(value) <span class="kw">or</span> value <span class="op">==</span> <span class="st">""</span>:</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> []</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [s.strip() <span class="cf">for</span> s <span class="kw">in</span> <span class="bu">str</span>(value).split(<span class="st">","</span>) <span class="cf">if</span> s.strip()]</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"SKILLS_LIST"</span>] <span class="op">=</span> df[<span class="st">"SKILLS_NAME"</span>].<span class="bu">apply</span>(clean_skill_list)</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"SOFTWARE_SKILLS_LIST"</span>] <span class="op">=</span> df[<span class="st">"SOFTWARE_SKILLS_NAME"</span>].<span class="bu">apply</span>(clean_skill_list)</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Postings with at least one listed skill: </span><span class="sc">{</span>(df[<span class="st">'SKILLS_LIST'</span>].<span class="bu">str</span>.<span class="bu">len</span>() <span class="op">&gt;</span> <span class="dv">0</span>)<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>df[[<span class="st">"TITLE_CLEAN"</span>, <span class="st">"SKILLS_LIST"</span>, <span class="st">"SOFTWARE_SKILLS_LIST"</span>]]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="a4a50ee4" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> clean_skill_list(value):</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> pd.isna(value) <span class="kw">or</span> value <span class="op">==</span> <span class="st">""</span>:</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> []</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> json.loads(value)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> (json.JSONDecodeError, <span class="pp">TypeError</span>):</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> []</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"SKILLS_LIST"</span>] <span class="op">=</span> df[<span class="st">"SKILLS_NAME"</span>].<span class="bu">apply</span>(clean_skill_list)</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"SOFTWARE_SKILLS_LIST"</span>] <span class="op">=</span> df[<span class="st">"SOFTWARE_SKILLS_NAME"</span>].<span class="bu">apply</span>(clean_skill_list)</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Postings with at least one listed skill: </span><span class="sc">{</span>(df[<span class="st">'SKILLS_LIST'</span>].<span class="bu">str</span>.<span class="bu">len</span>() <span class="op">&gt;</span> <span class="dv">0</span>)<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>df[[<span class="st">"TITLE_CLEAN"</span>, <span class="st">"SKILLS_LIST"</span>, <span class="st">"SOFTWARE_SKILLS_LIST"</span>]]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Postings with at least one listed skill: 19</code></pre>
+<pre><code>Postings with at least one listed skill: 15</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="11">
+<div class="cell-output cell-output-display" data-execution_count="23">
 <div>
 
 
@@ -748,116 +762,116 @@ Median SALARY_TO used for fill: 138222.0</code></pre>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">0</th>
 <td>Senior Business Intelligence &amp; Data Analyst - ...</td>
-<td>[[]]</td>
-<td>[[]]</td>
+<td>[]</td>
+<td>[]</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">1</th>
 <td>Sr Region Operations Analyst - Sierra</td>
-<td>[[]]</td>
-<td>[[]]</td>
+<td>[]</td>
+<td>[]</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">2</th>
 <td>Product Manager, Enterprise Analytics</td>
-<td>[["Power BI", "Data Governance", "Anomaly Dete...</td>
-<td>[["Power BI"]]</td>
+<td>[Power BI, Data Governance, Anomaly Detection,...</td>
+<td>[Power BI]</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">3</th>
 <td>Principal, Data Analytics and Engineering</td>
-<td>[["Snowflake Schema", "SQL (Programming Langua...</td>
-<td>[["Snowflake Schema", "SQL (Programming Langua...</td>
+<td>[Snowflake Schema, SQL (Programming Language),...</td>
+<td>[Snowflake Schema, SQL (Programming Language),...</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">4</th>
 <td>Media Marketing Sr. Manager, Analytics</td>
-<td>[["Print Media", "Media Strategy", "Brand Posi...</td>
-<td>[[]]</td>
+<td>[Print Media, Media Strategy, Brand Positionin...</td>
+<td>[]</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">5</th>
 <td>Sr. Manager, Ecommerce Analytics</td>
-<td>[["Power BI", "Microsoft Excel", "Data Analysi...</td>
-<td>[["Power BI", "Microsoft Excel"]]</td>
+<td>[Power BI, Microsoft Excel, Data Analysis Tool...</td>
+<td>[Power BI, Microsoft Excel]</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">6</th>
 <td>Sr. Manager, Global Finance Business Analyst</td>
-<td>[["Microsoft Dynamics 365", "Accounting Inform...</td>
-<td>[["Microsoft Dynamics 365"]]</td>
+<td>[Microsoft Dynamics 365, Accounting Informatio...</td>
+<td>[Microsoft Dynamics 365]</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">7</th>
 <td>Sr. FP&amp;A Manager, Systems &amp; Analytics</td>
-<td>[["Power BI", "Microsoft Excel", "SQL (Program...</td>
-<td>[["Power BI", "Microsoft Excel", "SQL (Program...</td>
+<td>[Power BI, Microsoft Excel, SQL (Programming L...</td>
+<td>[Power BI, Microsoft Excel, SQL (Programming L...</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">8</th>
 <td>Merchandising Data Analyst</td>
-<td>[["Power BI", "Microsoft Excel", "SQL (Program...</td>
-<td>[["Power BI", "Microsoft Excel", "SQL (Program...</td>
+<td>[Power BI, Microsoft Excel, SQL (Programming L...</td>
+<td>[Power BI, Microsoft Excel, SQL (Programming L...</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">9</th>
 <td>Senior Analyst, Merchandise Flow &amp; Analytics</td>
-<td>[[]]</td>
-<td>[[]]</td>
+<td>[]</td>
+<td>[]</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">10</th>
 <td>Manager, Digital Consumer Analytics</td>
-<td>[["SQL (Programming Language)", "Databricks", ...</td>
-<td>[["SQL (Programming Language)", "Databricks"]]</td>
+<td>[SQL (Programming Language), Databricks, Digit...</td>
+<td>[SQL (Programming Language), Databricks]</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">11</th>
 <td>Sr Region Operations Analyst - Sierra</td>
-<td>[["Microsoft Office", "Reporting and Analysis"...</td>
-<td>[["Microsoft Office"]]</td>
+<td>[Microsoft Office, Reporting and Analysis, Dat...</td>
+<td>[Microsoft Office]</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">12</th>
 <td>Senior Business Intelligence &amp; Data Analyst - ...</td>
-<td>[[]]</td>
-<td>[[]]</td>
+<td>[]</td>
+<td>[]</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">13</th>
 <td>Manager, Digital Analytics</td>
-<td>[["Power BI", "Adobe Analytics", "Python (Prog...</td>
-<td>[["Power BI", "Adobe Analytics", "Python (Prog...</td>
+<td>[Power BI, Adobe Analytics, Python (Programmin...</td>
+<td>[Power BI, Adobe Analytics, Python (Programmin...</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">14</th>
 <td>Media Marketing Sr. Manager, Analytics</td>
-<td>[["Print Media", "Media Strategy", "Brand Posi...</td>
-<td>[[]]</td>
+<td>[Print Media, Media Strategy, Brand Positionin...</td>
+<td>[]</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">15</th>
 <td>Sr. Data Analyst</td>
-<td>[["Power BI", "SQL (Programming Language)", "M...</td>
-<td>[["Power BI", "SQL (Programming Language)", "M...</td>
+<td>[Power BI, SQL (Programming Language), Microso...</td>
+<td>[Power BI, SQL (Programming Language), Microso...</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">16</th>
 <td>Manager, Digital Marketing Analytics</td>
-<td>[["SQL (Programming Language)", "Digital Marke...</td>
-<td>[["SQL (Programming Language)"]]</td>
+<td>[SQL (Programming Language), Digital Marketing...</td>
+<td>[SQL (Programming Language)]</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">17</th>
 <td>Data Analyst 3 - Store Operations</td>
-<td>[["Microsoft Office", "SQL (Programming Langua...</td>
-<td>[["Microsoft Office", "SQL (Programming Langua...</td>
+<td>[Microsoft Office, SQL (Programming Language),...</td>
+<td>[Microsoft Office, SQL (Programming Language),...</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">18</th>
 <td>Director, Wholesale Sales Planning &amp; Analytics</td>
-<td>[["Power BI", "Python (Programming Language)",...</td>
-<td>[["Power BI", "Python (Programming Language)",...</td>
+<td>[Power BI, Python (Programming Language), Micr...</td>
+<td>[Power BI, Python (Programming Language), Micr...</td>
 </tr>
 </tbody>
 </table>
@@ -868,7 +882,7 @@ Median SALARY_TO used for fill: 138222.0</code></pre>
 </section>
 <section id="save-the-cleaned-dataset" class="level2">
 <h2 class="anchored" data-anchor-id="save-the-cleaned-dataset">Save the Cleaned Dataset</h2>
-<div id="5ca7d508" class="cell" data-execution_count="6">
+<div id="0d1464e5" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>os.makedirs(<span class="st">"data/processed"</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>df.to_csv(<span class="st">"data/processed/apparel_analyst_clean.csv"</span>, index<span class="op">=</span><span class="va">False</span>)</span>

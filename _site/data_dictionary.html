@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>AD688: Fashion and Apparel Career Evaluation - Group 7</title>
+<title>data_dictionary – AD688: Fashion and Apparel Career Evaluation - Group 7</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -96,7 +96,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -139,52 +139,243 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#project-overview" id="toc-project-overview" class="nav-link active" data-scroll-target="#project-overview">Project Overview</a></li>
-  <li><a href="#project-sections" id="toc-project-sections" class="nav-link" data-scroll-target="#project-sections">Project Sections</a></li>
+  <li><a href="#data-dictionary-apparel_analyst_clean.csv" id="toc-data-dictionary-apparel_analyst_clean.csv" class="nav-link active" data-scroll-target="#data-dictionary-apparel_analyst_clean.csv">Data Dictionary � apparel_analyst_clean.csv</a>
+  <ul class="collapse">
+  <li><a href="#identification" id="toc-identification" class="nav-link" data-scroll-target="#identification">Identification</a></li>
+  <li><a href="#salary" id="toc-salary" class="nav-link" data-scroll-target="#salary">Salary</a></li>
+  <li><a href="#experience" id="toc-experience" class="nav-link" data-scroll-target="#experience">Experience</a></li>
+  <li><a href="#education" id="toc-education" class="nav-link" data-scroll-target="#education">Education</a></li>
+  <li><a href="#skills" id="toc-skills" class="nav-link" data-scroll-target="#skills">Skills</a></li>
+  <li><a href="#remoteonsite" id="toc-remoteonsite" class="nav-link" data-scroll-target="#remoteonsite">Remote/Onsite</a></li>
+  <li><a href="#location" id="toc-location" class="nav-link" data-scroll-target="#location">Location</a></li>
+  <li><a href="#industry-occupation" id="toc-industry-occupation" class="nav-link" data-scroll-target="#industry-occupation">Industry / Occupation</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">AD688: Fashion and Apparel Career Evaluation - Group 7</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="project-overview" class="level2">
-<h2 class="anchored" data-anchor-id="project-overview">Project Overview</h2>
-<p>This project evaluates analytics-related career opportunities within the apparel and fashion industry using job-posting data from the MET Career Compass dataset.</p>
-<p>The analysis focuses on a narrowly defined market built around NAICS 458 and a verified list of apparel and fashion employers. The current filtered dataset contains 19 job postings and is intended to provide a descriptive view of the selected market rather than represent the broader analytics labor market.</p>
+<section id="data-dictionary-apparel_analyst_clean.csv" class="level1">
+<h1>Data Dictionary � apparel_analyst_clean.csv</h1>
+<p>Cleaned dataset for Business/Data Analyst roles within NAICS 458 (Clothing, Clothing Accessories, Shoe, and Jewelry Retailers), filtered using NAICS 458 + an exact-match apparel brand list + narrow analyst title matching. 19 verified rows.</p>
+<section id="identification" class="level2">
+<h2 class="anchored" data-anchor-id="identification">Identification</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ID</td>
+<td>Unique job posting identifier</td>
+</tr>
+<tr class="even">
+<td>TITLE_CLEAN</td>
+<td>Standardized/cleaned job title</td>
+</tr>
+<tr class="odd">
+<td>TITLE_RAW</td>
+<td>Original job title as posted</td>
+</tr>
+<tr class="even">
+<td>COMPANY_NAME</td>
+<td>Employer name</td>
+</tr>
+<tr class="odd">
+<td>COMPANY_CLEAN</td>
+<td>Standardized employer name</td>
+</tr>
+<tr class="even">
+<td>POSTED</td>
+<td>Date the job was posted</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="project-sections" class="level2">
-<h2 class="anchored" data-anchor-id="project-sections">Project Sections</h2>
-<p>Use the navigation bar above to explore the project:</p>
-<ul>
-<li><strong>Introduction</strong> — project scope, career pathway, and industry context</li>
-<li><strong>Data Preparation</strong> — filtering, cleaning, and preparation of the analytical dataset</li>
-<li><strong>Market Baseline</strong> — current job volume, salary, geography, experience, work arrangement, and employer patterns</li>
-<li><strong>Skill Gap Analysis</strong> — comparison of market skill requirements with relevant career skills</li>
-<li><strong>Career Evaluation</strong> — evaluation of career opportunities using the project findings</li>
-<li><strong>Final Recommendations</strong> — overall conclusions and recommendations</li>
-</ul>
-<p>The Market Baseline currently provides the descriptive foundation for the later skill-gap and career-evaluation stages of the project.</p>
+<section id="salary" class="level2">
+<h2 class="anchored" data-anchor-id="salary">Salary</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>SALARY</td>
+<td>Original salary text as posted</td>
+</tr>
+<tr class="even">
+<td>SALARY_FROM</td>
+<td>Lower bound of posted salary range</td>
+</tr>
+<tr class="odd">
+<td>SALARY_TO</td>
+<td>Upper bound of posted salary range</td>
+</tr>
+<tr class="even">
+<td>ORIGINAL_PAY_PERIOD</td>
+<td>Pay period as posted (e.g.&nbsp;hourly, annual)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="experience" class="level2">
+<h2 class="anchored" data-anchor-id="experience">Experience</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>MIN_YEARS_EXPERIENCE</td>
+<td>Minimum years of experience required</td>
+</tr>
+<tr class="even">
+<td>MAX_YEARS_EXPERIENCE</td>
+<td>Maximum years of experience required</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="education" class="level2">
+<h2 class="anchored" data-anchor-id="education">Education</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>MIN_EDULEVELS_NAME</td>
+<td>Minimum education level required</td>
+</tr>
+<tr class="even">
+<td>MAX_EDULEVELS_NAME</td>
+<td>Maximum education level required</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="skills" class="level2">
+<h2 class="anchored" data-anchor-id="skills">Skills</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>SKILLS_LIST</td>
+<td>Cleaned list of general skills (parsed from JSON, e.g.&nbsp;[‘Power BI’, ‘Analytics’])</td>
+</tr>
+<tr class="even">
+<td>SOFTWARE_SKILLS_LIST</td>
+<td>Cleaned list of software tools (parsed from JSON)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="remoteonsite" class="level2">
+<h2 class="anchored" data-anchor-id="remoteonsite">Remote/Onsite</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>REMOTE_TYPE_NAME</td>
+<td>Work arrangement (Remote, Hybrid, On-site, Unknown)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="location" class="level2">
+<h2 class="anchored" data-anchor-id="location">Location</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CITY_NAME</td>
+<td>City of the job posting</td>
+</tr>
+<tr class="even">
+<td>STATE_NAME</td>
+<td>State of the job posting</td>
+</tr>
+<tr class="odd">
+<td>COUNTY_NAME</td>
+<td>County of the job posting</td>
+</tr>
+<tr class="even">
+<td>MSA_NAME</td>
+<td>Metropolitan Statistical Area name</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="industry-occupation" class="level2">
+<h2 class="anchored" data-anchor-id="industry-occupation">Industry / Occupation</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>NAICS_2022_6</td>
+<td>6-digit NAICS 2022 industry code</td>
+</tr>
+<tr class="even">
+<td>NAICS_2022_6_NAME</td>
+<td>Industry name for the NAICS code</td>
+</tr>
+<tr class="odd">
+<td>SOC_5</td>
+<td>5-digit SOC occupation code</td>
+</tr>
+<tr class="even">
+<td>SOC_5_NAME</td>
+<td>Occupation name for the SOC code</td>
+</tr>
+</tbody>
+</table>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

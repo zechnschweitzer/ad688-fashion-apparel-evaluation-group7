@@ -1,58 +1,254 @@
 [
   {
+    "objectID": "introduction.html",
+    "href": "introduction.html",
+    "title": "Career Pathway and Industry Scope",
+    "section": "",
+    "text": "Target career pathway: Business/Data Analyst roles\nIndustry code: NAICS 458 (Clothing, Clothing Accessories, Shoe, and Jewelry Retailers), within the broader apparel and fashion retail sector\nIndustry label: Apparel and Fashion Retail"
+  },
+  {
+    "objectID": "introduction.html#research-rationale",
+    "href": "introduction.html#research-rationale",
+    "title": "Career Pathway and Industry Scope",
+    "section": "Research Rationale",
+    "text": "Research Rationale\nBusiness and data analysts turn operational data into decisions organizations can act on. Apparel retail is a good place to study that work, since retailers are constantly reacting to seasonal demand, shifting consumer preferences, inventory limits, pricing calls, and supply chain pressure. Those conditions give analytical skills a direct, visible role in how the business runs.\nFor a student weighing an analytics career, it is not always obvious which skills employers actually care about, or whether their coursework and experience line up with what the job market expects. A title like “business analyst” or “data analyst” hides a lot of variation: some mix of technical ability, analytical thinking, communication, and business judgment, and the exact mix shifts by employer. This project tries to pin down which skills matter most for business/data analyst roles in apparel retail specifically, then checks that list against our own team’s current skills.\nThat is what separates this from a plain labor-market summary: it is meant to work as a career evaluation tool. A student should be able to look at it and see what employers are asking for, where their own strengths already line up, and what still needs work before they apply."
+  },
+  {
+    "objectID": "introduction.html#literature-review",
+    "href": "introduction.html#literature-review",
+    "title": "Career Pathway and Industry Scope",
+    "section": "Literature Review",
+    "text": "Literature Review\nUmamaheswaran et al. (2023) looked at what employers ask for in business analytics postings and found a consistent mix: big data, business intelligence, and analytical technique on one side, communication and stakeholder management on the other. That matters for how we think about readiness. Knowing the software is not enough on its own; an analyst also has to understand the business problem and explain results to people who are not going to read the code.\nApparel retail is a fitting test case for that combination. Forecasting, inventory, pricing, and supply chain decisions all show up as recurring analytical needs in clothing retail, and IBISWorld (2025) backs that up with broader industry context on clothing and clothing accessory retailers. Demand in this sector moves fast and shifts with the seasons, which is part of why data-supported decisions carry more weight here than they might in a slower-moving industry.\nRetail hiring overall backs up the case for treating analytics as its own career path within the industry. The Planet Group (2025) found that retail hiring has gotten more selective even as it leans harder into technology, analytics, and customer experience. So while fewer people may be getting hired overall, the analytical roles that support pricing, inventory, operations, and customer decisions do not seem to be losing ground.\nJob postings themselves give a more concrete look at what these roles ask for. Scanning ZipRecruiter listings, SQL, Excel, and a visualization tool like Tableau or Power BI show up repeatedly, alongside the usual asks for analytical and communication skills (ZipRecruiter, 2026b). We are treating this as a starting point rather than a finding, since individual job postings vary a lot by employer, seniority, and timing.\nThe same postings also show a fair amount of spread in pay and remote availability (ZipRecruiter, 2026a). Salary and remote work are not the central question we are asking, but they are useful context for judging how attractive a given role is. Once we are working with the MET Employability Career Match data, we will be able to check whether these early patterns hold up within our apparel retail scope specifically.\nAcross these sources, the same picture keeps showing up: business/data analyst roles need technical skill, analytical thinking, and the ability to work with the business side, all at once. What none of this tells us yet is which of those skills matter most specifically in apparel retail, or how close our own skills already are to that bar. That gap is what this project is built to close."
+  },
+  {
+    "objectID": "introduction.html#target-user",
+    "href": "introduction.html#target-user",
+    "title": "Career Pathway and Industry Scope",
+    "section": "Target User",
+    "text": "Target User\nThis product is aimed at BU MET students who are exploring analytics career paths and want a clearer picture of which industries and skills to prioritize. Our goal is to help someone in this position understand what a business/data analyst role in apparel retail actually looks like, so they can decide whether it fits their interests and know what to learn next if it does."
+  },
+  {
+    "objectID": "introduction.html#product-question",
+    "href": "introduction.html#product-question",
+    "title": "Career Pathway and Industry Scope",
+    "section": "Product Question",
+    "text": "Product Question\nWhich skills are most valued for business/data analyst roles in apparel retail and how well does our team’s current skill set match those demands?"
+  },
+  {
+    "objectID": "introduction.html#met-employability-career-match-fields-we-expect-to-use",
+    "href": "introduction.html#met-employability-career-match-fields-we-expect-to-use",
+    "title": "Career Pathway and Industry Scope",
+    "section": "MET Employability Career Match Fields We Expect to Use",
+    "text": "MET Employability Career Match Fields We Expect to Use\nWe plan to use title/normalized_title, naics_code, skills, annual_salary_min/annual_salary_max, remote_status, city/state, and soc_code. These fields should let us see which skills and pay levels matter most for business/data analyst roles in apparel retail."
+  },
+  {
+    "objectID": "introduction.html#references",
+    "href": "introduction.html#references",
+    "title": "Career Pathway and Industry Scope",
+    "section": "References",
+    "text": "References\n\n\nIBISWorld. (2025). Clothing and clothing accessory retailers in the US. https://www.ibisworld.com/united-states/industry/clothing-and-clothing-accessory-retailers/2048/\n\n\nThe Planet Group. (2025). Retail workforce report 2025. https://www.theplanetgroup.com/job-reports/retail-jobs-report-2025\n\n\nUmamaheswaran, S., Fernandes, S., Venkatesh, V. G., Avula, N., & Shi, Y. (2023). What do employers look for in \"business analytics\" roles? – a skill mining analysis. Information Systems Frontiers. https://doi.org/10.1007/s10796-023-10437-y\n\n\nZipRecruiter. (2026a). Retail data analyst remote jobs. https://www.ziprecruiter.com/Jobs/Retail-Data-Analyst-Remote\n\n\nZipRecruiter. (2026b). Work from home retail analyst jobs. https://www.ziprecruiter.com/Jobs/Work-From-Home-Retail-Analyst"
+  },
+  {
+    "objectID": "data_dictionary.html",
+    "href": "data_dictionary.html",
+    "title": "Data Dictionary � apparel_analyst_clean.csv",
+    "section": "",
+    "text": "Cleaned dataset for Business/Data Analyst roles within NAICS 458 (Clothing, Clothing Accessories, Shoe, and Jewelry Retailers), filtered using NAICS 458 + an exact-match apparel brand list + narrow analyst title matching. 19 verified rows.\n\n\n\n\n\nField\nDescription\n\n\n\n\nID\nUnique job posting identifier\n\n\nTITLE_CLEAN\nStandardized/cleaned job title\n\n\nTITLE_RAW\nOriginal job title as posted\n\n\nCOMPANY_NAME\nEmployer name\n\n\nCOMPANY_CLEAN\nStandardized employer name\n\n\nPOSTED\nDate the job was posted\n\n\n\n\n\n\n\n\n\nField\nDescription\n\n\n\n\nSALARY\nOriginal salary text as posted\n\n\nSALARY_FROM\nLower bound of posted salary range\n\n\nSALARY_TO\nUpper bound of posted salary range\n\n\nORIGINAL_PAY_PERIOD\nPay period as posted (e.g. hourly, annual)\n\n\n\n\n\n\n\n\n\nField\nDescription\n\n\n\n\nMIN_YEARS_EXPERIENCE\nMinimum years of experience required\n\n\nMAX_YEARS_EXPERIENCE\nMaximum years of experience required\n\n\n\n\n\n\n\n\n\nField\nDescription\n\n\n\n\nMIN_EDULEVELS_NAME\nMinimum education level required\n\n\nMAX_EDULEVELS_NAME\nMaximum education level required\n\n\n\n\n\n\n\n\n\n\n\n\n\nField\nDescription\n\n\n\n\nSKILLS_LIST\nCleaned list of general skills (parsed from JSON, e.g. [‘Power BI’, ‘Analytics’])\n\n\nSOFTWARE_SKILLS_LIST\nCleaned list of software tools (parsed from JSON)\n\n\n\n\n\n\n\n\n\n\n\n\n\nField\nDescription\n\n\n\n\nREMOTE_TYPE_NAME\nWork arrangement (Remote, Hybrid, On-site, Unknown)\n\n\n\n\n\n\n\n\n\nField\nDescription\n\n\n\n\nCITY_NAME\nCity of the job posting\n\n\nSTATE_NAME\nState of the job posting\n\n\nCOUNTY_NAME\nCounty of the job posting\n\n\nMSA_NAME\nMetropolitan Statistical Area name\n\n\n\n\n\n\n\n\n\nField\nDescription\n\n\n\n\nNAICS_2022_6\n6-digit NAICS 2022 industry code\n\n\nNAICS_2022_6_NAME\nIndustry name for the NAICS code\n\n\nSOC_5\n5-digit SOC occupation code\n\n\nSOC_5_NAME\nOccupation name for the SOC code"
+  },
+  {
+    "objectID": "data_dictionary.html#identification",
+    "href": "data_dictionary.html#identification",
+    "title": "Data Dictionary � apparel_analyst_clean.csv",
+    "section": "",
+    "text": "Field\nDescription\n\n\n\n\nID\nUnique job posting identifier\n\n\nTITLE_CLEAN\nStandardized/cleaned job title\n\n\nTITLE_RAW\nOriginal job title as posted\n\n\nCOMPANY_NAME\nEmployer name\n\n\nCOMPANY_CLEAN\nStandardized employer name\n\n\nPOSTED\nDate the job was posted"
+  },
+  {
+    "objectID": "data_dictionary.html#salary",
+    "href": "data_dictionary.html#salary",
+    "title": "Data Dictionary � apparel_analyst_clean.csv",
+    "section": "",
+    "text": "Field\nDescription\n\n\n\n\nSALARY\nOriginal salary text as posted\n\n\nSALARY_FROM\nLower bound of posted salary range\n\n\nSALARY_TO\nUpper bound of posted salary range\n\n\nORIGINAL_PAY_PERIOD\nPay period as posted (e.g. hourly, annual)"
+  },
+  {
+    "objectID": "data_dictionary.html#experience",
+    "href": "data_dictionary.html#experience",
+    "title": "Data Dictionary � apparel_analyst_clean.csv",
+    "section": "",
+    "text": "Field\nDescription\n\n\n\n\nMIN_YEARS_EXPERIENCE\nMinimum years of experience required\n\n\nMAX_YEARS_EXPERIENCE\nMaximum years of experience required"
+  },
+  {
+    "objectID": "data_dictionary.html#education",
+    "href": "data_dictionary.html#education",
+    "title": "Data Dictionary � apparel_analyst_clean.csv",
+    "section": "",
+    "text": "Field\nDescription\n\n\n\n\nMIN_EDULEVELS_NAME\nMinimum education level required\n\n\nMAX_EDULEVELS_NAME\nMaximum education level required"
+  },
+  {
+    "objectID": "data_dictionary.html#skills",
+    "href": "data_dictionary.html#skills",
+    "title": "Data Dictionary � apparel_analyst_clean.csv",
+    "section": "",
+    "text": "Field\nDescription\n\n\n\n\nSKILLS_LIST\nCleaned list of general skills (parsed from JSON, e.g. [‘Power BI’, ‘Analytics’])\n\n\nSOFTWARE_SKILLS_LIST\nCleaned list of software tools (parsed from JSON)"
+  },
+  {
+    "objectID": "data_dictionary.html#remoteonsite",
+    "href": "data_dictionary.html#remoteonsite",
+    "title": "Data Dictionary � apparel_analyst_clean.csv",
+    "section": "",
+    "text": "Field\nDescription\n\n\n\n\nREMOTE_TYPE_NAME\nWork arrangement (Remote, Hybrid, On-site, Unknown)"
+  },
+  {
+    "objectID": "data_dictionary.html#location",
+    "href": "data_dictionary.html#location",
+    "title": "Data Dictionary � apparel_analyst_clean.csv",
+    "section": "",
+    "text": "Field\nDescription\n\n\n\n\nCITY_NAME\nCity of the job posting\n\n\nSTATE_NAME\nState of the job posting\n\n\nCOUNTY_NAME\nCounty of the job posting\n\n\nMSA_NAME\nMetropolitan Statistical Area name"
+  },
+  {
+    "objectID": "data_dictionary.html#industry-occupation",
+    "href": "data_dictionary.html#industry-occupation",
+    "title": "Data Dictionary � apparel_analyst_clean.csv",
+    "section": "",
+    "text": "Field\nDescription\n\n\n\n\nNAICS_2022_6\n6-digit NAICS 2022 industry code\n\n\nNAICS_2022_6_NAME\nIndustry name for the NAICS code\n\n\nSOC_5\n5-digit SOC occupation code\n\n\nSOC_5_NAME\nOccupation name for the SOC code"
+  },
+  {
     "objectID": "data_preparation.html",
     "href": "data_preparation.html",
-    "title": "Data Preperation",
+    "title": "Data Preparation",
     "section": "",
     "text": "import pandas as pd\n\ndf = pd.read_csv(\"data/interim/apparel_analyst_filtered.csv\")\nprint(f\"Loaded {len(df)} rows, {len(df.columns)} columns\")\ndf.info()\n\nLoaded 19 rows, 125 columns\n&lt;class 'pandas.DataFrame'&gt;\nRangeIndex: 19 entries, 0 to 18\nColumns: 125 entries, ID to COMPANY_CLEAN\ndtypes: float64(38), int64(2), str(85)\nmemory usage: 122.6 KB"
   },
   {
     "objectID": "data_preparation.html#load-the-filtered-dataset",
     "href": "data_preparation.html#load-the-filtered-dataset",
-    "title": "Data Preperation",
+    "title": "Data Preparation",
     "section": "",
     "text": "import pandas as pd\n\ndf = pd.read_csv(\"data/interim/apparel_analyst_filtered.csv\")\nprint(f\"Loaded {len(df)} rows, {len(df.columns)} columns\")\ndf.info()\n\nLoaded 19 rows, 125 columns\n&lt;class 'pandas.DataFrame'&gt;\nRangeIndex: 19 entries, 0 to 18\nColumns: 125 entries, ID to COMPANY_CLEAN\ndtypes: float64(38), int64(2), str(85)\nmemory usage: 122.6 KB"
   },
   {
     "objectID": "data_preparation.html#clean-salary-fields",
     "href": "data_preparation.html#clean-salary-fields",
-    "title": "Data Preperation",
+    "title": "Data Preparation",
     "section": "Clean Salary Fields",
     "text": "Clean Salary Fields\n\ndf[\"SALARY_FROM\"] = pd.to_numeric(df[\"SALARY_FROM\"], errors=\"coerce\")\ndf[\"SALARY_TO\"] = pd.to_numeric(df[\"SALARY_TO\"], errors=\"coerce\")\n\nmedian_from = df[\"SALARY_FROM\"].median()\nmedian_to = df[\"SALARY_TO\"].median()\ndf[\"SALARY_FROM\"] = df[\"SALARY_FROM\"].fillna(median_from)\ndf[\"SALARY_TO\"] = df[\"SALARY_TO\"].fillna(median_to)\n\nprint(f\"Median SALARY_FROM used for fill: {median_from}\")\nprint(f\"Median SALARY_TO used for fill: {median_to}\")\ndf[[\"TITLE_CLEAN\", \"COMPANY_NAME\", \"SALARY_FROM\", \"SALARY_TO\"]]\n\nMedian SALARY_FROM used for fill: 85300.0\nMedian SALARY_TO used for fill: 138222.0\n\n\n\n\n\n\n\n\n\nTITLE_CLEAN\nCOMPANY_NAME\nSALARY_FROM\nSALARY_TO\n\n\n\n\n0\nSenior Business Intelligence & Data Analyst - ...\nJobs.tjx.com\n85300.0\n138222.0\n\n\n1\nSr Region Operations Analyst - Sierra\nTJX\n85300.0\n138222.0\n\n\n2\nProduct Manager, Enterprise Analytics\nVuoriinc\n85300.0\n138222.0\n\n\n3\nPrincipal, Data Analytics and Engineering\nMacy's\n85300.0\n138222.0\n\n\n4\nMedia Marketing Sr. Manager, Analytics\nRalph Lauren\n85000.0\n161444.0\n\n\n5\nSr. Manager, Ecommerce Analytics\nVuoriinc\n85300.0\n138222.0\n\n\n6\nSr. Manager, Global Finance Business Analyst\nVuoriinc\n85300.0\n138222.0\n\n\n7\nSr. FP&A Manager, Systems & Analytics\nVuoriinc\n85300.0\n138222.0\n\n\n8\nMerchandising Data Analyst\nCareers.michaels.com\n85300.0\n138222.0\n\n\n9\nSenior Analyst, Merchandise Flow & Analytics\nTJX\n85300.0\n138222.0\n\n\n10\nManager, Digital Consumer Analytics\nAdidas\n85300.0\n138222.0\n\n\n11\nSr Region Operations Analyst - Sierra\nTJX\n85600.0\n109200.0\n\n\n12\nSenior Business Intelligence & Data Analyst - ...\nJobs.tjx.com\n85300.0\n138222.0\n\n\n13\nManager, Digital Analytics\nAdidas\n85300.0\n138222.0\n\n\n14\nMedia Marketing Sr. Manager, Analytics\nRalph Lauren\n85000.0\n161444.0\n\n\n15\nSr. Data Analyst\nFoot Locker\n95000.0\n115000.0\n\n\n16\nManager, Digital Marketing Analytics\nAdidas\n85300.0\n138222.0\n\n\n17\nData Analyst 3 - Store Operations\nNordstrom\n85300.0\n138222.0\n\n\n18\nDirector, Wholesale Sales Planning & Analytics\nVuoriinc\n85300.0\n138222.0"
   },
   {
     "objectID": "data_preparation.html#clean-experience-fields",
     "href": "data_preparation.html#clean-experience-fields",
-    "title": "Data Preperation",
+    "title": "Data Preparation",
     "section": "Clean Experience Fields",
     "text": "Clean Experience Fields\n\ndf[\"MIN_YEARS_EXPERIENCE\"] = pd.to_numeric(df[\"MIN_YEARS_EXPERIENCE\"], errors=\"coerce\")\ndf[\"MAX_YEARS_EXPERIENCE\"] = pd.to_numeric(df[\"MAX_YEARS_EXPERIENCE\"], errors=\"coerce\")\n\ndf[\"MIN_YEARS_EXPERIENCE\"] = df[\"MIN_YEARS_EXPERIENCE\"].fillna(0)\ndf[\"MAX_YEARS_EXPERIENCE\"] = df[\"MAX_YEARS_EXPERIENCE\"].fillna(df[\"MIN_YEARS_EXPERIENCE\"])\n\ndf[[\"TITLE_CLEAN\", \"MIN_YEARS_EXPERIENCE\", \"MAX_YEARS_EXPERIENCE\"]]\n\n\n\n\n\n\n\n\nTITLE_CLEAN\nMIN_YEARS_EXPERIENCE\nMAX_YEARS_EXPERIENCE\n\n\n\n\n0\nSenior Business Intelligence & Data Analyst - ...\n0.0\n1.0\n\n\n1\nSr Region Operations Analyst - Sierra\n0.0\n1.0\n\n\n2\nProduct Manager, Enterprise Analytics\n5.0\n5.0\n\n\n3\nPrincipal, Data Analytics and Engineering\n0.0\n1.0\n\n\n4\nMedia Marketing Sr. Manager, Analytics\n0.0\n0.0\n\n\n5\nSr. Manager, Ecommerce Analytics\n0.0\n0.0\n\n\n6\nSr. Manager, Global Finance Business Analyst\n0.0\n0.0\n\n\n7\nSr. FP&A Manager, Systems & Analytics\n0.0\n0.0\n\n\n8\nMerchandising Data Analyst\n0.0\n1.0\n\n\n9\nSenior Analyst, Merchandise Flow & Analytics\n0.0\n1.0\n\n\n10\nManager, Digital Consumer Analytics\n5.0\n5.0\n\n\n11\nSr Region Operations Analyst - Sierra\n0.0\n0.0\n\n\n12\nSenior Business Intelligence & Data Analyst - ...\n0.0\n1.0\n\n\n13\nManager, Digital Analytics\n0.0\n0.0\n\n\n14\nMedia Marketing Sr. Manager, Analytics\n0.0\n0.0\n\n\n15\nSr. Data Analyst\n0.0\n0.0\n\n\n16\nManager, Digital Marketing Analytics\n0.0\n1.0\n\n\n17\nData Analyst 3 - Store Operations\n0.0\n0.0\n\n\n18\nDirector, Wholesale Sales Planning & Analytics\n0.0\n0.0"
   },
   {
     "objectID": "data_preparation.html#clean-geography-fields",
     "href": "data_preparation.html#clean-geography-fields",
-    "title": "Data Preperation",
+    "title": "Data Preparation",
     "section": "Clean Geography Fields",
-    "text": "Clean Geography Fields\n\nfor col in [\"CITY_NAME\", \"STATE_NAME\"]:\n    df[col] = df[col].astype(str).str.strip()\n    df[col] = df[col].replace(\"\", \"Unknown\").replace(\"nan\", \"Unknown\")\n\ndf[[\"TITLE_CLEAN\", \"COMPANY_NAME\", \"CITY_NAME\", \"STATE_NAME\"]]\n\n\n\n\n\n\n\n\nTITLE_CLEAN\nCOMPANY_NAME\nCITY_NAME\nSTATE_NAME\n\n\n\n\n0\nSenior Business Intelligence & Data Analyst - ...\nJobs.tjx.com\nFramingham\nMassachusetts\n\n\n1\nSr Region Operations Analyst - Sierra\nTJX\nFramingham\nMassachusetts\n\n\n2\nProduct Manager, Enterprise Analytics\nVuoriinc\nCarlsbad\nCalifornia\n\n\n3\nPrincipal, Data Analytics and Engineering\nMacy's\nLong Island City\nNew York\n\n\n4\nMedia Marketing Sr. Manager, Analytics\nRalph Lauren\nNew York\nNY\n\n\n5\nSr. Manager, Ecommerce Analytics\nVuoriinc\nCarlsbad\nCalifornia\n\n\n6\nSr. Manager, Global Finance Business Analyst\nVuoriinc\nCarlsbad\nCalifornia\n\n\n7\nSr. FP&A Manager, Systems & Analytics\nVuoriinc\nCarlsbad\nCalifornia\n\n\n8\nMerchandising Data Analyst\nCareers.michaels.com\nIrving\nTexas\n\n\n9\nSenior Analyst, Merchandise Flow & Analytics\nTJX\nFramingham\nMassachusetts\n\n\n10\nManager, Digital Consumer Analytics\nAdidas\nPortland\nOregon\n\n\n11\nSr Region Operations Analyst - Sierra\nTJX\nHome Office Framingham Ma 550\nCochituate Rd\n\n\n12\nSenior Business Intelligence & Data Analyst - ...\nJobs.tjx.com\nFramingham\nMassachusetts\n\n\n13\nManager, Digital Analytics\nAdidas\nPortland\nOregon\n\n\n14\nMedia Marketing Sr. Manager, Analytics\nRalph Lauren\nNew York\nNY\n\n\n15\nSr. Data Analyst\nFoot Locker\nNew York\nNY\n\n\n16\nManager, Digital Marketing Analytics\nAdidas\nPortland\nOregon\n\n\n17\nData Analyst 3 - Store Operations\nNordstrom\nNaN\nNaN\n\n\n18\nDirector, Wholesale Sales Planning & Analytics\nVuoriinc\nCarlsbad\nCalifornia"
+    "text": "Clean Geography Fields\n\nfor col in [\"CITY_NAME\", \"STATE_NAME\"]:\n    df[col] = df[col].astype(str).str.strip()\n    df[col] = df[col].replace(\"\", \"Unknown\").replace(\"nan\", \"Unknown\").fillna(\"Unknown\")\n\n# Manual fix: ID 352216 has a malformed LOCATION field (TJX corporate\n# address split incorrectly into CITY_NAME/STATE_NAME). Corrected using\n# other TJX postings in this dataset, which are consistently Framingham, MA.\ndf.loc[df[\"ID\"] == 352216, \"CITY_NAME\"] = \"Framingham\"\ndf.loc[df[\"ID\"] == 352216, \"STATE_NAME\"] = \"Massachusetts\"\n\ndf[[\"TITLE_CLEAN\", \"COMPANY_NAME\", \"CITY_NAME\", \"STATE_NAME\"]]\n\n\n\n\n\n\n\n\nTITLE_CLEAN\nCOMPANY_NAME\nCITY_NAME\nSTATE_NAME\n\n\n\n\n0\nSenior Business Intelligence & Data Analyst - ...\nJobs.tjx.com\nFramingham\nMassachusetts\n\n\n1\nSr Region Operations Analyst - Sierra\nTJX\nFramingham\nMassachusetts\n\n\n2\nProduct Manager, Enterprise Analytics\nVuoriinc\nCarlsbad\nCalifornia\n\n\n3\nPrincipal, Data Analytics and Engineering\nMacy's\nLong Island City\nNew York\n\n\n4\nMedia Marketing Sr. Manager, Analytics\nRalph Lauren\nNew York\nNY\n\n\n5\nSr. Manager, Ecommerce Analytics\nVuoriinc\nCarlsbad\nCalifornia\n\n\n6\nSr. Manager, Global Finance Business Analyst\nVuoriinc\nCarlsbad\nCalifornia\n\n\n7\nSr. FP&A Manager, Systems & Analytics\nVuoriinc\nCarlsbad\nCalifornia\n\n\n8\nMerchandising Data Analyst\nCareers.michaels.com\nIrving\nTexas\n\n\n9\nSenior Analyst, Merchandise Flow & Analytics\nTJX\nFramingham\nMassachusetts\n\n\n10\nManager, Digital Consumer Analytics\nAdidas\nPortland\nOregon\n\n\n11\nSr Region Operations Analyst - Sierra\nTJX\nFramingham\nMassachusetts\n\n\n12\nSenior Business Intelligence & Data Analyst - ...\nJobs.tjx.com\nFramingham\nMassachusetts\n\n\n13\nManager, Digital Analytics\nAdidas\nPortland\nOregon\n\n\n14\nMedia Marketing Sr. Manager, Analytics\nRalph Lauren\nNew York\nNY\n\n\n15\nSr. Data Analyst\nFoot Locker\nNew York\nNY\n\n\n16\nManager, Digital Marketing Analytics\nAdidas\nPortland\nOregon\n\n\n17\nData Analyst 3 - Store Operations\nNordstrom\nUnknown\nUnknown\n\n\n18\nDirector, Wholesale Sales Planning & Analytics\nVuoriinc\nCarlsbad\nCalifornia"
   },
   {
     "objectID": "data_preparation.html#clean-skills-fields",
     "href": "data_preparation.html#clean-skills-fields",
-    "title": "Data Preperation",
+    "title": "Data Preparation",
     "section": "Clean Skills Fields",
-    "text": "Clean Skills Fields\n\ndef clean_skill_list(value):\n    if pd.isna(value) or value == \"\":\n        return []\n    return [s.strip() for s in str(value).split(\",\") if s.strip()]\n\ndf[\"SKILLS_LIST\"] = df[\"SKILLS_NAME\"].apply(clean_skill_list)\ndf[\"SOFTWARE_SKILLS_LIST\"] = df[\"SOFTWARE_SKILLS_NAME\"].apply(clean_skill_list)\n\nprint(f\"Postings with at least one listed skill: {(df['SKILLS_LIST'].str.len() &gt; 0).sum()}\")\ndf[[\"TITLE_CLEAN\", \"SKILLS_LIST\", \"SOFTWARE_SKILLS_LIST\"]]\n\nPostings with at least one listed skill: 19\n\n\n\n\n\n\n\n\n\nTITLE_CLEAN\nSKILLS_LIST\nSOFTWARE_SKILLS_LIST\n\n\n\n\n0\nSenior Business Intelligence & Data Analyst - ...\n[[]]\n[[]]\n\n\n1\nSr Region Operations Analyst - Sierra\n[[]]\n[[]]\n\n\n2\nProduct Manager, Enterprise Analytics\n[[\"Power BI\", \"Data Governance\", \"Anomaly Dete...\n[[\"Power BI\"]]\n\n\n3\nPrincipal, Data Analytics and Engineering\n[[\"Snowflake Schema\", \"SQL (Programming Langua...\n[[\"Snowflake Schema\", \"SQL (Programming Langua...\n\n\n4\nMedia Marketing Sr. Manager, Analytics\n[[\"Print Media\", \"Media Strategy\", \"Brand Posi...\n[[]]\n\n\n5\nSr. Manager, Ecommerce Analytics\n[[\"Power BI\", \"Microsoft Excel\", \"Data Analysi...\n[[\"Power BI\", \"Microsoft Excel\"]]\n\n\n6\nSr. Manager, Global Finance Business Analyst\n[[\"Microsoft Dynamics 365\", \"Accounting Inform...\n[[\"Microsoft Dynamics 365\"]]\n\n\n7\nSr. FP&A Manager, Systems & Analytics\n[[\"Power BI\", \"Microsoft Excel\", \"SQL (Program...\n[[\"Power BI\", \"Microsoft Excel\", \"SQL (Program...\n\n\n8\nMerchandising Data Analyst\n[[\"Power BI\", \"Microsoft Excel\", \"SQL (Program...\n[[\"Power BI\", \"Microsoft Excel\", \"SQL (Program...\n\n\n9\nSenior Analyst, Merchandise Flow & Analytics\n[[]]\n[[]]\n\n\n10\nManager, Digital Consumer Analytics\n[[\"SQL (Programming Language)\", \"Databricks\", ...\n[[\"SQL (Programming Language)\", \"Databricks\"]]\n\n\n11\nSr Region Operations Analyst - Sierra\n[[\"Microsoft Office\", \"Reporting and Analysis\"...\n[[\"Microsoft Office\"]]\n\n\n12\nSenior Business Intelligence & Data Analyst - ...\n[[]]\n[[]]\n\n\n13\nManager, Digital Analytics\n[[\"Power BI\", \"Adobe Analytics\", \"Python (Prog...\n[[\"Power BI\", \"Adobe Analytics\", \"Python (Prog...\n\n\n14\nMedia Marketing Sr. Manager, Analytics\n[[\"Print Media\", \"Media Strategy\", \"Brand Posi...\n[[]]\n\n\n15\nSr. Data Analyst\n[[\"Power BI\", \"SQL (Programming Language)\", \"M...\n[[\"Power BI\", \"SQL (Programming Language)\", \"M...\n\n\n16\nManager, Digital Marketing Analytics\n[[\"SQL (Programming Language)\", \"Digital Marke...\n[[\"SQL (Programming Language)\"]]\n\n\n17\nData Analyst 3 - Store Operations\n[[\"Microsoft Office\", \"SQL (Programming Langua...\n[[\"Microsoft Office\", \"SQL (Programming Langua...\n\n\n18\nDirector, Wholesale Sales Planning & Analytics\n[[\"Power BI\", \"Python (Programming Language)\",...\n[[\"Power BI\", \"Python (Programming Language)\",..."
+    "text": "Clean Skills Fields\n\nimport json\n\ndef clean_skill_list(value):\n    if pd.isna(value) or value == \"\":\n        return []\n    try:\n        return json.loads(value)\n    except (json.JSONDecodeError, TypeError):\n        return []\n\ndf[\"SKILLS_LIST\"] = df[\"SKILLS_NAME\"].apply(clean_skill_list)\ndf[\"SOFTWARE_SKILLS_LIST\"] = df[\"SOFTWARE_SKILLS_NAME\"].apply(clean_skill_list)\n\nprint(f\"Postings with at least one listed skill: {(df['SKILLS_LIST'].str.len() &gt; 0).sum()}\")\ndf[[\"TITLE_CLEAN\", \"SKILLS_LIST\", \"SOFTWARE_SKILLS_LIST\"]]\n\nPostings with at least one listed skill: 15\n\n\n\n\n\n\n\n\n\nTITLE_CLEAN\nSKILLS_LIST\nSOFTWARE_SKILLS_LIST\n\n\n\n\n0\nSenior Business Intelligence & Data Analyst - ...\n[]\n[]\n\n\n1\nSr Region Operations Analyst - Sierra\n[]\n[]\n\n\n2\nProduct Manager, Enterprise Analytics\n[Power BI, Data Governance, Anomaly Detection,...\n[Power BI]\n\n\n3\nPrincipal, Data Analytics and Engineering\n[Snowflake Schema, SQL (Programming Language),...\n[Snowflake Schema, SQL (Programming Language),...\n\n\n4\nMedia Marketing Sr. Manager, Analytics\n[Print Media, Media Strategy, Brand Positionin...\n[]\n\n\n5\nSr. Manager, Ecommerce Analytics\n[Power BI, Microsoft Excel, Data Analysis Tool...\n[Power BI, Microsoft Excel]\n\n\n6\nSr. Manager, Global Finance Business Analyst\n[Microsoft Dynamics 365, Accounting Informatio...\n[Microsoft Dynamics 365]\n\n\n7\nSr. FP&A Manager, Systems & Analytics\n[Power BI, Microsoft Excel, SQL (Programming L...\n[Power BI, Microsoft Excel, SQL (Programming L...\n\n\n8\nMerchandising Data Analyst\n[Power BI, Microsoft Excel, SQL (Programming L...\n[Power BI, Microsoft Excel, SQL (Programming L...\n\n\n9\nSenior Analyst, Merchandise Flow & Analytics\n[]\n[]\n\n\n10\nManager, Digital Consumer Analytics\n[SQL (Programming Language), Databricks, Digit...\n[SQL (Programming Language), Databricks]\n\n\n11\nSr Region Operations Analyst - Sierra\n[Microsoft Office, Reporting and Analysis, Dat...\n[Microsoft Office]\n\n\n12\nSenior Business Intelligence & Data Analyst - ...\n[]\n[]\n\n\n13\nManager, Digital Analytics\n[Power BI, Adobe Analytics, Python (Programmin...\n[Power BI, Adobe Analytics, Python (Programmin...\n\n\n14\nMedia Marketing Sr. Manager, Analytics\n[Print Media, Media Strategy, Brand Positionin...\n[]\n\n\n15\nSr. Data Analyst\n[Power BI, SQL (Programming Language), Microso...\n[Power BI, SQL (Programming Language), Microso...\n\n\n16\nManager, Digital Marketing Analytics\n[SQL (Programming Language), Digital Marketing...\n[SQL (Programming Language)]\n\n\n17\nData Analyst 3 - Store Operations\n[Microsoft Office, SQL (Programming Language),...\n[Microsoft Office, SQL (Programming Language),...\n\n\n18\nDirector, Wholesale Sales Planning & Analytics\n[Power BI, Python (Programming Language), Micr...\n[Power BI, Python (Programming Language), Micr..."
   },
   {
     "objectID": "data_preparation.html#save-the-cleaned-dataset",
     "href": "data_preparation.html#save-the-cleaned-dataset",
-    "title": "Data Preperation",
+    "title": "Data Preparation",
     "section": "Save the Cleaned Dataset",
     "text": "Save the Cleaned Dataset\n\nimport os\nos.makedirs(\"data/processed\", exist_ok=True)\ndf.to_csv(\"data/processed/apparel_analyst_clean.csv\", index=False)\nprint(f\"Saved cleaned dataset: {len(df)} rows\")\n\nSaved cleaned dataset: 19 rows"
   },
   {
     "objectID": "data_preparation.html#note-on-sample-size",
     "href": "data_preparation.html#note-on-sample-size",
-    "title": "Data Preperation",
+    "title": "Data Preparation",
     "section": "Note on Sample Size",
     "text": "Note on Sample Size\nThe final cleaned dataset contains 19 job postings. This reflects a known limitation of NAICS-based industry classification: many analytics roles at apparel/retail companies are tagged under unrelated NAICS codes rather than under clothing retail codes specifically. To compensate, this dataset combines NAICS 458 (Clothing, Clothing Accessories, Shoe, and Jewelry Retailers) with an exact-match list of known apparel/fashion company names, then filters to narrow analyst job titles (business analyst, data analyst). The resulting sample size is small but each row is a verified, legitimate match."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "AD688: Fashion and Apparel Career Evaluation - Group 7",
+    "section": "",
+    "text": "This project evaluates analytics-related career opportunities within the apparel and fashion industry using job-posting data from the MET Career Compass dataset.\nThe analysis focuses on a narrowly defined market built around NAICS 458 and a verified list of apparel and fashion employers. The current filtered dataset contains 19 job postings and is intended to provide a descriptive view of the selected market rather than represent the broader analytics labor market."
+  },
+  {
+    "objectID": "index.html#project-overview",
+    "href": "index.html#project-overview",
+    "title": "AD688: Fashion and Apparel Career Evaluation - Group 7",
+    "section": "",
+    "text": "This project evaluates analytics-related career opportunities within the apparel and fashion industry using job-posting data from the MET Career Compass dataset.\nThe analysis focuses on a narrowly defined market built around NAICS 458 and a verified list of apparel and fashion employers. The current filtered dataset contains 19 job postings and is intended to provide a descriptive view of the selected market rather than represent the broader analytics labor market."
+  },
+  {
+    "objectID": "index.html#project-sections",
+    "href": "index.html#project-sections",
+    "title": "AD688: Fashion and Apparel Career Evaluation - Group 7",
+    "section": "Project Sections",
+    "text": "Project Sections\nUse the navigation bar above to explore the project:\n\nIntroduction — project scope, career pathway, and industry context\nData Preparation — filtering, cleaning, and preparation of the analytical dataset\nMarket Baseline — current job volume, salary, geography, experience, work arrangement, and employer patterns\nSkill Gap Analysis — comparison of market skill requirements with relevant career skills\nCareer Evaluation — evaluation of career opportunities using the project findings\nFinal Recommendations — overall conclusions and recommendations\n\nThe Market Baseline currently provides the descriptive foundation for the later skill-gap and career-evaluation stages of the project."
+  },
+  {
+    "objectID": "market_baseline.html",
+    "href": "market_baseline.html",
+    "title": "Market Baseline",
+    "section": "",
+    "text": "This page summarizes the baseline characteristics of the selected apparel and fashion analytics job market. The final filtered dataset contains 19 verified job postings based on the team’s selected NAICS 458 scope and an additional exact-match list of known apparel and fashion employers.\nBecause the market definition is intentionally narrow, the results should be interpreted as a descriptive snapshot of the selected apparel and fashion analytics market rather than as estimates of the broader analytics labor market."
+  },
+  {
+    "objectID": "market_baseline.html#market-overview",
+    "href": "market_baseline.html#market-overview",
+    "title": "Market Baseline",
+    "section": "",
+    "text": "This page summarizes the baseline characteristics of the selected apparel and fashion analytics job market. The final filtered dataset contains 19 verified job postings based on the team’s selected NAICS 458 scope and an additional exact-match list of known apparel and fashion employers.\nBecause the market definition is intentionally narrow, the results should be interpreted as a descriptive snapshot of the selected apparel and fashion analytics market rather than as estimates of the broader analytics labor market."
+  },
+  {
+    "objectID": "market_baseline.html#job-volume-by-title-or-segment",
+    "href": "market_baseline.html#job-volume-by-title-or-segment",
+    "title": "Market Baseline",
+    "section": "Job Volume by Title or Segment",
+    "text": "Job Volume by Title or Segment\nJob titles provide an initial view of the types of analytics roles represented within the selected apparel and fashion market.\n\n\n\n\n\n\n\n\n\nThe 19-posting sample contains a mix of analyst, business intelligence, ecommerce analytics, merchandise analytics, and senior analytics roles. Most job titles appear only once, suggesting that the selected market is relatively specialized and fragmented rather than concentrated around a single standardized title. A small number of titles appear more than once, but overall the postings span several analytics-related functions within apparel and fashion retail."
+  },
+  {
+    "objectID": "market_baseline.html#salary-distribution",
+    "href": "market_baseline.html#salary-distribution",
+    "title": "Market Baseline",
+    "section": "Salary Distribution",
+    "text": "Salary Distribution\nSalary information is incomplete in the filtered dataset. Only postings with an originally reported salary range are included in this analysis. Missing salaries that were filled during data preparation are excluded so that the results reflect observed compensation information rather than imputed values.\n\n\nPostings with observed salary ranges: 4 of 19\n\n\n\n\n\n\n\n\n\n\n\nOnly 4 of the 19 postings contain an observed salary range, so the salary findings should be interpreted cautiously. The available postings show variation in both the lower and upper ends of reported compensation, but the small number of observations is not sufficient to characterize salary levels across the full selected apparel and fashion analytics market. The chart therefore presents only compensation that was explicitly reported in the source postings."
+  },
+  {
+    "objectID": "market_baseline.html#location-patterns",
+    "href": "market_baseline.html#location-patterns",
+    "title": "Market Baseline",
+    "section": "Location Patterns",
+    "text": "Location Patterns\nGeographic information is available for most postings. A small amount of additional standardization is applied below to consolidate obvious differences in state and city labels.\n\n\n\n\n\n\n\n\n\nThe 19-posting sample is concentrated in a small number of states. California and Massachusetts each account for 5 postings, followed by New York with 4 and Oregon with 3. Texas contributes 1 posting, while 1 record does not contain a usable state value. This geographic concentration appears to reflect the locations of the apparel and fashion employers represented in the filtered sample rather than a geographically representative view of the broader analytics labor market."
+  },
+  {
+    "objectID": "market_baseline.html#experience-requirement-distribution",
+    "href": "market_baseline.html#experience-requirement-distribution",
+    "title": "Market Baseline",
+    "section": "Experience Requirement Distribution",
+    "text": "Experience Requirement Distribution\nExperience requirements are incomplete in the source data. This analysis uses only minimum experience values that were present in the filtered dataset before missing values were filled during data preparation.\n\n\nPostings with observed minimum experience requirements: 9 of 19\n\n\n\n\n\n\n\n\n\n\n\nMinimum experience information is available for 9 of the 19 postings. Among those records, 7 postings show a recorded minimum of 0 years and 2 postings show a minimum of 5 years. Because experience information is missing for more than half of the sample, these values should be interpreted as the requirements recorded in the available source data rather than as a complete representation of experience expectations across the selected market."
+  },
+  {
+    "objectID": "market_baseline.html#remote-vs-onsite-patterns",
+    "href": "market_baseline.html#remote-vs-onsite-patterns",
+    "title": "Market Baseline",
+    "section": "Remote vs Onsite Patterns",
+    "text": "Remote vs Onsite Patterns\nWork-arrangement information is limited in the source data. Rather than assuming that postings with missing remote-status information are onsite roles, records without a reported work arrangement are retained as a separate “Not specified” category.\n\n\nPostings with an identifiable work arrangement: 4 of 19\n\n\n\n\n\n\n\n\n\n\n\nAn identifiable work arrangement is available for only 4 of the 19 postings. Three postings are classified as hybrid and one as fully remote. The remaining 15 postings either do not report a work arrangement or contain an unknown value. No posting in the available sample is explicitly classified as onsite. Because work-arrangement information is unavailable for most of the sample, these results should not be used to infer the overall prevalence of remote, hybrid, or onsite work in the selected market."
+  },
+  {
+    "objectID": "market_baseline.html#top-employers",
+    "href": "market_baseline.html#top-employers",
+    "title": "Market Baseline",
+    "section": "Top Employers",
+    "text": "Top Employers\nEmployer names are standardized below to consolidate obvious duplicate labels before comparing hiring activity within the selected market.\n\n\nEmployers represented in the sample: 8\n\n\n\n\n\n\n\n\n\n\n\nHiring activity in the selected sample is concentrated among a small number of apparel and retail employers. Vuori and TJX each account for 5 postings, followed by Adidas with 3 and Ralph Lauren with 2. Nordstrom, Foot Locker, Michaels, and Macy’s each contribute 1 posting. These counts should be interpreted within the context of the small, intentionally filtered dataset rather than as a ranking of overall hiring activity across the apparel and fashion industry."
+  },
+  {
+    "objectID": "market_baseline.html#baseline-summary",
+    "href": "market_baseline.html#baseline-summary",
+    "title": "Market Baseline",
+    "section": "Baseline Summary",
+    "text": "Baseline Summary\nThe market baseline provides a descriptive snapshot of analytics-related opportunities within the selected apparel and fashion industry scope. The final dataset contains 19 verified job postings and shows that analytics work appears across several functional areas, including business intelligence, merchandising, ecommerce, finance, operations, and marketing.\nHiring activity is concentrated among a small group of employers and locations. Vuori and TJX each account for 5 postings, while California and Massachusetts each account for 5 postings. New York and Oregon also represent notable hiring locations within the sample.\nSeveral variables have substantial missing information. Only 4 postings contain observed salary ranges, 9 contain recorded minimum experience requirements, and 4 contain an identifiable work arrangement. These limitations are retained explicitly in the analysis rather than treating imputed or missing values as if they were directly reported by employers.\nOverall, the findings should be interpreted as a baseline for this narrowly defined apparel and fashion analytics market rather than as estimates of the broader analytics labor market. The results provide a foundation for the later skill-gap and career-evaluation stages of the project."
   }
 ]
