@@ -20,6 +20,7 @@ import ast
 import os
 import pandas as pd
 import matplotlib.pyplot as plt
+import seaborn as sns
 from collections import Counter
 from matplotlib.ticker import MaxNLocator
 
@@ -83,8 +84,101 @@ Power BI and SQL are the most frequently requested skills, each appearing in 7 o
 
 ## Team Skill Comparison
 
-*This section is pending team self-assessments (1-5 proficiency scale) for the skills identified above. Once collected, this section will compare team skill levels against market demand using a heatmap, following the same approach as the class example.*
+Each team member self-rated their proficiency (1 = Beginner, 5 = Expert) on the eight most in-demand skills identified above.
+
+```{python}
+#| echo: false
+
+skills_data = {
+    "Name": ["Alyssa", "Ankita", "Sara", "Zech"],
+    "Power BI": [3, 3, 2, 3],
+    "SQL": [3, 3, 3, 4],
+    "Python": [3, 3, 2, 3],
+    "Excel": [4, 4, 5, 4],
+    "Digital Marketing": [2, 2, 4, 3],
+    "Stakeholder Mgmt": [4, 3, 4, 3],
+    "Project Mgmt": [4, 3, 3, 4],
+    "Data Analysis": [4, 4, 4, 4],
+}
+
+df_skills = pd.DataFrame(skills_data)
+df_skills.set_index("Name", inplace=True)
+
+plt.figure(figsize=(9, 5))
+
+sns.heatmap(
+    df_skills,
+    annot=True,
+    cmap="coolwarm",
+    linewidths=0.5,
+    vmin=1,
+    vmax=5
+)
+
+plt.title(
+    "Team Skill Levels (1 = Beginner, 5 = Expert)",
+    fontsize=12,
+    pad=10
+)
+
+plt.tight_layout()
+
+plt.savefig(
+    "figures/skill_gap_analysis/team_skill_heatmap.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+
+plt.show()
+```
+
+```{python}
+#| echo: false
+
+team_avg = df_skills.mean().sort_values()
+
+plt.figure(figsize=(7, 4.5))
+
+team_avg.plot(kind="barh")
+
+plt.title(
+    "Average Team Proficiency by Skill",
+    fontsize=12,
+    pad=10
+)
+
+plt.xlabel("Average Proficiency (1-5)")
+plt.ylabel("Skill")
+
+plt.xlim(0, 5)
+
+plt.tight_layout()
+
+plt.savefig(
+    "figures/skill_gap_analysis/team_average_proficiency.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+
+plt.show()
+```
+
+As a team, Data Analysis and Excel show the strongest average proficiency (4.0 and 4.25 respectively), reflecting consistent comfort across all four members. Power BI and Python show the lowest average proficiency (2.75 each), both sitting below the "Intermediate" level as a team average. Digital Marketing shows the widest spread across the team, ranging from 2 (Beginner) to 4 (Advanced), reflecting the team's mixed backgrounds.
+
+## Skill Gaps
+
+Comparing market demand (posting frequency) against team proficiency highlights where the team is well-covered and where gaps exist relative to what the market is asking for.
+
+Power BI is the single largest gap: it is tied for the most in-demand skill in the market (7 of 19 postings) but has the lowest average team proficiency (2.75). SQL, the other most in-demand skill (7 of 19 postings), sits at a moderate team average (3.25), suggesting a smaller but still real gap. Python, requested in 5 postings, also averages only 2.75 across the team.
+
+By contrast, Excel and Data Analysis, both requested in the market, are also the team's strongest areas, so no meaningful gap exists there. Digital Marketing is requested in 4 postings and shows uneven team coverage (one member at Beginner, others Intermediate to Advanced), which is a gap for some but not all team members individually.
 
 ## Improvement Plan
 
-*To be completed once the team skill comparison above is available: which skills each member should prioritize, what resources could help close identified gaps, and how the team can collaborate to build missing skills.*
+Based on the gaps identified above, the team's priorities for skill-building are:
+
+- **Power BI** — the clearest gap given how frequently it appears in postings relative to team proficiency. Short, structured resources (Microsoft's free Power BI learning path, or a guided project rebuilding one of this project's own charts in Power BI) would directly address this.
+- **SQL** — a moderate gap; practicing with the project's own filtered dataset (writing queries against `apparel_analyst_clean.csv` loaded into a local SQLite database) ties skill-building directly to the project itself.
+- **Python** — similarly moderate; continuing to build on the pandas work already done in `data_preparation.qmd` and this page is a natural, low-cost way to keep strengthening this skill through the remainder of the project.
+
+To close these gaps as a team, members with higher individual proficiency in a given skill (e.g. whoever rated highest in SQL or Power BI) could briefly walk the others through their approach when relevant project tasks come up, rather than treating skill-building as a separate exercise from the coursework itself.

@@ -277,13 +277,20 @@
     "href": "skill_gap_analysis.html#team-skill-comparison",
     "title": "Skill Gap Analysis",
     "section": "Team Skill Comparison",
-    "text": "Team Skill Comparison\nThis section is pending team self-assessments (1-5 proficiency scale) for the skills identified above. Once collected, this section will compare team skill levels against market demand using a heatmap, following the same approach as the class example."
+    "text": "Team Skill Comparison\nEach team member self-rated their proficiency (1 = Beginner, 5 = Expert) on the eight most in-demand skills identified above.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAs a team, Data Analysis and Excel show the strongest average proficiency (4.0 and 4.25 respectively), reflecting consistent comfort across all four members. Power BI and Python show the lowest average proficiency (2.75 each), both sitting below the “Intermediate” level as a team average. Digital Marketing shows the widest spread across the team, ranging from 2 (Beginner) to 4 (Advanced), reflecting the team’s mixed backgrounds."
   },
   {
     "objectID": "skill_gap_analysis.html#improvement-plan",
     "href": "skill_gap_analysis.html#improvement-plan",
     "title": "Skill Gap Analysis",
     "section": "Improvement Plan",
-    "text": "Improvement Plan\nTo be completed once the team skill comparison above is available: which skills each member should prioritize, what resources could help close identified gaps, and how the team can collaborate to build missing skills."
+    "text": "Improvement Plan\nBased on the gaps identified above, the team’s priorities for skill-building are:\n\nPower BI — the clearest gap given how frequently it appears in postings relative to team proficiency. Short, structured resources (Microsoft’s free Power BI learning path, or a guided project rebuilding one of this project’s own charts in Power BI) would directly address this.\nSQL — a moderate gap; practicing with the project’s own filtered dataset (writing queries against apparel_analyst_clean.csv loaded into a local SQLite database) ties skill-building directly to the project itself.\nPython — similarly moderate; continuing to build on the pandas work already done in data_preparation.qmd and this page is a natural, low-cost way to keep strengthening this skill through the remainder of the project.\n\nTo close these gaps as a team, members with higher individual proficiency in a given skill (e.g. whoever rated highest in SQL or Power BI) could briefly walk the others through their approach when relevant project tasks come up, rather than treating skill-building as a separate exercise from the coursework itself."
+  },
+  {
+    "objectID": "skill_gap_analysis.html#skill-gaps",
+    "href": "skill_gap_analysis.html#skill-gaps",
+    "title": "Skill Gap Analysis",
+    "section": "Skill Gaps",
+    "text": "Skill Gaps\nComparing market demand (posting frequency) against team proficiency highlights where the team is well-covered and where gaps exist relative to what the market is asking for.\nPower BI is the single largest gap: it is tied for the most in-demand skill in the market (7 of 19 postings) but has the lowest average team proficiency (2.75). SQL, the other most in-demand skill (7 of 19 postings), sits at a moderate team average (3.25), suggesting a smaller but still real gap. Python, requested in 5 postings, also averages only 2.75 across the team.\nBy contrast, Excel and Data Analysis, both requested in the market, are also the team’s strongest areas, so no meaningful gap exists there. Digital Marketing is requested in 4 postings and shows uneven team coverage (one member at Beginner, others Intermediate to Advanced), which is a gap for some but not all team members individually."
   }
 ]
