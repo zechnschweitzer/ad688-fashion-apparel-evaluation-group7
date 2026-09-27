@@ -105,6 +105,234 @@ fig.show()
 
 The 19-posting sample contains a mix of analyst, business intelligence, ecommerce analytics, merchandise analytics, and senior analytics roles. Most job titles appear only once, suggesting that the selected market is relatively specialized and fragmented rather than concentrated around a single standardized title. A small number of titles appear more than once, but overall the postings span several analytics-related functions within apparel and fashion retail.
 
+## Functional Role Segmentation
+
+Individual job titles in the sample are highly fragmented, with many titles appearing only once. To identify broader hiring patterns, the titles are grouped into functional categories based on the primary focus of each role. This provides a more interpretable view of the types of analytics work represented in the selected apparel and fashion job postings.
+
+```{python}
+#| echo: true
+#| warning: false
+#| message: false
+
+import plotly.express as px
+
+
+def classify_role(title):
+    title = str(title).lower()
+
+    if any(keyword in title for keyword in [
+        "business intelligence",
+        "data analyst",
+        "data governance",
+        "data analytics"
+    ]):
+        return "BI / Data Analytics"
+
+    elif any(keyword in title for keyword in [
+        "operations",
+        "operational",
+        "region operations"
+    ]):
+        return "Operations Analytics"
+
+    elif any(keyword in title for keyword in [
+        "marketing",
+        "media",
+        "customer",
+        "consumer",
+        "digital analytics"
+    ]):
+        return "Marketing / Customer Analytics"
+
+    elif any(keyword in title for keyword in [
+        "merchandising",
+        "merchandise",
+        "ecommerce",
+        "e-commerce",
+        "retail",
+        "wholesale",
+        "sales planning"
+    ]):
+        return "Merchandising / Ecommerce"
+
+    elif any(keyword in title for keyword in [
+        "finance",
+        "financial",
+        "fp&a",
+        "strategy",
+        "strategic"
+    ]):
+        return "Finance / Strategy Analytics"
+
+    elif any(keyword in title for keyword in [
+        "product",
+        "engineering"
+    ]):
+        return "Product / Engineering Analytics"
+
+    else:
+        return "Other Analytics"
+
+
+# Create broader functional role categories
+clean_df["ROLE_SEGMENT"] = clean_df["TITLE_CLEAN"].apply(classify_role)
+
+# Count postings within each functional area
+role_segment_counts = (
+    clean_df["ROLE_SEGMENT"]
+    .value_counts()
+    .reset_index()
+)
+
+role_segment_counts.columns = [
+    "Functional Area",
+    "Number of Job Postings"
+]
+
+# Sort so the horizontal chart reads from smaller to larger values
+role_segment_counts = role_segment_counts.sort_values(
+    "Number of Job Postings",
+    ascending=True
+)
+
+# Display counts for validation
+print(role_segment_counts)
+
+# Check whether any titles remain uncategorized
+print("\nTitles classified as Other Analytics:")
+
+other_titles = clean_df.loc[
+    clean_df["ROLE_SEGMENT"] == "Other Analytics",
+    "TITLE_CLEAN"
+]
+
+if len(other_titles) == 0:
+    print("None")
+else:
+    print(other_titles.to_string(index=False))
+
+# Create interactive Plotly chart
+fig_role_segments = px.bar(
+    role_segment_counts,
+    x="Number of Job Postings",
+    y="Functional Area",
+    orientation="h",
+    template="plotly_white",
+    title="Job Postings by Functional Analytics Area"
+)
+
+fig_role_segments.update_layout(
+    title_x=0.5,
+    height=450,
+    xaxis_title="Number of Job Postings",
+    yaxis_title="Functional Area"
+)
+
+fig_role_segments.update_xaxes(
+    dtick=1
+)
+
+fig_role_segments.show()
+```
+
+The functional segmentation shows that BI and data analytics roles represent the largest share of the selected sample, with 6 of the 19 postings. Marketing and customer analytics follows closely with 5 postings, while merchandising and ecommerce account for 3. Finance and strategy analytics and operations analytics each contribute 2 postings, and product or engineering analytics contributes 1.
+
+This broader grouping reveals that analytics hiring within the selected apparel and fashion sample is distributed across several business functions rather than being concentrated in a single type of role. Because the dataset is small and the categories are derived from job-title wording, the results should be interpreted as a descriptive view of the selected postings rather than a standardized representation of the broader industry.
+
+## Data Completeness Across Key Attributes
+
+Several analytical fields in the job-posting dataset contain substantial missing information. Comparing attribute coverage helps distinguish which findings are supported by most of the sample and which rely on a smaller subset of postings.
+
+```{python}
+#| echo: true
+#| warning: false
+#| message: false
+
+import pandas as pd
+import plotly.express as px
+
+total_postings = len(raw_df)
+
+# Count only clearly identified work-arrangement values.
+# Missing and "Unknown" values are treated as unavailable.
+work_arrangement_usable = (
+    raw_df["REMOTE_TYPE_NAME"].notna()
+    & raw_df["REMOTE_TYPE_NAME"]
+        .astype(str)
+        .str.strip()
+        .str.lower()
+        .ne("unknown")
+).sum()
+
+coverage_data = pd.DataFrame({
+    "Attribute": [
+        "Job Title",
+        "Employer",
+        "Location",
+        "Observed Salary Range",
+        "Minimum Experience",
+        "Work Arrangement"
+    ],
+    "Postings with Usable Data": [
+        raw_df["TITLE_CLEAN"].notna().sum(),
+        raw_df["COMPANY_CLEAN"].notna().sum(),
+        raw_df["LOCATION"].notna().sum(),
+        raw_df[["SALARY_FROM", "SALARY_TO"]]
+            .notna()
+            .all(axis=1)
+            .sum(),
+        raw_df["MIN_YEARS_EXPERIENCE"].notna().sum(),
+        work_arrangement_usable
+    ]
+})
+
+coverage_data["Coverage Percentage"] = (
+    coverage_data["Postings with Usable Data"]
+    / total_postings
+    * 100
+).round(1)
+
+coverage_data = coverage_data.sort_values(
+    "Postings with Usable Data",
+    ascending=True
+)
+
+print(coverage_data)
+
+fig_coverage = px.bar(
+    coverage_data,
+    x="Postings with Usable Data",
+    y="Attribute",
+    orientation="h",
+    text="Coverage Percentage",
+    template="plotly_white",
+    title="Coverage of Key Job-Posting Attributes"
+)
+
+fig_coverage.update_traces(
+    texttemplate="%{text:.1f}%",
+    textposition="outside"
+)
+
+fig_coverage.update_layout(
+    title_x=0.5,
+    height=450,
+    xaxis_title="Number of Postings with Usable Data",
+    yaxis_title="Attribute"
+)
+
+fig_coverage.update_xaxes(
+    dtick=1,
+    range=[0, total_postings + 1]
+)
+
+fig_coverage.show()
+```
+
+The data-completeness analysis shows a clear difference in coverage across key job-posting attributes. Job title, employer, and location information are available for all 19 postings, while minimum-experience information is available for 9 postings. Observed salary ranges and identifiable work-arrangement information are available for only 4 postings each.
+
+This uneven coverage is important when interpreting the EDA. Findings related to titles, employers, and geography are supported by the full sample, whereas salary, experience, and work-arrangement analyses rely on much smaller subsets of the data and should therefore be interpreted more cautiously.
+
 ## Salary Distribution
 
 Salary information is incomplete in the filtered dataset. Only postings with an originally reported salary range are included in this analysis. Missing salaries that were filled during data preparation are excluded so that the results reflect observed compensation information rather than imputed values.
