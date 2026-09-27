@@ -30,6 +30,26 @@ clean_df = pd.read_csv(
     "data/processed/apparel_analyst_clean.csv"
 )
 
+print("Dataset shape:", clean_df.shape)
+
+print("\nKey EDA summary:")
+
+print("Total postings:", len(clean_df))
+print("Unique job titles:", clean_df["TITLE_CLEAN"].nunique())
+print("Unique companies:", clean_df["COMPANY_CLEAN"].nunique())
+print("Unique locations:", clean_df["LOCATION"].nunique())
+
+print("\nNon-null salary values:")
+print("SALARY_FROM:", clean_df["SALARY_FROM"].notna().sum())
+print("SALARY_TO:", clean_df["SALARY_TO"].notna().sum())
+
+print("\nRemote type values:")
+print(
+    clean_df["REMOTE_TYPE_NAME"]
+    .fillna("Missing")
+    .value_counts()
+)
+
 # Filtered dataset before missing salary and experience values were filled
 raw_df = pd.read_csv(
     "data/interim/apparel_analyst_filtered.csv"
