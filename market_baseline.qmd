@@ -49,40 +49,38 @@ Job titles provide an initial view of the types of analytics roles represented w
 ```{python}
 #| echo: false
 
+import plotly.express as px
+
 title_counts = (
     clean_df["TITLE_CLEAN"]
     .dropna()
     .value_counts()
     .head(10)
-    .sort_values()
+    .reset_index()
 )
 
-plt.figure(figsize=(8, 5.5))
+title_counts.columns = ["Job Title", "Number of Job Postings"]
 
-title_counts.plot(kind="barh")
-
-plt.title(
-    "Top Job Titles in Apparel Analytics",
-    fontsize=12,
-    pad=10
+fig = px.bar(
+    title_counts.sort_values("Number of Job Postings"),
+    x="Number of Job Postings",
+    y="Job Title",
+    orientation="h",
+    title="Top Job Titles in Apparel Analytics"
 )
 
-plt.xlabel("Number of Job Postings")
-plt.ylabel("Job Title")
-
-plt.gca().xaxis.set_major_locator(
-    MaxNLocator(integer=True)
+fig.update_layout(
+    xaxis_title="Number of Job Postings",
+    yaxis_title="Job Title",
+    height=550,
+    margin=dict(l=20, r=20, t=60, b=20)
 )
 
-plt.tight_layout()
-
-plt.savefig(
-    "figures/market_baseline/job_volume_by_title.png",
-    dpi=300,
-    bbox_inches="tight"
+fig.update_xaxes(
+    dtick=1
 )
 
-plt.show()
+fig.show()
 ```
 
 The 19-posting sample contains a mix of analyst, business intelligence, ecommerce analytics, merchandise analytics, and senior analytics roles. Most job titles appear only once, suggesting that the selected market is relatively specialized and fragmented rather than concentrated around a single standardized title. A small number of titles appear more than once, but overall the postings span several analytics-related functions within apparel and fashion retail.
@@ -93,6 +91,9 @@ Salary information is incomplete in the filtered dataset. Only postings with an 
 
 ```{python}
 #| echo: false
+
+import pandas as pd
+import plotly.graph_objects as go
 
 salary_df = raw_df.copy()
 
@@ -115,81 +116,88 @@ salary_observed["SALARY_MIDPOINT"] = (
     salary_observed["SALARY_TO"]
 ) / 2
 
-print(
-    f"Postings with observed salary ranges: "
-    f"{len(salary_observed)} of {len(raw_df)}"
-)
-```
-
-```{python}
-#| echo: false
-
 salary_observed = salary_observed.sort_values(
     "SALARY_MIDPOINT"
 ).reset_index(drop=True)
 
-salary_observed["LABEL"] = salary_observed.apply(
+# Build base label using title and employer
+salary_observed["BASE_LABEL"] = salary_observed.apply(
     lambda row: (
-        f"{row['TITLE_CLEAN']}\n({row['COMPANY_NAME']})"
+        f"{row['TITLE_CLEAN']} ({row['COMPANY_NAME']})"
         if pd.notna(row.get("COMPANY_NAME"))
         else row["TITLE_CLEAN"]
     ),
     axis=1
 )
 
-plt.figure(figsize=(8.5, 5.5))
+# Number repeated labels so separate postings remain visible
+salary_observed["DUPLICATE_NUMBER"] = (
+    salary_observed.groupby("BASE_LABEL").cumcount() + 1
+)
 
-for i, row in salary_observed.iterrows():
+salary_observed["DUPLICATE_TOTAL"] = (
+    salary_observed.groupby("BASE_LABEL")["BASE_LABEL"].transform("count")
+)
 
-    plt.plot(
-        [row["SALARY_FROM"], row["SALARY_TO"]],
-        [i, i],
-        linewidth=3
+salary_observed["LABEL"] = salary_observed.apply(
+    lambda row: (
+        f"{row['BASE_LABEL']} - Posting {row['DUPLICATE_NUMBER']}"
+        if row["DUPLICATE_TOTAL"] > 1
+        else row["BASE_LABEL"]
+    ),
+    axis=1
+)
+
+print(
+    f"Postings with observed salary ranges: "
+    f"{len(salary_observed)} of {len(raw_df)}"
+)
+
+fig = go.Figure()
+
+for _, row in salary_observed.iterrows():
+
+    fig.add_trace(
+        go.Scatter(
+            x=[
+                row["SALARY_FROM"],
+                row["SALARY_TO"]
+            ],
+            y=[
+                row["LABEL"],
+                row["LABEL"]
+            ],
+            mode="lines+markers",
+            line=dict(width=4),
+            marker=dict(size=9),
+            showlegend=False,
+            hovertemplate=(
+                "<b>%{y}</b><br>"
+                "Salary: $%{x:,.0f}"
+                "<extra></extra>"
+            )
+        )
     )
 
-    plt.scatter(
-        row["SALARY_MIDPOINT"],
-        i,
-        s=55,
-        zorder=3
-    )
-
-plt.yticks(
-    range(len(salary_observed)),
-    salary_observed["LABEL"],
-    fontsize=9
-)
-
-plt.xlabel("Annual Salary ($)")
-plt.ylabel("")
-
-plt.title(
-    "Observed Salary Ranges",
-    fontsize=12,
-    pad=10
-)
-
-ax = plt.gca()
-
-ax.xaxis.set_major_locator(
-    plt.MultipleLocator(20000)
-)
-
-ax.xaxis.set_major_formatter(
-    FuncFormatter(
-        lambda x, pos: f"${x/1000:.0f}K"
+fig.update_layout(
+    title="Observed Salary Ranges",
+    xaxis_title="Annual Salary ($)",
+    yaxis_title="",
+    height=560,
+    margin=dict(
+        l=320,
+        r=40,
+        t=70,
+        b=50
     )
 )
 
-plt.tight_layout()
-
-plt.savefig(
-    "figures/market_baseline/salary_distribution.png",
-    dpi=300,
-    bbox_inches="tight"
+fig.update_xaxes(
+    tickprefix="$",
+    tickformat="~s"
 )
 
-plt.show()
+fig.show()
 ```
 
 Only 4 of the 19 postings contain an observed salary range, so the salary findings should be interpreted cautiously. The available postings show variation in both the lower and upper ends of reported compensation, but the small number of observations is not sufficient to characterize salary levels across the full selected apparel and fashion analytics market. The chart therefore presents only compensation that was explicitly reported in the source postings.
@@ -200,6 +208,8 @@ Geographic information is available for most postings. A small amount of additio
 
 ```{python}
 #| echo: false
+
+import plotly.express as px
 
 location_df = raw_df.copy()
 
@@ -227,46 +237,49 @@ location_df["STATE_CLEAN"] = location_df[
 location_df["CITY_CLEAN"] = location_df[
     "CITY_CLEAN"
 ].replace({
-    "Home Office Framingham Ma 550":
-        "Framingham"
+    "Home Office Framingham Ma 550": "Framingham"
 })
 
 state_counts = (
     location_df["STATE_CLEAN"]
     .value_counts()
-    .sort_values()
-)
-```
-
-```{python}
-#| echo: false
-
-plt.figure(figsize=(7, 4.5))
-
-state_counts.plot(kind="barh")
-
-plt.title(
-    "Job Postings by State",
-    fontsize=12,
-    pad=10
+    .reset_index()
 )
 
-plt.xlabel("Number of Job Postings")
-plt.ylabel("State")
+state_counts.columns = [
+    "State",
+    "Number of Job Postings"
+]
 
-plt.gca().xaxis.set_major_locator(
-    MaxNLocator(integer=True)
+state_counts = state_counts.sort_values(
+    "Number of Job Postings"
 )
 
-plt.tight_layout()
-
-plt.savefig(
-    "figures/market_baseline/location_patterns.png",
-    dpi=300,
-    bbox_inches="tight"
+fig = px.bar(
+    state_counts,
+    x="Number of Job Postings",
+    y="State",
+    orientation="h",
+    title="Job Postings by State"
 )
 
-plt.show()
+fig.update_layout(
+    xaxis_title="Number of Job Postings",
+    yaxis_title="State",
+    height=450,
+    margin=dict(
+        l=80,
+        r=30,
+        t=60,
+        b=40
+    )
+)
+
+fig.update_xaxes(
+    dtick=1
+)
+
+fig.show()
 ```
 
 The 19-posting sample is concentrated in a small number of states. California and Massachusetts each account for 5 postings, followed by New York with 4 and Oregon with 3. Texas contributes 1 posting, while 1 record does not contain a usable state value. This geographic concentration appears to reflect the locations of the apparel and fashion employers represented in the filtered sample rather than a geographically representative view of the broader analytics labor market.
@@ -278,6 +291,8 @@ Experience requirements are incomplete in the source data. This analysis uses on
 ```{python}
 #| echo: false
 
+import plotly.express as px
+
 experience_df = raw_df.copy()
 
 experience_df["MIN_YEARS_EXPERIENCE"] = pd.to_numeric(
@@ -286,62 +301,56 @@ experience_df["MIN_YEARS_EXPERIENCE"] = pd.to_numeric(
 )
 
 observed_experience = experience_df[
-    experience_df["MIN_YEARS_EXPERIENCE"]
-    .notna()
+    experience_df["MIN_YEARS_EXPERIENCE"].notna()
 ].copy()
 
 experience_counts = (
-    observed_experience[
-        "MIN_YEARS_EXPERIENCE"
-    ]
+    observed_experience["MIN_YEARS_EXPERIENCE"]
     .value_counts()
     .sort_index()
+    .reset_index()
+)
+
+experience_counts.columns = [
+    "Minimum Years of Experience",
+    "Number of Job Postings"
+]
+
+experience_counts["Minimum Years of Experience"] = (
+    experience_counts["Minimum Years of Experience"]
+    .astype(int)
+    .astype(str)
 )
 
 print(
     f"Postings with observed minimum experience requirements: "
     f"{len(observed_experience)} of {len(raw_df)}"
 )
-```
 
-```{python}
-#| echo: false
-
-plt.figure(figsize=(6.5, 4.5))
-
-experience_counts.plot(kind="bar")
-
-plt.title(
-    "Observed Minimum Experience Requirements",
-    fontsize=12,
-    pad=10
+fig = px.bar(
+    experience_counts,
+    x="Minimum Years of Experience",
+    y="Number of Job Postings",
+    title="Observed Minimum Experience Requirements"
 )
 
-plt.xlabel("Minimum Years of Experience")
-plt.ylabel("Number of Job Postings")
-
-plt.xticks(
-    rotation=0,
-    labels=[
-        f"{int(x)}"
-        for x in experience_counts.index
-    ],
-    ticks=range(len(experience_counts))
+fig.update_layout(
+    xaxis_title="Minimum Years of Experience",
+    yaxis_title="Number of Job Postings",
+    height=450,
+    margin=dict(
+        l=60,
+        r=30,
+        t=60,
+        b=50
+    )
 )
 
-plt.gca().yaxis.set_major_locator(
-    MaxNLocator(integer=True)
+fig.update_yaxes(
+    dtick=1
 )
 
-plt.tight_layout()
-
-plt.savefig(
-    "figures/market_baseline/experience_distribution.png",
-    dpi=300,
-    bbox_inches="tight"
-)
-
-plt.show()
+fig.show()
 ```
 
 Minimum experience information is available for 9 of the 19 postings. Among those records, 7 postings show a recorded minimum of 0 years and 2 postings show a minimum of 5 years. Because experience information is missing for more than half of the sample, these values should be interpreted as the requirements recorded in the available source data rather than as a complete representation of experience expectations across the selected market.
@@ -352,6 +361,8 @@ Work-arrangement information is limited in the source data. Rather than assuming
 
 ```{python}
 #| echo: false
+
+import plotly.express as px
 
 remote_df = raw_df.copy()
 
@@ -373,7 +384,16 @@ remote_df["WORK_ARRANGEMENT"] = (
 remote_counts = (
     remote_df["WORK_ARRANGEMENT"]
     .value_counts()
-    .sort_values()
+    .reset_index()
+)
+
+remote_counts.columns = [
+    "Work Arrangement",
+    "Number of Job Postings"
+]
+
+remote_counts = remote_counts.sort_values(
+    "Number of Job Postings"
 )
 
 identified_arrangement = remote_df[
@@ -386,37 +406,32 @@ print(
     f"Postings with an identifiable work arrangement: "
     f"{identified_arrangement} of {len(raw_df)}"
 )
-```
 
-```{python}
-#| echo: false
-
-plt.figure(figsize=(6.5, 4.5))
-
-remote_counts.plot(kind="barh")
-
-plt.title(
-    "Reported Work Arrangement",
-    fontsize=12,
-    pad=10
+fig = px.bar(
+    remote_counts,
+    x="Number of Job Postings",
+    y="Work Arrangement",
+    orientation="h",
+    title="Reported Work Arrangement"
 )
 
-plt.xlabel("Number of Job Postings")
-plt.ylabel("Work Arrangement")
-
-plt.gca().xaxis.set_major_locator(
-    MaxNLocator(integer=True)
+fig.update_layout(
+    xaxis_title="Number of Job Postings",
+    yaxis_title="Work Arrangement",
+    height=420,
+    margin=dict(
+        l=100,
+        r=30,
+        t=60,
+        b=40
+    )
 )
 
-plt.tight_layout()
-
-plt.savefig(
-    "figures/market_baseline/remote_onsite_patterns.png",
-    dpi=300,
-    bbox_inches="tight"
+fig.update_xaxes(
+    dtick=1
 )
 
-plt.show()
+fig.show()
 ```
 
 An identifiable work arrangement is available for only 4 of the 19 postings. Three postings are classified as hybrid and one as fully remote. The remaining 15 postings either do not report a work arrangement or contain an unknown value. No posting in the available sample is explicitly classified as onsite. Because work-arrangement information is unavailable for most of the sample, these results should not be used to infer the overall prevalence of remote, hybrid, or onsite work in the selected market.
@@ -428,83 +443,79 @@ Employer names are standardized below to consolidate obvious duplicate labels be
 ```{python}
 #| echo: false
 
+import plotly.express as px
+
 employer_df = clean_df.copy()
 
 employer_df["EMPLOYER"] = (
     employer_df["COMPANY_CLEAN"]
-    .fillna(
-        employer_df["COMPANY_NAME"]
-    )
+    .fillna(employer_df["COMPANY_NAME"])
     .astype(str)
     .str.strip()
     .str.lower()
 )
 
-employer_df["EMPLOYER"] = (
-    employer_df["EMPLOYER"]
-    .replace({
-        "jobs.tjx.com": "tjx",
-        "careers.michaels.com":
-            "michaels"
-    })
-)
+employer_df["EMPLOYER"] = employer_df["EMPLOYER"].replace({
+    "jobs.tjx.com": "tjx",
+    "careers.michaels.com": "michaels"
+})
 
-employer_df["EMPLOYER_DISPLAY"] = (
-    employer_df["EMPLOYER"]
-    .replace({
-        "tjx": "TJX",
-        "vuoriinc": "Vuori",
-        "adidas": "Adidas",
-        "ralph lauren": "Ralph Lauren",
-        "macy's": "Macy's",
-        "michaels": "Michaels",
-        "foot locker": "Foot Locker",
-        "nordstrom": "Nordstrom"
-    })
-)
+employer_df["EMPLOYER_DISPLAY"] = employer_df["EMPLOYER"].replace({
+    "tjx": "TJX",
+    "vuoriinc": "Vuori",
+    "adidas": "Adidas",
+    "ralph lauren": "Ralph Lauren",
+    "macy's": "Macy's",
+    "michaels": "Michaels",
+    "foot locker": "Foot Locker",
+    "nordstrom": "Nordstrom"
+})
 
 employer_counts = (
     employer_df["EMPLOYER_DISPLAY"]
     .value_counts()
-    .head(10)
-    .sort_values()
+    .reset_index()
+)
+
+employer_counts.columns = [
+    "Employer",
+    "Number of Job Postings"
+]
+
+employer_counts = employer_counts.sort_values(
+    "Number of Job Postings"
 )
 
 print(
     f"Employers represented in the sample: "
     f"{employer_df['EMPLOYER_DISPLAY'].nunique()}"
 )
-```
 
-```{python}
-#| echo: false
-
-plt.figure(figsize=(7, 4.8))
-
-employer_counts.plot(kind="barh")
-
-plt.title(
-    "Top Employers in the Selected Market",
-    fontsize=12,
-    pad=10
+fig = px.bar(
+    employer_counts,
+    x="Number of Job Postings",
+    y="Employer",
+    orientation="h",
+    title="Top Employers in the Selected Market"
 )
 
-plt.xlabel("Number of Job Postings")
-plt.ylabel("Employer")
-
-plt.gca().xaxis.set_major_locator(
-    MaxNLocator(integer=True)
+fig.update_layout(
+    xaxis_title="Number of Job Postings",
+    yaxis_title="Employer",
+    height=500,
+    margin=dict(
+        l=110,
+        r=30,
+        t=60,
+        b=40
+    )
 )
 
-plt.tight_layout()
-
-plt.savefig(
-    "figures/market_baseline/top_employers.png",
-    dpi=300,
-    bbox_inches="tight"
+fig.update_xaxes(
+    dtick=1
 )
 
-plt.show()
+fig.show()
 ```
 
 Hiring activity in the selected sample is concentrated among a small number of apparel and retail employers. Vuori and TJX each account for 5 postings, followed by Adidas with 3 and Ralph Lauren with 2. Nordstrom, Foot Locker, Michaels, and Macy’s each contribute 1 posting. These counts should be interpreted within the context of the small, intentionally filtered dataset rather than as a ranking of overall hiring activity across the apparel and fashion industry.
