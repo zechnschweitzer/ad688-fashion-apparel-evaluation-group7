@@ -256,7 +256,7 @@
     "href": "index.html#project-sections",
     "title": "AD688: Fashion and Apparel Career Evaluation - Group 7",
     "section": "Project Sections",
-    "text": "Project Sections\nUse the navigation bar above to explore the project:\n\nIntroduction - project scope, career pathway, and industry context\nData Preparation - filtering, cleaning, and preparation of the analytical dataset\nMarket Baseline - current job volume, salary, geography, experience, work arrangement, and employer patterns\nSkill Gap Analysis - comparison of market skill requirements with relevant career skills\nCareer Evaluation - evaluation of career opportunities using the project findings\nFinal Recommendations - overall conclusions and recommendations\n\nThe Market Baseline currently provides the descriptive foundation for the later skill-gap and career-evaluation stages of the project."
+    "text": "Project Sections\nUse the navigation bar above to explore the project:\n\nIntroduction: project scope, career pathway, and industry context\nData Preparation: filtering, cleaning, and preparation of the analytical dataset\nMarket Baseline: current job volume, salary, geography, experience, work arrangement, and employer patterns\nSkill Gap Analysis: comparison of market skill requirements with relevant career skills\nCareer Evaluation: evaluation of career opportunities using the project findings\nFinal Recommendations: overall conclusions and recommendations\n\nThe Market Baseline currently provides the descriptive foundation for the later skill-gap and career-evaluation stages of the project."
   },
   {
     "objectID": "market_baseline.html",
