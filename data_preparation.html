@@ -186,7 +186,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="load-the-filtered-dataset" class="level2">
 <h2 class="anchored" data-anchor-id="load-the-filtered-dataset">Load the Filtered Dataset</h2>
-<div id="0d4172a2" class="cell" data-execution_count="1">
+<div id="674107f6" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-stdout">
 <pre><code>Loaded 19 rows, 125 columns
 &lt;class 'pandas.DataFrame'&gt;
@@ -199,7 +199,7 @@ memory usage: 122.6 KB</code></pre>
 </section>
 <section id="clean-salary-fields" class="level2">
 <h2 class="anchored" data-anchor-id="clean-salary-fields">Clean Salary Fields</h2>
-<div id="5e424b5a" class="cell" data-execution_count="2">
+<div id="fa70a2b9" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-stdout">
 <pre><code>Median SALARY_FROM used for fill: 85300.0
 Median SALARY_TO used for fill: 138222.0</code></pre>
@@ -361,7 +361,7 @@ Median SALARY_TO used for fill: 138222.0</code></pre>
 </section>
 <section id="clean-experience-fields" class="level2">
 <h2 class="anchored" data-anchor-id="clean-experience-fields">Clean Experience Fields</h2>
-<div id="eb7fd73e" class="cell" data-execution_count="3">
+<div id="615c4e30" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display" data-execution_count="3">
 <div>
 
@@ -496,10 +496,11 @@ Median SALARY_TO used for fill: 138222.0</code></pre>
 </div>
 </div>
 </div>
+<p>Missing minimum-experience values were filled with 0 rather than left blank. This means a posting that did not report an experience requirement cannot be distinguished from one that genuinely requires 0 years, which should be kept in mind when interpreting accessibility scores later in the project.</p>
 </section>
 <section id="clean-geography-fields" class="level2">
 <h2 class="anchored" data-anchor-id="clean-geography-fields">Clean Geography Fields</h2>
-<div id="cfe57f97" class="cell" data-execution_count="4">
+<div id="a3d472f2" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display" data-execution_count="4">
 <div>
 
@@ -657,7 +658,7 @@ Median SALARY_TO used for fill: 138222.0</code></pre>
 </section>
 <section id="clean-skills-fields" class="level2">
 <h2 class="anchored" data-anchor-id="clean-skills-fields">Clean Skills Fields</h2>
-<div id="c8fe41c0" class="cell" data-execution_count="5">
+<div id="b643661b" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-stdout">
 <pre><code>Postings with at least one listed skill: 15</code></pre>
 </div>
@@ -798,7 +799,7 @@ Median SALARY_TO used for fill: 138222.0</code></pre>
 </section>
 <section id="save-the-cleaned-dataset" class="level2">
 <h2 class="anchored" data-anchor-id="save-the-cleaned-dataset">Save the Cleaned Dataset</h2>
-<div id="dd06f1f1" class="cell" data-execution_count="6">
+<div id="8ef445c3" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-stdout">
 <pre><code>Saved cleaned dataset: 19 rows</code></pre>
 </div>
