@@ -1,1 +1,2 @@
 /* css styles */
+#refs a { word-break: break-all; overflow-wrap: anywhere; }
