@@ -154,6 +154,27 @@
     "text": "Field\nDescription\n\n\n\n\nNAICS_2022_6\n6-digit NAICS 2022 industry code\n\n\nNAICS_2022_6_NAME\nIndustry name for the NAICS code\n\n\nSOC_5\n5-digit SOC occupation code\n\n\nSOC_5_NAME\nOccupation name for the SOC code"
   },
   {
+    "objectID": "career_evaluation.html",
+    "href": "career_evaluation.html",
+    "title": "Career Evaluation",
+    "section": "",
+    "text": "Not all 19 postings in our filtered dataset represent an equally strong opportunity for this team. Some ask for skills the team already has, some are more attainable given their experience requirements, and some come from employers that are clearly hiring repeatedly for this kind of role. This page turns those factors into a scorecard so postings can be compared directly rather than assessed one at a time.\nWe scored each posting on three things we have full or near-full data for across all 19 postings:\n\nSkill fit: how many of the role’s listed skills overlap with skills the team already rates itself strong in (Data Analysis, Microsoft Excel, Stakeholder Management, and Project Management, based on our skill gap findings).\nAccessibility: how attainable the role is, based on minimum years of experience required. A role asking for 0 years scores highest, and the score drops as the experience requirement climbs.\nEmployer signal: how many postings from that same employer appear in our dataset, as a rough proxy for how actively that company is hiring into this kind of role.\n\nWe left salary and remote status out of the combined score since only 4 of the 19 postings have that data, and folding sparse fields into a score would unfairly penalize postings that simply did not report them. We call those out separately below instead."
+  },
+  {
+    "objectID": "career_evaluation.html#what-makes-a-role-attractive-for-this-team",
+    "href": "career_evaluation.html#what-makes-a-role-attractive-for-this-team",
+    "title": "Career Evaluation",
+    "section": "",
+    "text": "Not all 19 postings in our filtered dataset represent an equally strong opportunity for this team. Some ask for skills the team already has, some are more attainable given their experience requirements, and some come from employers that are clearly hiring repeatedly for this kind of role. This page turns those factors into a scorecard so postings can be compared directly rather than assessed one at a time.\nWe scored each posting on three things we have full or near-full data for across all 19 postings:\n\nSkill fit: how many of the role’s listed skills overlap with skills the team already rates itself strong in (Data Analysis, Microsoft Excel, Stakeholder Management, and Project Management, based on our skill gap findings).\nAccessibility: how attainable the role is, based on minimum years of experience required. A role asking for 0 years scores highest, and the score drops as the experience requirement climbs.\nEmployer signal: how many postings from that same employer appear in our dataset, as a rough proxy for how actively that company is hiring into this kind of role.\n\nWe left salary and remote status out of the combined score since only 4 of the 19 postings have that data, and folding sparse fields into a score would unfairly penalize postings that simply did not report them. We call those out separately below instead."
+  },
+  {
+    "objectID": "career_evaluation.html#opportunity-scorecard",
+    "href": "career_evaluation.html#opportunity-scorecard",
+    "title": "Career Evaluation",
+    "section": "Opportunity Scorecard",
+    "text": "Opportunity Scorecard\n\n\n\n\n\n\n\n\n\nTITLE_CLEAN\nCOMPANY_NAME\nSKILL_FIT_SCORE\nACCESSIBILITY_SCORE\nEMPLOYER_SIGNAL_SCORE\nOPPORTUNITY_SCORE\n\n\n\n\n0\nSr. Manager, Ecommerce Analytics\nVuoriinc\n2\n3\n5\n10\n\n\n1\nSr. FP&A Manager, Systems & Analytics\nVuoriinc\n1\n3\n5\n9\n\n\n2\nDirector, Wholesale Sales Planning & Analytics\nVuoriinc\n1\n3\n5\n9\n\n\n3\nManager, Digital Marketing Analytics\nAdidas\n2\n3\n3\n8\n\n\n4\nSr. Manager, Global Finance Business Analyst\nVuoriinc\n0\n3\n5\n8\n\n\n5\nProduct Manager, Enterprise Analytics\nVuoriinc\n1\n1\n5\n7\n\n\n6\nSr Region Operations Analyst - Sierra\nTJX\n0\n3\n3\n6\n\n\n7\nSr. Data Analyst\nFoot Locker\n2\n3\n1\n6\n\n\n8\nSenior Analyst, Merchandise Flow & Analytics\nTJX\n0\n3\n3\n6\n\n\n9\nManager, Digital Consumer Analytics\nAdidas\n2\n1\n3\n6\n\n\n10\nMedia Marketing Sr. Manager, Analytics\nRalph Lauren\n1\n3\n2\n6\n\n\n11\nSr Region Operations Analyst - Sierra\nTJX\n0\n3\n3\n6\n\n\n12\nMedia Marketing Sr. Manager, Analytics\nRalph Lauren\n1\n3\n2\n6\n\n\n13\nManager, Digital Analytics\nAdidas\n0\n3\n3\n6\n\n\n14\nSenior Business Intelligence & Data Analyst - ...\nJobs.tjx.com\n0\n3\n2\n5\n\n\n15\nSenior Business Intelligence & Data Analyst - ...\nJobs.tjx.com\n0\n3\n2\n5\n\n\n16\nMerchandising Data Analyst\nCareers.michaels.com\n1\n3\n1\n5\n\n\n17\nData Analyst 3 - Store Operations\nNordstrom\n1\n3\n1\n5\n\n\n18\nPrincipal, Data Analytics and Engineering\nMacy's\n0\n3\n1\n4"
+  },
+  {
     "objectID": "data_preparation.html",
     "href": "data_preparation.html",
     "title": "Data Preparation",
