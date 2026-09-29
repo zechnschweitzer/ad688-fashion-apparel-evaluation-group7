@@ -11,6 +11,7 @@ execute:
 ## Market Overview
 
 This page gives a quick look at the apparel and fashion analytics market captured in our filtered data. After applying the NAICS 458 filter and checking a list of known apparel and fashion employers, we ended up with 19 verified job postings.
+
 Since the sample is intentionally narrow, the results are best used to understand this specific set of postings. They should not be treated as a representation of the overall analytics job market.
 
 ```{python}
