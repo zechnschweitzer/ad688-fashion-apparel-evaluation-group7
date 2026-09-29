@@ -45,7 +45,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-38838b12d2c25e08a8e0512b421f47c2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-97cbdf4c33b0c1d59c3c8504f205f74a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -75,7 +75,10 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
 
+
+
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
 
 
 <link rel="stylesheet" href="styles.css">
@@ -176,20 +179,20 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="load-the-filtered-dataset" class="level2">
 <h2 class="anchored" data-anchor-id="load-the-filtered-dataset">Load the Filtered Dataset</h2>
-<div id="a8469480" class="cell" data-execution_count="1">
+<div id="33788108" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-stdout">
 <pre><code>Loaded 19 rows, 125 columns
 &lt;class 'pandas.DataFrame'&gt;
 RangeIndex: 19 entries, 0 to 18
 Columns: 125 entries, ID to COMPANY_CLEAN
 dtypes: float64(38), int64(2), str(85)
-memory usage: 18.7 KB</code></pre>
+memory usage: 122.6 KB</code></pre>
 </div>
 </div>
 </section>
 <section id="clean-salary-fields" class="level2">
 <h2 class="anchored" data-anchor-id="clean-salary-fields">Clean Salary Fields</h2>
-<div id="f6778216" class="cell" data-execution_count="2">
+<div id="a1dc30e4" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-stdout">
 <pre><code>Median SALARY_FROM used for fill: 85300.0
 Median SALARY_TO used for fill: 138222.0</code></pre>
@@ -351,7 +354,7 @@ Median SALARY_TO used for fill: 138222.0</code></pre>
 </section>
 <section id="clean-experience-fields" class="level2">
 <h2 class="anchored" data-anchor-id="clean-experience-fields">Clean Experience Fields</h2>
-<div id="457f0d2b" class="cell" data-execution_count="3">
+<div id="34f84860" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display" data-execution_count="3">
 <div>
 
@@ -490,7 +493,7 @@ Median SALARY_TO used for fill: 138222.0</code></pre>
 </section>
 <section id="clean-geography-fields" class="level2">
 <h2 class="anchored" data-anchor-id="clean-geography-fields">Clean Geography Fields</h2>
-<div id="ddf1d751" class="cell" data-execution_count="4">
+<div id="53af97ba" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display" data-execution_count="4">
 <div>
 
@@ -648,7 +651,7 @@ Median SALARY_TO used for fill: 138222.0</code></pre>
 </section>
 <section id="clean-skills-fields" class="level2">
 <h2 class="anchored" data-anchor-id="clean-skills-fields">Clean Skills Fields</h2>
-<div id="3e78c4f9" class="cell" data-execution_count="5">
+<div id="5b8d0ae3" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-stdout">
 <pre><code>Postings with at least one listed skill: 15</code></pre>
 </div>
@@ -789,7 +792,7 @@ Median SALARY_TO used for fill: 138222.0</code></pre>
 </section>
 <section id="save-the-cleaned-dataset" class="level2">
 <h2 class="anchored" data-anchor-id="save-the-cleaned-dataset">Save the Cleaned Dataset</h2>
-<div id="6e540c0f" class="cell" data-execution_count="6">
+<div id="a8b4d3ec" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-stdout">
 <pre><code>Saved cleaned dataset: 19 rows</code></pre>
 </div>
