@@ -10,9 +10,9 @@ execute:
 
 ## Market Overview
 
-This page summarizes the baseline characteristics of the selected apparel and fashion analytics job market. The final filtered dataset contains 19 verified job postings based on the team’s selected NAICS 458 scope and an additional exact-match list of known apparel and fashion employers.
+This page gives a quick look at the apparel and fashion analytics market captured in our filtered data. After applying the NAICS 458 filter and checking a list of known apparel and fashion employers, we ended up with 19 verified job postings.
 
-Because the market definition is intentionally narrow, the results should be interpreted as a descriptive snapshot of the selected apparel and fashion analytics market rather than as estimates of the broader analytics labor market.
+Since the sample is intentionally narrow, the results are best used to understand this specific set of postings. They should not be treated as a representation of the overall analytics job market.
 
 ```{python}
 #| echo: false
@@ -103,7 +103,7 @@ fig.update_xaxes(
 fig.show()
 ```
 
-The 19-posting sample contains a mix of analyst, business intelligence, ecommerce analytics, merchandise analytics, and senior analytics roles. Most job titles appear only once, suggesting that the selected market is relatively specialized and fragmented rather than concentrated around a single standardized title. A small number of titles appear more than once, but overall the postings span several analytics-related functions within apparel and fashion retail.
+The 19 postings cover a fairly wide mix of roles, including analyst, business intelligence, ecommerce, merchandise, and senior analytics positions. Most titles appear only once, so there is not one dominant job title in the sample. Instead, analytics work seems to be spread across several business functions in apparel and fashion retail.
 
 ## Functional Role Segmentation
 
@@ -329,9 +329,9 @@ fig_coverage.update_xaxes(
 fig_coverage.show()
 ```
 
-The data-completeness analysis shows a clear difference in coverage across key job-posting attributes. Job title, employer, and location information are available for all 19 postings, while minimum-experience information is available for 9 postings. Observed salary ranges and identifiable work-arrangement information are available for only 4 postings each.
+Job title, employer, and location are available for all 19 postings. Experience data is less complete, with usable minimum-experience information for 9 postings. Salary and work-arrangement data are the most limited, with only 4 usable records for each.
 
-This uneven coverage is important when interpreting the EDA. Findings related to titles, employers, and geography are supported by the full sample, whereas salary, experience, and work-arrangement analyses rely on much smaller subsets of the data and should therefore be interpreted more cautiously.
+This difference in coverage matters when reading the rest of the EDA. The title, employer, and location findings use the full sample, while the salary, experience, and remote-work results come from much smaller subsets. Those smaller sections are still useful, but they should be read with more caution.
 
 ## Salary Distribution
 
