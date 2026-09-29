@@ -1,3 +1,72 @@
 ---
-title: Career Evaluation
+title: "Career Evaluation"
+format:
+  html:
+    toc: true
+execute:
+  echo: false
+  eval: true
+  freeze: auto
 ---
+
+## What Makes a Role Attractive for This Team
+
+The 19 postings in our filtered dataset do not represent equally strong opportunities for this team. Some of these postings require skills the team has already demonstrated, some are more attainable given their experience requirements, and some originate from employers that are hiring repeatedly for comparable roles. This section converts those factors into a structured scorecard, allowing postings to be compared against one another rather than evaluated individually.
+
+We scored each job posting on three areas we have full or near-full data across these 19 postings:
+
+- **Skill fit**: how many of the role's listed skills overlap with skills our team already rates itself strong in (Data Analysis, Microsoft Excel, Stakeholder Management, and Project Management based on our skill gap findings).
+- **Accessibility**: how attainable the role is based on minimum years of experience required. A role asking for 0 years scores highest and the score drops as the experience requirement climbs.
+- **Employer signal**: how many postings from that same employer appear in our dataset as a rough proxy for how actively that company is hiring for this kind of role.
+
+We left salary and remote status out of the combined score as only 4 of the 19 postings have that data. Folding these sparse fields into the score would unfairly penalize postings that did not report them. We call those out separately below instead.
+
+## Opportunity Scorecard
+
+```{python}
+import pandas as pd
+
+df = pd.read_csv("data/processed/apparel_analyst_clean.csv")
+
+team_strong_skills = ["Data Analysis", "Microsoft Excel", "Stakeholder Management", "Project Management"]
+
+def skill_fit_score(skills_text):
+    if pd.isna(skills_text):
+        return 0
+    matches = 0
+    for strong in team_strong_skills:
+        if strong.lower() in str(skills_text).lower():
+            matches += 1
+    return matches
+
+df["SKILL_FIT_SCORE"] = df["SKILLS_LIST"].apply(skill_fit_score)
+
+def accessibility_score(years):
+    if years == 0:
+        return 3
+    elif years <= 2:
+        return 2
+    elif years <= 5:
+        return 1
+    else:
+        return 0
+
+df["ACCESSIBILITY_SCORE"] = df["MIN_YEARS_EXPERIENCE"].apply(accessibility_score)
+
+employer_counts = df["COMPANY_NAME"].value_counts()
+df["EMPLOYER_SIGNAL_SCORE"] = df["COMPANY_NAME"].map(employer_counts)
+
+df["OPPORTUNITY_SCORE"] = df["SKILL_FIT_SCORE"] + df["ACCESSIBILITY_SCORE"] + df["EMPLOYER_SIGNAL_SCORE"]
+
+scorecard = df[["TITLE_CLEAN", "COMPANY_NAME", "SKILL_FIT_SCORE", "ACCESSIBILITY_SCORE", "EMPLOYER_SIGNAL_SCORE", "OPPORTUNITY_SCORE"]].sort_values("OPPORTUNITY_SCORE", ascending=False).reset_index(drop=True)
+
+scorecard
+```
+
+## What the Scores Show
+
+Vuori appears four times in the top six rows. This is a direct result of how often the company posts similar roles in our dataset, not a fluke of the scoring method. That repetition is what the employer signal score is intended to capture: a company hiring repeatedly for related work is a more realistic target than one with a single listing. The Sr. Manager, Ecommerce Analytics role at Vuori is at the top of the list as it combines that hiring pattern with a moderate skill overlap and a low experience bar. This is the profile the scorecard was designed to surface.
+
+Adidas' Manager, Digital Marketing Analytics role is the strongest non-Vuori result, driven mainly by skill fit rather than employer signal, as Adidas appears less often in the filtered postings. That distinction matters for our team: a role can score well either because it closely matches skills the team already has, or because the employer is clearly hiring at volume. These are different types of opportunity. A few roles near the bottom of this list, such as the TJX and Foot Locker postings, score lower primarily on skill fit. This is aligned with the gaps identified in the skill-gap analysis rather than a lack of accessibility or employer activity.
+
+When taken together, the scorecard points toward employers who are actively and repeatedly hiring for adjacent roles as the more attainable near-term targets, while the highest skill-fit postings point toward where the team's current strengths already translate directly into job requirements.

@@ -1,11 +1,10 @@
 ---
 title: "Data Preparation"
-author: "Alyssa Quigley, Ankita Roy, Zechariah Schweitzer, Sara Scribner"
 format:
   html:
     toc: true
 execute:
-  echo: true
+  echo: false
   eval: true
   freeze: auto
 ---
@@ -47,6 +46,8 @@ df["MAX_YEARS_EXPERIENCE"] = df["MAX_YEARS_EXPERIENCE"].fillna(df["MIN_YEARS_EXP
 
 df[["TITLE_CLEAN", "MIN_YEARS_EXPERIENCE", "MAX_YEARS_EXPERIENCE"]]
 ```
+
+Missing minimum-experience values were filled with 0 rather than left blank. This means a posting that did not report an experience requirement cannot be distinguished from one that genuinely requires 0 years, which should be kept in mind when interpreting accessibility scores later in the project.
 
 ## Clean Geography Fields
 

@@ -110,7 +110,7 @@ The 19-posting sample contains a mix of analyst, business intelligence, ecommerc
 Individual job titles in the sample are highly fragmented, with many titles appearing only once. To identify broader hiring patterns, the titles are grouped into functional categories based on the primary focus of each role. This provides a more interpretable view of the types of analytics work represented in the selected apparel and fashion job postings.
 
 ```{python}
-#| echo: true
+#| echo: false
 #| warning: false
 #| message: false
 
@@ -244,7 +244,7 @@ This broader grouping reveals that analytics hiring within the selected apparel 
 Several analytical fields in the job-posting dataset contain substantial missing information. Comparing attribute coverage helps distinguish which findings are supported by most of the sample and which rely on a smaller subset of postings.
 
 ```{python}
-#| echo: true
+#| echo: false
 #| warning: false
 #| message: false
 
