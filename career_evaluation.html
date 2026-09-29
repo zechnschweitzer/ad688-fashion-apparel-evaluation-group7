@@ -29,7 +29,7 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -73,6 +73,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 <link rel="stylesheet" href="styles.css">
@@ -134,8 +137,16 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-makes-a-role-attractive-for-this-team" id="toc-what-makes-a-role-attractive-for-this-team" class="nav-link active" data-scroll-target="#what-makes-a-role-attractive-for-this-team">What Makes a Role Attractive for This Team</a></li>
+  <li><a href="#opportunity-scorecard" id="toc-opportunity-scorecard" class="nav-link" data-scroll-target="#opportunity-scorecard">Opportunity Scorecard</a></li>
+  <li><a href="#what-the-scores-show" id="toc-what-the-scores-show" class="nav-link" data-scroll-target="#what-the-scores-show">What the Scores Show</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -159,8 +170,223 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="what-makes-a-role-attractive-for-this-team" class="level2">
+<h2 class="anchored" data-anchor-id="what-makes-a-role-attractive-for-this-team">What Makes a Role Attractive for This Team</h2>
+<p>The 19 postings in our filtered dataset do not represent equally strong opportunities for this team. Some of these postings require skills the team has already demonstrated, some are more attainable given their experience requirements, and some originate from employers that are hiring repeatedly for comparable roles. This section converts those factors into a structured scorecard, allowing postings to be compared against one another rather than evaluated individually.</p>
+<p>We scored each job posting on three areas we have full or near-full data across these 19 postings:</p>
+<ul>
+<li><strong>Skill fit</strong>: how many of the role’s listed skills overlap with skills our team already rates itself strong in (Data Analysis, Microsoft Excel, Stakeholder Management, and Project Management based on our skill gap findings).</li>
+<li><strong>Accessibility</strong>: how attainable the role is based on minimum years of experience required. A role asking for 0 years scores highest and the score drops as the experience requirement climbs.</li>
+<li><strong>Employer signal</strong>: how many postings from that same employer appear in our dataset as a rough proxy for how actively that company is hiring for this kind of role.</li>
+</ul>
+<p>We left salary and remote status out of the combined score as only 4 of the 19 postings have that data. Folding these sparse fields into the score would unfairly penalize postings that did not report them. We call those out separately below instead.</p>
+</section>
+<section id="opportunity-scorecard" class="level2">
+<h2 class="anchored" data-anchor-id="opportunity-scorecard">Opportunity Scorecard</h2>
+<div id="ea8208f7" class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display" data-execution_count="1">
+<div>
 
 
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">TITLE_CLEAN</th>
+<th data-quarto-table-cell-role="th">COMPANY_NAME</th>
+<th data-quarto-table-cell-role="th">SKILL_FIT_SCORE</th>
+<th data-quarto-table-cell-role="th">ACCESSIBILITY_SCORE</th>
+<th data-quarto-table-cell-role="th">EMPLOYER_SIGNAL_SCORE</th>
+<th data-quarto-table-cell-role="th">OPPORTUNITY_SCORE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>Sr. Manager, Ecommerce Analytics</td>
+<td>Vuoriinc</td>
+<td>2</td>
+<td>3</td>
+<td>5</td>
+<td>10</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>Sr. FP&amp;A Manager, Systems &amp; Analytics</td>
+<td>Vuoriinc</td>
+<td>1</td>
+<td>3</td>
+<td>5</td>
+<td>9</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>Director, Wholesale Sales Planning &amp; Analytics</td>
+<td>Vuoriinc</td>
+<td>1</td>
+<td>3</td>
+<td>5</td>
+<td>9</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>Manager, Digital Marketing Analytics</td>
+<td>Adidas</td>
+<td>2</td>
+<td>3</td>
+<td>3</td>
+<td>8</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4</th>
+<td>Sr. Manager, Global Finance Business Analyst</td>
+<td>Vuoriinc</td>
+<td>0</td>
+<td>3</td>
+<td>5</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">5</th>
+<td>Product Manager, Enterprise Analytics</td>
+<td>Vuoriinc</td>
+<td>1</td>
+<td>1</td>
+<td>5</td>
+<td>7</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">6</th>
+<td>Sr Region Operations Analyst - Sierra</td>
+<td>TJX</td>
+<td>0</td>
+<td>3</td>
+<td>3</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">7</th>
+<td>Sr. Data Analyst</td>
+<td>Foot Locker</td>
+<td>2</td>
+<td>3</td>
+<td>1</td>
+<td>6</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">8</th>
+<td>Senior Analyst, Merchandise Flow &amp; Analytics</td>
+<td>TJX</td>
+<td>0</td>
+<td>3</td>
+<td>3</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">9</th>
+<td>Manager, Digital Consumer Analytics</td>
+<td>Adidas</td>
+<td>2</td>
+<td>1</td>
+<td>3</td>
+<td>6</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">10</th>
+<td>Media Marketing Sr. Manager, Analytics</td>
+<td>Ralph Lauren</td>
+<td>1</td>
+<td>3</td>
+<td>2</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">11</th>
+<td>Sr Region Operations Analyst - Sierra</td>
+<td>TJX</td>
+<td>0</td>
+<td>3</td>
+<td>3</td>
+<td>6</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">12</th>
+<td>Media Marketing Sr. Manager, Analytics</td>
+<td>Ralph Lauren</td>
+<td>1</td>
+<td>3</td>
+<td>2</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">13</th>
+<td>Manager, Digital Analytics</td>
+<td>Adidas</td>
+<td>0</td>
+<td>3</td>
+<td>3</td>
+<td>6</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">14</th>
+<td>Senior Business Intelligence &amp; Data Analyst - ...</td>
+<td>Jobs.tjx.com</td>
+<td>0</td>
+<td>3</td>
+<td>2</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">15</th>
+<td>Senior Business Intelligence &amp; Data Analyst - ...</td>
+<td>Jobs.tjx.com</td>
+<td>0</td>
+<td>3</td>
+<td>2</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">16</th>
+<td>Merchandising Data Analyst</td>
+<td>Careers.michaels.com</td>
+<td>1</td>
+<td>3</td>
+<td>1</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">17</th>
+<td>Data Analyst 3 - Store Operations</td>
+<td>Nordstrom</td>
+<td>1</td>
+<td>3</td>
+<td>1</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">18</th>
+<td>Principal, Data Analytics and Engineering</td>
+<td>Macy's</td>
+<td>0</td>
+<td>3</td>
+<td>1</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="what-the-scores-show" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-scores-show">What the Scores Show</h2>
+<p>Vuori appears four times in the top six rows. This is a direct result of how often the company posts similar roles in our dataset, not a fluke of the scoring method. That repetition is what the employer signal score is intended to capture: a company hiring repeatedly for related work is a more realistic target than one with a single listing. The Sr.&nbsp;Manager, Ecommerce Analytics role at Vuori is at the top of the list as it combines that hiring pattern with a moderate skill overlap and a low experience bar. This is the profile the scorecard was designed to surface.</p>
+<p>Adidas’ Manager, Digital Marketing Analytics role is the strongest non-Vuori result, driven mainly by skill fit rather than employer signal, as Adidas appears less often in the filtered postings. That distinction matters for our team: a role can score well either because it closely matches skills the team already has, or because the employer is clearly hiring at volume. These are different types of opportunity. A few roles near the bottom of this list, such as the TJX and Foot Locker postings, score lower primarily on skill fit. This is aligned with the gaps identified in the skill-gap analysis rather than a lack of accessibility or employer activity.</p>
+<p>When taken together, the scorecard points toward employers who are actively and repeatedly hiring for adjacent roles as the more attainable near-term targets, while the highest skill-fit postings point toward where the team’s current strengths already translate directly into job requirements.</p>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
