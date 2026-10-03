@@ -9,6 +9,46 @@ execute:
   freeze: auto
 ---
 
+## Filter Funnel
+
+Our team started from the full MET Employability raw dataset, loaded across 21 parquet files, and narrowed it down in two stages before any cleaning happened.
+
+| Stage | Count |
+|---|---|
+| Raw source (21 parquet parts) | 504,208 |
+| NAICS 458 only | 18 |
+| Known apparel/fashion employer only | 2,387 |
+| NAICS 458 OR known employer (industry match) | 2,405 |
+| Role title keyword match, any industry | 13,841 |
+| Final filtered set (industry match AND role match) | 19 |
+
+NAICS 458 alone matched only 18 postings in the entire 504,208 posting dataset. That number confirms the limitation noted at the bottom of this page: most apparel and fashion retail analytics roles are not tagged under clothing retail NAICS codes at all. Widening the industry filter to also match a list of known apparel and fashion employer names raised that count to 2,405, which is the number actually carried forward. From there, filtering to postings whose title contains an analyst or analytics related keyword narrowed the set to our final 19 verified postings.
+
+This funnel is reproducible from `explore_naics.py`, which logs each stage and writes the table above to `outputs/filter_funnel.md`.
+
+## Data Dictionary
+
+| Column | Description |
+|---|---|
+| ID | Unique posting identifier from the source dataset |
+| TITLE_CLEAN | Standardized job title used throughout this site |
+| COMPANY_NAME | Employer name as reported in the posting |
+| COMPANY_CLEAN | Lowercased, trimmed employer name used for employer-based filtering and grouping |
+| SALARY_FROM / SALARY_TO | Reported minimum and maximum annual salary, where disclosed. Missing values are filled with the dataset median during cleaning, below |
+| MIN_YEARS_EXPERIENCE / MAX_YEARS_EXPERIENCE | Minimum and maximum years of experience requested. Missing minimums are filled with 0 |
+| CITY_NAME / STATE_NAME | Posting location. Blank or malformed values are standardized to "Unknown," or corrected manually where the source data was clearly wrong |
+| REMOTE_TYPE_NAME | Reported work arrangement (remote, hybrid, onsite), where disclosed |
+| SKILLS_LIST | Parsed list of skills associated with the posting |
+| SOFTWARE_SKILLS_LIST | Parsed list of software or tool specific skills associated with the posting |
+| NAICS_2022_3 | Three digit NAICS industry code used for the industry filter |
+
+## Reproducing This Dataset
+
+1. Place the raw MET Employability parquet files in `data/raw/`.
+2. Run `python explore_naics.py`. This applies the NAICS 458 and known employer filter, then the role title keyword filter, and saves the result to `data/interim/apparel_analyst_filtered.csv`. It also writes the filter funnel table to `outputs/filter_funnel.md`.
+3. Render `data_preparation.qmd` (this page). It loads that interim file, cleans the salary, experience, geography, and skills fields, and saves the final analytical dataset to `data/processed/apparel_analyst_clean.csv`.
+4. Render the rest of the site. Market Baseline, Skill Gap Analysis, Career Evaluation, and Final Analytics all read from `data/processed/apparel_analyst_clean.csv`.
+
 ## Load the Filtered Dataset
 
 ```{python}
@@ -99,7 +139,9 @@ print(f"Saved cleaned dataset: {len(df)} rows")
 The final cleaned dataset contains 19 job postings. This reflects a known
 limitation of NAICS-based industry classification: many analytics roles at
 apparel/retail companies are tagged under unrelated NAICS codes rather than
-under clothing retail codes specifically. To compensate, this dataset combines
+under clothing retail codes specifically. In our raw dataset, NAICS 458 alone
+matched only 18 of 504,208 postings, confirming this is not a minor edge case.
+To compensate, this dataset combines
 NAICS 458 (Clothing, Clothing Accessories, Shoe, and Jewelry Retailers) with
 an exact-match list of known apparel/fashion company names, then filters to
 narrow analyst job titles (business analyst, data analyst). The resulting
