@@ -6,12 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Alyssa Quigley">
-<meta name="author" content="Ankita Roy">
-<meta name="author" content="Zechariah Schweitzer">
-<meta name="author" content="Sara Scribner">
 
-<title>AD688: Fashion and Apparel Career Evaluation - Group 7</title>
+<title>Final Analytics – AD688: Fashion and Apparel Career Evaluation - Group 7</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -33,7 +29,7 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -77,6 +73,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 <link rel="stylesheet" href="styles.css">
@@ -100,7 +99,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -124,7 +123,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Career Evaluation</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./final_analytics.html"> 
+    <a class="nav-link active" href="./final_analytics.html" aria-current="page"> 
 <span class="menu-text">Final Analytics</span></a>
   </li>  
   <li class="nav-item">
@@ -147,8 +146,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#project-overview" id="toc-project-overview" class="nav-link active" data-scroll-target="#project-overview">Project Overview</a></li>
-  <li><a href="#project-sections" id="toc-project-sections" class="nav-link" data-scroll-target="#project-sections">Project Sections</a></li>
+  <li><a href="#analytics-track-opportunity-scorecard-segmentation-and-ranking" id="toc-analytics-track-opportunity-scorecard-segmentation-and-ranking" class="nav-link active" data-scroll-target="#analytics-track-opportunity-scorecard-segmentation-and-ranking">Analytics Track: Opportunity Scorecard (Segmentation and Ranking)</a></li>
+  <li><a href="#scoring-methodology-and-weighting-justification" id="toc-scoring-methodology-and-weighting-justification" class="nav-link" data-scroll-target="#scoring-methodology-and-weighting-justification">Scoring Methodology and Weighting Justification</a></li>
+  <li><a href="#opportunity-scorecard" id="toc-opportunity-scorecard" class="nav-link" data-scroll-target="#opportunity-scorecard">Opportunity Scorecard</a></li>
+  <li><a href="#what-the-scores-show" id="toc-what-the-scores-show" class="nav-link" data-scroll-target="#what-the-scores-show">What the Scores Show</a></li>
+  <li><a href="#evaluating-the-score" id="toc-evaluating-the-score" class="nav-link" data-scroll-target="#evaluating-the-score">Evaluating the Score</a></li>
+  <li><a href="#practical-meaning-for-job-seekers" id="toc-practical-meaning-for-job-seekers" class="nav-link" data-scroll-target="#practical-meaning-for-job-seekers">Practical Meaning for Job Seekers</a></li>
   </ul>
 </nav>
     </div>
@@ -157,22 +160,13 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">AD688: Fashion and Apparel Career Evaluation - Group 7</h1>
+<h1 class="title">Final Analytics</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Authors</div>
-    <div class="quarto-title-meta-contents">
-             <p>Alyssa Quigley </p>
-             <p>Ankita Roy </p>
-             <p>Zechariah Schweitzer </p>
-             <p>Sara Scribner </p>
-          </div>
-  </div>
     
   
     
@@ -183,22 +177,239 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="project-overview" class="level2">
-<h2 class="anchored" data-anchor-id="project-overview">Project Overview</h2>
-<p>This project evaluates analytics-related career opportunities within the apparel and fashion industry using job-posting data from the MET Career Compass dataset.</p>
-<p>The analysis focuses on a narrowly defined market built around NAICS 458 and a verified list of apparel and fashion employers. The current filtered dataset contains 19 job postings and is intended to provide a descriptive view of the selected market rather than represent the broader analytics labor market.</p>
+<section id="analytics-track-opportunity-scorecard-segmentation-and-ranking" class="level2">
+<h2 class="anchored" data-anchor-id="analytics-track-opportunity-scorecard-segmentation-and-ranking">Analytics Track: Opportunity Scorecard (Segmentation and Ranking)</h2>
+<p>This project uses <strong>Option C — Segmentation/Ranking</strong> rather than a regression or classification model. With 19 postings total, and usable salary data for only 4 of them and usable experience data for only 9 (see <a href="./market_baseline.html">Market Baseline</a>), there is not enough consistent, complete data to train and validate a predictive model without overfitting or drawing conclusions from a handful of records. A structured, multi-factor scorecard lets us rank every posting in the sample using the fields we have strong coverage on, while keeping the sparse fields (salary, remote status) as separate, clearly-labeled context rather than folding them into a score they would distort.</p>
+<p><strong>What was scored:</strong> every one of the 19 postings in our filtered apparel and fashion analytics dataset, each assigned an Opportunity Score built from three component scores.</p>
+<p><strong>Why it matters for a job seeker:</strong> a list of 19 open postings is not itself a decision tool. Ranking those postings by attainability, skill fit, and employer hiring signal turns the raw posting list into a prioritized target list the team can act on.</p>
 </section>
-<section id="project-sections" class="level2">
-<h2 class="anchored" data-anchor-id="project-sections">Project Sections</h2>
-<p>Use the navigation bar above to explore the project:</p>
+<section id="scoring-methodology-and-weighting-justification" class="level2">
+<h2 class="anchored" data-anchor-id="scoring-methodology-and-weighting-justification">Scoring Methodology and Weighting Justification</h2>
+<p>The Opportunity Score is the unweighted sum of three component scores:</p>
 <ul>
-<li><strong>Introduction</strong>: project scope, career pathway, and industry context</li>
-<li><strong>Data Preparation</strong>: filtering, cleaning, and preparation of the analytical dataset</li>
-<li><strong>Market Baseline</strong>: current job volume, salary, geography, experience, work arrangement, and employer patterns</li>
-<li><strong>Skill Gap Analysis</strong>: comparison of market skill requirements with relevant career skills</li>
-<li><strong>Career Evaluation</strong>: evaluation of career opportunities using the project findings</li>
-<li><strong>Final Recommendations</strong>: overall conclusions and recommendations</li>
+<li><strong>Skill fit score (0–4):</strong> counts how many of the team’s four self-rated strongest skills (Data Analysis, Microsoft Excel, Stakeholder Management, Project Management — from the <a href="./skill_gap_analysis.html">Skill Gap Analysis</a>) are mentioned in that posting’s listed skills.</li>
+<li><strong>Accessibility score (0–3):</strong> a tiered score based on minimum years of experience required, highest (3) for a 0-year requirement and lowest (0) for roles requiring more than 5 years.</li>
+<li><strong>Employer signal score (1–5):</strong> the raw count of postings from that same employer in our 19-posting sample, used as a proxy for how actively that company is hiring for this kind of role.</li>
 </ul>
+<p><strong>Why these three and not salary or remote status:</strong> salary is observed for only 4 of 19 postings and work arrangement for only 4 of 19. Scoring on fields that sparse would let a small number of postings with reported data dominate or distort the ranking for the other 15. Both are instead reported as separate context in the market baseline rather than scored.</p>
+<p><strong>Why equal weighting, and its limitation:</strong> the three components are added with equal weight (1:1:1) rather than a tuned or justified weighting scheme, because the team had no outcome data (e.g., actual application success or offer rates) to fit weights against. This is a real limitation worth naming directly: the employer signal score is not capped the same way the other two are (it is a raw count, currently ranging 1–5 across our employers), so an employer with many repeat postings can move the score by more per point than a skill-fit or accessibility point can. In practice this means Opportunity Score should be read alongside its three components, not as a single number on its own — which is why all three columns are kept visible in the table below rather than only the total.</p>
+</section>
+<section id="opportunity-scorecard" class="level2">
+<h2 class="anchored" data-anchor-id="opportunity-scorecard">Opportunity Scorecard</h2>
+<div id="36b513ff" class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display" data-execution_count="1">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">TITLE_CLEAN</th>
+<th data-quarto-table-cell-role="th">COMPANY_NAME</th>
+<th data-quarto-table-cell-role="th">SKILL_FIT_SCORE</th>
+<th data-quarto-table-cell-role="th">ACCESSIBILITY_SCORE</th>
+<th data-quarto-table-cell-role="th">EMPLOYER_SIGNAL_SCORE</th>
+<th data-quarto-table-cell-role="th">OPPORTUNITY_SCORE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>Sr. Manager, Ecommerce Analytics</td>
+<td>Vuoriinc</td>
+<td>2</td>
+<td>3</td>
+<td>5</td>
+<td>10</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>Sr. FP&amp;A Manager, Systems &amp; Analytics</td>
+<td>Vuoriinc</td>
+<td>1</td>
+<td>3</td>
+<td>5</td>
+<td>9</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>Director, Wholesale Sales Planning &amp; Analytics</td>
+<td>Vuoriinc</td>
+<td>1</td>
+<td>3</td>
+<td>5</td>
+<td>9</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>Manager, Digital Marketing Analytics</td>
+<td>Adidas</td>
+<td>2</td>
+<td>3</td>
+<td>3</td>
+<td>8</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4</th>
+<td>Sr. Manager, Global Finance Business Analyst</td>
+<td>Vuoriinc</td>
+<td>0</td>
+<td>3</td>
+<td>5</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">5</th>
+<td>Product Manager, Enterprise Analytics</td>
+<td>Vuoriinc</td>
+<td>1</td>
+<td>1</td>
+<td>5</td>
+<td>7</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">6</th>
+<td>Sr Region Operations Analyst - Sierra</td>
+<td>TJX</td>
+<td>0</td>
+<td>3</td>
+<td>3</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">7</th>
+<td>Sr. Data Analyst</td>
+<td>Foot Locker</td>
+<td>2</td>
+<td>3</td>
+<td>1</td>
+<td>6</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">8</th>
+<td>Senior Analyst, Merchandise Flow &amp; Analytics</td>
+<td>TJX</td>
+<td>0</td>
+<td>3</td>
+<td>3</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">9</th>
+<td>Manager, Digital Consumer Analytics</td>
+<td>Adidas</td>
+<td>2</td>
+<td>1</td>
+<td>3</td>
+<td>6</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">10</th>
+<td>Media Marketing Sr. Manager, Analytics</td>
+<td>Ralph Lauren</td>
+<td>1</td>
+<td>3</td>
+<td>2</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">11</th>
+<td>Sr Region Operations Analyst - Sierra</td>
+<td>TJX</td>
+<td>0</td>
+<td>3</td>
+<td>3</td>
+<td>6</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">12</th>
+<td>Media Marketing Sr. Manager, Analytics</td>
+<td>Ralph Lauren</td>
+<td>1</td>
+<td>3</td>
+<td>2</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">13</th>
+<td>Manager, Digital Analytics</td>
+<td>Adidas</td>
+<td>0</td>
+<td>3</td>
+<td>3</td>
+<td>6</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">14</th>
+<td>Senior Business Intelligence &amp; Data Analyst - ...</td>
+<td>Jobs.tjx.com</td>
+<td>0</td>
+<td>3</td>
+<td>2</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">15</th>
+<td>Senior Business Intelligence &amp; Data Analyst - ...</td>
+<td>Jobs.tjx.com</td>
+<td>0</td>
+<td>3</td>
+<td>2</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">16</th>
+<td>Merchandising Data Analyst</td>
+<td>Careers.michaels.com</td>
+<td>1</td>
+<td>3</td>
+<td>1</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">17</th>
+<td>Data Analyst 3 - Store Operations</td>
+<td>Nordstrom</td>
+<td>1</td>
+<td>3</td>
+<td>1</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">18</th>
+<td>Principal, Data Analytics and Engineering</td>
+<td>Macy's</td>
+<td>0</td>
+<td>3</td>
+<td>1</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="what-the-scores-show" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-scores-show">What the Scores Show</h2>
+<p>Vuori appears four times in the top six rows. This is a direct result of how often the company posts similar roles in our dataset, not a fluke of the scoring method. That repetition is what the employer signal score is intended to capture: a company hiring repeatedly for related work is a more realistic target than one with a single listing. The Sr.&nbsp;Manager, Ecommerce Analytics role at Vuori is at the top of the list as it combines that hiring pattern with a moderate skill overlap and a low experience bar. This is the profile the scorecard was designed to surface.</p>
+<p>Adidas’ Manager, Digital Marketing Analytics role is the strongest non-Vuori result, driven mainly by skill fit rather than employer signal, as Adidas appears less often in the filtered postings. That distinction matters for our team: a role can score well either because it closely matches skills the team already has, or because the employer is clearly hiring at volume. These are different types of opportunity. A few roles near the bottom of this list, such as the TJX and Foot Locker postings, score lower primarily on skill fit. This is aligned with the gaps identified in the skill-gap analysis rather than a lack of accessibility or employer activity.</p>
+<p>When taken together, the scorecard points toward employers who are actively and repeatedly hiring for adjacent roles as the more attainable near-term targets, while the highest skill-fit postings point toward where the team’s current strengths already translate directly into job requirements.</p>
+</section>
+<section id="evaluating-the-score" class="level2">
+<h2 class="anchored" data-anchor-id="evaluating-the-score">Evaluating the Score</h2>
+<p>Because this is a scorecard rather than a fitted model, there is no RMSE or accuracy figure to report. Evaluation here means checking the ranking for face validity against the rest of the project instead:</p>
+<ul>
+<li>The two employers the scorecard surfaces most (Vuori and TJX) are the same two employers identified as the top two in <a href="./market_baseline.html#top-employers">Market Baseline</a>, so the employer signal component is tracking a pattern that shows up independently in the raw posting counts, not an artifact of the scoring formula.</li>
+<li>Low skill-fit postings on the scorecard line up with the skills the team already flagged as gaps (Power BI, SQL, Python) in the <a href="./skill_gap_analysis.html">Skill Gap Analysis</a>, so the skill-fit component is consistent with that separate analysis rather than contradicting it.</li>
+<li>The scorecard has not been validated against any ground truth of actual hiring outcomes, so it should be read as a prioritization tool for where to focus search and skill-building effort, not as a prediction of who will get an offer.</li>
+</ul>
+</section>
+<section id="practical-meaning-for-job-seekers" class="level2">
+<h2 class="anchored" data-anchor-id="practical-meaning-for-job-seekers">Practical Meaning for Job Seekers</h2>
+<p>For this team, the scorecard says: apply early and often to Vuori and TJX postings, since both the raw posting counts and the scorecard agree these employers are hiring repeatedly for adjacent roles; use the Adidas-style postings as a check on skill fit, since those reward the skills the team already rates itself strong in; and treat the lower-scoring postings as a map of which skills (Power BI, SQL, Python) would open up the largest number of additional opportunities if built up, which is exactly where the <a href="./final_recommendations.html">Final Recommendations</a> page picks up.</p>
 
 
 </section>
