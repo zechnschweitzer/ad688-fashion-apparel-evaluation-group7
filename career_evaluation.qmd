@@ -11,14 +11,14 @@ execute:
 
 ## What Makes a Role Attractive for This Team
 
-The 19 postings in our filtered dataset do not represent equally strong opportunities for this team. Some of these postings require skills the team has already demonstrated, some are more attainable given their experience requirements, and some originate from employers that are hiring repeatedly for comparable roles. This section converts those factors into a structured scorecard, allowing postings to be compared against one another rather than evaluated individually.
+The 19 postings in our filtered dataset do not represent equally strong opportunities for this team. Some ask for skills our team has already demonstrated. Some are more attainable given their experience requirements. Some come from employers that are hiring repeatedly for comparable roles. A posting that scores well on one of these factors and poorly on another is a different kind of opportunity than one that scores well on all three, so judging postings one at a time misses that distinction.
 
-We scored each job posting on three areas we have full or near-full data across these 19 postings:
+## How We Define Opportunity
 
-- **Skill fit**: how many of the role's listed skills overlap with skills our team already rates itself strong in (Data Analysis, Microsoft Excel, Stakeholder Management, and Project Management based on our skill gap findings).
-- **Accessibility**: how attainable the role is based on minimum years of experience required. A role asking for 0 years scores highest and the score drops as the experience requirement climbs.
-- **Employer signal**: how many postings from that same employer appear in our dataset as a rough proxy for how actively that company is hiring for this kind of role.
+We treat a posting as a strong opportunity when it is attainable, relevant to skills our team already has, and backed by an employer that is actively hiring for similar work. These three factors come from what the market baseline and skill gap analysis already showed matters for this team: experience requirements vary widely across postings, our team's strengths and gaps are already mapped against the most in-demand skills, and some employers in our sample post the same type of role several times while others post once.
 
-We left salary and remote status out of the combined score as only 4 of the 19 postings have that data. Folding these sparse fields into the score would unfairly penalize postings that did not report them. We call those out separately below instead.
+None of these factors alone tells the full story. A role can be highly accessible but ask for skills our team lacks. A role can match our skills well but come from an employer with no other postings in our sample, making it a less repeatable target. Looking at all three together is what turns 19 individual postings into a ranked set of targets.
 
-The scorecard itself, the methodology behind it, and what the results show are covered on the [Final Analytics](final_analytics.qmd) page.
+## Where the Scoring Happens
+
+We turn these three factors into a scored, ranked list on the [Final Analytics](final_analytics.qmd) page, along with the full methodology, the weighting choices behind it, and what the results show.

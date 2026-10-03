@@ -26,6 +26,8 @@ Power BI and SQL are the two most market-demanded skills in our sample, each sho
 
 Closing the Power BI and SQL gaps would raise skill fit scores on the scorecard itself. Those are the two most frequently listed skills missing from the postings currently scoring lowest on skill fit, including the TJX and Foot Locker roles.
 
+By person: Alyssa and Ankita should complete a Power BI learning path before the Module 5 deadline, then move to SQL practice against our own filtered dataset. Sara should prioritize Power BI first given her lowest team rating on it, building on her existing Excel strength. Zech should focus on Power BI's data modeling features, building on his existing SQL proficiency.
+
 ## How to Use This Product Going Forward
 
 1. Re-run the Opportunity Scorecard as new postings come in. Employer signal and skill demand can shift as hiring continues.
