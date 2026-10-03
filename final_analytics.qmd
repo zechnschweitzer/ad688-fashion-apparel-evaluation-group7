@@ -9,25 +9,19 @@ execute:
   freeze: auto
 ---
 
-## Analytics Track: Opportunity Scorecard (Segmentation and Ranking)
+## Opportunity Scorecard Methodology
 
-This project uses **Option C — Segmentation/Ranking** rather than a regression or classification model. With 19 postings total, and usable salary data for only 4 of them and usable experience data for only 9 (see [Market Baseline](market_baseline.qmd)), there is not enough consistent, complete data to train and validate a predictive model without overfitting or drawing conclusions from a handful of records. A structured, multi-factor scorecard lets us rank every posting in the sample using the fields we have strong coverage on, while keeping the sparse fields (salary, remote status) as separate, clearly-labeled context rather than folding them into a score they would distort.
+Our filtered dataset has only 19 postings. Usable salary data exists for 4 of them. Usable experience data exists for 9 (see Market Baseline). That is too little consistent data to train and validate a regression or classification model without drawing conclusions from a handful of records. Instead, our team built a structured, multi-factor scorecard. It ranks every posting in the sample using the fields with strong coverage, and keeps salary and remote status as separate context instead of folding them into a score they would distort.
 
-**What was scored:** every one of the 19 postings in our filtered apparel and fashion analytics dataset, each assigned an Opportunity Score built from three component scores.
+Each of the 19 postings gets an Opportunity Score built from three component scores.
 
-**Why it matters for a job seeker:** a list of 19 open postings is not itself a decision tool. Ranking those postings by attainability, skill fit, and employer hiring signal turns the raw posting list into a prioritized target list the team can act on.
+- **Skill fit score (0 to 4):** how many of our team's four self-rated strongest skills (Data Analysis, Microsoft Excel, Stakeholder Management, Project Management, from the Skill Gap Analysis) show up in that posting's listed skills.
+- **Accessibility score (0 to 3):** a tiered score based on minimum years of experience required. A 0 year requirement scores highest. The score drops as the requirement climbs.
+- **Employer signal score (1 to 5):** the number of postings from that same employer in our sample. It is a proxy for how actively that company is hiring for this kind of role.
 
-## Scoring Methodology and Weighting Justification
+Salary and work arrangement were left out of the score. Only 4 of the 19 postings have usable data for each. Scoring on fields that sparse would let a handful of postings with reported data drive the ranking for the other 15. Market Baseline reports those two fields separately instead.
 
-The Opportunity Score is the unweighted sum of three component scores:
-
-- **Skill fit score (0–4):** counts how many of the team's four self-rated strongest skills (Data Analysis, Microsoft Excel, Stakeholder Management, Project Management — from the [Skill Gap Analysis](skill_gap_analysis.qmd)) are mentioned in that posting's listed skills.
-- **Accessibility score (0–3):** a tiered score based on minimum years of experience required, highest (3) for a 0-year requirement and lowest (0) for roles requiring more than 5 years.
-- **Employer signal score (1–5):** the raw count of postings from that same employer in our 19-posting sample, used as a proxy for how actively that company is hiring for this kind of role.
-
-**Why these three and not salary or remote status:** salary is observed for only 4 of 19 postings and work arrangement for only 4 of 19. Scoring on fields that sparse would let a small number of postings with reported data dominate or distort the ranking for the other 15. Both are instead reported as separate context in the market baseline rather than scored.
-
-**Why equal weighting, and its limitation:** the three components are added with equal weight (1:1:1) rather than a tuned or justified weighting scheme, because the team had no outcome data (e.g., actual application success or offer rates) to fit weights against. This is a real limitation worth naming directly: the employer signal score is not capped the same way the other two are (it is a raw count, currently ranging 1–5 across our employers), so an employer with many repeat postings can move the score by more per point than a skill-fit or accessibility point can. In practice this means Opportunity Score should be read alongside its three components, not as a single number on its own — which is why all three columns are kept visible in the table below rather than only the total.
+The three components carry equal weight. Our team had no outcome data, like actual application or offer results, to fit weights against instead. The employer signal score is not capped the same way the other two are. It is a raw count, and it currently ranges from 1 to 5 across our employers. That means an employer with many repeat postings can move the total by more per point than a skill fit or accessibility point can. Read the Opportunity Score alongside its three components, not as a single number on its own. That is why all three columns stay visible in the table below.
 
 ## Opportunity Scorecard
 
@@ -73,20 +67,14 @@ scorecard
 
 ## What the Scores Show
 
-Vuori appears four times in the top six rows. This is a direct result of how often the company posts similar roles in our dataset, not a fluke of the scoring method. That repetition is what the employer signal score is intended to capture: a company hiring repeatedly for related work is a more realistic target than one with a single listing. The Sr. Manager, Ecommerce Analytics role at Vuori is at the top of the list as it combines that hiring pattern with a moderate skill overlap and a low experience bar. This is the profile the scorecard was designed to surface.
+Vuori appears four times in the top six rows. This is a direct result of how often the company posts similar roles in our dataset, not a fluke of the scoring method. That repetition is what the employer signal score is meant to capture: a company hiring repeatedly for related work is a more realistic target than one with a single listing. The Sr. Manager, Ecommerce Analytics role at Vuori sits at the top of the list because it combines that hiring pattern with a moderate skill overlap and a low experience bar.
 
-Adidas' Manager, Digital Marketing Analytics role is the strongest non-Vuori result, driven mainly by skill fit rather than employer signal, as Adidas appears less often in the filtered postings. That distinction matters for our team: a role can score well either because it closely matches skills the team already has, or because the employer is clearly hiring at volume. These are different types of opportunity. A few roles near the bottom of this list, such as the TJX and Foot Locker postings, score lower primarily on skill fit. This is aligned with the gaps identified in the skill-gap analysis rather than a lack of accessibility or employer activity.
-
-When taken together, the scorecard points toward employers who are actively and repeatedly hiring for adjacent roles as the more attainable near-term targets, while the highest skill-fit postings point toward where the team's current strengths already translate directly into job requirements.
+Adidas' Manager, Digital Marketing Analytics role is the strongest non-Vuori result, driven mainly by skill fit rather than employer signal, since Adidas appears less often in the filtered postings. A role can score well either because it closely matches skills our team already has, or because the employer is clearly hiring at volume. Those are different types of opportunity. A few roles near the bottom of the list, like the TJX and Foot Locker postings, score lower mainly on skill fit, which lines up with the gaps found in the skill-gap analysis rather than a lack of accessibility or employer activity.
 
 ## Evaluating the Score
 
-Because this is a scorecard rather than a fitted model, there is no RMSE or accuracy figure to report. Evaluation here means checking the ranking for face validity against the rest of the project instead:
+Vuori and TJX, the two employers the scorecard ranks highest, are also the two employers with the most postings in Market Baseline. Low skill fit scores line up with the gaps found in the Skill Gap Analysis: Power BI, SQL, and Python. The scorecard has not been checked against real hiring outcomes. Use it to prioritize search and skill building, not to predict who gets an offer.
 
-- The two employers the scorecard surfaces most (Vuori and TJX) are the same two employers identified as the top two in [Market Baseline](market_baseline.qmd#top-employers), so the employer signal component is tracking a pattern that shows up independently in the raw posting counts, not an artifact of the scoring formula.
-- Low skill-fit postings on the scorecard line up with the skills the team already flagged as gaps (Power BI, SQL, Python) in the [Skill Gap Analysis](skill_gap_analysis.qmd), so the skill-fit component is consistent with that separate analysis rather than contradicting it.
-- The scorecard has not been validated against any ground truth of actual hiring outcomes, so it should be read as a prioritization tool for where to focus search and skill-building effort, not as a prediction of who will get an offer.
+## What This Means for Our Team
 
-## Practical Meaning for Job Seekers
-
-For this team, the scorecard says: apply early and often to Vuori and TJX postings, since both the raw posting counts and the scorecard agree these employers are hiring repeatedly for adjacent roles; use the Adidas-style postings as a check on skill fit, since those reward the skills the team already rates itself strong in; and treat the lower-scoring postings as a map of which skills (Power BI, SQL, Python) would open up the largest number of additional opportunities if built up, which is exactly where the [Final Recommendations](final_recommendations.qmd) page picks up.
+The scorecard points us toward applying early and often to Vuori and TJX postings. Both the raw counts and the scorecard agree these employers are hiring repeatedly for adjacent roles. Adidas postings are a good check on skill fit. They reward the skills our team already rates itself strong in. The lower scoring postings show which skills would open up the most additional opportunities if built up. That is where Final Recommendations picks up.

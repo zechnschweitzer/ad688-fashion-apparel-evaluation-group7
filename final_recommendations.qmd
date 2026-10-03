@@ -8,36 +8,34 @@ execute:
   eval: true
 ---
 
-## Overview
-
-This page translates the market baseline, skill-gap analysis, and opportunity scorecard into concrete next steps for a BU MET student targeting business/data analyst roles in apparel and fashion retail (NAICS 458).
-
 ## Where to Focus the Job Search
 
-The [Final Analytics](final_analytics.qmd) scorecard and the raw posting counts in the [Market Baseline](market_baseline.qmd) agree on the same two employers:
+Vuori and TJX each account for 5 of our 19 sample postings, and both dominate the top of the Opportunity Scorecard. They are repeatedly posting for adjacent analytics roles, which makes them the most attainable near-term targets, not just the highest scorers in a one-time snapshot.
 
-- **Vuori** and **TJX** each account for 5 of the 19 postings in our sample and dominate the top of the Opportunity Scorecard. Both are repeatedly posting for adjacent analytics roles, which makes them the most attainable near-term targets, not just the highest scorers in a one-time snapshot.
-- **Adidas** (3 postings) is the strongest option for a candidate relying on skill fit rather than application volume, since its postings reward the skills the team already rates itself strong in (Data Analysis, Excel, Stakeholder Management, Project Management).
-- Geographically, effort is best concentrated on **California, Massachusetts, and New York**, which together account for 14 of the 19 postings in the sample.
+Adidas, with 3 postings, is the strongest option for a candidate relying on skill fit rather than application volume. Its postings reward the skills our team already rates itself strong in: Data Analysis, Excel, Stakeholder Management, and Project Management.
 
-## Where to Focus Skill-Building
+California, Massachusetts, and New York together account for 14 of our 19 postings. Effort is best concentrated there.
 
-The skill-gap analysis identified Power BI and SQL as the two most market-demanded skills (7 of 19 postings each) and also the team's weakest areas relative to that demand. That gap directly depresses skill-fit scores on the scorecard, since Power BI and SQL are not among the four skills counted toward skill fit. In priority order:
+## Where to Focus Skill Building
 
-1. **Power BI** — the single most consistent gap across all four team members (every member self-rated at 3 or below on the market's joint-highest-demand skill).
-2. **SQL** — equally in demand, with more room between team members (Zech at Advanced, others at Intermediate).
-3. **Python** — requested in 5 of 19 postings, also rated low across the team.
+Power BI and SQL are the two most market-demanded skills in our sample, each showing up in 7 of 19 postings. They are also our team's weakest areas relative to that demand. That gap lowers skill fit scores on the scorecard directly, since Power BI and SQL are not among the four skills counted toward skill fit. In priority order:
 
-Closing the Power BI and SQL gaps would not just raise individual readiness; it would raise skill-fit scores on the scorecard itself, since those are the two most frequently listed skills missing from the postings currently scoring lowest on skill fit (the TJX and Foot Locker roles in particular).
+1. **Power BI.** The single most consistent gap across all four team members. Every member self-rated at 3 or below on the market's joint highest demand skill.
+2. **SQL.** Equally in demand, with more room between team members. Zech rates Advanced, the rest rate Intermediate.
+3. **Python.** Requested in 5 of 19 postings, also rated low across our team.
+
+Closing the Power BI and SQL gaps would raise skill fit scores on the scorecard itself. Those are the two most frequently listed skills missing from the postings currently scoring lowest on skill fit, including the TJX and Foot Locker roles.
 
 ## How to Use This Product Going Forward
 
-1. Re-run the Opportunity Scorecard periodically as new postings are added, rather than treating this as a one-time ranking — employer signal and skill demand can shift as hiring continues.
-2. Treat the Opportunity Score as a starting point for prioritization, not a verdict. The [Final Analytics](final_analytics.qmd) page notes that the score has not been validated against real hiring outcomes and that the three components should be read individually, not only as a single combined number.
-3. Use the skill-gap priorities (Power BI, then SQL, then Python) to guide coursework and self-study choices over the remainder of the semester, since those are the skills most likely to move a candidate from a low-scoring to a high-scoring posting.
+1. Re-run the Opportunity Scorecard as new postings come in. Employer signal and skill demand can shift as hiring continues.
+2. Treat the Opportunity Score as a starting point, not a verdict. It has not been checked against real hiring outcomes, and its three components should be read individually, not just as one combined number.
+3. Use the skill priorities above, Power BI, then SQL, then Python, to guide coursework and self-study for the rest of the semester. Those are the skills most likely to move a posting from low-scoring to high-scoring.
 
 ## Limitations
 
-- The underlying sample is 19 postings from a narrowly filtered search (NAICS 458, known apparel/fashion employers). These recommendations describe this specific sample, not the broader apparel analytics job market.
-- Salary and remote-work data were usable for only 4 of 19 postings each, so neither recommendation above is able to account for compensation or remote-work preferences with any confidence.
-- The scorecard's equal weighting of skill fit, accessibility, and employer signal is a modeling choice, not a validated weighting scheme — see [Final Analytics](final_analytics.qmd) for the full discussion of that limitation.
+Our sample is 19 postings from a narrowly filtered search: NAICS 458, known apparel and fashion employers. These recommendations describe this specific sample, not the broader apparel analytics job market.
+
+Salary and remote work data were usable for only 4 of 19 postings each, so neither recommendation above can account for compensation or remote work preferences with much confidence.
+
+The scorecard's equal weighting of skill fit, accessibility, and employer signal is a modeling choice, not a validated weighting scheme. See Final Analytics for the full discussion of that limitation.
