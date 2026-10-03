@@ -86,6 +86,7 @@ fig = px.bar(
     x="Number of Job Postings",
     y="Job Title",
     orientation="h",
+    color_discrete_sequence=["#2C6E8C"],
     title="Top Job Titles in Apparel Analytics"
 )
 
@@ -218,6 +219,7 @@ fig_role_segments = px.bar(
     y="Functional Area",
     orientation="h",
     template="plotly_white",
+    color_discrete_sequence=["#2C6E8C"],
     title="Job Postings by Functional Analytics Area"
 )
 
@@ -306,6 +308,7 @@ fig_coverage = px.bar(
     orientation="h",
     text="Coverage Percentage",
     template="plotly_white",
+    color_discrete_sequence=["#2C6E8C"],
     title="Coverage of Key Job-Posting Attributes"
 )
 
@@ -508,6 +511,7 @@ fig = px.bar(
     x="Number of Job Postings",
     y="State",
     orientation="h",
+    color_discrete_sequence=["#2C6E8C"],
     title="Job Postings by State"
 )
 
@@ -579,6 +583,7 @@ fig = px.bar(
     experience_counts,
     x="Minimum Years of Experience",
     y="Number of Job Postings",
+    color_discrete_sequence=["#2C6E8C"],
     title="Observed Minimum Experience Requirements"
 )
 
@@ -660,6 +665,7 @@ fig = px.bar(
     x="Number of Job Postings",
     y="Work Arrangement",
     orientation="h",
+    color_discrete_sequence=["#2C6E8C"],
     title="Reported Work Arrangement"
 )
 
@@ -744,6 +750,7 @@ fig = px.bar(
     x="Number of Job Postings",
     y="Employer",
     orientation="h",
+    color_discrete_sequence=["#2C6E8C"],
     title="Top Employers in the Selected Market"
 )
 
