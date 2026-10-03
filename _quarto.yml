@@ -20,6 +20,8 @@ website:
         text: Skill Gap Analysis
       - href: career_evaluation.qmd
         text: Career Evaluation
+      - href: final_analytics.qmd
+        text: Final Analytics
       - href: final_recommendations.qmd
         text: Final Recommendations
      
