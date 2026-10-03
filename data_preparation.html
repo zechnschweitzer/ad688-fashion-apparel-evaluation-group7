@@ -146,7 +146,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#load-the-filtered-dataset" id="toc-load-the-filtered-dataset" class="nav-link active" data-scroll-target="#load-the-filtered-dataset">Load the Filtered Dataset</a></li>
+  <li><a href="#filter-funnel" id="toc-filter-funnel" class="nav-link active" data-scroll-target="#filter-funnel">Filter Funnel</a></li>
+  <li><a href="#data-dictionary" id="toc-data-dictionary" class="nav-link" data-scroll-target="#data-dictionary">Data Dictionary</a></li>
+  <li><a href="#reproducing-this-dataset" id="toc-reproducing-this-dataset" class="nav-link" data-scroll-target="#reproducing-this-dataset">Reproducing This Dataset</a></li>
+  <li><a href="#load-the-filtered-dataset" id="toc-load-the-filtered-dataset" class="nav-link" data-scroll-target="#load-the-filtered-dataset">Load the Filtered Dataset</a></li>
   <li><a href="#clean-salary-fields" id="toc-clean-salary-fields" class="nav-link" data-scroll-target="#clean-salary-fields">Clean Salary Fields</a></li>
   <li><a href="#clean-experience-fields" id="toc-clean-experience-fields" class="nav-link" data-scroll-target="#clean-experience-fields">Clean Experience Fields</a></li>
   <li><a href="#clean-geography-fields" id="toc-clean-geography-fields" class="nav-link" data-scroll-target="#clean-geography-fields">Clean Geography Fields</a></li>
@@ -178,9 +181,119 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="filter-funnel" class="level2">
+<h2 class="anchored" data-anchor-id="filter-funnel">Filter Funnel</h2>
+<p>Our team started from the full MET Employability raw dataset, loaded across 21 parquet files, and narrowed it down in two stages before any cleaning happened.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Stage</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Raw source (21 parquet parts)</td>
+<td>504,208</td>
+</tr>
+<tr class="even">
+<td>NAICS 458 only</td>
+<td>18</td>
+</tr>
+<tr class="odd">
+<td>Known apparel/fashion employer only</td>
+<td>2,387</td>
+</tr>
+<tr class="even">
+<td>NAICS 458 OR known employer (industry match)</td>
+<td>2,405</td>
+</tr>
+<tr class="odd">
+<td>Role title keyword match, any industry</td>
+<td>13,841</td>
+</tr>
+<tr class="even">
+<td>Final filtered set (industry match AND role match)</td>
+<td>19</td>
+</tr>
+</tbody>
+</table>
+<p>NAICS 458 alone matched only 18 postings in the entire 504,208 posting dataset. That number confirms the limitation noted at the bottom of this page: most apparel and fashion retail analytics roles are not tagged under clothing retail NAICS codes at all. Widening the industry filter to also match a list of known apparel and fashion employer names raised that count to 2,405, which is the number actually carried forward. From there, filtering to postings whose title contains an analyst or analytics related keyword narrowed the set to our final 19 verified postings.</p>
+<p>This funnel is reproducible from <code>explore_naics.py</code>, which logs each stage and writes the table above to <code>outputs/filter_funnel.md</code>.</p>
+</section>
+<section id="data-dictionary" class="level2">
+<h2 class="anchored" data-anchor-id="data-dictionary">Data Dictionary</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ID</td>
+<td>Unique posting identifier from the source dataset</td>
+</tr>
+<tr class="even">
+<td>TITLE_CLEAN</td>
+<td>Standardized job title used throughout this site</td>
+</tr>
+<tr class="odd">
+<td>COMPANY_NAME</td>
+<td>Employer name as reported in the posting</td>
+</tr>
+<tr class="even">
+<td>COMPANY_CLEAN</td>
+<td>Lowercased, trimmed employer name used for employer-based filtering and grouping</td>
+</tr>
+<tr class="odd">
+<td>SALARY_FROM / SALARY_TO</td>
+<td>Reported minimum and maximum annual salary, where disclosed. Missing values are filled with the dataset median during cleaning, below</td>
+</tr>
+<tr class="even">
+<td>MIN_YEARS_EXPERIENCE / MAX_YEARS_EXPERIENCE</td>
+<td>Minimum and maximum years of experience requested. Missing minimums are filled with 0</td>
+</tr>
+<tr class="odd">
+<td>CITY_NAME / STATE_NAME</td>
+<td>Posting location. Blank or malformed values are standardized to “Unknown,” or corrected manually where the source data was clearly wrong</td>
+</tr>
+<tr class="even">
+<td>REMOTE_TYPE_NAME</td>
+<td>Reported work arrangement (remote, hybrid, onsite), where disclosed</td>
+</tr>
+<tr class="odd">
+<td>SKILLS_LIST</td>
+<td>Parsed list of skills associated with the posting</td>
+</tr>
+<tr class="even">
+<td>SOFTWARE_SKILLS_LIST</td>
+<td>Parsed list of software or tool specific skills associated with the posting</td>
+</tr>
+<tr class="odd">
+<td>NAICS_2022_3</td>
+<td>Three digit NAICS industry code used for the industry filter</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="reproducing-this-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="reproducing-this-dataset">Reproducing This Dataset</h2>
+<ol type="1">
+<li>Place the raw MET Employability parquet files in <code>data/raw/</code>.</li>
+<li>Run <code>python explore_naics.py</code>. This applies the NAICS 458 and known employer filter, then the role title keyword filter, and saves the result to <code>data/interim/apparel_analyst_filtered.csv</code>. It also writes the filter funnel table to <code>outputs/filter_funnel.md</code>.</li>
+<li>Render <code>data_preparation.qmd</code> (this page). It loads that interim file, cleans the salary, experience, geography, and skills fields, and saves the final analytical dataset to <code>data/processed/apparel_analyst_clean.csv</code>.</li>
+<li>Render the rest of the site. Market Baseline, Skill Gap Analysis, Career Evaluation, and Final Analytics all read from <code>data/processed/apparel_analyst_clean.csv</code>.</li>
+</ol>
+</section>
 <section id="load-the-filtered-dataset" class="level2">
 <h2 class="anchored" data-anchor-id="load-the-filtered-dataset">Load the Filtered Dataset</h2>
-<div id="0d505e7f" class="cell" data-execution_count="1">
+<div id="d692cb98" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-stdout">
 <pre><code>Loaded 19 rows, 125 columns
 &lt;class 'pandas.DataFrame'&gt;
@@ -193,7 +306,7 @@ memory usage: 18.7 KB</code></pre>
 </section>
 <section id="clean-salary-fields" class="level2">
 <h2 class="anchored" data-anchor-id="clean-salary-fields">Clean Salary Fields</h2>
-<div id="6b18938b" class="cell" data-execution_count="2">
+<div id="6fe18292" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-stdout">
 <pre><code>Median SALARY_FROM used for fill: 85300.0
 Median SALARY_TO used for fill: 138222.0</code></pre>
@@ -355,7 +468,7 @@ Median SALARY_TO used for fill: 138222.0</code></pre>
 </section>
 <section id="clean-experience-fields" class="level2">
 <h2 class="anchored" data-anchor-id="clean-experience-fields">Clean Experience Fields</h2>
-<div id="d0aaebc5" class="cell" data-execution_count="3">
+<div id="27b3c149" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display" data-execution_count="3">
 <div>
 
@@ -494,7 +607,7 @@ Median SALARY_TO used for fill: 138222.0</code></pre>
 </section>
 <section id="clean-geography-fields" class="level2">
 <h2 class="anchored" data-anchor-id="clean-geography-fields">Clean Geography Fields</h2>
-<div id="b4693694" class="cell" data-execution_count="4">
+<div id="ae98ab79" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display" data-execution_count="4">
 <div>
 
@@ -652,7 +765,7 @@ Median SALARY_TO used for fill: 138222.0</code></pre>
 </section>
 <section id="clean-skills-fields" class="level2">
 <h2 class="anchored" data-anchor-id="clean-skills-fields">Clean Skills Fields</h2>
-<div id="68307579" class="cell" data-execution_count="5">
+<div id="e60c6abd" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-stdout">
 <pre><code>Postings with at least one listed skill: 15</code></pre>
 </div>
@@ -793,7 +906,7 @@ Median SALARY_TO used for fill: 138222.0</code></pre>
 </section>
 <section id="save-the-cleaned-dataset" class="level2">
 <h2 class="anchored" data-anchor-id="save-the-cleaned-dataset">Save the Cleaned Dataset</h2>
-<div id="68cfac9f" class="cell" data-execution_count="6">
+<div id="dffd620e" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-stdout">
 <pre><code>Saved cleaned dataset: 19 rows</code></pre>
 </div>
@@ -801,7 +914,7 @@ Median SALARY_TO used for fill: 138222.0</code></pre>
 </section>
 <section id="note-on-sample-size" class="level2">
 <h2 class="anchored" data-anchor-id="note-on-sample-size">Note on Sample Size</h2>
-<p>The final cleaned dataset contains 19 job postings. This reflects a known limitation of NAICS-based industry classification: many analytics roles at apparel/retail companies are tagged under unrelated NAICS codes rather than under clothing retail codes specifically. To compensate, this dataset combines NAICS 458 (Clothing, Clothing Accessories, Shoe, and Jewelry Retailers) with an exact-match list of known apparel/fashion company names, then filters to narrow analyst job titles (business analyst, data analyst). The resulting sample size is small but each row is a verified, legitimate match.</p>
+<p>The final cleaned dataset contains 19 job postings. This reflects a known limitation of NAICS-based industry classification: many analytics roles at apparel/retail companies are tagged under unrelated NAICS codes rather than under clothing retail codes specifically. In our raw dataset, NAICS 458 alone matched only 18 of 504,208 postings, confirming this is not a minor edge case. To compensate, this dataset combines NAICS 458 (Clothing, Clothing Accessories, Shoe, and Jewelry Retailers) with an exact-match list of known apparel/fashion company names, then filters to narrow analyst job titles (business analyst, data analyst). The resulting sample size is small but each row is a verified, legitimate match.</p>
 
 
 </section>
