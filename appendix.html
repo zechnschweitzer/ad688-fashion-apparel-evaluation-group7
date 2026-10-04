@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Final Analytics – AD688: Fashion and Apparel Career Evaluation - Group 7</title>
+<title>Appendix – AD688: Fashion and Apparel Career Evaluation - Group 7</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -173,7 +173,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Final Recommendations</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./appendix.html"> 
+    <a class="nav-link active" href="./appendix.html" aria-current="page"> 
 <span class="menu-text">Appendix</span></a>
   </li>  
 </ul>
@@ -192,11 +192,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#opportunity-scorecard-methodology" id="toc-opportunity-scorecard-methodology" class="nav-link active" data-scroll-target="#opportunity-scorecard-methodology">Opportunity Scorecard Methodology</a></li>
-  <li><a href="#opportunity-scorecard" id="toc-opportunity-scorecard" class="nav-link" data-scroll-target="#opportunity-scorecard">Opportunity Scorecard</a></li>
-  <li><a href="#what-the-scores-show" id="toc-what-the-scores-show" class="nav-link" data-scroll-target="#what-the-scores-show">What the Scores Show</a></li>
-  <li><a href="#evaluating-the-score" id="toc-evaluating-the-score" class="nav-link" data-scroll-target="#evaluating-the-score">Evaluating the Score</a></li>
-  <li><a href="#what-this-means-for-our-team" id="toc-what-this-means-for-our-team" class="nav-link" data-scroll-target="#what-this-means-for-our-team">What This Means for Our Team</a></li>
+  <li><a href="#purpose-of-this-page" id="toc-purpose-of-this-page" class="nav-link active" data-scroll-target="#purpose-of-this-page">Purpose of This Page</a></li>
+  <li><a href="#filter-criteria-reference" id="toc-filter-criteria-reference" class="nav-link" data-scroll-target="#filter-criteria-reference">Filter Criteria Reference</a>
+  <ul class="collapse">
+  <li><a href="#known-apparelfashion-employers" id="toc-known-apparelfashion-employers" class="nav-link" data-scroll-target="#known-apparelfashion-employers">Known Apparel/Fashion Employers</a></li>
+  <li><a href="#role-title-keywords" id="toc-role-title-keywords" class="nav-link" data-scroll-target="#role-title-keywords">Role-Title Keywords</a></li>
+  </ul></li>
+  <li><a href="#opportunity-scorecard-reference" id="toc-opportunity-scorecard-reference" class="nav-link" data-scroll-target="#opportunity-scorecard-reference">Opportunity Scorecard Reference</a></li>
+  <li><a href="#full-posting-list" id="toc-full-posting-list" class="nav-link" data-scroll-target="#full-posting-list">Full Posting List</a></li>
+  <li><a href="#related-pages" id="toc-related-pages" class="nav-link" data-scroll-target="#related-pages">Related Pages</a></li>
   </ul>
 </nav>
     </div>
@@ -205,7 +209,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Final Analytics</h1>
+<h1 class="title">Appendix</h1>
 </div>
 
 
@@ -222,60 +226,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="opportunity-scorecard-methodology" class="level2">
-<h2 class="anchored" data-anchor-id="opportunity-scorecard-methodology">Opportunity Scorecard Methodology</h2>
-<p>Our filtered dataset has only 19 postings. Usable salary data exists for 4 of them. Usable experience data exists for 9 (see Market Baseline). That is too little consistent data to train and validate a regression or classification model without drawing conclusions from a handful of records. Instead, our team built a structured, multi-factor scorecard. It ranks every posting in the sample using the fields with strong coverage, and keeps salary and remote status as separate context instead of folding them into a score they would distort.</p>
-<p>Each of the 19 postings gets an Opportunity Score built from three component scores.</p>
-<ul>
-<li><strong>Skill fit score (0 to 4):</strong> how many of our team’s four self-rated strongest skills (Data Analysis, Microsoft Excel, Stakeholder Management, Project Management, from the Skill Gap Analysis) show up in that posting’s listed skills.</li>
-<li><strong>Accessibility score (0 to 3):</strong> a tiered score based on minimum years of experience required. A 0 year requirement scores highest. The score drops as the requirement climbs.</li>
-<li><strong>Employer signal score (1 to 5):</strong> the number of postings from that same employer in our sample. It is a proxy for how actively that company is hiring for this kind of role.</li>
-</ul>
-<p>Salary and work arrangement were left out of the score. Only 4 of the 19 postings have usable data for each. Scoring on fields that sparse would let a handful of postings with reported data drive the ranking for the other 15. Market Baseline reports those two fields separately instead.</p>
-<p>The three components carry equal weight. Our team had no outcome data, like actual application or offer results, to fit weights against instead. The employer signal score is not capped the same way the other two are. It is a raw count, and it currently ranges from 1 to 5 across our employers. That means an employer with many repeat postings can move the total by more per point than a skill fit or accessibility point can. Read the Opportunity Score alongside its three components, not as a single number on its own. That is why all three columns stay visible in the table below.</p>
+<section id="purpose-of-this-page" class="level2">
+<h2 class="anchored" data-anchor-id="purpose-of-this-page">Purpose of This Page</h2>
+<p>This appendix collects the supporting reference material behind the analysis: the exact filter criteria used to build the dataset, the full list of postings in the final sample, and the scoring tiers behind the Opportunity Scorecard. It is meant to be checked against, not read start to finish.</p>
 </section>
-<section id="opportunity-scorecard" class="level2">
-<h2 class="anchored" data-anchor-id="opportunity-scorecard">Opportunity Scorecard</h2>
-<div id="7abde969" class="cell" data-execution_count="1">
+<section id="filter-criteria-reference" class="level2">
+<h2 class="anchored" data-anchor-id="filter-criteria-reference">Filter Criteria Reference</h2>
+<section id="known-apparelfashion-employers" class="level3">
+<h3 class="anchored" data-anchor-id="known-apparelfashion-employers">Known Apparel/Fashion Employers</h3>
+<p>These employer names, matched against <code>COMPANY_CLEAN</code>, were used alongside NAICS 458 to build the industry match in <a href="./data_preparation.html">Data Preparation</a>.</p>
+<div id="abb30a96" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"data/processed/apparel_analyst_clean.csv"</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>team_strong_skills <span class="op">=</span> [<span class="st">"Data Analysis"</span>, <span class="st">"Microsoft Excel"</span>, <span class="st">"Stakeholder Management"</span>, <span class="st">"Project Management"</span>]</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> skill_fit_score(skills_text):</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> pd.isna(skills_text):</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">0</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    matches <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> strong <span class="kw">in</span> team_strong_skills:</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> strong.lower() <span class="kw">in</span> <span class="bu">str</span>(skills_text).lower():</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>            matches <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> matches</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"SKILL_FIT_SCORE"</span>] <span class="op">=</span> df[<span class="st">"SKILLS_LIST"</span>].<span class="bu">apply</span>(skill_fit_score)</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> accessibility_score(years):</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> years <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">3</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> years <span class="op">&lt;=</span> <span class="dv">2</span>:</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">2</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> years <span class="op">&lt;=</span> <span class="dv">5</span>:</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">1</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">0</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"ACCESSIBILITY_SCORE"</span>] <span class="op">=</span> df[<span class="st">"MIN_YEARS_EXPERIENCE"</span>].<span class="bu">apply</span>(accessibility_score)</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>employer_counts <span class="op">=</span> df[<span class="st">"COMPANY_NAME"</span>].value_counts()</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"EMPLOYER_SIGNAL_SCORE"</span>] <span class="op">=</span> df[<span class="st">"COMPANY_NAME"</span>].<span class="bu">map</span>(employer_counts)</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"OPPORTUNITY_SCORE"</span>] <span class="op">=</span> df[<span class="st">"SKILL_FIT_SCORE"</span>] <span class="op">+</span> df[<span class="st">"ACCESSIBILITY_SCORE"</span>] <span class="op">+</span> df[<span class="st">"EMPLOYER_SIGNAL_SCORE"</span>]</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>scorecard <span class="op">=</span> df[[<span class="st">"TITLE_CLEAN"</span>, <span class="st">"COMPANY_NAME"</span>, <span class="st">"SKILL_FIT_SCORE"</span>, <span class="st">"ACCESSIBILITY_SCORE"</span>, <span class="st">"EMPLOYER_SIGNAL_SCORE"</span>, <span class="st">"OPPORTUNITY_SCORE"</span>]].sort_values(<span class="st">"OPPORTUNITY_SCORE"</span>, ascending<span class="op">=</span><span class="va">False</span>).reset_index(drop<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>scorecard</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>known_apparel_companies <span class="op">=</span> [</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"adidas"</span>, <span class="st">"vuoriinc"</span>, <span class="st">"tjx"</span>, <span class="st">"jobs.tjx.com"</span>, <span class="st">"careers.michaels.com"</span>,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ralph lauren"</span>, <span class="st">"macy''s"</span>, <span class="st">"macys"</span>, <span class="st">"nordstrom"</span>, <span class="st">"kohl''s"</span>, <span class="st">"kohls"</span>,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"jcpenney"</span>, <span class="st">"foot locker"</span>, <span class="st">"dsw"</span>, <span class="st">"ross stores"</span>, <span class="st">"burlington"</span>,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"victoria''s secret"</span>, <span class="st">"victorias secret"</span>, <span class="st">"under armour"</span>, <span class="st">"lululemon"</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"columbia sportswear"</span>, <span class="st">"vf corporation"</span>, <span class="st">"pvh corp"</span>, <span class="st">"kontoor brands"</span>,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"urban outfitters"</span>, <span class="st">"anthropologie"</span>, <span class="st">"american eagle outfitters"</span>,</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"abercrombie &amp; fitch"</span>, <span class="st">"hollister co"</span>, <span class="st">"forever 21"</span>, <span class="st">"old navy"</span>,</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"banana republic"</span>, <span class="st">"gap inc"</span>, <span class="st">"the gap"</span>, <span class="st">"chico''s fas"</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>pd.DataFrame({<span class="st">"Known Employer"</span>: known_apparel_companies})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-display" data-execution_count="1">
 <div>
@@ -285,185 +260,149 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">TITLE_CLEAN</th>
-<th data-quarto-table-cell-role="th">COMPANY_NAME</th>
-<th data-quarto-table-cell-role="th">SKILL_FIT_SCORE</th>
-<th data-quarto-table-cell-role="th">ACCESSIBILITY_SCORE</th>
-<th data-quarto-table-cell-role="th">EMPLOYER_SIGNAL_SCORE</th>
-<th data-quarto-table-cell-role="th">OPPORTUNITY_SCORE</th>
+<th data-quarto-table-cell-role="th">Known Employer</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">0</th>
-<td>Sr. Manager, Ecommerce Analytics</td>
-<td>Vuoriinc</td>
-<td>2</td>
-<td>3</td>
-<td>5</td>
-<td>10</td>
+<td>adidas</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">1</th>
-<td>Sr. FP&amp;A Manager, Systems &amp; Analytics</td>
-<td>Vuoriinc</td>
-<td>1</td>
-<td>3</td>
-<td>5</td>
-<td>9</td>
+<td>vuoriinc</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">2</th>
-<td>Director, Wholesale Sales Planning &amp; Analytics</td>
-<td>Vuoriinc</td>
-<td>1</td>
-<td>3</td>
-<td>5</td>
-<td>9</td>
+<td>tjx</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">3</th>
-<td>Manager, Digital Marketing Analytics</td>
-<td>Adidas</td>
-<td>2</td>
-<td>3</td>
-<td>3</td>
-<td>8</td>
+<td>jobs.tjx.com</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">4</th>
-<td>Sr. Manager, Global Finance Business Analyst</td>
-<td>Vuoriinc</td>
-<td>0</td>
-<td>3</td>
-<td>5</td>
-<td>8</td>
+<td>careers.michaels.com</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">5</th>
-<td>Product Manager, Enterprise Analytics</td>
-<td>Vuoriinc</td>
-<td>1</td>
-<td>1</td>
-<td>5</td>
-<td>7</td>
+<td>ralph lauren</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">6</th>
-<td>Sr Region Operations Analyst - Sierra</td>
-<td>TJX</td>
-<td>0</td>
-<td>3</td>
-<td>3</td>
-<td>6</td>
+<td>macy''s</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">7</th>
-<td>Sr. Data Analyst</td>
-<td>Foot Locker</td>
-<td>2</td>
-<td>3</td>
-<td>1</td>
-<td>6</td>
+<td>macys</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">8</th>
-<td>Senior Analyst, Merchandise Flow &amp; Analytics</td>
-<td>TJX</td>
-<td>0</td>
-<td>3</td>
-<td>3</td>
-<td>6</td>
+<td>nordstrom</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">9</th>
-<td>Manager, Digital Consumer Analytics</td>
-<td>Adidas</td>
-<td>2</td>
-<td>1</td>
-<td>3</td>
-<td>6</td>
+<td>kohl''s</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">10</th>
-<td>Media Marketing Sr. Manager, Analytics</td>
-<td>Ralph Lauren</td>
-<td>1</td>
-<td>3</td>
-<td>2</td>
-<td>6</td>
+<td>kohls</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">11</th>
-<td>Sr Region Operations Analyst - Sierra</td>
-<td>TJX</td>
-<td>0</td>
-<td>3</td>
-<td>3</td>
-<td>6</td>
+<td>jcpenney</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">12</th>
-<td>Media Marketing Sr. Manager, Analytics</td>
-<td>Ralph Lauren</td>
-<td>1</td>
-<td>3</td>
-<td>2</td>
-<td>6</td>
+<td>foot locker</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">13</th>
-<td>Manager, Digital Analytics</td>
-<td>Adidas</td>
-<td>0</td>
-<td>3</td>
-<td>3</td>
-<td>6</td>
+<td>dsw</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">14</th>
-<td>Senior Business Intelligence &amp; Data Analyst - ...</td>
-<td>Jobs.tjx.com</td>
-<td>0</td>
-<td>3</td>
-<td>2</td>
-<td>5</td>
+<td>ross stores</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">15</th>
-<td>Senior Business Intelligence &amp; Data Analyst - ...</td>
-<td>Jobs.tjx.com</td>
-<td>0</td>
-<td>3</td>
-<td>2</td>
-<td>5</td>
+<td>burlington</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">16</th>
-<td>Merchandising Data Analyst</td>
-<td>Careers.michaels.com</td>
-<td>1</td>
-<td>3</td>
-<td>1</td>
-<td>5</td>
+<td>victoria''s secret</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">17</th>
-<td>Data Analyst 3 - Store Operations</td>
-<td>Nordstrom</td>
-<td>1</td>
-<td>3</td>
-<td>1</td>
-<td>5</td>
+<td>victorias secret</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">18</th>
-<td>Principal, Data Analytics and Engineering</td>
-<td>Macy's</td>
-<td>0</td>
-<td>3</td>
-<td>1</td>
-<td>4</td>
+<td>under armour</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">19</th>
+<td>lululemon</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">20</th>
+<td>columbia sportswear</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">21</th>
+<td>vf corporation</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">22</th>
+<td>pvh corp</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">23</th>
+<td>kontoor brands</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">24</th>
+<td>urban outfitters</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">25</th>
+<td>anthropologie</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">26</th>
+<td>american eagle outfitters</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">27</th>
+<td>abercrombie &amp; fitch</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">28</th>
+<td>hollister co</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">29</th>
+<td>forever 21</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">30</th>
+<td>old navy</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">31</th>
+<td>banana republic</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">32</th>
+<td>gap inc</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">33</th>
+<td>the gap</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">34</th>
+<td>chico''s fas</td>
 </tr>
 </tbody>
 </table>
@@ -472,18 +411,395 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="what-the-scores-show" class="level2">
-<h2 class="anchored" data-anchor-id="what-the-scores-show">What the Scores Show</h2>
-<p>Vuori appears four times in the top six rows. This is a direct result of how often the company posts similar roles in our dataset, not a fluke of the scoring method. That repetition is what the employer signal score is meant to capture: a company hiring repeatedly for related work is a more realistic target than one with a single listing. The Sr.&nbsp;Manager, Ecommerce Analytics role at Vuori sits at the top of the list because it combines that hiring pattern with a moderate skill overlap and a low experience bar.</p>
-<p>Adidas’ Manager, Digital Marketing Analytics role is the strongest non-Vuori result, driven mainly by skill fit rather than employer signal, since Adidas appears less often in the filtered postings. A role can score well either because it closely matches skills our team already has, or because the employer is clearly hiring at volume. Those are different types of opportunity. A few roles near the bottom of the list, like the TJX and Foot Locker postings, score lower mainly on skill fit, which lines up with the gaps found in the skill-gap analysis rather than a lack of accessibility or employer activity.</p>
+<section id="role-title-keywords" class="level3">
+<h3 class="anchored" data-anchor-id="role-title-keywords">Role-Title Keywords</h3>
+<p>A posting’s <code>TITLE_CLEAN</code> had to contain at least one of these terms to pass the role-title filter.</p>
+<div id="5747b4a5" class="cell" data-execution_count="2">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>role_terms <span class="op">=</span> [</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"business analyst"</span>, <span class="st">"data analyst"</span>, <span class="st">"business intelligence"</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"analytics"</span>, <span class="st">"insights analyst"</span>, <span class="st">"merchandising analyst"</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"reporting analyst"</span>, <span class="st">"operations analyst"</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>pd.DataFrame({<span class="st">"Role-Title Keyword"</span>: role_terms})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Role-Title Keyword</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>business analyst</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>data analyst</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>business intelligence</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>analytics</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4</th>
+<td>insights analyst</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">5</th>
+<td>merchandising analyst</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">6</th>
+<td>reporting analyst</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">7</th>
+<td>operations analyst</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
 </section>
-<section id="evaluating-the-score" class="level2">
-<h2 class="anchored" data-anchor-id="evaluating-the-score">Evaluating the Score</h2>
-<p>Vuori and TJX, the two employers the scorecard ranks highest, are also the two employers with the most postings in Market Baseline. Low skill fit scores line up with the gaps found in the Skill Gap Analysis: Power BI, SQL, and Python. The scorecard has not been checked against real hiring outcomes. Use it to prioritize search and skill building, not to predict who gets an offer.</p>
 </section>
-<section id="what-this-means-for-our-team" class="level2">
-<h2 class="anchored" data-anchor-id="what-this-means-for-our-team">What This Means for Our Team</h2>
-<p>The scorecard points us toward applying early and often to Vuori and TJX postings. Both the raw counts and the scorecard agree these employers are hiring repeatedly for adjacent roles. Adidas postings are a good check on skill fit. They reward the skills our team already rates itself strong in. The lower scoring postings show which skills would open up the most additional opportunities if built up. That is where Final Recommendations picks up.</p>
+<section id="opportunity-scorecard-reference" class="level2">
+<h2 class="anchored" data-anchor-id="opportunity-scorecard-reference">Opportunity Scorecard Reference</h2>
+<p>The full methodology is on <a href="./final_analytics.html">Final Analytics</a>. The scoring tiers behind each component are reproduced here for quick reference.</p>
+<div id="tbl-score-tiers" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-score-tiers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Scoring tiers behind the Opportunity Score
+</figcaption>
+<div aria-describedby="tbl-score-tiers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Component</th>
+<th>Score</th>
+<th>Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Skill fit</td>
+<td>0-4</td>
+<td>+1 for each of the team’s four strongest self-rated skills (Data Analysis, Microsoft Excel, Stakeholder Management, Project Management) found in the posting’s listed skills</td>
+</tr>
+<tr class="even">
+<td>Accessibility</td>
+<td>3</td>
+<td>Minimum years of experience = 0</td>
+</tr>
+<tr class="odd">
+<td>Accessibility</td>
+<td>2</td>
+<td>Minimum years of experience 1-2</td>
+</tr>
+<tr class="even">
+<td>Accessibility</td>
+<td>1</td>
+<td>Minimum years of experience 3-5</td>
+</tr>
+<tr class="odd">
+<td>Accessibility</td>
+<td>0</td>
+<td>Minimum years of experience &gt; 5</td>
+</tr>
+<tr class="even">
+<td>Employer signal</td>
+<td>1-5</td>
+<td>Raw count of postings from that employer in the 19-posting sample</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="full-posting-list" class="level2">
+<h2 class="anchored" data-anchor-id="full-posting-list">Full Posting List</h2>
+<p>All 19 postings in the final filtered and cleaned dataset, with the fields used across the analysis.</p>
+<div class="cell" data-execution_count="3">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"data/processed/apparel_analyst_clean.csv"</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>df[[</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"TITLE_CLEAN"</span>, <span class="st">"COMPANY_NAME"</span>, <span class="st">"CITY_NAME"</span>, <span class="st">"STATE_NAME"</span>,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"MIN_YEARS_EXPERIENCE"</span>, <span class="st">"SALARY_FROM"</span>, <span class="st">"SALARY_TO"</span>, <span class="st">"REMOTE_TYPE_NAME"</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>]].sort_values(<span class="st">"COMPANY_NAME"</span>).reset_index(drop<span class="op">=</span><span class="va">True</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div id="tbl-full-postings" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="3">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-full-postings-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: All postings in the final analytical sample
+</figcaption>
+<div aria-describedby="tbl-full-postings-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display" data-execution_count="3">
+<div>
+
+
+<table class="dataframe cell caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">TITLE_CLEAN</th>
+<th data-quarto-table-cell-role="th">COMPANY_NAME</th>
+<th data-quarto-table-cell-role="th">CITY_NAME</th>
+<th data-quarto-table-cell-role="th">STATE_NAME</th>
+<th data-quarto-table-cell-role="th">MIN_YEARS_EXPERIENCE</th>
+<th data-quarto-table-cell-role="th">SALARY_FROM</th>
+<th data-quarto-table-cell-role="th">SALARY_TO</th>
+<th data-quarto-table-cell-role="th">REMOTE_TYPE_NAME</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>Manager, Digital Marketing Analytics</td>
+<td>Adidas</td>
+<td>Portland</td>
+<td>Oregon</td>
+<td>0.0</td>
+<td>85300.0</td>
+<td>138222.0</td>
+<td>Hybrid</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>Manager, Digital Analytics</td>
+<td>Adidas</td>
+<td>Portland</td>
+<td>Oregon</td>
+<td>0.0</td>
+<td>85300.0</td>
+<td>138222.0</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>Manager, Digital Consumer Analytics</td>
+<td>Adidas</td>
+<td>Portland</td>
+<td>Oregon</td>
+<td>5.0</td>
+<td>85300.0</td>
+<td>138222.0</td>
+<td>Hybrid</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>Merchandising Data Analyst</td>
+<td>Careers.michaels.com</td>
+<td>Irving</td>
+<td>Texas</td>
+<td>0.0</td>
+<td>85300.0</td>
+<td>138222.0</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4</th>
+<td>Sr. Data Analyst</td>
+<td>Foot Locker</td>
+<td>New York</td>
+<td>NY</td>
+<td>0.0</td>
+<td>95000.0</td>
+<td>115000.0</td>
+<td>Hybrid</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">5</th>
+<td>Senior Business Intelligence &amp; Data Analyst - ...</td>
+<td>Jobs.tjx.com</td>
+<td>Framingham</td>
+<td>Massachusetts</td>
+<td>0.0</td>
+<td>85300.0</td>
+<td>138222.0</td>
+<td>Unknown</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">6</th>
+<td>Senior Business Intelligence &amp; Data Analyst - ...</td>
+<td>Jobs.tjx.com</td>
+<td>Framingham</td>
+<td>Massachusetts</td>
+<td>0.0</td>
+<td>85300.0</td>
+<td>138222.0</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">7</th>
+<td>Principal, Data Analytics and Engineering</td>
+<td>Macy's</td>
+<td>Long Island City</td>
+<td>New York</td>
+<td>0.0</td>
+<td>85300.0</td>
+<td>138222.0</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">8</th>
+<td>Data Analyst 3 - Store Operations</td>
+<td>Nordstrom</td>
+<td>Unknown</td>
+<td>Unknown</td>
+<td>0.0</td>
+<td>85300.0</td>
+<td>138222.0</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">9</th>
+<td>Media Marketing Sr. Manager, Analytics</td>
+<td>Ralph Lauren</td>
+<td>New York</td>
+<td>NY</td>
+<td>0.0</td>
+<td>85000.0</td>
+<td>161444.0</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">10</th>
+<td>Media Marketing Sr. Manager, Analytics</td>
+<td>Ralph Lauren</td>
+<td>New York</td>
+<td>NY</td>
+<td>0.0</td>
+<td>85000.0</td>
+<td>161444.0</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">11</th>
+<td>Senior Analyst, Merchandise Flow &amp; Analytics</td>
+<td>TJX</td>
+<td>Framingham</td>
+<td>Massachusetts</td>
+<td>0.0</td>
+<td>85300.0</td>
+<td>138222.0</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">12</th>
+<td>Sr Region Operations Analyst - Sierra</td>
+<td>TJX</td>
+<td>Framingham</td>
+<td>Massachusetts</td>
+<td>0.0</td>
+<td>85300.0</td>
+<td>138222.0</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">13</th>
+<td>Sr Region Operations Analyst - Sierra</td>
+<td>TJX</td>
+<td>Framingham</td>
+<td>Massachusetts</td>
+<td>0.0</td>
+<td>85600.0</td>
+<td>109200.0</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">14</th>
+<td>Sr. FP&amp;A Manager, Systems &amp; Analytics</td>
+<td>Vuoriinc</td>
+<td>Carlsbad</td>
+<td>California</td>
+<td>0.0</td>
+<td>85300.0</td>
+<td>138222.0</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">15</th>
+<td>Sr. Manager, Global Finance Business Analyst</td>
+<td>Vuoriinc</td>
+<td>Carlsbad</td>
+<td>California</td>
+<td>0.0</td>
+<td>85300.0</td>
+<td>138222.0</td>
+<td>Remote</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">16</th>
+<td>Sr. Manager, Ecommerce Analytics</td>
+<td>Vuoriinc</td>
+<td>Carlsbad</td>
+<td>California</td>
+<td>0.0</td>
+<td>85300.0</td>
+<td>138222.0</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">17</th>
+<td>Product Manager, Enterprise Analytics</td>
+<td>Vuoriinc</td>
+<td>Carlsbad</td>
+<td>California</td>
+<td>5.0</td>
+<td>85300.0</td>
+<td>138222.0</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">18</th>
+<td>Director, Wholesale Sales Planning &amp; Analytics</td>
+<td>Vuoriinc</td>
+<td>Carlsbad</td>
+<td>California</td>
+<td>0.0</td>
+<td>85300.0</td>
+<td>138222.0</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</figure>
+</div>
+</div>
+</section>
+<section id="related-pages" class="level2">
+<h2 class="anchored" data-anchor-id="related-pages">Related Pages</h2>
+<ul>
+<li><a href="./data_preparation.html">Data Preparation</a> - full filter funnel and cleaning steps</li>
+<li><a href="./market_baseline.html">Market Baseline</a> - job volume, salary, geography, and employer patterns</li>
+<li><a href="./skill_gap_analysis.html">Skill Gap Analysis</a> - market skill demand versus team self-ratings</li>
+<li><a href="./final_analytics.html">Final Analytics</a> - Opportunity Scorecard methodology and results</li>
+</ul>
 
 
 </section>
