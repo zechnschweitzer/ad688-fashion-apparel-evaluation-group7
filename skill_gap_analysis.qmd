@@ -162,6 +162,55 @@ As a team we rated ourselves strongest in Data Analysis and Excel with average s
 
 ## Skill Gaps
 
+We convert each skill's share of the 19 postings into a target proficiency level, then compare that target against the team average to flag priority.
+
+```{python}
+#| label: tbl-gap-summary
+#| tbl-cap: "Skill gap summary: market demand, target level, team average, and priority"
+
+skill_map = {
+    "Power BI": "Power BI",
+    "SQL": "SQL (Programming Language)",
+    "Python": "Python (Programming Language)",
+    "Excel": "Microsoft Excel",
+    "Digital Marketing": "Digital Marketing",
+    "Stakeholder Mgmt": "Stakeholder Management",
+    "Project Mgmt": "Project Management",
+    "Data Analysis": "Data Analysis",
+}
+
+demand_pct = {label: skill_counts.get(full, 0) / len(clean_df) * 100 for label, full in skill_map.items()}
+
+def target_level(pct):
+    if pct >= 30:
+        return 5
+    elif pct >= 20:
+        return 4
+    elif pct >= 10:
+        return 3
+    else:
+        return 2
+
+def priority(gap):
+    if gap >= 1.5:
+        return "High"
+    elif gap > 0:
+        return "Moderate"
+    else:
+        return "Low"
+
+gap_summary = pd.DataFrame({
+    "Skill": list(df_skills.columns),
+    "Market Demand": [f"{demand_pct[s]:.1f}%" for s in df_skills.columns],
+    "Target Level": [target_level(demand_pct[s]) for s in df_skills.columns],
+    "Team Average": df_skills.mean().round(2).values,
+})
+gap_summary["Gap"] = (gap_summary["Target Level"] - gap_summary["Team Average"]).round(2)
+gap_summary["Priority"] = gap_summary["Gap"].apply(priority)
+gap_summary = gap_summary.sort_values("Gap", ascending=False).reset_index(drop=True)
+gap_summary
+```
+
 Comparing market demand against team proficiency helps show where we're well-covered and where the gaps actually are both as a team and for each of us individually.
 
 As a team Power BI is our largest gap. It's tied for the most in-demand skill in the market showing up in 7 of 19 postings but has the lowest average proficiency on the team at 2.75. SQL is the other most requested skill at 7 of 19 postings and fares a bit better with a team average of 3.25. Python is requested in 5 postings and also comes in low at 2.75. Excel and Data Analysis are the opposite story: both are in demand in the market and also where we rate ourselves strongest so there's no real gap to address there.
@@ -182,4 +231,6 @@ Based on the gaps above our individual priorities are:
 - **Zech** should prioritize Power BI before the Module 5 deadline, the one skill where his rating trails his otherwise strong technical profile. Given his existing SQL proficiency focusing on Power BI's data modeling features is a natural next step since those build on relational concepts he already knows.
 
 Across the team Power BI is the most consistent gap since every member rated it at 3 or below while it ties for the highest market demand. Team members with relatively higher proficiency in a given skill (for example Zech in SQL and Sara in Excel) can informally support others when related project tasks come up rather than treating skill-building as separate from the coursework itself.
+
+
 
