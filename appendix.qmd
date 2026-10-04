@@ -85,3 +85,4 @@ df[[
 - [Market Baseline](market_baseline.qmd) - job volume, salary, geography, and employer patterns
 - [Skill Gap Analysis](skill_gap_analysis.qmd) - market skill demand versus team self-ratings
 - [Final Analytics](final_analytics.qmd) - Opportunity Scorecard methodology and results
+
