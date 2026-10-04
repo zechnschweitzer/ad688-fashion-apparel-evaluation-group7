@@ -1,1 +1,7 @@
 /* css styles */
+#refs a { word-break: break-all; overflow-wrap: anywhere; }
+
+table.dataframe { width: 100%; table-layout: fixed; }
+table.dataframe td, table.dataframe th { white-space: normal; word-wrap: break-word; }
+
+.quarto-title-meta-contents p { white-space: nowrap; }

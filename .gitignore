@@ -6,3 +6,6 @@ data/raw/
 *.parquet
 data/MET_CareerCompass_2026/
 MET_CareerCompass_2026/
+
+_site/
+_freeze/

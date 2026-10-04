@@ -103,25 +103,40 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./introduction.html"> 
 <span class="menu-text">Introduction</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./data_preparation.html"> 
-<span class="menu-text">Data Preparation</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-analysis" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Analysis</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-analysis">    
+        <li>
+    <a class="dropdown-item" href="./data_preparation.html">
+ <span class="dropdown-text">Data Preparation</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./market_baseline.html"> 
-<span class="menu-text">Market Baseline</span></a>
+        <li>
+    <a class="dropdown-item" href="./market_baseline.html">
+ <span class="dropdown-text">Market Baseline</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./skill_gap_analysis.html"> 
-<span class="menu-text">Skill Gap Analysis</span></a>
+        <li>
+    <a class="dropdown-item" href="./skill_gap_analysis.html">
+ <span class="dropdown-text">Skill Gap Analysis</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="./career_evaluation.html" aria-current="page"> 
-<span class="menu-text">Career Evaluation</span></a>
+        <li>
+    <a class="dropdown-item" href="./career_evaluation.html">
+ <span class="dropdown-text">Career Evaluation</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./final_analytics.html">
+ <span class="dropdown-text">Final Analytics</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="./final_recommendations.html"> 
 <span class="menu-text">Final Recommendations</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./appendix.html"> 
+<span class="menu-text">Appendix</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -134,8 +149,16 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-makes-a-role-attractive-for-this-team" id="toc-what-makes-a-role-attractive-for-this-team" class="nav-link active" data-scroll-target="#what-makes-a-role-attractive-for-this-team">What Makes a Role Attractive for This Team</a></li>
+  <li><a href="#how-we-define-opportunity" id="toc-how-we-define-opportunity" class="nav-link" data-scroll-target="#how-we-define-opportunity">How We Define Opportunity</a></li>
+  <li><a href="#where-the-scoring-happens" id="toc-where-the-scoring-happens" class="nav-link" data-scroll-target="#where-the-scoring-happens">Where the Scoring Happens</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -159,8 +182,24 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="what-makes-a-role-attractive-for-this-team" class="level2">
+<h2 class="anchored" data-anchor-id="what-makes-a-role-attractive-for-this-team">What Makes a Role Attractive for This Team</h2>
+<p>The 19 postings in our filtered dataset do not represent equally strong opportunities for this team. Some ask for skills our team has already demonstrated. Some are more attainable given their experience requirements. Some come from employers that are hiring repeatedly for comparable roles. A posting that scores well on one of these factors and poorly on another is a different kind of opportunity than one that scores well on all three, so judging postings one at a time misses that distinction.</p>
+</section>
+<section id="how-we-define-opportunity" class="level2">
+<h2 class="anchored" data-anchor-id="how-we-define-opportunity">How We Define Opportunity</h2>
+<p>We treat a posting as a strong opportunity when it is attainable, relevant to skills our team already has, and backed by an employer that is actively hiring for similar work. These three factors come from what the market baseline and skill gap analysis already showed matters for this team, and the numbers behind each one explain why none of them can be skipped.</p>
+<p><strong>Attainability.</strong> Experience requirements in our sample are not evenly spread. 17 of the 19 postings list a minimum of 0 years of experience, and only 2 list a 5-year minimum. Accessibility is not a broad gradient across the sample, it is mostly uniform with a couple of high-bar outliers, which is exactly the kind of pattern a single accessibility score needs to flag rather than average away.</p>
+<p><strong>Skill relevance.</strong> We counted how many of our team’s four strongest self-rated skills (Data Analysis, Microsoft Excel, Stakeholder Management, Project Management) show up in each posting’s listed skills. 8 of the 19 postings match none of them, 7 match exactly one, and 4 match two. Not a single posting in our sample matches three or four. That spread means skill relevance genuinely separates the postings in our sample, almost half show no overlap at all with what our team already does well.</p>
+<p><strong>Employer signal.</strong> Vuori accounts for 5 of the 19 postings. TJX, counting its two listed company names together, also accounts for 5. Adidas accounts for 3. Together those three employers make up 13 of our 19 postings, 68%, while the remaining six employers in the sample post once each. An employer repeating a role is a different kind of signal than an employer posting once, and that 68% concentration is why employer signal carries real weight in the score.</p>
+<p>None of these factors alone tells the full story. A role can be highly accessible but ask for skills our team lacks. A role can match our skills well but come from an employer with no other postings in our sample, making it a less repeatable target. Looking at all three together is what turns 19 individual postings into a ranked set of targets.</p>
+</section>
+<section id="where-the-scoring-happens" class="level2">
+<h2 class="anchored" data-anchor-id="where-the-scoring-happens">Where the Scoring Happens</h2>
+<p>We turn these three factors into a scored, ranked list on the <a href="./final_analytics.html">Final Analytics</a> page, along with the full methodology, the weighting choices behind it, and what the results show.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -236,7 +275,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/zechnschweitzer\.github\.io\/ad688-fashion-apparel-evaluation-group7\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

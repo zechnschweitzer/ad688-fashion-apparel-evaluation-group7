@@ -103,25 +103,40 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./introduction.html"> 
 <span class="menu-text">Introduction</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./data_preparation.html"> 
-<span class="menu-text">Data Preparation</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-analysis" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Analysis</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-analysis">    
+        <li>
+    <a class="dropdown-item" href="./data_preparation.html">
+ <span class="dropdown-text">Data Preparation</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./market_baseline.html"> 
-<span class="menu-text">Market Baseline</span></a>
+        <li>
+    <a class="dropdown-item" href="./market_baseline.html">
+ <span class="dropdown-text">Market Baseline</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./skill_gap_analysis.html"> 
-<span class="menu-text">Skill Gap Analysis</span></a>
+        <li>
+    <a class="dropdown-item" href="./skill_gap_analysis.html">
+ <span class="dropdown-text">Skill Gap Analysis</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./career_evaluation.html"> 
-<span class="menu-text">Career Evaluation</span></a>
+        <li>
+    <a class="dropdown-item" href="./career_evaluation.html">
+ <span class="dropdown-text">Career Evaluation</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./final_analytics.html">
+ <span class="dropdown-text">Final Analytics</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link active" href="./final_recommendations.html" aria-current="page"> 
 <span class="menu-text">Final Recommendations</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./appendix.html"> 
+<span class="menu-text">Appendix</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -134,8 +149,17 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#where-to-focus-the-job-search" id="toc-where-to-focus-the-job-search" class="nav-link active" data-scroll-target="#where-to-focus-the-job-search">Where to Focus the Job Search</a></li>
+  <li><a href="#where-to-focus-skill-building" id="toc-where-to-focus-skill-building" class="nav-link" data-scroll-target="#where-to-focus-skill-building">Where to Focus Skill Building</a></li>
+  <li><a href="#how-to-use-this-product-going-forward" id="toc-how-to-use-this-product-going-forward" class="nav-link" data-scroll-target="#how-to-use-this-product-going-forward">How to Use This Product Going Forward</a></li>
+  <li><a href="#limitations" id="toc-limitations" class="nav-link" data-scroll-target="#limitations">Limitations</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -159,8 +183,39 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="where-to-focus-the-job-search" class="level2">
+<h2 class="anchored" data-anchor-id="where-to-focus-the-job-search">Where to Focus the Job Search</h2>
+<p>Vuori and TJX each account for 5 of our 19 sample postings, and both dominate the top of the Opportunity Scorecard. They are repeatedly posting for adjacent analytics roles, which makes them the most attainable near-term targets, not just the highest scorers in a one-time snapshot.</p>
+<p>Adidas, with 3 postings, is the strongest option for a candidate relying on skill fit rather than application volume. Its postings reward the skills our team already rates itself strong in: Data Analysis, Excel, Stakeholder Management, and Project Management.</p>
+<p>California, Massachusetts, and New York together account for 14 of our 19 postings. Effort is best concentrated there.</p>
+</section>
+<section id="where-to-focus-skill-building" class="level2">
+<h2 class="anchored" data-anchor-id="where-to-focus-skill-building">Where to Focus Skill Building</h2>
+<p>Power BI and SQL are the two most market-demanded skills in our sample, each showing up in 7 of 19 postings. They are also our team’s weakest areas relative to that demand. That gap lowers skill fit scores on the scorecard directly, since Power BI and SQL are not among the four skills counted toward skill fit. In priority order:</p>
+<ol type="1">
+<li><strong>Power BI.</strong> The single most consistent gap across all four team members. Every member self-rated at 3 or below on the market’s joint highest demand skill.</li>
+<li><strong>SQL.</strong> Equally in demand, with more room between team members. Zech rates Advanced, the rest rate Intermediate.</li>
+<li><strong>Python.</strong> Requested in 5 of 19 postings, also rated low across our team.</li>
+</ol>
+<p>Closing the Power BI and SQL gaps would raise skill fit scores on the scorecard itself. Those are the two most frequently listed skills missing from the postings currently scoring lowest on skill fit, including the TJX and Foot Locker roles.</p>
+<p>By person: Alyssa and Ankita should complete a Power BI learning path before the Module 5 deadline, then move to SQL practice against our own filtered dataset. Sara should prioritize Power BI first given her lowest team rating on it, building on her existing Excel strength. Zech should focus on Power BI’s data modeling features, building on his existing SQL proficiency.</p>
+</section>
+<section id="how-to-use-this-product-going-forward" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-use-this-product-going-forward">How to Use This Product Going Forward</h2>
+<ol type="1">
+<li>Re-run the Opportunity Scorecard as new postings come in. Employer signal and skill demand can shift as hiring continues.</li>
+<li>Treat the Opportunity Score as a starting point, not a verdict. It has not been checked against real hiring outcomes, and its three components should be read individually, not just as one combined number.</li>
+<li>Use the skill priorities above, Power BI, then SQL, then Python, to guide coursework and self-study for the rest of the semester. Those are the skills most likely to move a posting from low-scoring to high-scoring.</li>
+</ol>
+</section>
+<section id="limitations" class="level2">
+<h2 class="anchored" data-anchor-id="limitations">Limitations</h2>
+<p>Our sample is 19 postings from a narrowly filtered search: NAICS 458, known apparel and fashion employers. These recommendations describe this specific sample, not the broader apparel analytics job market.</p>
+<p>Salary and remote work data were usable for only 4 of 19 postings each, so neither recommendation above can account for compensation or remote work preferences with much confidence.</p>
+<p>The scorecard’s equal weighting of skill fit, accessibility, and employer signal is a modeling choice, not a validated weighting scheme. See Final Analytics for the full discussion of that limitation.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -236,7 +291,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/zechnschweitzer\.github\.io\/ad688-fashion-apparel-evaluation-group7\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

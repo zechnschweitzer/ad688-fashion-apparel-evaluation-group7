@@ -103,25 +103,40 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./introduction.html"> 
 <span class="menu-text">Introduction</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./data_preparation.html"> 
-<span class="menu-text">Data Preparation</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-analysis" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Analysis</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-analysis">    
+        <li>
+    <a class="dropdown-item" href="./data_preparation.html">
+ <span class="dropdown-text">Data Preparation</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./market_baseline.html"> 
-<span class="menu-text">Market Baseline</span></a>
+        <li>
+    <a class="dropdown-item" href="./market_baseline.html">
+ <span class="dropdown-text">Market Baseline</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./skill_gap_analysis.html"> 
-<span class="menu-text">Skill Gap Analysis</span></a>
+        <li>
+    <a class="dropdown-item" href="./skill_gap_analysis.html">
+ <span class="dropdown-text">Skill Gap Analysis</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./career_evaluation.html"> 
-<span class="menu-text">Career Evaluation</span></a>
+        <li>
+    <a class="dropdown-item" href="./career_evaluation.html">
+ <span class="dropdown-text">Career Evaluation</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./final_analytics.html">
+ <span class="dropdown-text">Final Analytics</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="./final_recommendations.html"> 
 <span class="menu-text">Final Recommendations</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./appendix.html"> 
+<span class="menu-text">Appendix</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -452,7 +467,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/zechnschweitzer\.github\.io\/ad688-fashion-apparel-evaluation-group7\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

@@ -6,7 +6,6 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Alyssa Quigley, Ankita Roy, Zechariah Schweitzer, Sara Scribner">
 
 <title>Data Preparation – AD688: Fashion and Apparel Career Evaluation - Group 7</title>
 <style>
@@ -145,25 +144,40 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link" href="./introduction.html"> 
 <span class="menu-text">Introduction</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="./data_preparation.html" aria-current="page"> 
-<span class="menu-text">Data Preparation</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-analysis" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Analysis</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-analysis">    
+        <li>
+    <a class="dropdown-item" href="./data_preparation.html">
+ <span class="dropdown-text">Data Preparation</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./market_baseline.html"> 
-<span class="menu-text">Market Baseline</span></a>
+        <li>
+    <a class="dropdown-item" href="./market_baseline.html">
+ <span class="dropdown-text">Market Baseline</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./skill_gap_analysis.html"> 
-<span class="menu-text">Skill Gap Analysis</span></a>
+        <li>
+    <a class="dropdown-item" href="./skill_gap_analysis.html">
+ <span class="dropdown-text">Skill Gap Analysis</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./career_evaluation.html"> 
-<span class="menu-text">Career Evaluation</span></a>
+        <li>
+    <a class="dropdown-item" href="./career_evaluation.html">
+ <span class="dropdown-text">Career Evaluation</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./final_analytics.html">
+ <span class="dropdown-text">Final Analytics</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="./final_recommendations.html"> 
 <span class="menu-text">Final Recommendations</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./appendix.html"> 
+<span class="menu-text">Appendix</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -181,7 +195,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#load-the-filtered-dataset" id="toc-load-the-filtered-dataset" class="nav-link active" data-scroll-target="#load-the-filtered-dataset">Load the Filtered Dataset</a></li>
+  <li><a href="#filter-funnel" id="toc-filter-funnel" class="nav-link active" data-scroll-target="#filter-funnel">Filter Funnel</a></li>
+  <li><a href="#data-dictionary" id="toc-data-dictionary" class="nav-link" data-scroll-target="#data-dictionary">Data Dictionary</a></li>
+  <li><a href="#reproducing-this-dataset" id="toc-reproducing-this-dataset" class="nav-link" data-scroll-target="#reproducing-this-dataset">Reproducing This Dataset</a></li>
+  <li><a href="#load-the-filtered-dataset" id="toc-load-the-filtered-dataset" class="nav-link" data-scroll-target="#load-the-filtered-dataset">Load the Filtered Dataset</a></li>
   <li><a href="#clean-salary-fields" id="toc-clean-salary-fields" class="nav-link" data-scroll-target="#clean-salary-fields">Clean Salary Fields</a></li>
   <li><a href="#clean-experience-fields" id="toc-clean-experience-fields" class="nav-link" data-scroll-target="#clean-experience-fields">Clean Experience Fields</a></li>
   <li><a href="#clean-geography-fields" id="toc-clean-geography-fields" class="nav-link" data-scroll-target="#clean-geography-fields">Clean Geography Fields</a></li>
@@ -203,12 +220,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Alyssa Quigley, Ankita Roy, Zechariah Schweitzer, Sara Scribner </p>
-          </div>
-  </div>
     
   
     
@@ -219,14 +230,136 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<section id="filter-funnel" class="level2">
+<h2 class="anchored" data-anchor-id="filter-funnel">Filter Funnel</h2>
+<p>Our team started from the full MET Employability raw dataset, loaded across 21 parquet files, and narrowed it down in two stages before any cleaning happened.</p>
+<div id="tbl-funnel" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-funnel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Filter funnel from raw dataset to final analytical sample
+</figcaption>
+<div aria-describedby="tbl-funnel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Stage</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Raw source (21 parquet parts)</td>
+<td>504,208</td>
+</tr>
+<tr class="even">
+<td>NAICS 458 only</td>
+<td>18</td>
+</tr>
+<tr class="odd">
+<td>Known apparel/fashion employer only</td>
+<td>2,387</td>
+</tr>
+<tr class="even">
+<td>NAICS 458 OR known employer (industry match)</td>
+<td>2,405</td>
+</tr>
+<tr class="odd">
+<td>Role title keyword match, any industry</td>
+<td>13,841</td>
+</tr>
+<tr class="even">
+<td>Final filtered set (industry match AND role match)</td>
+<td>19</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>NAICS 458 alone matched only 18 postings in the entire 504,208 posting dataset. That number confirms the limitation noted at the bottom of this page: most apparel and fashion retail analytics roles are not tagged under clothing retail NAICS codes at all. Widening the industry filter to also match a list of known apparel and fashion employer names raised that count to 2,405, which is the number actually carried forward. From there, filtering to postings whose title contains an analyst or analytics related keyword narrowed the set to our final 19 verified postings.</p>
+<p>This funnel is reproducible from <code>explore_naics.py</code>, which logs each stage and writes the table above to <code>outputs/filter_funnel.md</code>.</p>
+</section>
+<section id="data-dictionary" class="level2">
+<h2 class="anchored" data-anchor-id="data-dictionary">Data Dictionary</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ID</td>
+<td>Unique posting identifier from the source dataset</td>
+</tr>
+<tr class="even">
+<td>TITLE_CLEAN</td>
+<td>Standardized job title used throughout this site</td>
+</tr>
+<tr class="odd">
+<td>COMPANY_NAME</td>
+<td>Employer name as reported in the posting</td>
+</tr>
+<tr class="even">
+<td>COMPANY_CLEAN</td>
+<td>Lowercased, trimmed employer name used for employer-based filtering and grouping</td>
+</tr>
+<tr class="odd">
+<td>SALARY_FROM / SALARY_TO</td>
+<td>Reported minimum and maximum annual salary, where disclosed. Missing values are filled with the dataset median during cleaning, below</td>
+</tr>
+<tr class="even">
+<td>MIN_YEARS_EXPERIENCE / MAX_YEARS_EXPERIENCE</td>
+<td>Minimum and maximum years of experience requested. Missing minimums are filled with 0</td>
+</tr>
+<tr class="odd">
+<td>CITY_NAME / STATE_NAME</td>
+<td>Posting location. Blank or malformed values are standardized to “Unknown,” or corrected manually where the source data was clearly wrong</td>
+</tr>
+<tr class="even">
+<td>REMOTE_TYPE_NAME</td>
+<td>Reported work arrangement (remote, hybrid, onsite), where disclosed</td>
+</tr>
+<tr class="odd">
+<td>SKILLS_LIST</td>
+<td>Parsed list of skills associated with the posting</td>
+</tr>
+<tr class="even">
+<td>SOFTWARE_SKILLS_LIST</td>
+<td>Parsed list of software or tool specific skills associated with the posting</td>
+</tr>
+<tr class="odd">
+<td>NAICS_2022_3</td>
+<td>Three digit NAICS industry code used for the industry filter</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="reproducing-this-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="reproducing-this-dataset">Reproducing This Dataset</h2>
+<ol type="1">
+<li>Place the raw MET Employability parquet files in <code>data/raw/</code>.</li>
+<li>Run <code>python explore_naics.py</code>. This applies the NAICS 458 and known employer filter, then the role title keyword filter, and saves the result to <code>data/interim/apparel_analyst_filtered.csv</code>. It also writes the filter funnel table to <code>outputs/filter_funnel.md</code>.</li>
+<li>Render <code>data_preparation.qmd</code> (this page). It loads that interim file, cleans the salary, experience, geography, and skills fields, and saves the final analytical dataset to <code>data/processed/apparel_analyst_clean.csv</code>.</li>
+<li>Render the rest of the site. Market Baseline, Skill Gap Analysis, Career Evaluation, and Final Analytics all read from <code>data/processed/apparel_analyst_clean.csv</code>.</li>
+</ol>
+</section>
 <section id="load-the-filtered-dataset" class="level2">
 <h2 class="anchored" data-anchor-id="load-the-filtered-dataset">Load the Filtered Dataset</h2>
-<div id="24f80676" class="cell" data-execution_count="1">
+<div id="bf12c4dc" class="cell" data-execution_count="1">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"data/interim/apparel_analyst_filtered.csv"</span>)</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Loaded </span><span class="sc">{</span><span class="bu">len</span>(df)<span class="sc">}</span><span class="ss"> rows, </span><span class="sc">{</span><span class="bu">len</span>(df.columns)<span class="sc">}</span><span class="ss"> columns"</span>)</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>df.info()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Loaded 19 rows, 125 columns
 &lt;class 'pandas.DataFrame'&gt;
@@ -239,7 +372,9 @@ memory usage: 122.6 KB</code></pre>
 </section>
 <section id="clean-salary-fields" class="level2">
 <h2 class="anchored" data-anchor-id="clean-salary-fields">Clean Salary Fields</h2>
-<div id="0f875360" class="cell" data-execution_count="2">
+<div class="cell" data-execution_count="2">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"SALARY_FROM"</span>] <span class="op">=</span> pd.to_numeric(df[<span class="st">"SALARY_FROM"</span>], errors<span class="op">=</span><span class="st">"coerce"</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"SALARY_TO"</span>] <span class="op">=</span> pd.to_numeric(df[<span class="st">"SALARY_TO"</span>], errors<span class="op">=</span><span class="st">"coerce"</span>)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -251,15 +386,22 @@ memory usage: 122.6 KB</code></pre>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Median SALARY_FROM used for fill: </span><span class="sc">{</span>median_from<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Median SALARY_TO used for fill: </span><span class="sc">{</span>median_to<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>df[[<span class="st">"TITLE_CLEAN"</span>, <span class="st">"COMPANY_NAME"</span>, <span class="st">"SALARY_FROM"</span>, <span class="st">"SALARY_TO"</span>]]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Median SALARY_FROM used for fill: 85300.0
 Median SALARY_TO used for fill: 138222.0</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="20">
+<div id="tbl-salary" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="2">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-salary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Cleaned salary fields by posting
+</figcaption>
+<div aria-describedby="tbl-salary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display" data-execution_count="2">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<table class="dataframe cell caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -409,10 +551,15 @@ Median SALARY_TO used for fill: 138222.0</code></pre>
 </div>
 </div>
 </div>
+</figure>
+</div>
+</div>
 </section>
 <section id="clean-experience-fields" class="level2">
 <h2 class="anchored" data-anchor-id="clean-experience-fields">Clean Experience Fields</h2>
-<div id="d5f058a5" class="cell" data-execution_count="3">
+<div class="cell" data-execution_count="3">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"MIN_YEARS_EXPERIENCE"</span>] <span class="op">=</span> pd.to_numeric(df[<span class="st">"MIN_YEARS_EXPERIENCE"</span>], errors<span class="op">=</span><span class="st">"coerce"</span>)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"MAX_YEARS_EXPERIENCE"</span>] <span class="op">=</span> pd.to_numeric(df[<span class="st">"MAX_YEARS_EXPERIENCE"</span>], errors<span class="op">=</span><span class="st">"coerce"</span>)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -420,11 +567,18 @@ Median SALARY_TO used for fill: 138222.0</code></pre>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"MAX_YEARS_EXPERIENCE"</span>] <span class="op">=</span> df[<span class="st">"MAX_YEARS_EXPERIENCE"</span>].fillna(df[<span class="st">"MIN_YEARS_EXPERIENCE"</span>])</span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>df[[<span class="st">"TITLE_CLEAN"</span>, <span class="st">"MIN_YEARS_EXPERIENCE"</span>, <span class="st">"MAX_YEARS_EXPERIENCE"</span>]]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="21">
+</details>
+<div id="tbl-experience" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="3">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-experience-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3: Cleaned experience fields by posting
+</figcaption>
+<div aria-describedby="tbl-experience-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display" data-execution_count="3">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<table class="dataframe cell caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -554,10 +708,16 @@ Median SALARY_TO used for fill: 138222.0</code></pre>
 </div>
 </div>
 </div>
+</figure>
+</div>
+</div>
+<p>Missing minimum-experience values were filled with 0 rather than left blank. This means a posting that did not report an experience requirement cannot be distinguished from one that genuinely requires 0 years, which should be kept in mind when interpreting accessibility scores later in the project.</p>
 </section>
 <section id="clean-geography-fields" class="level2">
 <h2 class="anchored" data-anchor-id="clean-geography-fields">Clean Geography Fields</h2>
-<div id="90e71fb0" class="cell" data-execution_count="4">
+<div class="cell" data-execution_count="4">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> col <span class="kw">in</span> [<span class="st">"CITY_NAME"</span>, <span class="st">"STATE_NAME"</span>]:</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    df[col] <span class="op">=</span> df[col].astype(<span class="bu">str</span>).<span class="bu">str</span>.strip()</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    df[col] <span class="op">=</span> df[col].replace(<span class="st">""</span>, <span class="st">"Unknown"</span>).replace(<span class="st">"nan"</span>, <span class="st">"Unknown"</span>).fillna(<span class="st">"Unknown"</span>)</span>
@@ -569,11 +729,18 @@ Median SALARY_TO used for fill: 138222.0</code></pre>
 <span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>df.loc[df[<span class="st">"ID"</span>] <span class="op">==</span> <span class="dv">352216</span>, <span class="st">"STATE_NAME"</span>] <span class="op">=</span> <span class="st">"Massachusetts"</span></span>
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>df[[<span class="st">"TITLE_CLEAN"</span>, <span class="st">"COMPANY_NAME"</span>, <span class="st">"CITY_NAME"</span>, <span class="st">"STATE_NAME"</span>]]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="22">
+</details>
+<div id="tbl-geography" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="4">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-geography-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4: Cleaned location fields by posting
+</figcaption>
+<div aria-describedby="tbl-geography-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display" data-execution_count="4">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<table class="dataframe cell caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -723,10 +890,15 @@ Median SALARY_TO used for fill: 138222.0</code></pre>
 </div>
 </div>
 </div>
+</figure>
+</div>
+</div>
 </section>
 <section id="clean-skills-fields" class="level2">
 <h2 class="anchored" data-anchor-id="clean-skills-fields">Clean Skills Fields</h2>
-<div id="a4a50ee4" class="cell" data-execution_count="5">
+<div class="cell" data-execution_count="5">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> clean_skill_list(value):</span>
@@ -742,14 +914,21 @@ Median SALARY_TO used for fill: 138222.0</code></pre>
 <span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Postings with at least one listed skill: </span><span class="sc">{</span>(df[<span class="st">'SKILLS_LIST'</span>].<span class="bu">str</span>.<span class="bu">len</span>() <span class="op">&gt;</span> <span class="dv">0</span>)<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>df[[<span class="st">"TITLE_CLEAN"</span>, <span class="st">"SKILLS_LIST"</span>, <span class="st">"SOFTWARE_SKILLS_LIST"</span>]]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Postings with at least one listed skill: 15</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="23">
+<div id="tbl-skills" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="5">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-skills-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;5: Parsed skill lists by posting
+</figcaption>
+<div aria-describedby="tbl-skills-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display" data-execution_count="5">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<table class="dataframe cell caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -879,14 +1058,20 @@ Median SALARY_TO used for fill: 138222.0</code></pre>
 </div>
 </div>
 </div>
+</figure>
+</div>
+</div>
 </section>
 <section id="save-the-cleaned-dataset" class="level2">
 <h2 class="anchored" data-anchor-id="save-the-cleaned-dataset">Save the Cleaned Dataset</h2>
-<div id="0d1464e5" class="cell" data-execution_count="6">
+<div id="1fcc49d2" class="cell" data-execution_count="6">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>os.makedirs(<span class="st">"data/processed"</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>df.to_csv(<span class="st">"data/processed/apparel_analyst_clean.csv"</span>, index<span class="op">=</span><span class="va">False</span>)</span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Saved cleaned dataset: </span><span class="sc">{</span><span class="bu">len</span>(df)<span class="sc">}</span><span class="ss"> rows"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Saved cleaned dataset: 19 rows</code></pre>
 </div>
@@ -894,7 +1079,7 @@ Median SALARY_TO used for fill: 138222.0</code></pre>
 </section>
 <section id="note-on-sample-size" class="level2">
 <h2 class="anchored" data-anchor-id="note-on-sample-size">Note on Sample Size</h2>
-<p>The final cleaned dataset contains 19 job postings. This reflects a known limitation of NAICS-based industry classification: many analytics roles at apparel/retail companies are tagged under unrelated NAICS codes rather than under clothing retail codes specifically. To compensate, this dataset combines NAICS 458 (Clothing, Clothing Accessories, Shoe, and Jewelry Retailers) with an exact-match list of known apparel/fashion company names, then filters to narrow analyst job titles (business analyst, data analyst). The resulting sample size is small but each row is a verified, legitimate match.</p>
+<p>The final cleaned dataset contains 19 job postings. This reflects a known limitation of NAICS-based industry classification: many analytics roles at apparel/retail companies are tagged under unrelated NAICS codes rather than under clothing retail codes specifically. In our raw dataset, NAICS 458 alone matched only 18 of 504,208 postings, confirming this is not a minor edge case. To compensate, this dataset combines NAICS 458 (Clothing, Clothing Accessories, Shoe, and Jewelry Retailers) with an exact-match list of known apparel/fashion company names, then filters to narrow analyst job titles (business analyst, data analyst). The resulting sample size is small but each row is a verified, legitimate match.</p>
 
 
 </section>
@@ -973,7 +1158,7 @@ Median SALARY_TO used for fill: 138222.0</code></pre>
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/zechnschweitzer\.github\.io\/ad688-fashion-apparel-evaluation-group7\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

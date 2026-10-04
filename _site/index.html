@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Alyssa Quigley, Ankita Roy, Zechariah Schweitzer, Sara Scribner">
 
 <title>AD688: Fashion and Apparel Career Evaluation - Group 7</title>
 <style>
@@ -103,25 +104,40 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./introduction.html"> 
 <span class="menu-text">Introduction</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./data_preparation.html"> 
-<span class="menu-text">Data Preparation</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-analysis" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Analysis</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-analysis">    
+        <li>
+    <a class="dropdown-item" href="./data_preparation.html">
+ <span class="dropdown-text">Data Preparation</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./market_baseline.html"> 
-<span class="menu-text">Market Baseline</span></a>
+        <li>
+    <a class="dropdown-item" href="./market_baseline.html">
+ <span class="dropdown-text">Market Baseline</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./skill_gap_analysis.html"> 
-<span class="menu-text">Skill Gap Analysis</span></a>
+        <li>
+    <a class="dropdown-item" href="./skill_gap_analysis.html">
+ <span class="dropdown-text">Skill Gap Analysis</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./career_evaluation.html"> 
-<span class="menu-text">Career Evaluation</span></a>
+        <li>
+    <a class="dropdown-item" href="./career_evaluation.html">
+ <span class="dropdown-text">Career Evaluation</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./final_analytics.html">
+ <span class="dropdown-text">Final Analytics</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="./final_recommendations.html"> 
 <span class="menu-text">Final Recommendations</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./appendix.html"> 
+<span class="menu-text">Appendix</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -140,6 +156,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#project-overview" id="toc-project-overview" class="nav-link active" data-scroll-target="#project-overview">Project Overview</a></li>
+  <li><a href="#key-findings" id="toc-key-findings" class="nav-link" data-scroll-target="#key-findings">Key Findings</a></li>
   <li><a href="#project-sections" id="toc-project-sections" class="nav-link" data-scroll-target="#project-sections">Project Sections</a></li>
   </ul>
 </nav>
@@ -156,6 +173,12 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Authors</div>
+    <div class="quarto-title-meta-contents">
+             <p>Alyssa Quigley, Ankita Roy, Zechariah Schweitzer, Sara Scribner </p>
+          </div>
+  </div>
     
   
     
@@ -171,18 +194,60 @@ ul.task-list li input[type="checkbox"] {
 <p>This project evaluates analytics-related career opportunities within the apparel and fashion industry using job-posting data from the MET Career Compass dataset.</p>
 <p>The analysis focuses on a narrowly defined market built around NAICS 458 and a verified list of apparel and fashion employers. The current filtered dataset contains 19 job postings and is intended to provide a descriptive view of the selected market rather than represent the broader analytics labor market.</p>
 </section>
+<section id="key-findings" class="level2">
+<h2 class="anchored" data-anchor-id="key-findings">Key Findings</h2>
+<p>Our filtered dataset contains 19 verified business/data analyst postings in apparel and fashion retail (NAICS 458). Power BI and SQL are the two most requested skills, each appearing in 7 of the 19 postings. Vuori and TJX are the most active employers in the sample, each posting 5 of the 19 roles.</p>
+<p>Our team rates itself strongest in Data Analysis and Microsoft Excel, and weakest in Power BI and Python, the opposite of what the market asks for most. The opportunity scorecard ranks Vuori’s Sr.&nbsp;Manager, Ecommerce Analytics role as the strongest match for our team right now.</p>
+<p>See Market Baseline, Skill Gap Analysis, and Final Analytics for the full breakdown.</p>
+</section>
 <section id="project-sections" class="level2">
 <h2 class="anchored" data-anchor-id="project-sections">Project Sections</h2>
-<p>Use the navigation bar above to explore the project:</p>
-<ul>
-<li><strong>Introduction</strong> — project scope, career pathway, and industry context</li>
-<li><strong>Data Preparation</strong> — filtering, cleaning, and preparation of the analytical dataset</li>
-<li><strong>Market Baseline</strong> — current job volume, salary, geography, experience, work arrangement, and employer patterns</li>
-<li><strong>Skill Gap Analysis</strong> — comparison of market skill requirements with relevant career skills</li>
-<li><strong>Career Evaluation</strong> — evaluation of career opportunities using the project findings</li>
-<li><strong>Final Recommendations</strong> — overall conclusions and recommendations</li>
-</ul>
-<p>The Market Baseline currently provides the descriptive foundation for the later skill-gap and career-evaluation stages of the project.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Page</th>
+<th>What You’ll Find</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Introduction</td>
+<td>Project scope, career pathway, and industry context</td>
+</tr>
+<tr class="even">
+<td>Data Preparation</td>
+<td>Filtering, cleaning, and preparation of the analytical dataset</td>
+</tr>
+<tr class="odd">
+<td>Market Baseline</td>
+<td>Current job volume, salary, geography, experience, work arrangement, and employer patterns</td>
+</tr>
+<tr class="even">
+<td>Skill Gap Analysis</td>
+<td>Market skill demand compared against the team’s self-rated skills, with a scored gap and priority table</td>
+</tr>
+<tr class="odd">
+<td>Career Evaluation</td>
+<td>How we define and score opportunity across the filtered postings</td>
+</tr>
+<tr class="even">
+<td>Final Analytics</td>
+<td>The Opportunity Scorecard methodology and full ranked results</td>
+</tr>
+<tr class="odd">
+<td>Final Recommendations</td>
+<td>Where to focus the job search and skill building, plus limitations</td>
+</tr>
+<tr class="even">
+<td>Appendix</td>
+<td>Filter criteria reference, scorecard tiers, and the full 19-posting list</td>
+</tr>
+</tbody>
+</table>
 
 
 </section>
@@ -261,7 +326,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/zechnschweitzer\.github\.io\/ad688-fashion-apparel-evaluation-group7\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
