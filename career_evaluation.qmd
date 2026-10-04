@@ -24,6 +24,12 @@ We treat a posting as a strong opportunity when it is attainable, relevant to sk
 
 **Employer signal.** Vuori accounts for 5 of the 19 postings. TJX, counting its two listed company names together, also accounts for 5. Adidas accounts for 3. Together those three employers make up 13 of our 19 postings, 68%, while the remaining six employers in the sample post once each. An employer repeating a role is a different kind of signal than an employer posting once, and that 68% concentration is why employer signal carries real weight in the score.
 
+::: {.callout-note}
+## 68% Concentration
+
+Just three employers, Vuori, TJX, and Adidas, account for 13 of our 19 postings. The other six employers in the sample post once each.
+:::
+
 None of these factors alone tells the full story. A role can be highly accessible but ask for skills our team lacks. A role can match our skills well but come from an employer with no other postings in our sample, making it a less repeatable target. Looking at all three together is what turns 19 individual postings into a ranked set of targets.
 
 ## Where the Scoring Happens
