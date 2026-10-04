@@ -5,13 +5,3 @@ table.dataframe { width: 100%; table-layout: fixed; }
 table.dataframe td, table.dataframe th { white-space: normal; word-wrap: break-word; }
 
 .quarto-title-meta-contents p { white-space: nowrap; }
-
-.quarto-title-meta-contents {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 0.3em;
-}
-
-.quarto-title-meta-contents p:not(:last-child)::after {
-  content: ",";
-}
