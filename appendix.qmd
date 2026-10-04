@@ -23,13 +23,13 @@ These employer names, matched against `COMPANY_CLEAN`, were used alongside NAICS
 ```{python}
 known_apparel_companies = [
     "adidas", "vuoriinc", "tjx", "jobs.tjx.com", "careers.michaels.com",
-    "ralph lauren", "macy''s", "macys", "nordstrom", "kohl''s", "kohls",
+    "ralph lauren", "macy's", "macys", "nordstrom", "kohl's", "kohls",
     "jcpenney", "foot locker", "dsw", "ross stores", "burlington",
-    "victoria''s secret", "victorias secret", "under armour", "lululemon",
+    "victoria's secret", "victorias secret", "under armour", "lululemon",
     "columbia sportswear", "vf corporation", "pvh corp", "kontoor brands",
     "urban outfitters", "anthropologie", "american eagle outfitters",
     "abercrombie & fitch", "hollister co", "forever 21", "old navy",
-    "banana republic", "gap inc", "the gap", "chico''s fas"
+    "banana republic", "gap inc", "the gap", "chico's fas"
 ]
 
 import pandas as pd
@@ -85,4 +85,5 @@ df[[
 - [Market Baseline](market_baseline.qmd) - job volume, salary, geography, and employer patterns
 - [Skill Gap Analysis](skill_gap_analysis.qmd) - market skill demand versus team self-ratings
 - [Final Analytics](final_analytics.qmd) - Opportunity Scorecard methodology and results
+
 

@@ -1,6 +1,10 @@
 ---
 title: "AD688: Fashion and Apparel Career Evaluation - Group 7"
-author: "Alyssa Quigley, Ankita Roy, Zechariah Schweitzer, Sara Scribner"
+author:
+  - "Alyssa Quigley"
+  - "Ankita Roy"
+  - "Zechariah Schweitzer"
+  - "Sara Scribner"
 ---
 
 ## Project Overview
@@ -13,20 +17,18 @@ The analysis focuses on a narrowly defined market built around NAICS 458 and a v
 
 Our filtered dataset contains 19 verified business/data analyst postings in apparel and fashion retail (NAICS 458). Power BI and SQL are the two most requested skills, each appearing in 7 of the 19 postings. Vuori and TJX are the most active employers in the sample, each posting 5 of the 19 roles.
 
-Our team rates itself strongest in Data Analysis and Microsoft Excel, and weakest in Power BI and Python, the opposite of what the market asks for most. The opportunity scorecard ranks Vuori''s Sr. Manager, Ecommerce Analytics role as the strongest match for our team right now.
+Our team rates itself strongest in Data Analysis and Microsoft Excel, and weakest in Power BI and Python, the opposite of what the market asks for most. The opportunity scorecard ranks Vuori's Sr. Manager, Ecommerce Analytics role as the strongest match for our team right now.
 
 See Market Baseline, Skill Gap Analysis, and Final Analytics for the full breakdown.
 
 ## Project Sections
 
-Use the navigation bar above to explore the project. Here''s what each page covers:
-
-| Page | What You''ll Find |
+| Page | What You'll Find |
 |---|---|
 | Introduction | Project scope, career pathway, and industry context |
 | Data Preparation | Filtering, cleaning, and preparation of the analytical dataset |
 | Market Baseline | Current job volume, salary, geography, experience, work arrangement, and employer patterns |
-| Skill Gap Analysis | Market skill demand compared against the team''s self-rated skills, with a scored gap and priority table |
+| Skill Gap Analysis | Market skill demand compared against the team's self-rated skills, with a scored gap and priority table |
 | Career Evaluation | How we define and score opportunity across the filtered postings |
 | Final Analytics | The Opportunity Scorecard methodology and full ranked results |
 | Final Recommendations | Where to focus the job search and skill building, plus limitations |
