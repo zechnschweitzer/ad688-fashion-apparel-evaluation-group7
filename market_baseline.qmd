@@ -530,6 +530,48 @@ fig.update_xaxes(
 fig.show()
 ```
 
+```{python}
+
+import plotly.express as px
+
+state_abbrev = {
+    "California": "CA",
+    "Massachusetts": "MA",
+    "New York": "NY",
+    "Oregon": "OR",
+    "Texas": "TX"
+}
+
+map_df = state_counts[
+    state_counts["State"].isin(state_abbrev.keys())
+].copy()
+
+map_df["State Code"] = map_df["State"].map(state_abbrev)
+
+fig = px.choropleth(
+    map_df,
+    locations="State Code",
+    locationmode="USA-states",
+    color="Number of Job Postings",
+    scope="usa",
+    color_continuous_scale="Blues",
+    hover_name="State",
+    title="Geographic Concentration of Job Postings"
+)
+
+fig.update_layout(
+    height=450,
+    margin=dict(
+        l=10,
+        r=10,
+        t=60,
+        b=10
+    )
+)
+
+fig.show()
+```
+
 The 19-posting sample is concentrated in a small number of states. California and Massachusetts each account for 5 postings, followed by New York with 4 and Oregon with 3. Texas contributes 1 posting, while 1 record does not contain a usable state value. This geographic concentration appears to reflect the locations of the apparel and fashion employers represented in the filtered sample rather than a geographically representative view of the broader analytics labor market.
 
 ## Experience Requirement Distribution
@@ -767,6 +809,78 @@ fig.show()
 ```
 
 Hiring activity in the selected sample is concentrated among a small number of apparel and retail employers. Vuori and TJX each account for 5 postings, followed by Adidas with 3 and Ralph Lauren with 2. Nordstrom, Foot Locker, Michaels, and Macy’s each contribute 1 posting. These counts should be interpreted within the context of the small, intentionally filtered dataset rather than as a ranking of overall hiring activity across the apparel and fashion industry.
+
+### Concentration, By Employer or By State
+
+The same concentration pattern shows up along two different dimensions of this sample: who is hiring, and where. Use the dropdown on the chart below to switch between the two views without losing the comparison.
+
+```{python}
+
+import plotly.graph_objects as go
+
+fig_dropdown = go.Figure()
+
+fig_dropdown.add_trace(go.Bar(
+    x=employer_counts["Number of Job Postings"],
+    y=employer_counts["Employer"],
+    orientation="h",
+    marker_color="#2C6E8C",
+    visible=True,
+    name="By Employer"
+))
+
+fig_dropdown.add_trace(go.Bar(
+    x=state_counts["Number of Job Postings"],
+    y=state_counts["State"],
+    orientation="h",
+    marker_color="#2C6E8C",
+    visible=False,
+    name="By State"
+))
+
+fig_dropdown.update_layout(
+    title="Posting Concentration: By Employer or By State",
+    xaxis_title="Number of Job Postings",
+    height=500,
+    margin=dict(
+        l=110,
+        r=30,
+        t=80,
+        b=40
+    ),
+    updatemenus=[
+        dict(
+            buttons=[
+                dict(
+                    label="By Employer",
+                    method="update",
+                    args=[
+                        {"visible": [True, False]},
+                        {"yaxis": {"title": "Employer"}}
+                    ]
+                ),
+                dict(
+                    label="By State",
+                    method="update",
+                    args=[
+                        {"visible": [False, True]},
+                        {"yaxis": {"title": "State"}}
+                    ]
+                )
+            ],
+            direction="down",
+            x=1.0,
+            xanchor="right",
+            y=1.15,
+            yanchor="top"
+        )
+    ]
+)
+
+fig_dropdown.show()
+```
+
+Both views tell a version of the same story: a handful of employers and a handful of states account for most of this sample, which is why Final Recommendations treats Vuori, TJX, and the California/Massachusetts/New York corridor as the most concentrated near-term targets rather than treating the 19 postings as evenly spread.
 
 ## Baseline Summary
 

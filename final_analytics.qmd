@@ -13,7 +13,7 @@ execute:
 
 ## Opportunity Scorecard Methodology
 
-Our filtered dataset has only 19 postings. Usable salary data exists for 4 of them. Usable experience data exists for 9 (see Market Baseline). That is too little consistent data to train and validate a regression or classification model without drawing conclusions from a handful of records. Instead, our team built a structured, multi-factor scorecard. It ranks every posting in the sample using the fields with strong coverage, and keeps salary and remote status as separate context instead of folding them into a score they would distort.
+Our filtered dataset has only 19 postings. Usable salary data exists for 4 of them. Usable experience data exists for 9 (see Market Baseline). That is too little consistent data to train and validate a regression or classification model without drawing conclusions from a handful of records, so instead of fitting a statistical model to data that cannot support one, our team built the **Opportunity Score**: a weighted, rule-based scoring model that ranks every posting in the sample using the three fields with strong coverage across all 19 records. This is a deliberate modeling choice, not a workaround. A regression or classifier trained on 19 rows, 4 of which have salary, would overfit and produce confident-looking numbers that mean nothing; a transparent, equal-weighted scoring model is the model that actually fits data this size. Salary and remote status are kept as separate context instead of being folded into the score, since folding in a field only 4 postings report would let those 4 records drive the ranking for the other 15.
 
 Each of the 19 postings gets an Opportunity Score built from three component scores.
 
@@ -66,6 +66,35 @@ scorecard = df[["TITLE_CLEAN", "COMPANY_NAME", "SKILL_FIT_SCORE", "ACCESSIBILITY
 
 scorecard
 ```
+
+## Scoring Model Diagnostics
+
+A rule-based scoring model still needs to be checked, not just described. Since we have no real hiring outcomes to validate the Opportunity Score against, we instead check its internal consistency: how much each component actually drives the final score, and whether any single component is quietly dominating the ranking.
+
+```{python}
+
+component_correlations = df[[
+    "SKILL_FIT_SCORE",
+    "ACCESSIBILITY_SCORE",
+    "EMPLOYER_SIGNAL_SCORE",
+    "OPPORTUNITY_SCORE"
+]].corr(method="spearman")["OPPORTUNITY_SCORE"].drop("OPPORTUNITY_SCORE")
+
+component_correlations = component_correlations.rename("Correlation with Opportunity Score").round(2)
+
+component_range = df[[
+    "SKILL_FIT_SCORE",
+    "ACCESSIBILITY_SCORE",
+    "EMPLOYER_SIGNAL_SCORE"
+]].agg(["min", "max", "mean"]).T.round(2)
+
+component_range.columns = ["Min", "Max", "Mean"]
+
+diagnostics = component_range.join(component_correlations)
+diagnostics
+```
+
+Employer signal score has the widest range (1 to 5, uncapped) of the three components, and the table above shows it also carries by far the strongest rank correlation with the final Opportunity Score (0.87). Skill fit correlates more moderately (0.42), and accessibility correlates essentially not at all, slightly negative at -0.11. That confirms what the methodology note above flags: employer signal has more influence on the ranking than skill fit or accessibility, because it is a raw count rather than a capped 0-to-3 or 0-to-4 score, and it also means accessibility is currently closer to a tiebreaker than a real driver of the ranking. That is a property of this specific weighting choice, not a bug, but it is exactly the kind of thing a scoring model needs to disclose rather than hide behind a single combined number. A future version of this model could cap employer signal the same way the other two components are capped, or weight the three components unevenly on purpose, once there is outcome data to justify that choice.
 
 ## What the Scores Show
 
