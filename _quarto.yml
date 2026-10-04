@@ -31,8 +31,8 @@ format:
     theme: yeti
     css: styles.css
     toc: true
+    code-fold: true
 
 execute: 
   echo: true
   eval: true
-  code-fold: true

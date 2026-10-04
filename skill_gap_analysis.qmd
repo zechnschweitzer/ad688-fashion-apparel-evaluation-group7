@@ -3,8 +3,10 @@ title: "Skill Gap Analysis"
 format:
   html:
     toc: true
+    code-fold: true
+
 execute:
-  echo: false
+  echo: true
   eval: true
 ---
 
@@ -13,7 +15,6 @@ execute:
 This page compares the skills most commonly requested in our filtered apparel and fashion analytics job postings with the team's current skill levels, highlighting where the team is well-positioned and where gaps remain.
 
 ```{python}
-#| echo: false
 #| output: false
 
 import ast
@@ -36,7 +37,6 @@ PLOTLY_COLOR = "#2C6E8C"
 Skill fields were parsed from each posting's listed skills. Counts reflect how many of the 19 filtered postings mention each skill at least once.
 
 ```{python}
-#| echo: false
 
 clean_df["SKILLS_LIST"] = clean_df["SKILLS_LIST"].apply(ast.literal_eval)
 
@@ -87,7 +87,6 @@ We pulled the skills listed in each posting and counted how often each one showe
 Each team member self-rated their proficiency on the eight most in-demand skills identified above using a scale from 1 (Beginner) to 5 (Expert).
 
 ```{python}
-#| echo: false
 
 skills_data = {
     "Name": ["Alyssa", "Ankita", "Sara", "Zech"],
@@ -129,7 +128,6 @@ fig_heatmap.show()
 ```
 
 ```{python}
-#| echo: false
 
 team_avg = df_skills.mean().sort_values(ascending=True)
 
@@ -184,3 +182,4 @@ Based on the gaps above our individual priorities are:
 - **Zech** should prioritize Power BI before the Module 5 deadline, the one skill where his rating trails his otherwise strong technical profile. Given his existing SQL proficiency focusing on Power BI's data modeling features is a natural next step since those build on relational concepts he already knows.
 
 Across the team Power BI is the most consistent gap since every member rated it at 3 or below while it ties for the highest market demand. Team members with relatively higher proficiency in a given skill (for example Zech in SQL and Sara in Excel) can informally support others when related project tasks come up rather than treating skill-building as separate from the coursework itself.
+

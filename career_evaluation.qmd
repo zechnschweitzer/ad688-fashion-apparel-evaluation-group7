@@ -3,8 +3,9 @@ title: "Career Evaluation"
 format:
   html:
     toc: true
+    code-fold: true
 execute:
-  echo: false
+  echo: true
   eval: true
   freeze: auto
 ---

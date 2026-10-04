@@ -3,8 +3,10 @@ title: "Final Analytics"
 format:
   html:
     toc: true
+    code-fold: true
+
 execute:
-  echo: false
+  echo: true
   eval: true
   freeze: auto
 ---
@@ -78,3 +80,4 @@ Vuori and TJX, the two employers the scorecard ranks highest, are also the two e
 ## What This Means for Our Team
 
 The scorecard points us toward applying early and often to Vuori and TJX postings. Both the raw counts and the scorecard agree these employers are hiring repeatedly for adjacent roles. Adidas postings are a good check on skill fit. They reward the skills our team already rates itself strong in. The lower scoring postings show which skills would open up the most additional opportunities if built up. That is where Final Recommendations picks up.
+
