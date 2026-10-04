@@ -17,13 +17,7 @@ The analysis focuses on a narrowly defined market built around NAICS 458 and a v
 
 Our filtered dataset contains 19 verified business/data analyst postings in apparel and fashion retail (NAICS 458). Power BI and SQL are the two most requested skills, each appearing in 7 of the 19 postings. Vuori and TJX are the most active employers in the sample, each posting 5 of the 19 roles.
 
-Our team rates itself strongest in Data Analysis and Microsoft Excel, and weakest in Power BI and Python, the opposite of what the market asks for most.
-
-::: {.callout-important}
-## Top Match
-
-The opportunity scorecard ranks **Vuori's Sr. Manager, Ecommerce Analytics role** as the strongest match for our team right now, combining a repeat-hiring employer, a low experience bar, and moderate skill overlap.
-:::
+Our team rates itself strongest in Data Analysis and Microsoft Excel, and weakest in Power BI and Python, the opposite of what the market asks for most. The opportunity scorecard ranks Vuori's Sr. Manager, Ecommerce Analytics role as the strongest match for our team right now.
 
 See Market Baseline, Skill Gap Analysis, and Final Analytics for the full breakdown.
 
@@ -39,3 +33,4 @@ See Market Baseline, Skill Gap Analysis, and Final Analytics for the full breakd
 | Final Analytics | The Opportunity Scorecard methodology and full ranked results |
 | Final Recommendations | Where to focus the job search and skill building, plus limitations |
 | Appendix | Filter criteria reference, scorecard tiers, and the full 19-posting list |
+
