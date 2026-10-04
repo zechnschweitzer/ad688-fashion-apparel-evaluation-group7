@@ -5,3 +5,25 @@ table.dataframe { width: 100%; table-layout: fixed; }
 table.dataframe td, table.dataframe th { white-space: normal; word-wrap: break-word; }
 
 .quarto-title-meta-contents p { white-space: nowrap; }
+
+#title-block-header {
+  background: linear-gradient(135deg, #0b3d59 0%, #2c6e8c 100%);
+  color: #ffffff;
+  padding: 2.5rem 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+#title-block-header h1.title {
+  color: #ffffff;
+}
+
+#title-block-header .quarto-title-meta-heading,
+#title-block-header .quarto-title-meta-contents,
+#title-block-header .quarto-title-author-name {
+  color: #e4edf3;
+}
+
+.navbar {
+  background-color: #0b3d59 !important;
+}
