@@ -9,13 +9,9 @@ table.dataframe td, table.dataframe th { white-space: normal; word-wrap: break-w
 .quarto-title-meta-contents {
   display: flex;
   flex-wrap: wrap;
-  gap: 0;
+  column-gap: 0.3em;
 }
 
-.quarto-title-meta-contents p.author {
-  margin: 0;
-}
-
-.quarto-title-meta-contents p.author:not(:last-child)::after {
-  content: ", ";
+.quarto-title-meta-contents p:not(:last-child)::after {
+  content: ",";
 }
