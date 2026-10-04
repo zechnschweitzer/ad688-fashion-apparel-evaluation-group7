@@ -237,7 +237,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="opportunity-scorecard" class="level2">
 <h2 class="anchored" data-anchor-id="opportunity-scorecard">Opportunity Scorecard</h2>
-<div id="6b50c5c5" class="cell" data-execution_count="1">
+<div id="2f313063" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -476,7 +476,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="scoring-model-diagnostics" class="level2">
 <h2 class="anchored" data-anchor-id="scoring-model-diagnostics">Scoring Model Diagnostics</h2>
 <p>A rule-based scoring model still needs to be checked, not just described. Since we have no real hiring outcomes to validate the Opportunity Score against, we instead check its internal consistency: how much each component actually drives the final score, and whether any single component is quietly dominating the ranking.</p>
-<div id="cfb5e058" class="cell" data-execution_count="2">
+<div id="2878cdd4" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>component_correlations <span class="op">=</span> df[[</span>
@@ -495,9 +495,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>]].agg([<span class="st">"min"</span>, <span class="st">"max"</span>, <span class="st">"mean"</span>]).T.<span class="bu">round</span>(<span class="dv">2</span>)</span>
 <span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>component_range.columns <span class="op">=</span> [<span class="st">"Min"</span>, <span class="st">"Max"</span>, <span class="st">"Mean"</span>]</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>diagnostics <span class="op">=</span> component_range.join(component_correlations)</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>diagnostics</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>component_range.index <span class="op">=</span> [<span class="st">"Skill Fit"</span>, <span class="st">"Accessibility"</span>, <span class="st">"Employer Signal"</span>]</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>component_correlations.index <span class="op">=</span> [<span class="st">"Skill Fit"</span>, <span class="st">"Accessibility"</span>, <span class="st">"Employer Signal"</span>]</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>diagnostics <span class="op">=</span> component_range.join(component_correlations)</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>diagnostics</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <div>
@@ -515,21 +518,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">SKILL_FIT_SCORE</th>
+<th data-quarto-table-cell-role="th">Skill Fit</th>
 <td>0.0</td>
 <td>2.0</td>
 <td>0.79</td>
 <td>0.42</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">ACCESSIBILITY_SCORE</th>
+<th data-quarto-table-cell-role="th">Accessibility</th>
 <td>1.0</td>
 <td>3.0</td>
 <td>2.79</td>
 <td>-0.11</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">EMPLOYER_SIGNAL_SCORE</th>
+<th data-quarto-table-cell-role="th">Employer Signal</th>
 <td>1.0</td>
 <td>5.0</td>
 <td>2.89</td>
