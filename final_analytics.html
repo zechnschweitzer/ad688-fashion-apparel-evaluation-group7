@@ -194,6 +194,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#opportunity-scorecard-methodology" id="toc-opportunity-scorecard-methodology" class="nav-link active" data-scroll-target="#opportunity-scorecard-methodology">Opportunity Scorecard Methodology</a></li>
   <li><a href="#opportunity-scorecard" id="toc-opportunity-scorecard" class="nav-link" data-scroll-target="#opportunity-scorecard">Opportunity Scorecard</a></li>
+  <li><a href="#scoring-model-diagnostics" id="toc-scoring-model-diagnostics" class="nav-link" data-scroll-target="#scoring-model-diagnostics">Scoring Model Diagnostics</a></li>
   <li><a href="#what-the-scores-show" id="toc-what-the-scores-show" class="nav-link" data-scroll-target="#what-the-scores-show">What the Scores Show</a></li>
   <li><a href="#evaluating-the-score" id="toc-evaluating-the-score" class="nav-link" data-scroll-target="#evaluating-the-score">Evaluating the Score</a></li>
   <li><a href="#what-this-means-for-our-team" id="toc-what-this-means-for-our-team" class="nav-link" data-scroll-target="#what-this-means-for-our-team">What This Means for Our Team</a></li>
@@ -224,7 +225,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="opportunity-scorecard-methodology" class="level2">
 <h2 class="anchored" data-anchor-id="opportunity-scorecard-methodology">Opportunity Scorecard Methodology</h2>
-<p>Our filtered dataset has only 19 postings. Usable salary data exists for 4 of them. Usable experience data exists for 9 (see Market Baseline). That is too little consistent data to train and validate a regression or classification model without drawing conclusions from a handful of records. Instead, our team built a structured, multi-factor scorecard. It ranks every posting in the sample using the fields with strong coverage, and keeps salary and remote status as separate context instead of folding them into a score they would distort.</p>
+<p>Our filtered dataset has only 19 postings. Usable salary data exists for 4 of them. Usable experience data exists for 9 (see Market Baseline). That is too little consistent data to train and validate a regression or classification model without drawing conclusions from a handful of records, so instead of fitting a statistical model to data that cannot support one, our team built the <strong>Opportunity Score</strong>: a weighted, rule-based scoring model that ranks every posting in the sample using the three fields with strong coverage across all 19 records. This is a deliberate modeling choice, not a workaround. A regression or classifier trained on 19 rows, 4 of which have salary, would overfit and produce confident-looking numbers that mean nothing; a transparent, equal-weighted scoring model is the model that actually fits data this size. Salary and remote status are kept as separate context instead of being folded into the score, since folding in a field only 4 postings report would let those 4 records drive the ranking for the other 15.</p>
 <p>Each of the 19 postings gets an Opportunity Score built from three component scores.</p>
 <ul>
 <li><strong>Skill fit score (0 to 4):</strong> how many of our team’s four self-rated strongest skills (Data Analysis, Microsoft Excel, Stakeholder Management, Project Management, from the Skill Gap Analysis) show up in that posting’s listed skills.</li>
@@ -236,7 +237,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="opportunity-scorecard" class="level2">
 <h2 class="anchored" data-anchor-id="opportunity-scorecard">Opportunity Scorecard</h2>
-<div id="345a49a5" class="cell" data-execution_count="1">
+<div id="6b50c5c5" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -471,6 +472,76 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+</section>
+<section id="scoring-model-diagnostics" class="level2">
+<h2 class="anchored" data-anchor-id="scoring-model-diagnostics">Scoring Model Diagnostics</h2>
+<p>A rule-based scoring model still needs to be checked, not just described. Since we have no real hiring outcomes to validate the Opportunity Score against, we instead check its internal consistency: how much each component actually drives the final score, and whether any single component is quietly dominating the ranking.</p>
+<div id="cfb5e058" class="cell" data-execution_count="2">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>component_correlations <span class="op">=</span> df[[</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"SKILL_FIT_SCORE"</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ACCESSIBILITY_SCORE"</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"EMPLOYER_SIGNAL_SCORE"</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"OPPORTUNITY_SCORE"</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>]].corr(method<span class="op">=</span><span class="st">"spearman"</span>)[<span class="st">"OPPORTUNITY_SCORE"</span>].drop(<span class="st">"OPPORTUNITY_SCORE"</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>component_correlations <span class="op">=</span> component_correlations.rename(<span class="st">"Correlation with Opportunity Score"</span>).<span class="bu">round</span>(<span class="dv">2</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>component_range <span class="op">=</span> df[[</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"SKILL_FIT_SCORE"</span>,</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ACCESSIBILITY_SCORE"</span>,</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">"EMPLOYER_SIGNAL_SCORE"</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>]].agg([<span class="st">"min"</span>, <span class="st">"max"</span>, <span class="st">"mean"</span>]).T.<span class="bu">round</span>(<span class="dv">2</span>)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>component_range.columns <span class="op">=</span> [<span class="st">"Min"</span>, <span class="st">"Max"</span>, <span class="st">"Mean"</span>]</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>diagnostics <span class="op">=</span> component_range.join(component_correlations)</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>diagnostics</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Min</th>
+<th data-quarto-table-cell-role="th">Max</th>
+<th data-quarto-table-cell-role="th">Mean</th>
+<th data-quarto-table-cell-role="th">Correlation with Opportunity Score</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">SKILL_FIT_SCORE</th>
+<td>0.0</td>
+<td>2.0</td>
+<td>0.79</td>
+<td>0.42</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">ACCESSIBILITY_SCORE</th>
+<td>1.0</td>
+<td>3.0</td>
+<td>2.79</td>
+<td>-0.11</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">EMPLOYER_SIGNAL_SCORE</th>
+<td>1.0</td>
+<td>5.0</td>
+<td>2.89</td>
+<td>0.87</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>Employer signal score has the widest range (1 to 5, uncapped) of the three components, and the table above shows it also carries by far the strongest rank correlation with the final Opportunity Score (0.87). Skill fit correlates more moderately (0.42), and accessibility correlates essentially not at all, slightly negative at -0.11. That confirms what the methodology note above flags: employer signal has more influence on the ranking than skill fit or accessibility, because it is a raw count rather than a capped 0-to-3 or 0-to-4 score, and it also means accessibility is currently closer to a tiebreaker than a real driver of the ranking. That is a property of this specific weighting choice, not a bug, but it is exactly the kind of thing a scoring model needs to disclose rather than hide behind a single combined number. A future version of this model could cap employer signal the same way the other two components are capped, or weight the three components unevenly on purpose, once there is outcome data to justify that choice.</p>
 </section>
 <section id="what-the-scores-show" class="level2">
 <h2 class="anchored" data-anchor-id="what-the-scores-show">What the Scores Show</h2>
