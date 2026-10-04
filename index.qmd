@@ -1,10 +1,7 @@
 ---
 title: "AD688: Fashion and Apparel Career Evaluation - Group 7"
-author:
-  - "Alyssa Quigley"
-  - "Ankita Roy"
-  - "Zechariah Schweitzer"
-  - "Sara Scribner"
+author: "Alyssa Quigley, Ankita Roy, Zechariah Schweitzer, Sara Scribner"
+author-title: "Authors"
 ---
 
 ## Project Overview
