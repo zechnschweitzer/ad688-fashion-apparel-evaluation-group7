@@ -89,6 +89,9 @@ component_range = df[[
 ]].agg(["min", "max", "mean"]).T.round(2)
 
 component_range.columns = ["Min", "Max", "Mean"]
+component_range.index = ["Skill Fit", "Accessibility", "Employer Signal"]
+
+component_correlations.index = ["Skill Fit", "Accessibility", "Employer Signal"]
 
 diagnostics = component_range.join(component_correlations)
 diagnostics

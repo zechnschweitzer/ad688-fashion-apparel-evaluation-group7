@@ -841,11 +841,11 @@ fig_dropdown.add_trace(go.Bar(
 fig_dropdown.update_layout(
     title="Posting Concentration: By Employer or By State",
     xaxis_title="Number of Job Postings",
-    height=500,
+    height=520,
     margin=dict(
         l=110,
         r=30,
-        t=80,
+        t=130,
         b=40
     ),
     updatemenus=[
@@ -869,10 +869,41 @@ fig_dropdown.update_layout(
                 )
             ],
             direction="down",
+            showactive=True,
+            active=0,
             x=1.0,
             xanchor="right",
-            y=1.15,
-            yanchor="top"
+            y=1.25,
+            yanchor="top",
+            bgcolor="#e4edf3",
+            bordercolor="#0b3d59",
+            borderwidth=1,
+            font=dict(
+                size=13,
+                color="#0b3d59"
+            ),
+            pad=dict(
+                t=6,
+                r=8,
+                b=6,
+                l=8
+            )
+        )
+    ],
+    annotations=[
+        dict(
+            text="View by:",
+            x=0.80,
+            xref="paper",
+            y=1.25,
+            yref="paper",
+            xanchor="right",
+            yanchor="top",
+            showarrow=False,
+            font=dict(
+                size=13,
+                color="#0b3d59"
+            )
         )
     ]
 )
