@@ -192,8 +192,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#purpose-of-this-page" id="toc-purpose-of-this-page" class="nav-link active" data-scroll-target="#purpose-of-this-page">Purpose of This Page</a></li>
-  <li><a href="#filter-criteria-reference" id="toc-filter-criteria-reference" class="nav-link" data-scroll-target="#filter-criteria-reference">Filter Criteria Reference</a>
+  <li><a href="#filter-criteria-reference" id="toc-filter-criteria-reference" class="nav-link active" data-scroll-target="#filter-criteria-reference">Filter Criteria Reference</a>
   <ul class="collapse">
   <li><a href="#known-apparelfashion-employers" id="toc-known-apparelfashion-employers" class="nav-link" data-scroll-target="#known-apparelfashion-employers">Known Apparel/Fashion Employers</a></li>
   <li><a href="#role-title-keywords" id="toc-role-title-keywords" class="nav-link" data-scroll-target="#role-title-keywords">Role-Title Keywords</a></li>
@@ -226,16 +225,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="purpose-of-this-page" class="level2">
-<h2 class="anchored" data-anchor-id="purpose-of-this-page">Purpose of This Page</h2>
-<p>This appendix collects the supporting reference material behind the analysis: the exact filter criteria used to build the dataset, the full list of postings in the final sample, and the scoring tiers behind the Opportunity Scorecard. It is meant to be checked against, not read start to finish.</p>
-</section>
 <section id="filter-criteria-reference" class="level2">
 <h2 class="anchored" data-anchor-id="filter-criteria-reference">Filter Criteria Reference</h2>
 <section id="known-apparelfashion-employers" class="level3">
 <h3 class="anchored" data-anchor-id="known-apparelfashion-employers">Known Apparel/Fashion Employers</h3>
 <p>These employer names, matched against <code>COMPANY_CLEAN</code>, were used alongside NAICS 458 to build the industry match in <a href="./data_preparation.html">Data Preparation</a>.</p>
-<div id="c0cd091d" class="cell" data-execution_count="1">
+<div id="116cfc31" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>known_apparel_companies <span class="op">=</span> [</span>
@@ -414,7 +409,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="role-title-keywords" class="level3">
 <h3 class="anchored" data-anchor-id="role-title-keywords">Role-Title Keywords</h3>
 <p>A posting’s <code>TITLE_CLEAN</code> had to contain at least one of these terms to pass the role-title filter.</p>
-<div id="5c943243" class="cell" data-execution_count="2">
+<div id="a85a36fd" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>role_terms <span class="op">=</span> [</span>
