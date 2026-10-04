@@ -12,19 +12,20 @@ website:
         text: Home
       - href: introduction.qmd
         text: Introduction
-      - href: data_preparation.qmd
-        text: Data Preparation
-      - href: market_baseline.qmd
-        text: Market Baseline
-      - href: skill_gap_analysis.qmd
-        text: Skill Gap Analysis
-      - href: career_evaluation.qmd
-        text: Career Evaluation
-      - href: final_analytics.qmd
-        text: Final Analytics
+      - text: "Analysis"
+        menu:
+          - href: data_preparation.qmd
+            text: Data Preparation
+          - href: market_baseline.qmd
+            text: Market Baseline
+          - href: skill_gap_analysis.qmd
+            text: Skill Gap Analysis
+          - href: career_evaluation.qmd
+            text: Career Evaluation
+          - href: final_analytics.qmd
+            text: Final Analytics
       - href: final_recommendations.qmd
         text: Final Recommendations
-     
 
 format:
   html:
@@ -33,6 +34,6 @@ format:
     toc: true
     code-fold: true
 
-execute: 
+execute:
   echo: true
   eval: true
