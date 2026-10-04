@@ -207,8 +207,7 @@ gap_summary = pd.DataFrame({
 })
 gap_summary["Gap"] = (gap_summary["Target Level"] - gap_summary["Team Average"]).round(2)
 gap_summary["Priority"] = gap_summary["Gap"].apply(priority)
-gap_summary = gap_summary.sort_values("Gap", ascending=False).reset_index(drop=True)
-gap_summary
+
 ```
 
 Comparing market demand against team proficiency helps show where we're well-covered and where the gaps actually are both as a team and for each of us individually.
