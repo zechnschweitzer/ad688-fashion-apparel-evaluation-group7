@@ -10,10 +10,6 @@ execute:
   freeze: auto
 ---
 
-## Purpose of This Page
-
-This appendix collects the supporting reference material behind the analysis: the exact filter criteria used to build the dataset, the full list of postings in the final sample, and the scoring tiers behind the Opportunity Scorecard. It is meant to be checked against, not read start to finish.
-
 ## Filter Criteria Reference
 
 ### Known Apparel/Fashion Employers
@@ -85,5 +81,6 @@ df[[
 - [Market Baseline](market_baseline.qmd) - job volume, salary, geography, and employer patterns
 - [Skill Gap Analysis](skill_gap_analysis.qmd) - market skill demand versus team self-ratings
 - [Final Analytics](final_analytics.qmd) - Opportunity Scorecard methodology and results
+
 
 
