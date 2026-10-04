@@ -26,6 +26,8 @@ website:
             text: Final Analytics
       - href: final_recommendations.qmd
         text: Final Recommendations
+      - href: appendix.qmd
+        text: Appendix
 
 format:
   html:

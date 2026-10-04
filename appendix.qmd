@@ -1,0 +1,87 @@
+---
+title: "Appendix"
+format:
+  html:
+    toc: true
+    code-fold: true
+execute:
+  echo: true
+  eval: true
+  freeze: auto
+---
+
+## Purpose of This Page
+
+This appendix collects the supporting reference material behind the analysis: the exact filter criteria used to build the dataset, the full list of postings in the final sample, and the scoring tiers behind the Opportunity Scorecard. It is meant to be checked against, not read start to finish.
+
+## Filter Criteria Reference
+
+### Known Apparel/Fashion Employers
+
+These employer names, matched against `COMPANY_CLEAN`, were used alongside NAICS 458 to build the industry match in [Data Preparation](data_preparation.qmd).
+
+```{python}
+known_apparel_companies = [
+    "adidas", "vuoriinc", "tjx", "jobs.tjx.com", "careers.michaels.com",
+    "ralph lauren", "macy''s", "macys", "nordstrom", "kohl''s", "kohls",
+    "jcpenney", "foot locker", "dsw", "ross stores", "burlington",
+    "victoria''s secret", "victorias secret", "under armour", "lululemon",
+    "columbia sportswear", "vf corporation", "pvh corp", "kontoor brands",
+    "urban outfitters", "anthropologie", "american eagle outfitters",
+    "abercrombie & fitch", "hollister co", "forever 21", "old navy",
+    "banana republic", "gap inc", "the gap", "chico''s fas"
+]
+
+import pandas as pd
+pd.DataFrame({"Known Employer": known_apparel_companies})
+```
+
+### Role-Title Keywords
+
+A posting's `TITLE_CLEAN` had to contain at least one of these terms to pass the role-title filter.
+
+```{python}
+role_terms = [
+    "business analyst", "data analyst", "business intelligence",
+    "analytics", "insights analyst", "merchandising analyst",
+    "reporting analyst", "operations analyst"
+]
+pd.DataFrame({"Role-Title Keyword": role_terms})
+```
+
+## Opportunity Scorecard Reference
+
+The full methodology is on [Final Analytics](final_analytics.qmd). The scoring tiers behind each component are reproduced here for quick reference.
+
+| Component | Score | Rule |
+|---|---|---|
+| Skill fit | 0-4 | +1 for each of the team's four strongest self-rated skills (Data Analysis, Microsoft Excel, Stakeholder Management, Project Management) found in the posting's listed skills |
+| Accessibility | 3 | Minimum years of experience = 0 |
+| Accessibility | 2 | Minimum years of experience 1-2 |
+| Accessibility | 1 | Minimum years of experience 3-5 |
+| Accessibility | 0 | Minimum years of experience > 5 |
+| Employer signal | 1-5 | Raw count of postings from that employer in the 19-posting sample |
+
+: Scoring tiers behind the Opportunity Score {#tbl-score-tiers}
+
+## Full Posting List
+
+All 19 postings in the final filtered and cleaned dataset, with the fields used across the analysis.
+
+```{python}
+#| label: tbl-full-postings
+#| tbl-cap: "All postings in the final analytical sample"
+df = pd.read_csv("data/processed/apparel_analyst_clean.csv")
+
+df[[
+    "TITLE_CLEAN", "COMPANY_NAME", "CITY_NAME", "STATE_NAME",
+    "MIN_YEARS_EXPERIENCE", "SALARY_FROM", "SALARY_TO", "REMOTE_TYPE_NAME"
+]].sort_values("COMPANY_NAME").reset_index(drop=True)
+```
+
+## Related Pages
+
+- [Data Preparation](data_preparation.qmd) - full filter funnel and cleaning steps
+- [Market Baseline](market_baseline.qmd) - job volume, salary, geography, and employer patterns
+- [Skill Gap Analysis](skill_gap_analysis.qmd) - market skill demand versus team self-ratings
+- [Final Analytics](final_analytics.qmd) - Opportunity Scorecard methodology and results
