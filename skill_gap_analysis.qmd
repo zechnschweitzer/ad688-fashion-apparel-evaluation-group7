@@ -211,7 +211,7 @@ gap_summary = gap_summary.sort_values("Gap", ascending=False).reset_index(drop=T
 gap_summary
 ```
 
-```
+```{python}
 
 gap_chart_data = gap_summary.sort_values("Gap", ascending=True)
 
