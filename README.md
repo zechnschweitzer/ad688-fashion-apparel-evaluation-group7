@@ -1,10 +1,10 @@
-AD688: Fashion and Apparel Career Evaluation (Group 7)
+﻿AD688: Fashion and Apparel Career Evaluation (Group 7)
 Live Website: https://zechnschweitzer.github.io/ad688-fashion-apparel-evaluation-group7/
 
 Project Overview
 Target Career Pathway: Business/Data Analyst roles
 
-Industry: Apparel and Fashion Retail (NAICS 458 � Clothing, Clothing Accessories, Shoe, and Jewelry Retailers)
+Industry: Apparel and Fashion Retail (NAICS 458 — Clothing, Clothing Accessories, Shoe, and Jewelry Retailers)
 
 Target Audience: BU MET students exploring analytics career paths
 
@@ -20,3 +20,4 @@ This project was a collaborative effort across all four team members. Each perso
 | Ankita Roy | Data preparation, analysis, and website development |
 | Zechariah Schweitzer | Data preparation, analysis, and website development |
 | Sara Scribner | Data preparation, analysis, and website development |
+
