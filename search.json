@@ -140,230 +140,6 @@
     "text": "Where the Scoring Happens\nWe turn these three factors into a scored, ranked list on the Final Analytics page, along with the full methodology, the weighting choices behind it, and what the results show."
   },
   {
-    "objectID": "final_recommendations.html",
-    "href": "final_recommendations.html",
-    "title": "Final Recommendations",
-    "section": "",
-    "text": "Vuori and TJX each account for 5 of our 19 sample postings, and both dominate the top of the Opportunity Scorecard. They are repeatedly posting for adjacent analytics roles, which makes them the most attainable near-term targets, not just the highest scorers in a one-time snapshot.\nAdidas, with 3 postings, is the strongest option for a candidate relying on skill fit rather than application volume. Its postings reward the skills our team already rates itself strong in: Data Analysis, Excel, Stakeholder Management, and Project Management.\nCalifornia, Massachusetts, and New York together account for 14 of our 19 postings. Effort is best concentrated there."
-  },
-  {
-    "objectID": "final_recommendations.html#where-to-focus-the-job-search",
-    "href": "final_recommendations.html#where-to-focus-the-job-search",
-    "title": "Final Recommendations",
-    "section": "",
-    "text": "Vuori and TJX each account for 5 of our 19 sample postings, and both dominate the top of the Opportunity Scorecard. They are repeatedly posting for adjacent analytics roles, which makes them the most attainable near-term targets, not just the highest scorers in a one-time snapshot.\nAdidas, with 3 postings, is the strongest option for a candidate relying on skill fit rather than application volume. Its postings reward the skills our team already rates itself strong in: Data Analysis, Excel, Stakeholder Management, and Project Management.\nCalifornia, Massachusetts, and New York together account for 14 of our 19 postings. Effort is best concentrated there."
-  },
-  {
-    "objectID": "final_recommendations.html#where-to-focus-skill-building",
-    "href": "final_recommendations.html#where-to-focus-skill-building",
-    "title": "Final Recommendations",
-    "section": "Where to Focus Skill Building",
-    "text": "Where to Focus Skill Building\nPower BI and SQL are the two most market-demanded skills in our sample, each showing up in 7 of 19 postings. They are also our team’s weakest areas relative to that demand. That gap lowers skill fit scores on the scorecard directly, since Power BI and SQL are not among the four skills counted toward skill fit. In priority order:\n\nPower BI. The single most consistent gap across all four team members. Every member self-rated at 3 or below on the market’s joint highest demand skill.\nSQL. Equally in demand, with more room between team members. Zech rates Advanced, the rest rate Intermediate.\nPython. Requested in 5 of 19 postings, also rated low across our team.\n\nClosing the Power BI and SQL gaps would raise skill fit scores on the scorecard itself. Those are the two most frequently listed skills missing from the postings currently scoring lowest on skill fit, including the TJX and Foot Locker roles.\nBy person: Alyssa and Ankita should complete a Power BI learning path before the Module 5 deadline, then move to SQL practice against our own filtered dataset. Sara should prioritize Power BI first given her lowest team rating on it, building on her existing Excel strength. Zech should focus on Power BI’s data modeling features, building on his existing SQL proficiency."
-  },
-  {
-    "objectID": "final_recommendations.html#how-to-use-this-product-going-forward",
-    "href": "final_recommendations.html#how-to-use-this-product-going-forward",
-    "title": "Final Recommendations",
-    "section": "How to Use This Product Going Forward",
-    "text": "How to Use This Product Going Forward\n\nRe-run the Opportunity Scorecard as new postings come in. Employer signal and skill demand can shift as hiring continues.\nTreat the Opportunity Score as a starting point, not a verdict. It has not been checked against real hiring outcomes, and its three components should be read individually, not just as one combined number.\nUse the skill priorities above, Power BI, then SQL, then Python, to guide coursework and self-study for the rest of the semester. Those are the skills most likely to move a posting from low-scoring to high-scoring."
-  },
-  {
-    "objectID": "final_recommendations.html#limitations",
-    "href": "final_recommendations.html#limitations",
-    "title": "Final Recommendations",
-    "section": "Limitations",
-    "text": "Limitations\nOur sample is 19 postings from a narrowly filtered search: NAICS 458, known apparel and fashion employers. These recommendations describe this specific sample, not the broader apparel analytics job market.\nSalary and remote work data were usable for only 4 of 19 postings each, so neither recommendation above can account for compensation or remote work preferences with much confidence.\nThe scorecard’s equal weighting of skill fit, accessibility, and employer signal is a modeling choice, not a validated weighting scheme. See Final Analytics for the full discussion of that limitation."
-  },
-  {
-    "objectID": "introduction.html",
-    "href": "introduction.html",
-    "title": "Career Pathway and Industry Scope",
-    "section": "",
-    "text": "Target career pathway: Business/Data Analyst roles\nIndustry code: NAICS 458 (Clothing, Clothing Accessories, Shoe, and Jewelry Retailers), within the broader apparel and fashion retail sector\nIndustry label: Apparel and Fashion Retail"
-  },
-  {
-    "objectID": "introduction.html#research-rationale",
-    "href": "introduction.html#research-rationale",
-    "title": "Career Pathway and Industry Scope",
-    "section": "Research Rationale",
-    "text": "Research Rationale\nBusiness and data analysts turn operational data into decisions organizations can act on. Apparel retail is a good place to study that work, since retailers are constantly reacting to seasonal demand, shifting consumer preferences, inventory limits, pricing calls, and supply chain pressure. Those conditions give analytical skills a direct, visible role in how the business runs.\nFor a student weighing an analytics career, it is not always obvious which skills employers actually care about, or whether their coursework and experience line up with what the job market expects. A title like “business analyst” or “data analyst” hides a lot of variation: some mix of technical ability, analytical thinking, communication, and business judgment, and the exact mix shifts by employer. This project tries to pin down which skills matter most for business/data analyst roles in apparel retail specifically, then checks that list against our own team’s current skills.\nThat is what separates this from a plain labor-market summary: it is meant to work as a career evaluation tool. A student should be able to look at it and see what employers are asking for, where their own strengths already line up, and what still needs work before they apply."
-  },
-  {
-    "objectID": "introduction.html#literature-review",
-    "href": "introduction.html#literature-review",
-    "title": "Career Pathway and Industry Scope",
-    "section": "Literature Review",
-    "text": "Literature Review\nUmamaheswaran et al. (2023) looked at what employers ask for in business analytics postings and found a consistent mix: big data, business intelligence, and analytical technique on one side, communication and stakeholder management on the other. That matters for how we think about readiness. Knowing the software is not enough on its own; an analyst also has to understand the business problem and explain results to people who are not going to read the code.\nAlshameri & Adhikari (2025) looked at business job postings the same way and identified the same kind of gap. Employers ask for a mix of general tools like Microsoft Office and data visualization plus skills specific to their field and the exact mix depends on industry and location. The study refers to this as a growing disconnect between what schools teach and what employers are actually looking for. In addition Debortoli et al. (2014) conducted a comparable analysis of business intelligence and big data postings and found the same pattern. Employers separate technical tool skills from broader analytical thinking and the strongest candidates show both.\nApparel retail is a fitting test case for that combination. Forecasting, inventory, pricing, and supply chain decisions all show up as recurring analytical needs in clothing retail, and IBISWorld (2025) backs that up with broader industry context on clothing and clothing accessory retailers. Demand in this sector moves fast and shifts with the seasons, which is part of why data-supported decisions carry more weight here than they might in a slower-moving industry.\nFashion retail has been leaning harder into data analytics in recent years. Oh (2020) found that fashion brands increasingly use data analytics to personalize products plan merchandising and improve profitability and argued that education has not kept pace with this shift. That gap between what the industry needs and what students are taught is part of what this project is looking to measure directly.\nRetail hiring overall backs up the case for treating analytics as its own career path within the industry. The Planet Group (2025) found that retail hiring has gotten more selective even as it leans harder into technology, analytics, and customer experience. So while fewer people may be getting hired overall, the analytical roles that support pricing, inventory, operations, and customer decisions do not seem to be losing ground.\nJob postings themselves give a more concrete look at what these roles ask for. Scanning ZipRecruiter listings, SQL, Excel, and a visualization tool like Tableau or Power BI show up repeatedly, alongside the usual asks for analytical and communication skills (ZipRecruiter, 2026b). We are treating this as a starting point rather than a finding, since individual job postings vary a lot by employer, seniority, and timing.\nThe same postings also show a fair amount of spread in pay and remote availability (ZipRecruiter, 2026a). Salary and remote work are not the central question we are asking, but they are useful context for judging how attractive a given role is. Once we are working with the MET Employability Career Match data, we will be able to check whether these early patterns hold up within our apparel retail scope specifically.\nThe demand for this kind of work is also reflected in national labor data. The U.S. Bureau of Labor Statistics projects 7% growth for market research analyst roles from 2025 to 2035 well above the average for all occupations with a median annual wage of $78,760 as of May 2025 (U.S. Bureau of Labor Statistics, 2025). The core skills the Bureau lists are analytical thinking communication critical thinking and attention to detail and they line up closely with what the job-posting studies above describe.\nAcross these sources, the same picture keeps showing up: business/data analyst roles need technical skill, analytical thinking, and the ability to work with the business side, all at once. What none of this tells us yet is which of those skills matter most specifically in apparel retail, or how close our own skills already are to that bar. That gap is what this project is built to close."
-  },
-  {
-    "objectID": "introduction.html#target-user",
-    "href": "introduction.html#target-user",
-    "title": "Career Pathway and Industry Scope",
-    "section": "Target User",
-    "text": "Target User\nThis product is aimed at BU MET students who are exploring analytics career paths and want a clearer picture of which industries and skills to prioritize. Our goal is to help someone in this position understand what a business/data analyst role in apparel retail actually looks like, so they can decide whether it fits their interests and know what to learn next if it does."
-  },
-  {
-    "objectID": "introduction.html#product-question",
-    "href": "introduction.html#product-question",
-    "title": "Career Pathway and Industry Scope",
-    "section": "Product Question",
-    "text": "Product Question\nWhich skills are most valued for business/data analyst roles in apparel retail and how well does our team’s current skill set match those demands?"
-  },
-  {
-    "objectID": "introduction.html#met-employability-career-match-fields-we-expect-to-use",
-    "href": "introduction.html#met-employability-career-match-fields-we-expect-to-use",
-    "title": "Career Pathway and Industry Scope",
-    "section": "MET Employability Career Match Fields We Expect to Use",
-    "text": "MET Employability Career Match Fields We Expect to Use\nWe plan to use title/normalized_title, naics_code, skills, annual_salary_min/annual_salary_max, remote_status, city/state, and soc_code. These fields should let us see which skills and pay levels matter most for business/data analyst roles in apparel retail."
-  },
-  {
-    "objectID": "introduction.html#references",
-    "href": "introduction.html#references",
-    "title": "Career Pathway and Industry Scope",
-    "section": "References",
-    "text": "References\n\n\nAlshameri, F., & Adhikari, A. (2025). A content analysis of business job advertisements using data mining techniques. Journal of Information Systems Education, 36(3), 316–330. https://aisel.aisnet.org/cgi/viewcontent.cgi?article=2097&context=jise\n\n\nDebortoli, S., Müller, O., & Brocke, J. vom. (2014). Comparing business intelligence and big data skills: A text mining study using job advertisements. Business and Information Systems Engineering. https://www.researchgate.net/publication/262150370_Comparing_Business_Intelligence_and_Big_Data_Skills_A_Text_Mining_Study_Using_Job_Advertisements\n\n\nIBISWorld. (2025). Clothing and clothing accessory retailers in the US. https://www.ibisworld.com/united-states/industry/clothing-and-clothing-accessory-retailers/2048/\n\n\nOh, K. (2020). The roles of data analytics in the fashion industry. Journal of Textile Engineering and Fashion Technology, 6(3). https://medcraveonline.com/JTEFT/the-roles-of-data-analytics-in-the-fashion-industry.html\n\n\nThe Planet Group. (2025). Retail workforce report 2025. https://www.theplanetgroup.com/job-reports/retail-jobs-report-2025\n\n\nUmamaheswaran, S., Fernandes, S., Venkatesh, V. G., Avula, N., & Shi, Y. (2023). What do employers look for in \"business analytics\" roles? – a skill mining analysis. Information Systems Frontiers. https://doi.org/10.1007/s10796-023-10437-y\n\n\nU.S. Bureau of Labor Statistics. (2025). Market research analysts: Occupational outlook handbook. https://www.bls.gov/ooh/business-and-financial/market-research-analysts.htm\n\n\nZipRecruiter. (2026a). Retail data analyst remote jobs. https://www.ziprecruiter.com/Jobs/Retail-Data-Analyst-Remote\n\n\nZipRecruiter. (2026b). Work from home retail analyst jobs. https://www.ziprecruiter.com/Jobs/Work-From-Home-Retail-Analyst"
-  },
-  {
-    "objectID": "data_dictionary.html",
-    "href": "data_dictionary.html",
-    "title": "Data Dictionary � apparel_analyst_clean.csv",
-    "section": "",
-    "text": "Cleaned dataset for Business/Data Analyst roles within NAICS 458 (Clothing, Clothing Accessories, Shoe, and Jewelry Retailers), filtered using NAICS 458 + an exact-match apparel brand list + narrow analyst title matching. 19 verified rows.\n\n\n\n\n\nField\nDescription\n\n\n\n\nID\nUnique job posting identifier\n\n\nTITLE_CLEAN\nStandardized/cleaned job title\n\n\nTITLE_RAW\nOriginal job title as posted\n\n\nCOMPANY_NAME\nEmployer name\n\n\nCOMPANY_CLEAN\nStandardized employer name\n\n\nPOSTED\nDate the job was posted\n\n\n\n\n\n\n\n\n\nField\nDescription\n\n\n\n\nSALARY\nOriginal salary text as posted\n\n\nSALARY_FROM\nLower bound of posted salary range\n\n\nSALARY_TO\nUpper bound of posted salary range\n\n\nORIGINAL_PAY_PERIOD\nPay period as posted (e.g. hourly, annual)\n\n\n\n\n\n\n\n\n\nField\nDescription\n\n\n\n\nMIN_YEARS_EXPERIENCE\nMinimum years of experience required\n\n\nMAX_YEARS_EXPERIENCE\nMaximum years of experience required\n\n\n\n\n\n\n\n\n\nField\nDescription\n\n\n\n\nMIN_EDULEVELS_NAME\nMinimum education level required\n\n\nMAX_EDULEVELS_NAME\nMaximum education level required\n\n\n\n\n\n\n\n\n\n\n\n\n\nField\nDescription\n\n\n\n\nSKILLS_LIST\nCleaned list of general skills (parsed from JSON, e.g. [‘Power BI’, ‘Analytics’])\n\n\nSOFTWARE_SKILLS_LIST\nCleaned list of software tools (parsed from JSON)\n\n\n\n\n\n\n\n\n\n\n\n\n\nField\nDescription\n\n\n\n\nREMOTE_TYPE_NAME\nWork arrangement (Remote, Hybrid, On-site, Unknown)\n\n\n\n\n\n\n\n\n\nField\nDescription\n\n\n\n\nCITY_NAME\nCity of the job posting\n\n\nSTATE_NAME\nState of the job posting\n\n\nCOUNTY_NAME\nCounty of the job posting\n\n\nMSA_NAME\nMetropolitan Statistical Area name\n\n\n\n\n\n\n\n\n\nField\nDescription\n\n\n\n\nNAICS_2022_6\n6-digit NAICS 2022 industry code\n\n\nNAICS_2022_6_NAME\nIndustry name for the NAICS code\n\n\nSOC_5\n5-digit SOC occupation code\n\n\nSOC_5_NAME\nOccupation name for the SOC code"
-  },
-  {
-    "objectID": "data_dictionary.html#identification",
-    "href": "data_dictionary.html#identification",
-    "title": "Data Dictionary � apparel_analyst_clean.csv",
-    "section": "",
-    "text": "Field\nDescription\n\n\n\n\nID\nUnique job posting identifier\n\n\nTITLE_CLEAN\nStandardized/cleaned job title\n\n\nTITLE_RAW\nOriginal job title as posted\n\n\nCOMPANY_NAME\nEmployer name\n\n\nCOMPANY_CLEAN\nStandardized employer name\n\n\nPOSTED\nDate the job was posted"
-  },
-  {
-    "objectID": "data_dictionary.html#salary",
-    "href": "data_dictionary.html#salary",
-    "title": "Data Dictionary � apparel_analyst_clean.csv",
-    "section": "",
-    "text": "Field\nDescription\n\n\n\n\nSALARY\nOriginal salary text as posted\n\n\nSALARY_FROM\nLower bound of posted salary range\n\n\nSALARY_TO\nUpper bound of posted salary range\n\n\nORIGINAL_PAY_PERIOD\nPay period as posted (e.g. hourly, annual)"
-  },
-  {
-    "objectID": "data_dictionary.html#experience",
-    "href": "data_dictionary.html#experience",
-    "title": "Data Dictionary � apparel_analyst_clean.csv",
-    "section": "",
-    "text": "Field\nDescription\n\n\n\n\nMIN_YEARS_EXPERIENCE\nMinimum years of experience required\n\n\nMAX_YEARS_EXPERIENCE\nMaximum years of experience required"
-  },
-  {
-    "objectID": "data_dictionary.html#education",
-    "href": "data_dictionary.html#education",
-    "title": "Data Dictionary � apparel_analyst_clean.csv",
-    "section": "",
-    "text": "Field\nDescription\n\n\n\n\nMIN_EDULEVELS_NAME\nMinimum education level required\n\n\nMAX_EDULEVELS_NAME\nMaximum education level required"
-  },
-  {
-    "objectID": "data_dictionary.html#skills",
-    "href": "data_dictionary.html#skills",
-    "title": "Data Dictionary � apparel_analyst_clean.csv",
-    "section": "",
-    "text": "Field\nDescription\n\n\n\n\nSKILLS_LIST\nCleaned list of general skills (parsed from JSON, e.g. [‘Power BI’, ‘Analytics’])\n\n\nSOFTWARE_SKILLS_LIST\nCleaned list of software tools (parsed from JSON)"
-  },
-  {
-    "objectID": "data_dictionary.html#remoteonsite",
-    "href": "data_dictionary.html#remoteonsite",
-    "title": "Data Dictionary � apparel_analyst_clean.csv",
-    "section": "",
-    "text": "Field\nDescription\n\n\n\n\nREMOTE_TYPE_NAME\nWork arrangement (Remote, Hybrid, On-site, Unknown)"
-  },
-  {
-    "objectID": "data_dictionary.html#location",
-    "href": "data_dictionary.html#location",
-    "title": "Data Dictionary � apparel_analyst_clean.csv",
-    "section": "",
-    "text": "Field\nDescription\n\n\n\n\nCITY_NAME\nCity of the job posting\n\n\nSTATE_NAME\nState of the job posting\n\n\nCOUNTY_NAME\nCounty of the job posting\n\n\nMSA_NAME\nMetropolitan Statistical Area name"
-  },
-  {
-    "objectID": "data_dictionary.html#industry-occupation",
-    "href": "data_dictionary.html#industry-occupation",
-    "title": "Data Dictionary � apparel_analyst_clean.csv",
-    "section": "",
-    "text": "Field\nDescription\n\n\n\n\nNAICS_2022_6\n6-digit NAICS 2022 industry code\n\n\nNAICS_2022_6_NAME\nIndustry name for the NAICS code\n\n\nSOC_5\n5-digit SOC occupation code\n\n\nSOC_5_NAME\nOccupation name for the SOC code"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "AD688: Fashion and Apparel Career Evaluation - Group 7",
-    "section": "",
-    "text": "This project evaluates analytics-related career opportunities within the apparel and fashion industry using job-posting data from the MET Career Compass dataset.\nThe analysis focuses on a narrowly defined market built around NAICS 458 and a verified list of apparel and fashion employers. The current filtered dataset contains 19 job postings and is intended to provide a descriptive view of the selected market rather than represent the broader analytics labor market."
-  },
-  {
-    "objectID": "index.html#project-overview",
-    "href": "index.html#project-overview",
-    "title": "AD688: Fashion and Apparel Career Evaluation - Group 7",
-    "section": "",
-    "text": "This project evaluates analytics-related career opportunities within the apparel and fashion industry using job-posting data from the MET Career Compass dataset.\nThe analysis focuses on a narrowly defined market built around NAICS 458 and a verified list of apparel and fashion employers. The current filtered dataset contains 19 job postings and is intended to provide a descriptive view of the selected market rather than represent the broader analytics labor market."
-  },
-  {
-    "objectID": "index.html#key-findings",
-    "href": "index.html#key-findings",
-    "title": "AD688: Fashion and Apparel Career Evaluation - Group 7",
-    "section": "Key Findings",
-    "text": "Key Findings\nOur filtered dataset contains 19 verified business/data analyst postings in apparel and fashion retail (NAICS 458). Power BI and SQL are the two most requested skills, each appearing in 7 of the 19 postings. Vuori and TJX are the most active employers in the sample, each posting 5 of the 19 roles.\nOur team rates itself strongest in Data Analysis and Microsoft Excel, and weakest in Power BI and Python, the opposite of what the market asks for most. The opportunity scorecard ranks Vuori’s Sr. Manager, Ecommerce Analytics role as the strongest match for our team right now.\nSee Market Baseline, Skill Gap Analysis, and Final Analytics for the full breakdown."
-  },
-  {
-    "objectID": "index.html#project-sections",
-    "href": "index.html#project-sections",
-    "title": "AD688: Fashion and Apparel Career Evaluation - Group 7",
-    "section": "Project Sections",
-    "text": "Project Sections\n\n\n\n\n\n\n\nPage\nWhat You’ll Find\n\n\n\n\nIntroduction\nProject scope, career pathway, and industry context\n\n\nData Preparation\nFiltering, cleaning, and preparation of the analytical dataset\n\n\nMarket Baseline\nCurrent job volume, salary, geography, experience, work arrangement, and employer patterns\n\n\nSkill Gap Analysis\nMarket skill demand compared against the team’s self-rated skills, with a scored gap and priority table\n\n\nCareer Evaluation\nHow we define and score opportunity across the filtered postings\n\n\nFinal Analytics\nThe Opportunity Scorecard methodology and full ranked results\n\n\nFinal Recommendations\nWhere to focus the job search and skill building, plus limitations\n\n\nAppendix\nFilter criteria reference, scorecard tiers, and the full 19-posting list"
-  },
-  {
-    "objectID": "final_analytics.html",
-    "href": "final_analytics.html",
-    "title": "Final Analytics",
-    "section": "",
-    "text": "Our filtered dataset has only 19 postings. Usable salary data exists for 4 of them. Usable experience data exists for 9 (see Market Baseline). That is too little consistent data to train and validate a regression or classification model without drawing conclusions from a handful of records, so instead of fitting a statistical model to data that cannot support one, our team built the Opportunity Score: a weighted, rule-based scoring model that ranks every posting in the sample using the three fields with strong coverage across all 19 records. This is a deliberate modeling choice, not a workaround. A regression or classifier trained on 19 rows, 4 of which have salary, would overfit and produce confident-looking numbers that mean nothing; a transparent, equal-weighted scoring model is the model that actually fits data this size. Salary and remote status are kept as separate context instead of being folded into the score, since folding in a field only 4 postings report would let those 4 records drive the ranking for the other 15.\nEach of the 19 postings gets an Opportunity Score built from three component scores.\n\nSkill fit score (0 to 4): how many of our team’s four self-rated strongest skills (Data Analysis, Microsoft Excel, Stakeholder Management, Project Management, from the Skill Gap Analysis) show up in that posting’s listed skills.\nAccessibility score (0 to 3): a tiered score based on minimum years of experience required. A 0 year requirement scores highest. The score drops as the requirement climbs.\nEmployer signal score (1 to 5): the number of postings from that same employer in our sample. It is a proxy for how actively that company is hiring for this kind of role.\n\nSalary and work arrangement were left out of the score. Only 4 of the 19 postings have usable data for each. Scoring on fields that sparse would let a handful of postings with reported data drive the ranking for the other 15. Market Baseline reports those two fields separately instead.\nThe three components carry equal weight. Our team had no outcome data, like actual application or offer results, to fit weights against instead. The employer signal score is not capped the same way the other two are. It is a raw count, and it currently ranges from 1 to 5 across our employers. That means an employer with many repeat postings can move the total by more per point than a skill fit or accessibility point can. Read the Opportunity Score alongside its three components, not as a single number on its own. That is why all three columns stay visible in the table below."
-  },
-  {
-    "objectID": "final_analytics.html#opportunity-scorecard-methodology",
-    "href": "final_analytics.html#opportunity-scorecard-methodology",
-    "title": "Final Analytics",
-    "section": "",
-    "text": "Our filtered dataset has only 19 postings. Usable salary data exists for 4 of them. Usable experience data exists for 9 (see Market Baseline). That is too little consistent data to train and validate a regression or classification model without drawing conclusions from a handful of records, so instead of fitting a statistical model to data that cannot support one, our team built the Opportunity Score: a weighted, rule-based scoring model that ranks every posting in the sample using the three fields with strong coverage across all 19 records. This is a deliberate modeling choice, not a workaround. A regression or classifier trained on 19 rows, 4 of which have salary, would overfit and produce confident-looking numbers that mean nothing; a transparent, equal-weighted scoring model is the model that actually fits data this size. Salary and remote status are kept as separate context instead of being folded into the score, since folding in a field only 4 postings report would let those 4 records drive the ranking for the other 15.\nEach of the 19 postings gets an Opportunity Score built from three component scores.\n\nSkill fit score (0 to 4): how many of our team’s four self-rated strongest skills (Data Analysis, Microsoft Excel, Stakeholder Management, Project Management, from the Skill Gap Analysis) show up in that posting’s listed skills.\nAccessibility score (0 to 3): a tiered score based on minimum years of experience required. A 0 year requirement scores highest. The score drops as the requirement climbs.\nEmployer signal score (1 to 5): the number of postings from that same employer in our sample. It is a proxy for how actively that company is hiring for this kind of role.\n\nSalary and work arrangement were left out of the score. Only 4 of the 19 postings have usable data for each. Scoring on fields that sparse would let a handful of postings with reported data drive the ranking for the other 15. Market Baseline reports those two fields separately instead.\nThe three components carry equal weight. Our team had no outcome data, like actual application or offer results, to fit weights against instead. The employer signal score is not capped the same way the other two are. It is a raw count, and it currently ranges from 1 to 5 across our employers. That means an employer with many repeat postings can move the total by more per point than a skill fit or accessibility point can. Read the Opportunity Score alongside its three components, not as a single number on its own. That is why all three columns stay visible in the table below."
-  },
-  {
-    "objectID": "final_analytics.html#opportunity-scorecard",
-    "href": "final_analytics.html#opportunity-scorecard",
-    "title": "Final Analytics",
-    "section": "Opportunity Scorecard",
-    "text": "Opportunity Scorecard\n\n\nCode\nimport pandas as pd\n\ndf = pd.read_csv(\"data/processed/apparel_analyst_clean.csv\")\n\nteam_strong_skills = [\"Data Analysis\", \"Microsoft Excel\", \"Stakeholder Management\", \"Project Management\"]\n\ndef skill_fit_score(skills_text):\n    if pd.isna(skills_text):\n        return 0\n    matches = 0\n    for strong in team_strong_skills:\n        if strong.lower() in str(skills_text).lower():\n            matches += 1\n    return matches\n\ndf[\"SKILL_FIT_SCORE\"] = df[\"SKILLS_LIST\"].apply(skill_fit_score)\n\ndef accessibility_score(years):\n    if years == 0:\n        return 3\n    elif years &lt;= 2:\n        return 2\n    elif years &lt;= 5:\n        return 1\n    else:\n        return 0\n\ndf[\"ACCESSIBILITY_SCORE\"] = df[\"MIN_YEARS_EXPERIENCE\"].apply(accessibility_score)\n\nemployer_counts = df[\"COMPANY_NAME\"].value_counts()\ndf[\"EMPLOYER_SIGNAL_SCORE\"] = df[\"COMPANY_NAME\"].map(employer_counts)\n\ndf[\"OPPORTUNITY_SCORE\"] = df[\"SKILL_FIT_SCORE\"] + df[\"ACCESSIBILITY_SCORE\"] + df[\"EMPLOYER_SIGNAL_SCORE\"]\n\nscorecard = df[[\"TITLE_CLEAN\", \"COMPANY_NAME\", \"SKILL_FIT_SCORE\", \"ACCESSIBILITY_SCORE\", \"EMPLOYER_SIGNAL_SCORE\", \"OPPORTUNITY_SCORE\"]].sort_values(\"OPPORTUNITY_SCORE\", ascending=False).reset_index(drop=True)\n\nscorecard\n\n\n\n\n\n\n\n\n\nTITLE_CLEAN\nCOMPANY_NAME\nSKILL_FIT_SCORE\nACCESSIBILITY_SCORE\nEMPLOYER_SIGNAL_SCORE\nOPPORTUNITY_SCORE\n\n\n\n\n0\nSr. Manager, Ecommerce Analytics\nVuoriinc\n2\n3\n5\n10\n\n\n1\nSr. FP&A Manager, Systems & Analytics\nVuoriinc\n1\n3\n5\n9\n\n\n2\nDirector, Wholesale Sales Planning & Analytics\nVuoriinc\n1\n3\n5\n9\n\n\n3\nManager, Digital Marketing Analytics\nAdidas\n2\n3\n3\n8\n\n\n4\nSr. Manager, Global Finance Business Analyst\nVuoriinc\n0\n3\n5\n8\n\n\n5\nProduct Manager, Enterprise Analytics\nVuoriinc\n1\n1\n5\n7\n\n\n6\nSr Region Operations Analyst - Sierra\nTJX\n0\n3\n3\n6\n\n\n7\nSr. Data Analyst\nFoot Locker\n2\n3\n1\n6\n\n\n8\nSenior Analyst, Merchandise Flow & Analytics\nTJX\n0\n3\n3\n6\n\n\n9\nManager, Digital Consumer Analytics\nAdidas\n2\n1\n3\n6\n\n\n10\nMedia Marketing Sr. Manager, Analytics\nRalph Lauren\n1\n3\n2\n6\n\n\n11\nSr Region Operations Analyst - Sierra\nTJX\n0\n3\n3\n6\n\n\n12\nMedia Marketing Sr. Manager, Analytics\nRalph Lauren\n1\n3\n2\n6\n\n\n13\nManager, Digital Analytics\nAdidas\n0\n3\n3\n6\n\n\n14\nSenior Business Intelligence & Data Analyst - ...\nJobs.tjx.com\n0\n3\n2\n5\n\n\n15\nSenior Business Intelligence & Data Analyst - ...\nJobs.tjx.com\n0\n3\n2\n5\n\n\n16\nMerchandising Data Analyst\nCareers.michaels.com\n1\n3\n1\n5\n\n\n17\nData Analyst 3 - Store Operations\nNordstrom\n1\n3\n1\n5\n\n\n18\nPrincipal, Data Analytics and Engineering\nMacy's\n0\n3\n1\n4"
-  },
-  {
-    "objectID": "final_analytics.html#scoring-model-diagnostics",
-    "href": "final_analytics.html#scoring-model-diagnostics",
-    "title": "Final Analytics",
-    "section": "Scoring Model Diagnostics",
-    "text": "Scoring Model Diagnostics\nA rule-based scoring model still needs to be checked, not just described. Since we have no real hiring outcomes to validate the Opportunity Score against, we instead check its internal consistency: how much each component actually drives the final score, and whether any single component is quietly dominating the ranking.\n\n\nCode\ncomponent_correlations = df[[\n    \"SKILL_FIT_SCORE\",\n    \"ACCESSIBILITY_SCORE\",\n    \"EMPLOYER_SIGNAL_SCORE\",\n    \"OPPORTUNITY_SCORE\"\n]].corr(method=\"spearman\")[\"OPPORTUNITY_SCORE\"].drop(\"OPPORTUNITY_SCORE\")\n\ncomponent_correlations = component_correlations.rename(\"Correlation with Opportunity Score\").round(2)\n\ncomponent_range = df[[\n    \"SKILL_FIT_SCORE\",\n    \"ACCESSIBILITY_SCORE\",\n    \"EMPLOYER_SIGNAL_SCORE\"\n]].agg([\"min\", \"max\", \"mean\"]).T.round(2)\n\ncomponent_range.columns = [\"Min\", \"Max\", \"Mean\"]\ncomponent_range.index = [\"Skill Fit\", \"Accessibility\", \"Employer Signal\"]\n\ncomponent_correlations.index = [\"Skill Fit\", \"Accessibility\", \"Employer Signal\"]\n\ndiagnostics = component_range.join(component_correlations)\ndiagnostics\n\n\n\n\n\n\n\n\n\nMin\nMax\nMean\nCorrelation with Opportunity Score\n\n\n\n\nSkill Fit\n0.0\n2.0\n0.79\n0.42\n\n\nAccessibility\n1.0\n3.0\n2.79\n-0.11\n\n\nEmployer Signal\n1.0\n5.0\n2.89\n0.87\n\n\n\n\n\n\n\nEmployer signal score has the widest range (1 to 5, uncapped) of the three components, and the table above shows it also carries by far the strongest rank correlation with the final Opportunity Score (0.87). Skill fit correlates more moderately (0.42), and accessibility correlates essentially not at all, slightly negative at -0.11. That confirms what the methodology note above flags: employer signal has more influence on the ranking than skill fit or accessibility, because it is a raw count rather than a capped 0-to-3 or 0-to-4 score, and it also means accessibility is currently closer to a tiebreaker than a real driver of the ranking. That is a property of this specific weighting choice, not a bug, but it is exactly the kind of thing a scoring model needs to disclose rather than hide behind a single combined number. A future version of this model could cap employer signal the same way the other two components are capped, or weight the three components unevenly on purpose, once there is outcome data to justify that choice."
-  },
-  {
-    "objectID": "final_analytics.html#what-the-scores-show",
-    "href": "final_analytics.html#what-the-scores-show",
-    "title": "Final Analytics",
-    "section": "What the Scores Show",
-    "text": "What the Scores Show\nVuori appears four times in the top six rows. This is a direct result of how often the company posts similar roles in our dataset, not a fluke of the scoring method. That repetition is what the employer signal score is meant to capture: a company hiring repeatedly for related work is a more realistic target than one with a single listing. The Sr. Manager, Ecommerce Analytics role at Vuori sits at the top of the list because it combines that hiring pattern with a moderate skill overlap and a low experience bar.\nAdidas’ Manager, Digital Marketing Analytics role is the strongest non-Vuori result, driven mainly by skill fit rather than employer signal, since Adidas appears less often in the filtered postings. A role can score well either because it closely matches skills our team already has, or because the employer is clearly hiring at volume. Those are different types of opportunity. A few roles near the bottom of the list, like the TJX and Foot Locker postings, score lower mainly on skill fit, which lines up with the gaps found in the skill-gap analysis rather than a lack of accessibility or employer activity."
-  },
-  {
-    "objectID": "final_analytics.html#evaluating-the-score",
-    "href": "final_analytics.html#evaluating-the-score",
-    "title": "Final Analytics",
-    "section": "Evaluating the Score",
-    "text": "Evaluating the Score\nVuori and TJX, the two employers the scorecard ranks highest, are also the two employers with the most postings in Market Baseline. Low skill fit scores line up with the gaps found in the Skill Gap Analysis: Power BI, SQL, and Python. The scorecard has not been checked against real hiring outcomes. Use it to prioritize search and skill building, not to predict who gets an offer."
-  },
-  {
-    "objectID": "final_analytics.html#what-this-means-for-our-team",
-    "href": "final_analytics.html#what-this-means-for-our-team",
-    "title": "Final Analytics",
-    "section": "What This Means for Our Team",
-    "text": "What This Means for Our Team\nThe scorecard points us toward applying early and often to Vuori and TJX postings. Both the raw counts and the scorecard agree these employers are hiring repeatedly for adjacent roles. Adidas postings are a good check on skill fit. They reward the skills our team already rates itself strong in. The lower scoring postings show which skills would open up the most additional opportunities if built up. That is where Final Recommendations picks up."
-  },
-  {
     "objectID": "data_preparation.html",
     "href": "data_preparation.html",
     "title": "Data Preparation",
@@ -439,6 +215,230 @@
     "title": "Data Preparation",
     "section": "Note on Sample Size",
     "text": "Note on Sample Size\nThe final cleaned dataset contains 19 job postings. This reflects a known limitation of NAICS-based industry classification: many analytics roles at apparel/retail companies are tagged under unrelated NAICS codes rather than under clothing retail codes specifically. In our raw dataset, NAICS 458 alone matched only 18 of 504,208 postings, confirming this is not a minor edge case. To compensate, this dataset combines NAICS 458 (Clothing, Clothing Accessories, Shoe, and Jewelry Retailers) with an exact-match list of known apparel/fashion company names, then filters to narrow analyst job titles (business analyst, data analyst). The resulting sample size is small but each row is a verified, legitimate match."
+  },
+  {
+    "objectID": "final_analytics.html",
+    "href": "final_analytics.html",
+    "title": "Final Analytics",
+    "section": "",
+    "text": "Our filtered dataset has only 19 postings. Usable salary data exists for 4 of them. Usable experience data exists for 9 (see Market Baseline). That is too little consistent data to train and validate a regression or classification model without drawing conclusions from a handful of records, so instead of fitting a statistical model to data that cannot support one, our team built the Opportunity Score: a weighted, rule-based scoring model that ranks every posting in the sample using the three fields with strong coverage across all 19 records. This is a deliberate modeling choice, not a workaround. A regression or classifier trained on 19 rows, 4 of which have salary, would overfit and produce confident-looking numbers that mean nothing; a transparent, equal-weighted scoring model is the model that actually fits data this size. Salary and remote status are kept as separate context instead of being folded into the score, since folding in a field only 4 postings report would let those 4 records drive the ranking for the other 15.\nEach of the 19 postings gets an Opportunity Score built from three component scores.\n\nSkill fit score (0 to 4): how many of our team’s four self-rated strongest skills (Data Analysis, Microsoft Excel, Stakeholder Management, Project Management, from the Skill Gap Analysis) show up in that posting’s listed skills.\nAccessibility score (0 to 3): a tiered score based on minimum years of experience required. A 0 year requirement scores highest. The score drops as the requirement climbs.\nEmployer signal score (1 to 5): the number of postings from that same employer in our sample. It is a proxy for how actively that company is hiring for this kind of role.\n\nSalary and work arrangement were left out of the score. Only 4 of the 19 postings have usable data for each. Scoring on fields that sparse would let a handful of postings with reported data drive the ranking for the other 15. Market Baseline reports those two fields separately instead.\nThe three components carry equal weight. Our team had no outcome data, like actual application or offer results, to fit weights against instead. The employer signal score is not capped the same way the other two are. It is a raw count, and it currently ranges from 1 to 5 across our employers. That means an employer with many repeat postings can move the total by more per point than a skill fit or accessibility point can. Read the Opportunity Score alongside its three components, not as a single number on its own. That is why all three columns stay visible in the table below."
+  },
+  {
+    "objectID": "final_analytics.html#opportunity-scorecard-methodology",
+    "href": "final_analytics.html#opportunity-scorecard-methodology",
+    "title": "Final Analytics",
+    "section": "",
+    "text": "Our filtered dataset has only 19 postings. Usable salary data exists for 4 of them. Usable experience data exists for 9 (see Market Baseline). That is too little consistent data to train and validate a regression or classification model without drawing conclusions from a handful of records, so instead of fitting a statistical model to data that cannot support one, our team built the Opportunity Score: a weighted, rule-based scoring model that ranks every posting in the sample using the three fields with strong coverage across all 19 records. This is a deliberate modeling choice, not a workaround. A regression or classifier trained on 19 rows, 4 of which have salary, would overfit and produce confident-looking numbers that mean nothing; a transparent, equal-weighted scoring model is the model that actually fits data this size. Salary and remote status are kept as separate context instead of being folded into the score, since folding in a field only 4 postings report would let those 4 records drive the ranking for the other 15.\nEach of the 19 postings gets an Opportunity Score built from three component scores.\n\nSkill fit score (0 to 4): how many of our team’s four self-rated strongest skills (Data Analysis, Microsoft Excel, Stakeholder Management, Project Management, from the Skill Gap Analysis) show up in that posting’s listed skills.\nAccessibility score (0 to 3): a tiered score based on minimum years of experience required. A 0 year requirement scores highest. The score drops as the requirement climbs.\nEmployer signal score (1 to 5): the number of postings from that same employer in our sample. It is a proxy for how actively that company is hiring for this kind of role.\n\nSalary and work arrangement were left out of the score. Only 4 of the 19 postings have usable data for each. Scoring on fields that sparse would let a handful of postings with reported data drive the ranking for the other 15. Market Baseline reports those two fields separately instead.\nThe three components carry equal weight. Our team had no outcome data, like actual application or offer results, to fit weights against instead. The employer signal score is not capped the same way the other two are. It is a raw count, and it currently ranges from 1 to 5 across our employers. That means an employer with many repeat postings can move the total by more per point than a skill fit or accessibility point can. Read the Opportunity Score alongside its three components, not as a single number on its own. That is why all three columns stay visible in the table below."
+  },
+  {
+    "objectID": "final_analytics.html#opportunity-scorecard",
+    "href": "final_analytics.html#opportunity-scorecard",
+    "title": "Final Analytics",
+    "section": "Opportunity Scorecard",
+    "text": "Opportunity Scorecard\n\n\nCode\nimport pandas as pd\n\ndf = pd.read_csv(\"data/processed/apparel_analyst_clean.csv\")\n\nteam_strong_skills = [\"Data Analysis\", \"Microsoft Excel\", \"Stakeholder Management\", \"Project Management\"]\n\ndef skill_fit_score(skills_text):\n    if pd.isna(skills_text):\n        return 0\n    matches = 0\n    for strong in team_strong_skills:\n        if strong.lower() in str(skills_text).lower():\n            matches += 1\n    return matches\n\ndf[\"SKILL_FIT_SCORE\"] = df[\"SKILLS_LIST\"].apply(skill_fit_score)\n\ndef accessibility_score(years):\n    if years == 0:\n        return 3\n    elif years &lt;= 2:\n        return 2\n    elif years &lt;= 5:\n        return 1\n    else:\n        return 0\n\ndf[\"ACCESSIBILITY_SCORE\"] = df[\"MIN_YEARS_EXPERIENCE\"].apply(accessibility_score)\n\nemployer_counts = df[\"COMPANY_NAME\"].value_counts()\ndf[\"EMPLOYER_SIGNAL_SCORE\"] = df[\"COMPANY_NAME\"].map(employer_counts)\n\ndf[\"OPPORTUNITY_SCORE\"] = df[\"SKILL_FIT_SCORE\"] + df[\"ACCESSIBILITY_SCORE\"] + df[\"EMPLOYER_SIGNAL_SCORE\"]\n\nscorecard = df[[\"TITLE_CLEAN\", \"COMPANY_NAME\", \"SKILL_FIT_SCORE\", \"ACCESSIBILITY_SCORE\", \"EMPLOYER_SIGNAL_SCORE\", \"OPPORTUNITY_SCORE\"]].sort_values(\"OPPORTUNITY_SCORE\", ascending=False).reset_index(drop=True)\n\nscorecard\n\n\n\n\n\n\n\n\n\nTITLE_CLEAN\nCOMPANY_NAME\nSKILL_FIT_SCORE\nACCESSIBILITY_SCORE\nEMPLOYER_SIGNAL_SCORE\nOPPORTUNITY_SCORE\n\n\n\n\n0\nSr. Manager, Ecommerce Analytics\nVuoriinc\n2\n3\n5\n10\n\n\n1\nSr. FP&A Manager, Systems & Analytics\nVuoriinc\n1\n3\n5\n9\n\n\n2\nDirector, Wholesale Sales Planning & Analytics\nVuoriinc\n1\n3\n5\n9\n\n\n3\nManager, Digital Marketing Analytics\nAdidas\n2\n3\n3\n8\n\n\n4\nSr. Manager, Global Finance Business Analyst\nVuoriinc\n0\n3\n5\n8\n\n\n5\nProduct Manager, Enterprise Analytics\nVuoriinc\n1\n1\n5\n7\n\n\n6\nSr Region Operations Analyst - Sierra\nTJX\n0\n3\n3\n6\n\n\n7\nSr. Data Analyst\nFoot Locker\n2\n3\n1\n6\n\n\n8\nSenior Analyst, Merchandise Flow & Analytics\nTJX\n0\n3\n3\n6\n\n\n9\nManager, Digital Consumer Analytics\nAdidas\n2\n1\n3\n6\n\n\n10\nMedia Marketing Sr. Manager, Analytics\nRalph Lauren\n1\n3\n2\n6\n\n\n11\nSr Region Operations Analyst - Sierra\nTJX\n0\n3\n3\n6\n\n\n12\nMedia Marketing Sr. Manager, Analytics\nRalph Lauren\n1\n3\n2\n6\n\n\n13\nManager, Digital Analytics\nAdidas\n0\n3\n3\n6\n\n\n14\nSenior Business Intelligence & Data Analyst - ...\nJobs.tjx.com\n0\n3\n2\n5\n\n\n15\nSenior Business Intelligence & Data Analyst - ...\nJobs.tjx.com\n0\n3\n2\n5\n\n\n16\nMerchandising Data Analyst\nCareers.michaels.com\n1\n3\n1\n5\n\n\n17\nData Analyst 3 - Store Operations\nNordstrom\n1\n3\n1\n5\n\n\n18\nPrincipal, Data Analytics and Engineering\nMacy's\n0\n3\n1\n4"
+  },
+  {
+    "objectID": "final_analytics.html#scoring-model-diagnostics",
+    "href": "final_analytics.html#scoring-model-diagnostics",
+    "title": "Final Analytics",
+    "section": "Scoring Model Diagnostics",
+    "text": "Scoring Model Diagnostics\nA rule-based scoring model still needs to be checked, not just described. Since we have no real hiring outcomes to validate the Opportunity Score against, we instead check its internal consistency: how much each component actually drives the final score, and whether any single component is quietly dominating the ranking.\n\n\nCode\ncomponent_correlations = df[[\n    \"SKILL_FIT_SCORE\",\n    \"ACCESSIBILITY_SCORE\",\n    \"EMPLOYER_SIGNAL_SCORE\",\n    \"OPPORTUNITY_SCORE\"\n]].corr(method=\"spearman\")[\"OPPORTUNITY_SCORE\"].drop(\"OPPORTUNITY_SCORE\")\n\ncomponent_correlations = component_correlations.rename(\"Correlation with Opportunity Score\").round(2)\n\ncomponent_range = df[[\n    \"SKILL_FIT_SCORE\",\n    \"ACCESSIBILITY_SCORE\",\n    \"EMPLOYER_SIGNAL_SCORE\"\n]].agg([\"min\", \"max\", \"mean\"]).T.round(2)\n\ncomponent_range.columns = [\"Min\", \"Max\", \"Mean\"]\ncomponent_range.index = [\"Skill Fit\", \"Accessibility\", \"Employer Signal\"]\n\ncomponent_correlations.index = [\"Skill Fit\", \"Accessibility\", \"Employer Signal\"]\n\ndiagnostics = component_range.join(component_correlations)\ndiagnostics\n\n\n\n\n\n\n\n\n\nMin\nMax\nMean\nCorrelation with Opportunity Score\n\n\n\n\nSkill Fit\n0.0\n2.0\n0.79\n0.42\n\n\nAccessibility\n1.0\n3.0\n2.79\n-0.11\n\n\nEmployer Signal\n1.0\n5.0\n2.89\n0.87\n\n\n\n\n\n\n\nEmployer signal score has the widest range (1 to 5, uncapped) of the three components, and the table above shows it also carries by far the strongest rank correlation with the final Opportunity Score (0.87). Skill fit correlates more moderately (0.42), and accessibility correlates essentially not at all, slightly negative at -0.11. That confirms what the methodology note above flags: employer signal has more influence on the ranking than skill fit or accessibility, because it is a raw count rather than a capped 0-to-3 or 0-to-4 score, and it also means accessibility is currently closer to a tiebreaker than a real driver of the ranking. That is a property of this specific weighting choice, not a bug, but it is exactly the kind of thing a scoring model needs to disclose rather than hide behind a single combined number. A future version of this model could cap employer signal the same way the other two components are capped, or weight the three components unevenly on purpose, once there is outcome data to justify that choice."
+  },
+  {
+    "objectID": "final_analytics.html#what-the-scores-show",
+    "href": "final_analytics.html#what-the-scores-show",
+    "title": "Final Analytics",
+    "section": "What the Scores Show",
+    "text": "What the Scores Show\nVuori appears four times in the top six rows. This is a direct result of how often the company posts similar roles in our dataset, not a fluke of the scoring method. That repetition is what the employer signal score is meant to capture: a company hiring repeatedly for related work is a more realistic target than one with a single listing. The Sr. Manager, Ecommerce Analytics role at Vuori sits at the top of the list because it combines that hiring pattern with a moderate skill overlap and a low experience bar.\nAdidas’ Manager, Digital Marketing Analytics role is the strongest non-Vuori result, driven mainly by skill fit rather than employer signal, since Adidas appears less often in the filtered postings. A role can score well either because it closely matches skills our team already has, or because the employer is clearly hiring at volume. Those are different types of opportunity. A few roles near the bottom of the list, like the TJX and Foot Locker postings, score lower mainly on skill fit, which lines up with the gaps found in the skill-gap analysis rather than a lack of accessibility or employer activity."
+  },
+  {
+    "objectID": "final_analytics.html#evaluating-the-score",
+    "href": "final_analytics.html#evaluating-the-score",
+    "title": "Final Analytics",
+    "section": "Evaluating the Score",
+    "text": "Evaluating the Score\nVuori and TJX, the two employers the scorecard ranks highest, are also the two employers with the most postings in Market Baseline. Low skill fit scores line up with the gaps found in the Skill Gap Analysis: Power BI, SQL, and Python. The scorecard has not been checked against real hiring outcomes. Use it to prioritize search and skill building, not to predict who gets an offer."
+  },
+  {
+    "objectID": "final_analytics.html#what-this-means-for-our-team",
+    "href": "final_analytics.html#what-this-means-for-our-team",
+    "title": "Final Analytics",
+    "section": "What This Means for Our Team",
+    "text": "What This Means for Our Team\nThe scorecard points us toward applying early and often to Vuori and TJX postings. Both the raw counts and the scorecard agree these employers are hiring repeatedly for adjacent roles. Adidas postings are a good check on skill fit. They reward the skills our team already rates itself strong in. The lower scoring postings show which skills would open up the most additional opportunities if built up. That is where Final Recommendations picks up."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "AD688: Fashion and Apparel Career Evaluation - Group 7",
+    "section": "",
+    "text": "This project evaluates analytics-related career opportunities within the apparel and fashion industry using job-posting data from the MET Career Compass dataset.\nThe analysis focuses on a narrowly defined market built around NAICS 458 and a verified list of apparel and fashion employers. The current filtered dataset contains 19 job postings and is intended to provide a descriptive view of the selected market rather than represent the broader analytics labor market."
+  },
+  {
+    "objectID": "index.html#project-overview",
+    "href": "index.html#project-overview",
+    "title": "AD688: Fashion and Apparel Career Evaluation - Group 7",
+    "section": "",
+    "text": "This project evaluates analytics-related career opportunities within the apparel and fashion industry using job-posting data from the MET Career Compass dataset.\nThe analysis focuses on a narrowly defined market built around NAICS 458 and a verified list of apparel and fashion employers. The current filtered dataset contains 19 job postings and is intended to provide a descriptive view of the selected market rather than represent the broader analytics labor market."
+  },
+  {
+    "objectID": "index.html#key-findings",
+    "href": "index.html#key-findings",
+    "title": "AD688: Fashion and Apparel Career Evaluation - Group 7",
+    "section": "Key Findings",
+    "text": "Key Findings\nOur filtered dataset contains 19 verified business/data analyst postings in apparel and fashion retail (NAICS 458). Power BI and SQL are the two most requested skills, each appearing in 7 of the 19 postings. Vuori and TJX are the most active employers in the sample, each posting 5 of the 19 roles.\nOur team rates itself strongest in Data Analysis and Microsoft Excel, and weakest in Power BI and Python, the opposite of what the market asks for most. The opportunity scorecard ranks Vuori’s Sr. Manager, Ecommerce Analytics role as the strongest match for our team right now.\nSee Market Baseline, Skill Gap Analysis, and Final Analytics for the full breakdown."
+  },
+  {
+    "objectID": "index.html#project-sections",
+    "href": "index.html#project-sections",
+    "title": "AD688: Fashion and Apparel Career Evaluation - Group 7",
+    "section": "Project Sections",
+    "text": "Project Sections\n\n\n\n\n\n\n\nPage\nWhat You’ll Find\n\n\n\n\nIntroduction\nProject scope, career pathway, and industry context\n\n\nData Preparation\nFiltering, cleaning, and preparation of the analytical dataset\n\n\nMarket Baseline\nCurrent job volume, salary, geography, experience, work arrangement, and employer patterns\n\n\nSkill Gap Analysis\nMarket skill demand compared against the team’s self-rated skills, with a scored gap and priority table\n\n\nCareer Evaluation\nHow we define and score opportunity across the filtered postings\n\n\nFinal Analytics\nThe Opportunity Scorecard methodology and full ranked results\n\n\nFinal Recommendations\nWhere to focus the job search and skill building, plus limitations\n\n\nAppendix\nFilter criteria reference, scorecard tiers, and the full 19-posting list"
+  },
+  {
+    "objectID": "data_dictionary.html",
+    "href": "data_dictionary.html",
+    "title": "Data Dictionary � apparel_analyst_clean.csv",
+    "section": "",
+    "text": "Cleaned dataset for Business/Data Analyst roles within NAICS 458 (Clothing, Clothing Accessories, Shoe, and Jewelry Retailers), filtered using NAICS 458 + an exact-match apparel brand list + narrow analyst title matching. 19 verified rows.\n\n\n\n\n\nField\nDescription\n\n\n\n\nID\nUnique job posting identifier\n\n\nTITLE_CLEAN\nStandardized/cleaned job title\n\n\nTITLE_RAW\nOriginal job title as posted\n\n\nCOMPANY_NAME\nEmployer name\n\n\nCOMPANY_CLEAN\nStandardized employer name\n\n\nPOSTED\nDate the job was posted\n\n\n\n\n\n\n\n\n\nField\nDescription\n\n\n\n\nSALARY\nOriginal salary text as posted\n\n\nSALARY_FROM\nLower bound of posted salary range\n\n\nSALARY_TO\nUpper bound of posted salary range\n\n\nORIGINAL_PAY_PERIOD\nPay period as posted (e.g. hourly, annual)\n\n\n\n\n\n\n\n\n\nField\nDescription\n\n\n\n\nMIN_YEARS_EXPERIENCE\nMinimum years of experience required\n\n\nMAX_YEARS_EXPERIENCE\nMaximum years of experience required\n\n\n\n\n\n\n\n\n\nField\nDescription\n\n\n\n\nMIN_EDULEVELS_NAME\nMinimum education level required\n\n\nMAX_EDULEVELS_NAME\nMaximum education level required\n\n\n\n\n\n\n\n\n\n\n\n\n\nField\nDescription\n\n\n\n\nSKILLS_LIST\nCleaned list of general skills (parsed from JSON, e.g. [‘Power BI’, ‘Analytics’])\n\n\nSOFTWARE_SKILLS_LIST\nCleaned list of software tools (parsed from JSON)\n\n\n\n\n\n\n\n\n\n\n\n\n\nField\nDescription\n\n\n\n\nREMOTE_TYPE_NAME\nWork arrangement (Remote, Hybrid, On-site, Unknown)\n\n\n\n\n\n\n\n\n\nField\nDescription\n\n\n\n\nCITY_NAME\nCity of the job posting\n\n\nSTATE_NAME\nState of the job posting\n\n\nCOUNTY_NAME\nCounty of the job posting\n\n\nMSA_NAME\nMetropolitan Statistical Area name\n\n\n\n\n\n\n\n\n\nField\nDescription\n\n\n\n\nNAICS_2022_6\n6-digit NAICS 2022 industry code\n\n\nNAICS_2022_6_NAME\nIndustry name for the NAICS code\n\n\nSOC_5\n5-digit SOC occupation code\n\n\nSOC_5_NAME\nOccupation name for the SOC code"
+  },
+  {
+    "objectID": "data_dictionary.html#identification",
+    "href": "data_dictionary.html#identification",
+    "title": "Data Dictionary � apparel_analyst_clean.csv",
+    "section": "",
+    "text": "Field\nDescription\n\n\n\n\nID\nUnique job posting identifier\n\n\nTITLE_CLEAN\nStandardized/cleaned job title\n\n\nTITLE_RAW\nOriginal job title as posted\n\n\nCOMPANY_NAME\nEmployer name\n\n\nCOMPANY_CLEAN\nStandardized employer name\n\n\nPOSTED\nDate the job was posted"
+  },
+  {
+    "objectID": "data_dictionary.html#salary",
+    "href": "data_dictionary.html#salary",
+    "title": "Data Dictionary � apparel_analyst_clean.csv",
+    "section": "",
+    "text": "Field\nDescription\n\n\n\n\nSALARY\nOriginal salary text as posted\n\n\nSALARY_FROM\nLower bound of posted salary range\n\n\nSALARY_TO\nUpper bound of posted salary range\n\n\nORIGINAL_PAY_PERIOD\nPay period as posted (e.g. hourly, annual)"
+  },
+  {
+    "objectID": "data_dictionary.html#experience",
+    "href": "data_dictionary.html#experience",
+    "title": "Data Dictionary � apparel_analyst_clean.csv",
+    "section": "",
+    "text": "Field\nDescription\n\n\n\n\nMIN_YEARS_EXPERIENCE\nMinimum years of experience required\n\n\nMAX_YEARS_EXPERIENCE\nMaximum years of experience required"
+  },
+  {
+    "objectID": "data_dictionary.html#education",
+    "href": "data_dictionary.html#education",
+    "title": "Data Dictionary � apparel_analyst_clean.csv",
+    "section": "",
+    "text": "Field\nDescription\n\n\n\n\nMIN_EDULEVELS_NAME\nMinimum education level required\n\n\nMAX_EDULEVELS_NAME\nMaximum education level required"
+  },
+  {
+    "objectID": "data_dictionary.html#skills",
+    "href": "data_dictionary.html#skills",
+    "title": "Data Dictionary � apparel_analyst_clean.csv",
+    "section": "",
+    "text": "Field\nDescription\n\n\n\n\nSKILLS_LIST\nCleaned list of general skills (parsed from JSON, e.g. [‘Power BI’, ‘Analytics’])\n\n\nSOFTWARE_SKILLS_LIST\nCleaned list of software tools (parsed from JSON)"
+  },
+  {
+    "objectID": "data_dictionary.html#remoteonsite",
+    "href": "data_dictionary.html#remoteonsite",
+    "title": "Data Dictionary � apparel_analyst_clean.csv",
+    "section": "",
+    "text": "Field\nDescription\n\n\n\n\nREMOTE_TYPE_NAME\nWork arrangement (Remote, Hybrid, On-site, Unknown)"
+  },
+  {
+    "objectID": "data_dictionary.html#location",
+    "href": "data_dictionary.html#location",
+    "title": "Data Dictionary � apparel_analyst_clean.csv",
+    "section": "",
+    "text": "Field\nDescription\n\n\n\n\nCITY_NAME\nCity of the job posting\n\n\nSTATE_NAME\nState of the job posting\n\n\nCOUNTY_NAME\nCounty of the job posting\n\n\nMSA_NAME\nMetropolitan Statistical Area name"
+  },
+  {
+    "objectID": "data_dictionary.html#industry-occupation",
+    "href": "data_dictionary.html#industry-occupation",
+    "title": "Data Dictionary � apparel_analyst_clean.csv",
+    "section": "",
+    "text": "Field\nDescription\n\n\n\n\nNAICS_2022_6\n6-digit NAICS 2022 industry code\n\n\nNAICS_2022_6_NAME\nIndustry name for the NAICS code\n\n\nSOC_5\n5-digit SOC occupation code\n\n\nSOC_5_NAME\nOccupation name for the SOC code"
+  },
+  {
+    "objectID": "introduction.html",
+    "href": "introduction.html",
+    "title": "Career Pathway and Industry Scope",
+    "section": "",
+    "text": "Target career pathway: Business/Data Analyst roles\nIndustry code: NAICS 458 (Clothing, Clothing Accessories, Shoe, and Jewelry Retailers), within the broader apparel and fashion retail sector\nIndustry label: Apparel and Fashion Retail"
+  },
+  {
+    "objectID": "introduction.html#research-rationale",
+    "href": "introduction.html#research-rationale",
+    "title": "Career Pathway and Industry Scope",
+    "section": "Research Rationale",
+    "text": "Research Rationale\nBusiness and data analysts turn operational data into decisions organizations can act on. Apparel retail is a good place to study that work, since retailers are constantly reacting to seasonal demand, shifting consumer preferences, inventory limits, pricing calls, and supply chain pressure. Those conditions give analytical skills a direct, visible role in how the business runs.\nFor a student weighing an analytics career, it is not always obvious which skills employers actually care about, or whether their coursework and experience line up with what the job market expects. A title like “business analyst” or “data analyst” hides a lot of variation: some mix of technical ability, analytical thinking, communication, and business judgment, and the exact mix shifts by employer. This project tries to pin down which skills matter most for business/data analyst roles in apparel retail specifically, then checks that list against our own team’s current skills.\nThat is what separates this from a plain labor-market summary: it is meant to work as a career evaluation tool. A student should be able to look at it and see what employers are asking for, where their own strengths already line up, and what still needs work before they apply."
+  },
+  {
+    "objectID": "introduction.html#literature-review",
+    "href": "introduction.html#literature-review",
+    "title": "Career Pathway and Industry Scope",
+    "section": "Literature Review",
+    "text": "Literature Review\nUmamaheswaran et al. (2023) looked at what employers ask for in business analytics postings and found a consistent mix: big data, business intelligence, and analytical technique on one side, communication and stakeholder management on the other. That matters for how we think about readiness. Knowing the software is not enough on its own; an analyst also has to understand the business problem and explain results to people who are not going to read the code.\nAlshameri & Adhikari (2025) looked at business job postings the same way and identified the same kind of gap. Employers ask for a mix of general tools like Microsoft Office and data visualization plus skills specific to their field and the exact mix depends on industry and location. The study refers to this as a growing disconnect between what schools teach and what employers are actually looking for. In addition Debortoli et al. (2014) conducted a comparable analysis of business intelligence and big data postings and found the same pattern. Employers separate technical tool skills from broader analytical thinking and the strongest candidates show both.\nApparel retail is a fitting test case for that combination. Forecasting, inventory, pricing, and supply chain decisions all show up as recurring analytical needs in clothing retail, and IBISWorld (2025) backs that up with broader industry context on clothing and clothing accessory retailers. Demand in this sector moves fast and shifts with the seasons, which is part of why data-supported decisions carry more weight here than they might in a slower-moving industry.\nFashion retail has been leaning harder into data analytics in recent years. Oh (2020) found that fashion brands increasingly use data analytics to personalize products plan merchandising and improve profitability and argued that education has not kept pace with this shift. That gap between what the industry needs and what students are taught is part of what this project is looking to measure directly.\nRetail hiring overall backs up the case for treating analytics as its own career path within the industry. The Planet Group (2025) found that retail hiring has gotten more selective even as it leans harder into technology, analytics, and customer experience. So while fewer people may be getting hired overall, the analytical roles that support pricing, inventory, operations, and customer decisions do not seem to be losing ground.\nJob postings themselves give a more concrete look at what these roles ask for. Scanning ZipRecruiter listings, SQL, Excel, and a visualization tool like Tableau or Power BI show up repeatedly, alongside the usual asks for analytical and communication skills (ZipRecruiter, 2026b). We are treating this as a starting point rather than a finding, since individual job postings vary a lot by employer, seniority, and timing.\nThe same postings also show a fair amount of spread in pay and remote availability (ZipRecruiter, 2026a). Salary and remote work are not the central question we are asking, but they are useful context for judging how attractive a given role is. Once we are working with the MET Employability Career Match data, we will be able to check whether these early patterns hold up within our apparel retail scope specifically.\nThe demand for this kind of work is also reflected in national labor data. The U.S. Bureau of Labor Statistics projects 7% growth for market research analyst roles from 2025 to 2035 well above the average for all occupations with a median annual wage of $78,760 as of May 2025 (U.S. Bureau of Labor Statistics, 2025). The core skills the Bureau lists are analytical thinking communication critical thinking and attention to detail and they line up closely with what the job-posting studies above describe.\nAcross these sources, the same picture keeps showing up: business/data analyst roles need technical skill, analytical thinking, and the ability to work with the business side, all at once. What none of this tells us yet is which of those skills matter most specifically in apparel retail, or how close our own skills already are to that bar. That gap is what this project is built to close."
+  },
+  {
+    "objectID": "introduction.html#target-user",
+    "href": "introduction.html#target-user",
+    "title": "Career Pathway and Industry Scope",
+    "section": "Target User",
+    "text": "Target User\nThis product is aimed at BU MET students who are exploring analytics career paths and want a clearer picture of which industries and skills to prioritize. Our goal is to help someone in this position understand what a business/data analyst role in apparel retail actually looks like, so they can decide whether it fits their interests and know what to learn next if it does."
+  },
+  {
+    "objectID": "introduction.html#product-question",
+    "href": "introduction.html#product-question",
+    "title": "Career Pathway and Industry Scope",
+    "section": "Product Question",
+    "text": "Product Question\nWhich skills are most valued for business/data analyst roles in apparel retail and how well does our team’s current skill set match those demands?"
+  },
+  {
+    "objectID": "introduction.html#met-employability-career-match-fields-we-expect-to-use",
+    "href": "introduction.html#met-employability-career-match-fields-we-expect-to-use",
+    "title": "Career Pathway and Industry Scope",
+    "section": "MET Employability Career Match Fields We Expect to Use",
+    "text": "MET Employability Career Match Fields We Expect to Use\nWe plan to use title/normalized_title, naics_code, skills, annual_salary_min/annual_salary_max, remote_status, city/state, and soc_code. These fields should let us see which skills and pay levels matter most for business/data analyst roles in apparel retail."
+  },
+  {
+    "objectID": "introduction.html#references",
+    "href": "introduction.html#references",
+    "title": "Career Pathway and Industry Scope",
+    "section": "References",
+    "text": "References\n\n\nAlshameri, F., & Adhikari, A. (2025). A content analysis of business job advertisements using data mining techniques. Journal of Information Systems Education, 36(3), 316–330. https://aisel.aisnet.org/cgi/viewcontent.cgi?article=2097&context=jise\n\n\nDebortoli, S., Müller, O., & Brocke, J. vom. (2014). Comparing business intelligence and big data skills: A text mining study using job advertisements. Business and Information Systems Engineering. https://www.researchgate.net/publication/262150370_Comparing_Business_Intelligence_and_Big_Data_Skills_A_Text_Mining_Study_Using_Job_Advertisements\n\n\nIBISWorld. (2025). Clothing and clothing accessory retailers in the US. https://www.ibisworld.com/united-states/industry/clothing-and-clothing-accessory-retailers/2048/\n\n\nOh, K. (2020). The roles of data analytics in the fashion industry. Journal of Textile Engineering and Fashion Technology, 6(3). https://medcraveonline.com/JTEFT/the-roles-of-data-analytics-in-the-fashion-industry.html\n\n\nThe Planet Group. (2025). Retail workforce report 2025. https://www.theplanetgroup.com/job-reports/retail-jobs-report-2025\n\n\nUmamaheswaran, S., Fernandes, S., Venkatesh, V. G., Avula, N., & Shi, Y. (2023). What do employers look for in \"business analytics\" roles? – a skill mining analysis. Information Systems Frontiers. https://doi.org/10.1007/s10796-023-10437-y\n\n\nU.S. Bureau of Labor Statistics. (2025). Market research analysts: Occupational outlook handbook. https://www.bls.gov/ooh/business-and-financial/market-research-analysts.htm\n\n\nZipRecruiter. (2026a). Retail data analyst remote jobs. https://www.ziprecruiter.com/Jobs/Retail-Data-Analyst-Remote\n\n\nZipRecruiter. (2026b). Work from home retail analyst jobs. https://www.ziprecruiter.com/Jobs/Work-From-Home-Retail-Analyst"
+  },
+  {
+    "objectID": "final_recommendations.html",
+    "href": "final_recommendations.html",
+    "title": "Final Recommendations",
+    "section": "",
+    "text": "Vuori and TJX each account for 5 of our 19 sample postings, and both dominate the top of the Opportunity Scorecard. They are repeatedly posting for adjacent analytics roles, which makes them the most attainable near-term targets, not just the highest scorers in a one-time snapshot.\nAdidas, with 3 postings, is the strongest option for a candidate relying on skill fit rather than application volume. Its postings reward the skills our team already rates itself strong in: Data Analysis, Excel, Stakeholder Management, and Project Management.\nCalifornia, Massachusetts, and New York together account for 14 of our 19 postings. Effort is best concentrated there."
+  },
+  {
+    "objectID": "final_recommendations.html#where-to-focus-the-job-search",
+    "href": "final_recommendations.html#where-to-focus-the-job-search",
+    "title": "Final Recommendations",
+    "section": "",
+    "text": "Vuori and TJX each account for 5 of our 19 sample postings, and both dominate the top of the Opportunity Scorecard. They are repeatedly posting for adjacent analytics roles, which makes them the most attainable near-term targets, not just the highest scorers in a one-time snapshot.\nAdidas, with 3 postings, is the strongest option for a candidate relying on skill fit rather than application volume. Its postings reward the skills our team already rates itself strong in: Data Analysis, Excel, Stakeholder Management, and Project Management.\nCalifornia, Massachusetts, and New York together account for 14 of our 19 postings. Effort is best concentrated there."
+  },
+  {
+    "objectID": "final_recommendations.html#where-to-focus-skill-building",
+    "href": "final_recommendations.html#where-to-focus-skill-building",
+    "title": "Final Recommendations",
+    "section": "Where to Focus Skill Building",
+    "text": "Where to Focus Skill Building\nPower BI and SQL are the two most market-demanded skills in our sample, each showing up in 7 of 19 postings. They are also our team’s weakest areas relative to that demand. That gap lowers skill fit scores on the scorecard directly, since Power BI and SQL are not among the four skills counted toward skill fit. In priority order:\n\nPower BI. The single most consistent gap across all four team members. Every member self-rated at 3 or below on the market’s joint highest demand skill.\nSQL. Equally in demand, with more room between team members. Zech rates Advanced, the rest rate Intermediate.\nPython. Requested in 5 of 19 postings, also rated low across our team.\n\nClosing the Power BI and SQL gaps would raise skill fit scores on the scorecard itself. Those are the two most frequently listed skills missing from the postings currently scoring lowest on skill fit, including the TJX and Foot Locker roles.\nBy person: Alyssa and Ankita should complete a Power BI learning path before the Module 5 deadline, then move to SQL practice against our own filtered dataset. Sara should prioritize Power BI first given her lowest team rating on it, building on her existing Excel strength. Zech should focus on Power BI’s data modeling features, building on his existing SQL proficiency."
+  },
+  {
+    "objectID": "final_recommendations.html#how-to-use-this-product-going-forward",
+    "href": "final_recommendations.html#how-to-use-this-product-going-forward",
+    "title": "Final Recommendations",
+    "section": "How to Use This Product Going Forward",
+    "text": "How to Use This Product Going Forward\n\nRe-run the Opportunity Scorecard as new postings come in. Employer signal and skill demand can shift as hiring continues.\nTreat the Opportunity Score as a starting point, not a verdict. It has not been checked against real hiring outcomes, and its three components should be read individually, not just as one combined number.\nUse the skill priorities above, Power BI, then SQL, then Python, to guide coursework and self-study for the rest of the semester. Those are the skills most likely to move a posting from low-scoring to high-scoring."
+  },
+  {
+    "objectID": "final_recommendations.html#limitations",
+    "href": "final_recommendations.html#limitations",
+    "title": "Final Recommendations",
+    "section": "Limitations",
+    "text": "Limitations\nOur sample is 19 postings from a narrowly filtered search: NAICS 458, known apparel and fashion employers. These recommendations describe this specific sample, not the broader apparel analytics job market.\nSalary and remote work data were usable for only 4 of 19 postings each, so neither recommendation above can account for compensation or remote work preferences with much confidence.\nThe scorecard’s equal weighting of skill fit, accessibility, and employer signal is a modeling choice, not a validated weighting scheme. See Final Analytics for the full discussion of that limitation."
   },
   {
     "objectID": "skill_gap_analysis.html",
