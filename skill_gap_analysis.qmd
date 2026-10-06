@@ -12,7 +12,7 @@ execute:
 
 ## Overview
 
-This page compares the skills most commonly requested in our filtered apparel and fashion analytics job postings with the team's current skill levels, highlighting where the team is well-positioned and where gaps remain.
+We compare the skills most commonly requested in our filtered apparel and fashion analytics job postings against the team's current skill levels, highlighting where the team is well-positioned and where gaps remain.
 
 ```{python}
 #| output: false
