@@ -1,5 +1,6 @@
 ---
 title: "AD688: Fashion and Apparel Career Evaluation - Group 7"
+subtitle: "Mapping skills to opportunity in apparel and fashion analytics"
 author: "Alyssa Quigley, Ankita Roy, Zechariah Schweitzer, Sara Scribner"
 author-title: "Authors"
 ---

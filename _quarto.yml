@@ -35,6 +35,8 @@ format:
     css: styles.css
     toc: true
     code-fold: true
+    title-block-banner: "#0b3d59"
+    title-block-banner-color: "white"
 
 execute:
   echo: true
