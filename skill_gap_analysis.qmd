@@ -14,6 +14,10 @@ execute:
 
 We compare the skills most commonly requested in our filtered apparel and fashion analytics job postings against the team's current skill levels, highlighting where the team is well-positioned and where gaps remain.
 
+## Most In-Demand Skills
+
+Skill fields were parsed from each posting's listed skills. Counts reflect how many of the 19 filtered postings mention each skill at least once.
+
 ```{python}
 #| output: false
 
@@ -31,10 +35,6 @@ os.makedirs("figures/skill_gap_analysis", exist_ok=True)
 PLOTLY_TEMPLATE = "plotly_white"
 PLOTLY_COLOR = "#2C6E8C"
 ```
-
-## Most In-Demand Skills
-
-Skill fields were parsed from each posting's listed skills. Counts reflect how many of the 19 filtered postings mention each skill at least once.
 
 ```{python}
 
