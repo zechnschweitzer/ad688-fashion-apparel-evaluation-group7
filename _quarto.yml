@@ -6,6 +6,7 @@ csl: csl/apa.csl
 
 website:
   title: "AD688: Fashion and Apparel Career Evaluation - Group 7"
+  search: false
   navbar:
     left:
       - href: index.qmd
