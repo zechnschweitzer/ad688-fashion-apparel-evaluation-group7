@@ -56,9 +56,7 @@ The scorecard provides an intuitive method for prioritizing opportunities based 
 
 # Recommendations 
 
-Given this dataset and our Opportunity Scorecard, we recommend students focus their job search on Vuori and TJX, as they had multiple analytics-adjacent postings, making them the most attainable by volume. Adidas ranked third in posting volume, with positions relying more on skill fit rather than application volume. For location, students have the best chance of finding opportunity in California, Massachusetts, and New York.
-
-Students should also focus on developing their Power BI and SQL skills, as they are the most in-demand skills. The third most important skill is Python, though less than half of these postings required it. In our group's assessment, Alyssa and Ankita should work on their Power BI skills, then move to SQL practice against our own filtered dataset. Sara should prioritize Power BI first, building on her existing Excel strength. Zech should focus on additional Power BI features and build on his existing SQL skills.
+Given this dataset and our Opportunity Scorecard, we recommend students focus their job search on Vuori and TJX, as they had multiple analytics-adjacent postings, making them the most attainable by volume. Adidas ranked third in posting volume, with positions relying more on skill fit rather than application volume. For location, students have the best chance of finding opportunities in California, Massachusetts, and New York. Students should also focus on developing their Power BI and SQL skills, as they are the most in-demand skills. The third most important skill is Python, though less than half of these postings required it.
 
 # Limitations 
 
