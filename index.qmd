@@ -1,69 +1,9 @@
 ---
-pagetitle: "AD688: Fashion and Apparel Career Evaluation - Group 7"
-toc: false
-code-tools: false
+title: "AD688: Fashion and Apparel Career Evaluation - Group 7"
+subtitle: "Mapping skills to opportunity in apparel and fashion analytics"
+author: "Alyssa Quigley, Ankita Roy, Zechariah Schweitzer, Sara Scribner"
+author-title: "Authors"
 ---
-
-```{=html}
-<div class="g7-hero column-screen">
-  <div class="g7-hero__rail" aria-hidden="true"></div>
-  <div class="g7-garment" style="--start:2%;--end:76%;--delay:0.75s"><svg viewBox="0 0 100 150" aria-hidden="true" focusable="false"><path d="M50 18 V9 A4 4 0 0 0 42 9 V11.5" fill="none" stroke="#BBA7C9" stroke-width="3" stroke-linecap="round"/><path d="M50 17 L12 32 H88 Z" fill="none" stroke="#BBA7C9" stroke-width="3" stroke-linejoin="round"/><g fill="#79445F"><path d="M33 30 L14 40 L8 128 H22 L28 66 V146 H72 V66 L78 128 H92 L86 40 L67 30 L56 52 H44 Z"/></g><path d="M50 52 V146" stroke="rgba(51,33,59,.35)" stroke-width="2" fill="none"/><circle cx="56" cy="74" r="2.6" fill="rgba(51,33,59,.45)"/><circle cx="56" cy="98" r="2.6" fill="rgba(51,33,59,.45)"/><circle cx="56" cy="122" r="2.6" fill="rgba(51,33,59,.45)"/></svg></div>
-  <div class="g7-garment" style="--start:13%;--end:78%;--delay:0.7s"><svg viewBox="0 0 100 150" aria-hidden="true" focusable="false"><path d="M50 18 V9 A4 4 0 0 0 42 9 V11.5" fill="none" stroke="#BBA7C9" stroke-width="3" stroke-linecap="round"/><path d="M50 17 L12 32 H88 Z" fill="none" stroke="#BBA7C9" stroke-width="3" stroke-linejoin="round"/><g fill="#FFFCF7"><path d="M32 30 L12 44 L20 62 L30 57 V140 H70 V57 L80 62 L88 44 L68 30 Q60 40 50 40 Q40 40 32 30 Z"/></g></svg></div>
-  <div class="g7-garment" style="--start:24%;--end:80%;--delay:0.65s"><svg viewBox="0 0 100 150" aria-hidden="true" focusable="false"><path d="M50 18 V9 A4 4 0 0 0 42 9 V11.5" fill="none" stroke="#BBA7C9" stroke-width="3" stroke-linecap="round"/><path d="M50 17 L12 32 H88 Z" fill="none" stroke="#BBA7C9" stroke-width="3" stroke-linejoin="round"/><g fill="#C9ACDD"><path d="M38 30 Q50 42 62 30 L64 62 Q60 70 66 74 L88 144 H12 L34 74 Q40 70 36 62 Z"/></g><path d="M35 70 H65" stroke="rgba(51,33,59,.35)" stroke-width="3" fill="none"/></svg></div>
-  <div class="g7-garment" style="--start:35%;--end:82%;--delay:0.6s"><svg viewBox="0 0 100 150" aria-hidden="true" focusable="false"><path d="M50 18 V9 A4 4 0 0 0 42 9 V11.5" fill="none" stroke="#BBA7C9" stroke-width="3" stroke-linecap="round"/><path d="M50 17 L12 32 H88 Z" fill="none" stroke="#BBA7C9" stroke-width="3" stroke-linejoin="round"/><g fill="#69558E"><path d="M30 30 L12 44 L6 116 H20 L26 64 V134 H74 V64 L80 116 H94 L88 44 L70 30 Q50 44 30 30 Z"/></g><path d="M26 124 H74 M26 129 H74" stroke="rgba(51,33,59,.3)" stroke-width="2" fill="none"/></svg></div>
-  <div class="g7-garment" style="--start:46%;--end:84%;--delay:0.55s"><svg viewBox="0 0 100 150" aria-hidden="true" focusable="false"><path d="M50 18 V9 A4 4 0 0 0 42 9 V11.5" fill="none" stroke="#BBA7C9" stroke-width="3" stroke-linecap="round"/><path d="M50 17 L12 32 H88 Z" fill="none" stroke="#BBA7C9" stroke-width="3" stroke-linejoin="round"/><g fill="#BBA7C9"><path d="M32 30 L12 44 L20 62 L30 57 V140 H70 V57 L80 62 L88 44 L68 30 Q60 40 50 40 Q40 40 32 30 Z"/></g></svg></div>
-  <div class="g7-garment" style="--start:57%;--end:86%;--delay:0.5s"><svg viewBox="0 0 100 150" aria-hidden="true" focusable="false"><path d="M50 18 V9 A4 4 0 0 0 42 9 V11.5" fill="none" stroke="#BBA7C9" stroke-width="3" stroke-linecap="round"/><path d="M50 17 L12 32 H88 Z" fill="none" stroke="#BBA7C9" stroke-width="3" stroke-linejoin="round"/><g fill="#6C3656"><path d="M33 30 L14 40 L8 128 H22 L28 66 V146 H72 V66 L78 128 H92 L86 40 L67 30 L56 52 H44 Z"/></g><path d="M50 52 V146" stroke="rgba(51,33,59,.35)" stroke-width="2" fill="none"/><circle cx="56" cy="74" r="2.6" fill="rgba(51,33,59,.45)"/><circle cx="56" cy="98" r="2.6" fill="rgba(51,33,59,.45)"/><circle cx="56" cy="122" r="2.6" fill="rgba(51,33,59,.45)"/></svg></div>
-  <div class="g7-garment" style="--start:68%;--end:88%;--delay:0.45s"><svg viewBox="0 0 100 150" aria-hidden="true" focusable="false"><path d="M50 18 V9 A4 4 0 0 0 42 9 V11.5" fill="none" stroke="#BBA7C9" stroke-width="3" stroke-linecap="round"/><path d="M50 17 L12 32 H88 Z" fill="none" stroke="#BBA7C9" stroke-width="3" stroke-linejoin="round"/><g fill="#F8F4EC"><path d="M38 30 Q50 42 62 30 L64 62 Q60 70 66 74 L88 144 H12 L34 74 Q40 70 36 62 Z"/></g><path d="M35 70 H65" stroke="rgba(51,33,59,.35)" stroke-width="3" fill="none"/></svg></div>
-  <div class="g7-garment" style="--start:79%;--end:90%;--delay:0.4s"><svg viewBox="0 0 100 150" aria-hidden="true" focusable="false"><path d="M50 18 V9 A4 4 0 0 0 42 9 V11.5" fill="none" stroke="#BBA7C9" stroke-width="3" stroke-linecap="round"/><path d="M50 17 L12 32 H88 Z" fill="none" stroke="#BBA7C9" stroke-width="3" stroke-linejoin="round"/><g fill="#79445F"><path d="M30 30 L12 44 L6 116 H20 L26 64 V134 H74 V64 L80 116 H94 L88 44 L70 30 Q50 44 30 30 Z"/></g><path d="M26 124 H74 M26 129 H74" stroke="rgba(51,33,59,.3)" stroke-width="2" fill="none"/></svg></div>
-  <div class="g7-garment" style="--start:90%;--end:92%;--delay:0.35s"><svg viewBox="0 0 100 150" aria-hidden="true" focusable="false"><path d="M50 18 V9 A4 4 0 0 0 42 9 V11.5" fill="none" stroke="#BBA7C9" stroke-width="3" stroke-linecap="round"/><path d="M50 17 L12 32 H88 Z" fill="none" stroke="#BBA7C9" stroke-width="3" stroke-linejoin="round"/><g fill="#C9ACDD"><path d="M32 30 L12 44 L20 62 L30 57 V140 H70 V57 L80 62 L88 44 L68 30 Q60 40 50 40 Q40 40 32 30 Z"/></g></svg></div>
-  <div class="g7-hero__text">
-    <p class="g7-hero__title" role="heading" aria-level="1">AD688: Fashion and Apparel Career Evaluation - Group 7</p>
-    <p class="g7-hero__subtitle">Mapping skills to opportunity in apparel and fashion analytics</p>
-    <p class="g7-hero__authors"><span>Authors</span>Alyssa Quigley, Ankita Roy, Zechariah Schweitzer, Sara Scribner</p>
-  </div>
-</div>
-
-<div class="g7-ticker" role="marquee" aria-label="Postings by employer and top skills">
-  <div class="g7-ticker__track">
-    <span>Vuori: 5 postings</span>
-    <span>TJX: 5 postings</span>
-    <span>Adidas: 3 postings</span>
-    <span>Ralph Lauren: 2 postings</span>
-    <span>Power BI: 7 of 19 postings</span>
-    <span>SQL: 7 of 19 postings</span>
-    <span aria-hidden="true">Vuori: 5 postings</span>
-    <span aria-hidden="true">TJX: 5 postings</span>
-    <span aria-hidden="true">Adidas: 3 postings</span>
-    <span aria-hidden="true">Ralph Lauren: 2 postings</span>
-    <span aria-hidden="true">Power BI: 7 of 19 postings</span>
-    <span aria-hidden="true">SQL: 7 of 19 postings</span>
-  </div>
-</div>
-
-<div class="g7-tags">
-  <div class="g7-tag">
-    <span class="g7-tag__value">19</span>
-    <span class="g7-tag__label">job postings in the final filtered dataset</span>
-    <span class="g7-tag__sku">NAICS 458</span>
-  </div>
-  <div class="g7-tag">
-    <span class="g7-tag__value">7 of 19</span>
-    <span class="g7-tag__label">postings list Power BI, and 7 list SQL</span>
-    <span class="g7-tag__sku">Skill demand</span>
-  </div>
-  <div class="g7-tag">
-    <span class="g7-tag__value">13 of 19</span>
-    <span class="g7-tag__label">postings come from Vuori, TJX and Adidas</span>
-    <span class="g7-tag__sku">Employers</span>
-  </div>
-  <div class="g7-tag">
-    <span class="g7-tag__value">10 / 12</span>
-    <span class="g7-tag__label">Opportunity Score for Vuori's Sr. Manager, Ecommerce Analytics</span>
-    <span class="g7-tag__sku">Final analytics</span>
-  </div>
-</div>
-```
-
 
 ## Project Overview
 
@@ -81,47 +21,14 @@ See Market Baseline, Skill Gap Analysis, and Final Analytics for the full breakd
 
 ## Project Sections
 
-```{=html}
-<div class="g7-lookbook">
-  <a class="g7-look" href="introduction.html">
-    <span class="g7-look__no">01</span>
-    <span class="g7-look__title">Introduction</span>
-    <span class="g7-look__desc">Project scope, career pathway, and industry context</span>
-  </a>
-  <a class="g7-look" href="data_preparation.html">
-    <span class="g7-look__no">02</span>
-    <span class="g7-look__title">Data Preparation</span>
-    <span class="g7-look__desc">Filtering, cleaning, and preparation of the analytical dataset</span>
-  </a>
-  <a class="g7-look" href="market_baseline.html">
-    <span class="g7-look__no">03</span>
-    <span class="g7-look__title">Market Baseline</span>
-    <span class="g7-look__desc">Current job volume, salary, geography, experience, work arrangement, and employer patterns</span>
-  </a>
-  <a class="g7-look" href="skill_gap_analysis.html">
-    <span class="g7-look__no">04</span>
-    <span class="g7-look__title">Skill Gap Analysis</span>
-    <span class="g7-look__desc">Market skill demand compared against the team's self-rated skills, with a scored gap and priority table</span>
-  </a>
-  <a class="g7-look" href="career_evaluation.html">
-    <span class="g7-look__no">05</span>
-    <span class="g7-look__title">Career Evaluation</span>
-    <span class="g7-look__desc">How we define and score opportunity across the filtered postings</span>
-  </a>
-  <a class="g7-look" href="final_analytics.html">
-    <span class="g7-look__no">06</span>
-    <span class="g7-look__title">Final Analytics</span>
-    <span class="g7-look__desc">The Opportunity Scorecard methodology and full ranked results</span>
-  </a>
-  <a class="g7-look" href="final_recommendations.html">
-    <span class="g7-look__no">07</span>
-    <span class="g7-look__title">Final Recommendations</span>
-    <span class="g7-look__desc">Where to focus the job search and skill building, plus limitations</span>
-  </a>
-  <a class="g7-look" href="appendix.html">
-    <span class="g7-look__no">08</span>
-    <span class="g7-look__title">Appendix</span>
-    <span class="g7-look__desc">Filter criteria reference, scorecard tiers, and the full 19-posting list</span>
-  </a>
-</div>
-```
+| Page | What You'll Find |
+|---|---|
+| Introduction | Project scope, career pathway, and industry context |
+| Data Preparation | Filtering, cleaning, and preparation of the analytical dataset |
+| Market Baseline | Current job volume, salary, geography, experience, work arrangement, and employer patterns |
+| Skill Gap Analysis | Market skill demand compared against the team's self-rated skills, with a scored gap and priority table |
+| Career Evaluation | How we define and score opportunity across the filtered postings |
+| Final Analytics | The Opportunity Scorecard methodology and full ranked results |
+| Final Recommendations | Where to focus the job search and skill building, plus limitations |
+| Appendix | Filter criteria reference, scorecard tiers, and the full 19-posting list |
+

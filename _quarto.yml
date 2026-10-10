@@ -6,12 +6,8 @@ csl: csl/apa.csl
 
 website:
   title: "AD688: Fashion and Apparel Career Evaluation - Group 7"
-  favicon: images/hanger.svg
   search: false
-  page-navigation: true
   navbar:
-    logo: images/hanger.svg
-    logo-alt: "Clothes hanger"
     left:
       - href: index.qmd
         text: Home
@@ -33,26 +29,15 @@ website:
         text: Final Recommendations
       - href: appendix.qmd
         text: Appendix
-    right:
-      - icon: github
-        href: https://github.com/zechnschweitzer/ad688-fashion-apparel-evaluation-group7
-        aria-label: GitHub repository
-  page-footer:
-    left: "AD 688 · Group 7 · Alyssa Quigley, Ankita Roy, Zechariah Schweitzer, Sara Scribner"
-    right: "Data: MET Employability job postings · NAICS 458"
 
 format:
   html:
-    theme: [cosmo, theme.scss]
+    theme: yeti
     css: styles.css
     toc: true
-    toc-location: left
-    toc-title: "On this page"
     code-fold: true
-    code-summary: "Show code"
-    code-tools: true
-    title-block-banner: true
-    smooth-scroll: true
+    title-block-banner: "images/banner_background.jpg"
+    title-block-banner-color: "white"
 
 execute:
   echo: true
