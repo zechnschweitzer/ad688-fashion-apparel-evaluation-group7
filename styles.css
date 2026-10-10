@@ -1,4 +1,4 @@
-/* Functional fixes. Visual styling lives in theme.scss. */
+/* Existing functional fixes */
 
 #refs a {
   word-break: break-all;
@@ -16,17 +16,177 @@ table.dataframe th {
   word-wrap: break-word;
 }
 
-@media (min-width: 992px) {
-  .quarto-title-meta-contents p {
-    white-space: nowrap;
-  }
+.quarto-title-meta-contents p {
+  white-space: nowrap;
 }
 
+
+/* -----------------------------
+   Overall page layout
+------------------------------ */
+
 main.content {
+  max-width: 1100px;
+  margin: 0 auto;
   padding-bottom: 3rem;
 }
+
+
+/* -----------------------------
+   Headings
+------------------------------ */
+
+h1 {
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-weight: 650;
+  margin-top: 2.5rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+h3 {
+  font-weight: 600;
+  margin-top: 2rem;
+}
+
+
+/* -----------------------------
+   Paragraph readability
+------------------------------ */
+
+p {
+  line-height: 1.65;
+}
+
+.content p {
+  margin-bottom: 1rem;
+}
+
+
+/* -----------------------------
+   Navbar
+------------------------------ */
+
+.navbar {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  background-color: #0b3d59 !important;
+}
+
+.navbar-brand,
+.navbar-nav .nav-link,
+.navbar .dropdown-item {
+  color: #ffffff !important;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar .dropdown-item:hover {
+  color: #cfe3f0 !important;
+}
+
+.navbar .dropdown-menu {
+  background-color: #0b3d59;
+}
+
+.navbar-brand {
+  font-weight: 600;
+}
+
+
+/* -----------------------------
+   Tables
+------------------------------ */
+
+table {
+  margin-top: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+table th {
+  font-weight: 600;
+}
+
+.table {
+  vertical-align: middle;
+}
+
+
+/* -----------------------------
+   Figures and charts
+------------------------------ */
 
 .quarto-figure {
   margin-top: 1.5rem;
   margin-bottom: 2rem;
+}
+
+.figure-caption {
+  font-size: 0.9rem;
+}
+
+
+/* -----------------------------
+   Code blocks
+------------------------------ */
+
+pre {
+  border-radius: 6px;
+}
+
+details {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+
+/* -----------------------------
+   Links
+------------------------------ */
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/* -----------------------------
+   Table of contents
+------------------------------ */
+
+#TOC {
+  font-size: 0.95rem;
+}
+
+#TOC a {
+  line-height: 1.5;
+}
+
+
+/* -----------------------------
+   Section spacing
+------------------------------ */
+
+section {
+  margin-bottom: 2rem;
+}
+/* -----------------------------
+   Homepage and title spacing
+------------------------------ */
+
+.quarto-title-block {
+  margin-bottom: 2.5rem;
+}
+
+.quarto-title h1 {
+  line-height: 1.2;
+}
+
+h2 {
+  margin-bottom: 1rem;
 }

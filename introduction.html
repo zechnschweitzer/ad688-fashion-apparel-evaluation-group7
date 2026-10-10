@@ -26,41 +26,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -86,7 +51,6 @@ div.csl-indent {
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
-<link href="./images/hanger.svg" rel="icon" type="image/svg+xml">
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -97,7 +61,7 @@ div.csl-indent {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-3777870791f0cef051f156b17303398d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-38838b12d2c25e08a8e0512b421f47c2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -113,23 +77,36 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
-<style>html{ scroll-behavior: smooth; }</style>
+<style>
+
+      .quarto-title-block .quarto-title-banner h1,
+      .quarto-title-block .quarto-title-banner h2,
+      .quarto-title-block .quarto-title-banner h3,
+      .quarto-title-block .quarto-title-banner h4,
+      .quarto-title-block .quarto-title-banner h5,
+      .quarto-title-block .quarto-title-banner h6
+      {
+        color: white;
+      }
+
+      .quarto-title-block .quarto-title-banner {
+        color: white;
+background-image: url(images/banner_background.jpg);
+background-size: cover;
+      }
+</style>
 
 
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="floating nav-fixed quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./images/hanger.svg" alt="Clothes hanger" class="navbar-logo light-content">
-    <img src="./images/hanger.svg" alt="Clothes hanger" class="navbar-logo dark-content">
-    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">AD688: Fashion and Apparel Career Evaluation - Group 7</span>
     </a>
@@ -183,13 +160,6 @@ div.csl-indent {
 <span class="menu-text">Appendix</span></a>
   </li>  
 </ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/zechnschweitzer/ad688-fashion-apparel-evaluation-group7"> <i class="bi bi-github" role="img" aria-label="GitHub repository">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-</ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
 </div>
@@ -197,10 +167,10 @@ div.csl-indent {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <div class="quarto-title-block"><div><h1 class="title">Career Pathway and Industry Scope</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+      <h1 class="title">Career Pathway and Industry Scope</h1>
                       </div>
   </div>
     
@@ -215,8 +185,9 @@ div.csl-indent {
   
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <nav id="TOC" role="doc-toc" class="toc-active">
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
@@ -228,10 +199,6 @@ div.csl-indent {
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -306,8 +273,6 @@ ZipRecruiter. (2026b). <em>Work from home retail analyst jobs</em>. <a href="htt
 </div>
 
 
-<!-- -->
-
 </section>
 
 </main> <!-- /main -->
@@ -381,57 +346,6 @@ ZipRecruiter. (2026b). <em>Work from home retail analyst jobs</em>. <a href="htt
         container: window.document.getElementById('quarto-embedded-source-code-modal')
       });
       clipboardModal.on('success', onCopySuccess);
-    }
-    const viewSource = window.document.getElementById('quarto-view-source') ||
-                       window.document.getElementById('quarto-code-tools-source');
-    if (viewSource) {
-      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
-      viewSource.addEventListener("click", function(e) {
-        if (sourceUrl) {
-          // rstudio viewer pane
-          if (/\bcapabilities=\b/.test(window.location)) {
-            window.open(sourceUrl);
-          } else {
-            window.location.href = sourceUrl;
-          }
-        } else {
-          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
-          modal.show();
-        }
-        return false;
-      });
-    }
-    function toggleCodeHandler(show) {
-      return function(e) {
-        const cellDetails = window.document.querySelectorAll(".cell details.code-fold");
-        for (let i=0; i<cellDetails.length; i++) {
-          const details = cellDetails[i];
-          if (show) {
-            details.open = true;
-          } else {
-            details.removeAttribute("open");
-          }
-        }
-        const cellCodeDivs = window.document.querySelectorAll(".cell div.sourceCode.cell-code");
-        const fromCls = show ? "hidden" : "unhidden";
-        const toCls = show ? "unhidden" : "hidden";
-        for (let i=0; i<cellCodeDivs.length; i++) {
-          const codeDiv = cellCodeDivs[i];
-          if (codeDiv.classList.contains(fromCls)) {
-            codeDiv.classList.remove(fromCls);
-            codeDiv.classList.add(toCls);
-          } 
-        }
-        return false;
-      }
-    }
-    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
-    if (hideAllCode) {
-      hideAllCode.addEventListener("click", toggleCodeHandler(false));
-    }
-    const showAllCode = window.document.getElementById("quarto-show-all-code");
-    if (showAllCode) {
-      showAllCode.addEventListener("click", toggleCodeHandler(true));
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
@@ -761,80 +675,10 @@ ZipRecruiter. (2026b). <em>Work from home retail analyst jobs</em>. <a href="htt
       }
     }
   });
-  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Career Pathway and Industry Scope"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>**Target career pathway:** Business/Data Analyst roles</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>**Industry code:** NAICS 458 (Clothing, Clothing Accessories, Shoe, and Jewelry Retailers), within the broader apparel and fashion retail sector</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>**Industry label:** Apparel and Fashion Retail</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">## Research Rationale</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>Business and data analysts turn operational data into decisions organizations can act on. Apparel retail is a good place to study that work, since retailers are constantly reacting to seasonal demand, shifting consumer preferences, inventory limits, pricing calls, and supply chain pressure. Those conditions give analytical skills a direct, visible role in how the business runs.</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>For a student weighing an analytics career, it is not always obvious which skills employers actually care about, or whether their coursework and experience line up with what the job market expects. A title like "business analyst" or "data analyst" hides a lot of variation: some mix of technical ability, analytical thinking, communication, and business judgment, and the exact mix shifts by employer. This project tries to pin down which skills matter most for business/data analyst roles in apparel retail specifically, then checks that list against our own team's current skills.</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>That is what separates this from a plain labor-market summary: it is meant to work as a career evaluation tool. A student should be able to look at it and see what employers are asking for, where their own strengths already line up, and what still needs work before they apply.</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="fu">## Literature Review</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>@umamaheswaran2023 looked at what employers ask for in business analytics postings and found a consistent mix: big data, business intelligence, and analytical technique on one side, communication and stakeholder management on the other. That matters for how we think about readiness. Knowing the software is not enough on its own; an analyst also has to understand the business problem and explain results to people who are not going to read the code.</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>@alshameri2025 looked at business job postings the same way and identified the same kind of gap. Employers ask for a mix of general tools like Microsoft Office and data visualization plus skills specific to their field and the exact mix depends on industry and location. The study refers to this as a growing disconnect between what schools teach and what employers are actually looking for. In addition @debortoli2014 conducted a comparable analysis of business intelligence and big data postings and found the same pattern. Employers separate technical tool skills from broader analytical thinking and the strongest candidates show both.</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>Apparel retail is a fitting test case for that combination. Forecasting, inventory, pricing, and supply chain decisions all show up as recurring analytical needs in clothing retail, and @ibisworld2025 backs that up with broader industry context on clothing and clothing accessory retailers. Demand in this sector moves fast and shifts with the seasons, which is part of why data-supported decisions carry more weight here than they might in a slower-moving industry.</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>Fashion retail has been leaning harder into data analytics in recent years. @oh2020 found that fashion brands increasingly use data analytics to personalize products plan merchandising and improve profitability and argued that education has not kept pace with this shift. That gap between what the industry needs and what students are taught is part of what this project is looking to measure directly.</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>Retail hiring overall backs up the case for treating analytics as its own career path within the industry. @planetgroup2025 found that retail hiring has gotten more selective even as it leans harder into technology, analytics, and customer experience. So while fewer people may be getting hired overall, the analytical roles that support pricing, inventory, operations, and customer decisions do not seem to be losing ground.</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>Job postings themselves give a more concrete look at what these roles ask for. Scanning ZipRecruiter listings, SQL, Excel, and a visualization tool like Tableau or Power BI show up repeatedly, alongside the usual asks for analytical and communication skills <span class="co">[</span><span class="ot">@ziprecruiter2026a</span><span class="co">]</span>. We are treating this as a starting point rather than a finding, since individual job postings vary a lot by employer, seniority, and timing.</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>The same postings also show a fair amount of spread in pay and remote availability <span class="co">[</span><span class="ot">@ziprecruiter2026b</span><span class="co">]</span>. Salary and remote work are not the central question we are asking, but they are useful context for judging how attractive a given role is. Once we are working with the MET Employability Career Match data, we will be able to check whether these early patterns hold up within our apparel retail scope specifically.</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>The demand for this kind of work is also reflected in national labor data. The U.S. Bureau of Labor Statistics projects 7% growth for market research analyst roles from 2025 to 2035 well above the average for all occupations with a median annual wage of $78,760 as of May 2025 <span class="co">[</span><span class="ot">@blsooh2025</span><span class="co">]</span>. The core skills the Bureau lists are analytical thinking communication critical thinking and attention to detail and they line up closely with what the job-posting studies above describe.</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>Across these sources, the same picture keeps showing up: business/data analyst roles need technical skill, analytical thinking, and the ability to work with the business side, all at once. What none of this tells us yet is which of those skills matter most specifically in apparel retail, or how close our own skills already are to that bar. That gap is what this project is built to close.</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="fu">## Target User</span></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>This product is aimed at BU MET students who are exploring analytics career paths and want a clearer picture of which industries and skills to prioritize. Our goal is to help someone in this position understand what a business/data analyst role in apparel retail actually looks like, so they can decide whether it fits their interests and know what to learn next if it does.</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="fu">## Product Question</span></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>Which skills are most valued for business/data analyst roles in apparel retail and how well does our team's current skill set match those demands?</span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="fu">## MET Employability Career Match Fields We Expect to Use</span></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>We plan to use <span class="in">`title/normalized_title`</span>, <span class="in">`naics_code`</span>, <span class="in">`skills`</span>, <span class="in">`annual_salary_min/annual_salary_max`</span>, <span class="in">`remote_status`</span>, <span class="in">`city/state`</span>, and <span class="in">`soc_code`</span>. These fields should let us see which skills and pay levels matter most for business/data analyst roles in apparel retail.</span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="fu">## References</span></span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
-</div></div></div></div></div>
+  </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
-    <div class="nav-footer-left">
-<p>AD 688 · Group 7 · Alyssa Quigley, Ankita Roy, Zechariah Schweitzer, Sara Scribner</p>
-</div>   
-    <div class="nav-footer-center">
-      &nbsp;
-    </div>
-    <div class="nav-footer-right">
-<p>Data: MET Employability job postings · NAICS 458</p>
-</div>
-  </div>
-</footer>
 
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
