@@ -9,7 +9,7 @@ date: "October 12, 2026"
 
 format:
   docx:
-    toc: true
+    toc: false
     number-sections: true
 bibliography: references.bib
 csl: csl/apa.csl
@@ -31,6 +31,8 @@ Although the dataset included 504,208 job postings extracted from 21 parquet par
 | NAICS 458 OR known employer (industry match) | 2,405 |
 | Role title keyword match, any industry | 13,841 |
 | Final filtered set (industry match AND role match) | 19 |
+
+: {tbl-colwidths="[65,35]"}
 
 # Market Baseline
 
@@ -72,6 +74,8 @@ The Skill-Gap Analysis compares required employer skills with the current capabi
 | Stakeholder Mgmt | 15.8% | 3 | 3.50 | -0.50 | Low |
 | Project Mgmt | 15.8% | 3 | 3.50 | -0.50 | Low |
 | Data Analysis | 15.8% | 3 | 4.00 | -1.00 | Low |
+
+: {tbl-colwidths="[26,16,14,14,12,18]"}
 
 <!-- -->  
 
@@ -121,6 +125,10 @@ The final analysis uses a rule-based Opportunity Scorecard to rank job postings 
 | Data Analyst 3 - Store Operations | Nordstrom | 1 | 3 | 1 | 5 |
 | Principal, Data Analytics and Engineering | Macy's | 0 | 3 | 1 | 4 |
 
+: {tbl-colwidths="[38,14,10,12,13,13]"}
+
+<!-- -->
+
 
 
 The scorecard provides an intuitive method for prioritizing opportunities based on the student's current skill levels and the characteristics found in the job postings. To check the model's internal consistency, we computed the rank correlation between each component and the final Opportunity Score. Employer signal correlates most strongly (0.87), skill fit correlates moderately (0.42), and accessibility correlates essentially not at all (-0.11), confirming that employer signal currently has more influence on the ranking than the other two components, since it is an uncapped raw count rather than a capped 0-to-3 or 0-to-4 score. With this in mind, and considering this is not a predictive model, the scorecard is best interpreted as a career prioritization tool rather than a precise ranking.
@@ -130,6 +138,8 @@ The scorecard provides an intuitive method for prioritizing opportunities based 
 | Skill Fit | 0.00 | 2.00 | 0.79 | 0.42 |
 | Accessibility | 1.00 | 3.00 | 2.79 | -0.11 |
 | Employer Signal | 1.00 | 5.00 | 2.89 | 0.87 |
+
+: {tbl-colwidths="[22,12,12,12,42]"}
 
 # Recommendations 
 
@@ -158,6 +168,8 @@ This project was a collaborative effort across all four team members. Each perso
 
 ::: {#refs}
 :::
+
+
 
 
 
