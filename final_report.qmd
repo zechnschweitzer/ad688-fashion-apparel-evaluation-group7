@@ -25,11 +25,21 @@ Although the dataset included 504,208 job postings extracted from 21 parquet par
 
 # Market Baseline
 
-The market baseline examines the apparel and fashion industry demand, salary, location, working arrangement, and required experience for the selected analytics market. Job title, employer, and location are available for all 19 postings, but experience data is usable for only 9 postings and salary and work arrangement data are usable for only 4 postings each, so those smaller findings should be read with more caution. Grouping the 19 postings by functional focus shows BI and data analytics roles make up the largest share at 6 postings, followed by marketing and customer analytics with 5, merchandising and ecommerce with 3, finance and strategy analytics and operations analytics with 2 each, and product or engineering analytics with 1. Job opportunities were also concentrated among a small number of employers: Vuori and TJX each account for 5 postings, Adidas accounts for 3, and Ralph Lauren accounts for 2, while Nordstrom, Foot Locker, Michaels, and Macy's each contribute 1. Geographically, California and Massachusetts each account for 5 postings, followed by New York with 4 and Oregon with 3. 
+The market baseline examines the apparel and fashion industry demand, salary, location, working arrangement, and required experience for the selected analytics market. Job title, employer, and location are available for all 19 postings, but experience data is usable for only 9 postings and salary and work arrangement data are usable for only 4 postings each, so those smaller findings should be read with more caution. The 19 postings cover a fairly wide mix of roles, including analyst, business intelligence, ecommerce, merchandise, and senior analytics positions, and most titles appear only once.
+
+[![Market Baseline-Job Titles](figures/market_baseline/job_volume_by_title.png)](https://zechnschweitzer.github.io/ad688-fashion-apparel-evaluation-group7/market_baseline.html)
+
+Grouping the 19 postings by functional focus shows BI and data analytics roles make up the largest share at 6 postings, followed by marketing and customer analytics with 5, merchandising and ecommerce with 3, finance and strategy analytics and operations analytics with 2 each, and product or engineering analytics with 1. Job opportunities were also concentrated among a small number of employers: Vuori and TJX each account for 5 postings, Adidas accounts for 3, and Ralph Lauren accounts for 2, while Nordstrom, Foot Locker, Michaels, and Macy's each contribute 1.
+
+[![Market Baseline-Employers](figures/market_baseline/top_employers.png)](https://zechnschweitzer.github.io/ad688-fashion-apparel-evaluation-group7/market_baseline.html)
+
+Geographically, California and Massachusetts each account for 5 postings, followed by New York with 4 and Oregon with 3. 
 
 [![Market Baseline-Location](figures/market_baseline/location_patterns.png)](https://zechnschweitzer.github.io/ad688-fashion-apparel-evaluation-group7/market_baseline.html)
 
 Salary data was limited to 4 of the 19 postings, with a range of approximately $85,000 to $161,000. Work arrangement data was also limited to 4 postings: 3 are classified as hybrid and 1 as fully remote, and no posting in the sample is explicitly classified as onsite.
+
+[![Market Baseline-Remote vs Onsite](figures/market_baseline/remote_onsite_patterns.png)](https://zechnschweitzer.github.io/ad688-fashion-apparel-evaluation-group7/market_baseline.html)
 
 [![Market Baseline-Salary](figures/market_baseline/salary_distribution.png)](https://zechnschweitzer.github.io/ad688-fashion-apparel-evaluation-group7/market_baseline.html)
 
@@ -45,9 +55,23 @@ The Skill-Gap Analysis compares required employer skills with the current capabi
 
 [![Skills Gap-Top Skills](figures/skill_gap_analysis/top_skills.png)](https://zechnschweitzer.github.io/ad688-fashion-apparel-evaluation-group7/skill_gap_analysis.html)
 
-The team rated itself strongest in Excel (4.25) and Data Analysis (4.0), and weakest in Power BI (2.75), Python (2.75), and Digital Marketing (2.75). Comparing these averages against market-based targets set Power BI (2.25 gap) and SQL (1.75 gap) as high priority, and Python and Digital Marketing as moderate priority. Excel, Stakeholder Management, Project Management, and Data Analysis all came back as low priority, since the team's average proficiency already meets or exceeds the market-based target for each. Power BI is the most consistent gap across the team: every member rated it at 3 or below despite it tying for the highest market demand.
+The team rated itself strongest in Excel (4.25) and Data Analysis (4.0), and weakest in Power BI (2.75), Python (2.75), and Digital Marketing (2.75).
+
+[![Skill Gap-Team Heatmap](figures/skill_gap_analysis/team_skill_heatmap.png)](https://zechnschweitzer.github.io/ad688-fashion-apparel-evaluation-group7/skill_gap_analysis.html)
+
+Comparing these averages against market-based targets set Power BI (2.25 gap) and SQL (1.75 gap) as high priority, and Python and Digital Marketing as moderate priority. Excel, Stakeholder Management, Project Management, and Data Analysis all came back as low priority, since the team's average proficiency already meets or exceeds the market-based target for each.
+
+[![Skill Gap-Average Proficiency](figures/skill_gap_analysis/team_average_proficiency.png)](https://zechnschweitzer.github.io/ad688-fashion-apparel-evaluation-group7/skill_gap_analysis.html)
+
+Power BI is the most consistent gap across the team: every member rated it at 3 or below despite it tying for the highest market demand.
+
+[![Skill Gap-Priority Diverging Chart](figures/skill_gap_analysis/skill_gap_diverging.png)](https://zechnschweitzer.github.io/ad688-fashion-apparel-evaluation-group7/skill_gap_analysis.html)
 
 [![Skills Gap-Summary](figures/skill_gap_analysis/skill_gap_summary.png)](https://zechnschweitzer.github.io/ad688-fashion-apparel-evaluation-group7/skill_gap_analysis.html)
+
+# Career Evaluation
+
+The 19 postings in our filtered dataset do not represent equally strong opportunities for this team, so we evaluate them on three factors: attainability, skill relevance, and employer signal. Experience requirements are not evenly spread: 17 of the 19 postings list a minimum of 0 years of experience, and only 2 list a 5-year minimum, so accessibility is mostly uniform with a couple of high-bar outliers. Skill relevance separates the postings more clearly. We counted how many of the team's four strongest self-rated skills (Data Analysis, Microsoft Excel, Stakeholder Management, Project Management) show up in each posting's listed skills, and found 8 of the 19 postings match none of them, 7 match exactly one, and 4 match two; not a single posting matches three or four. Employer signal is also concentrated: Vuori accounts for 5 of the 19 postings, TJX accounts for 5, and Adidas accounts for 3, so together those three employers make up 13 of 19 postings, or 68 percent, while the remaining six employers in the sample post once each. These three factors feed directly into the Opportunity Scorecard below.
 
 # Final Analytics
 
@@ -84,6 +108,18 @@ This project was a collaborative effort across all four team members. Each perso
 
 ::: {#refs}
 :::
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
