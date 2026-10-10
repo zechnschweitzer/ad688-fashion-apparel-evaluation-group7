@@ -84,3 +84,7 @@ df[[
 
 
 
+
+## AI Use Disclosure
+
+In compliance with course guidelines, our team discloses that we used generative AI tools, including Claude and ChatGPT, throughout this project. We used these tools as a tutor and collaborator: to explain unfamiliar functions and statistical concepts, help debug code, brainstorm approaches, draft and revise written sections, and review our analysis for errors and gaps. All final analysis, writing, and conclusions were reviewed and approved by the team.
