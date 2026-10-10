@@ -27,6 +27,8 @@ The three components carry equal weight. Our team had no outcome data, like actu
 
 ## Opportunity Scorecard
 
+**Table 7:** Opportunity Scorecard, ranked by skill fit, accessibility, and employer signal
+
 ```{python}
 import pandas as pd
 
@@ -71,6 +73,8 @@ scorecard
 
 A rule-based scoring model still needs to be checked, not just described. Since we have no real hiring outcomes to validate the Opportunity Score against, we instead check its internal consistency: how much each component actually drives the final score, and whether any single component is quietly dominating the ranking.
 
+**Table 8:** Scoring model diagnostics: component ranges and rank correlation with Opportunity Score
+
 ```{python}
 
 component_correlations = df[[
@@ -98,6 +102,35 @@ diagnostics
 ```
 
 Employer signal score has the widest range (1 to 5, uncapped) of the three components, and the table above shows it also carries by far the strongest rank correlation with the final Opportunity Score (0.87). Skill fit correlates more moderately (0.42), and accessibility correlates essentially not at all, slightly negative at -0.11. That confirms what the methodology note above flags: employer signal has more influence on the ranking than skill fit or accessibility, because it is a raw count rather than a capped 0-to-3 or 0-to-4 score, and it also means accessibility is currently closer to a tiebreaker than a real driver of the ranking. That is a property of this specific weighting choice, not a bug, but it is exactly the kind of thing a scoring model needs to disclose rather than hide behind a single combined number. A future version of this model could cap employer signal the same way the other two components are capped, or weight the three components unevenly on purpose, once there is outcome data to justify that choice.
+
+
+## Does the Score Predict Pay?
+
+The correlations above show how each component relates to the final Opportunity Score. A separate question is whether those same components relate to actual advertised pay. We fit a simple linear regression predicting salary midpoint from the three scorecard components.
+
+**Table 9:** Linear regression of salary midpoint on scorecard components
+
+```{python}
+df["SALARY_MID"] = (df["SALARY_FROM"] + df["SALARY_TO"]) / 2
+
+import statsmodels.api as sm
+
+X = df[["SKILL_FIT_SCORE", "ACCESSIBILITY_SCORE", "EMPLOYER_SIGNAL_SCORE"]]
+X = sm.add_constant(X)
+y = df["SALARY_MID"]
+
+pay_model = sm.OLS(y, X).fit()
+
+regression_table = pd.DataFrame({
+    "Coefficient": pay_model.params.round(0),
+    "Std. Error": pay_model.bse.round(0),
+    "p-value": pay_model.pvalues.round(3)
+})
+regression_table.index = ["Intercept", "Skill Fit", "Accessibility", "Employer Signal"]
+regression_table
+```
+
+Only 4 of our 19 postings listed an actual salary. The other 15 were filled with the sample median during data cleaning, so this regression does not have 19 independent salary observations, it has 4 real ones and 15 copies of the same imputed value. Treat the results below as illustrative of the method, not as a real pay-prediction signal. With that caveat, this model is exploratory rather than a reliable predictive tool. It explains `{python} round(pay_model.rsquared * 100, 0)`% of the variation in salary midpoint across our sample (R-squared = `{python} round(pay_model.rsquared, 2)`), a figure driven mostly by how the three predictors happen to relate to the repeated median value rather than genuine pay variation. None of the three components reach standard statistical significance at this sample size, so the coefficients above are directional at best: employer signal and skill fit move in the same direction as pay, consistent with the correlation pattern above, while accessibility shows the weakest relationship. A real test of this question would need a larger sample with actual reported salaries, not an imputed one.
 
 ## What the Scores Show
 

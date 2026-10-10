@@ -11,34 +11,36 @@ execute:
 
 ## Where to Focus the Job Search
 
-Vuori and TJX each account for 5 of our 19 sample postings, and both dominate the top of the Opportunity Scorecard. They are repeatedly posting for adjacent analytics roles, which makes them the most attainable near-term targets, not just the highest scorers in a one-time snapshot.
+Vuori and TJX each account for 5 of our 19 sample postings and both dominate the top of the Opportunity Scorecard (Table 7). They are also the two most frequent employers in Market Baseline (Figure 9), confirming they are repeatedly posting for adjacent analytics roles rather than appearing once in a snapshot.
 
 Adidas, with 3 postings, is the strongest option for a candidate relying on skill fit rather than application volume. Its postings reward the skills our team already rates itself strong in: Data Analysis, Excel, Stakeholder Management, and Project Management.
 
-California, Massachusetts, and New York together account for 14 of our 19 postings. Effort is best concentrated there.
+California, Massachusetts, and New York together account for 14 of our 19 postings, consistent with the state-level concentration shown in Market Baseline (Figure 5 and Figure 6). Effort is best concentrated there.
 
 ## Where to Focus Skill Building
 
-Power BI and SQL are the two most market-demanded skills in our sample, each showing up in 7 of 19 postings. They are also our team's weakest areas relative to that demand. That gap lowers skill fit scores on the scorecard directly, since Power BI and SQL are not among the four skills counted toward skill fit. In priority order:
+Power BI and SQL are the two most market-demanded skills in our sample, each showing up in 7 of 19 postings (Figure 11). They are also our team's weakest areas relative to that demand, shown directly in the Skill Gap Summary (Table 6) and the gap chart in Skill Gap Analysis (Figure 14). That gap lowers skill fit scores on the scorecard directly, since Power BI and SQL are not among the four skills counted toward skill fit.
 
-1. **Power BI.** The single most consistent gap across all four team members. Every member self-rated at 3 or below on the market's joint highest demand skill.
+In priority order:
+
+1. **Power BI.** The single most consistent gap across all four team members (Figure 12). Every member self-rated at 3 or below on the market's joint highest demand skill.
 2. **SQL.** Equally in demand, with more room between team members. Zech rates Advanced, the rest rate Intermediate.
 3. **Python.** Requested in 5 of 19 postings, also rated low across our team.
 
-Closing the Power BI and SQL gaps would raise skill fit scores on the scorecard itself. Those are the two most frequently listed skills missing from the postings currently scoring lowest on skill fit, including the TJX and Foot Locker roles.
+Closing the Power BI and SQL gaps would raise skill fit scores on the scorecard itself (Table 7 and Table 8). Those are the two most frequently listed skills missing from the postings currently scoring lowest on skill fit, including the TJX and Foot Locker roles.
 
 By person: Alyssa and Ankita should complete a Power BI learning path before the Module 5 deadline, then move to SQL practice against our own filtered dataset. Sara should prioritize Power BI first given her lowest team rating on it, building on her existing Excel strength. Zech should focus on Power BI's data modeling features, building on his existing SQL proficiency.
 
 ## How to Use This Product Going Forward
 
 1. Re-run the Opportunity Scorecard as new postings come in. Employer signal and skill demand can shift as hiring continues.
-2. Treat the Opportunity Score as a starting point, not a verdict. It has not been checked against real hiring outcomes, and its three components should be read individually, not just as one combined number.
+2. Treat the Opportunity Score as a starting point, not a verdict. The diagnostics in Final Analytics (Table 8) show employer signal drives the ranking more than skill fit or accessibility, and the salary regression (Table 9) found none of the three components reach statistical significance at this sample size. Read the three components individually, not just as one combined number.
 3. Use the skill priorities above, Power BI, then SQL, then Python, to guide coursework and self-study for the rest of the semester. Those are the skills most likely to move a posting from low-scoring to high-scoring.
 
 ## Limitations
 
 Our sample is 19 postings from a narrowly filtered search: NAICS 458, known apparel and fashion employers. These recommendations describe this specific sample, not the broader apparel analytics job market.
 
-Salary and remote work data were usable for only 4 of 19 postings each, so neither recommendation above can account for compensation or remote work preferences with much confidence.
+Salary and remote work data were usable for only 4 of 19 postings each, so neither recommendation above can account for compensation or remote work preferences with much confidence. The salary regression in Final Analytics (Table 9) reflects this same limitation: with only 4 real salary values and 15 median-imputed ones, it is exploratory, not a reliable predictive tool.
 
 The scorecard's equal weighting of skill fit, accessibility, and employer signal is a modeling choice, not a validated weighting scheme. See Final Analytics for the full discussion of that limitation.

@@ -16,9 +16,9 @@ execute:
 
 These employer names, matched against `COMPANY_CLEAN`, were used alongside NAICS 458 to build the industry match in [Data Preparation](data_preparation.qmd).
 
+**Table 10:** Known apparel and fashion employers used for industry matching
+
 ```{python}
-#| label: tbl-employers
-#| tbl-cap: "Known apparel and fashion employers used for industry matching"
 known_apparel_companies = [
     "adidas", "vuoriinc", "tjx", "jobs.tjx.com", "careers.michaels.com",
     "ralph lauren", "macy's", "macys", "nordstrom", "kohl's", "kohls",
@@ -38,9 +38,9 @@ pd.DataFrame({"Known Employer": known_apparel_companies})
 
 A posting's `TITLE_CLEAN` had to contain at least one of these terms to pass the role-title filter.
 
+**Table 11:** Role-title keywords used for the role-title filter
+
 ```{python}
-#| label: tbl-roles
-#| tbl-cap: "Role-title keywords used for the role-title filter"
 role_terms = [
     "business analyst", "data analyst", "business intelligence",
     "analytics", "insights analyst", "merchandising analyst",
@@ -62,15 +62,15 @@ The full methodology is on [Final Analytics](final_analytics.qmd). The scoring t
 | Accessibility | 0 | Minimum years of experience > 5 |
 | Employer signal | 1-5 | Raw count of postings from that employer in the 19-posting sample |
 
-: Scoring tiers behind the Opportunity Score {#tbl-score-tiers}
+: **Table 12:** Scoring tiers behind the Opportunity Score
 
 ## Full Posting List
 
 All 19 postings in the final filtered and cleaned dataset, with the fields used across the analysis.
 
+**Table 13:** All postings in the final analytical sample
+
 ```{python}
-#| label: tbl-full-postings
-#| tbl-cap: "All postings in the final analytical sample"
 df = pd.read_csv("data/processed/apparel_analyst_clean.csv")
 
 df[[

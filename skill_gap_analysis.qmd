@@ -168,9 +168,9 @@ As a team we rated ourselves strongest in Data Analysis and Excel with average s
 
 We convert each skill's share of the 19 postings into a target proficiency level, then compare that target against the team average to flag priority.
 
+**Table 6:** Skill gap summary: market demand, target level, team average, and priority
+
 ```{python}
-#| label: tbl-gap-summary
-#| tbl-cap: "Skill gap summary: market demand, target level, team average, and priority"
 
 skill_map = {
     "Power BI": "Power BI",

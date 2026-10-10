@@ -24,7 +24,7 @@ Our team started from the full MET Employability raw dataset, loaded across 21 p
 | Role title keyword match, any industry | 13,841 |
 | Final filtered set (industry match AND role match) | 19 |
 
-: Filter funnel from raw dataset to final analytical sample {#tbl-funnel}
+: **Table 1:** Filter funnel from raw dataset to final analytical sample
 
 NAICS 458 alone matched only 18 postings in the entire 504,208 posting dataset. That number confirms the limitation noted at the bottom of this page: most apparel and fashion retail analytics roles are not tagged under clothing retail NAICS codes at all. Widening the industry filter to also match a list of known apparel and fashion employer names raised that count to 2,405, which is the number actually carried forward. From there, filtering to postings whose title contains an analyst or analytics related keyword narrowed the set to our final 19 verified postings.
 
@@ -65,9 +65,9 @@ df.info()
 
 ## Clean Salary Fields
 
+**Table 2:** Cleaned salary fields by posting
+
 ```{python}
-#| label: tbl-salary
-#| tbl-cap: "Cleaned salary fields by posting"
 df["SALARY_FROM"] = pd.to_numeric(df["SALARY_FROM"], errors="coerce")
 df["SALARY_TO"] = pd.to_numeric(df["SALARY_TO"], errors="coerce")
 
@@ -83,9 +83,9 @@ df[["TITLE_CLEAN", "COMPANY_NAME", "SALARY_FROM", "SALARY_TO"]]
 
 ## Clean Experience Fields
 
+**Table 3:** Cleaned experience fields by posting
+
 ```{python}
-#| label: tbl-experience
-#| tbl-cap: "Cleaned experience fields by posting"
 df["MIN_YEARS_EXPERIENCE"] = pd.to_numeric(df["MIN_YEARS_EXPERIENCE"], errors="coerce")
 df["MAX_YEARS_EXPERIENCE"] = pd.to_numeric(df["MAX_YEARS_EXPERIENCE"], errors="coerce")
 
@@ -99,9 +99,9 @@ Missing minimum-experience values were filled with 0 rather than left blank. Thi
 
 ## Clean Geography Fields
 
+**Table 4:** Cleaned location fields by posting
+
 ```{python}
-#| label: tbl-geography
-#| tbl-cap: "Cleaned location fields by posting"
 for col in ["CITY_NAME", "STATE_NAME"]:
     df[col] = df[col].astype(str).str.strip()
     df[col] = df[col].replace("", "Unknown").replace("nan", "Unknown").fillna("Unknown")
@@ -117,9 +117,9 @@ df[["TITLE_CLEAN", "COMPANY_NAME", "CITY_NAME", "STATE_NAME"]]
 
 ## Clean Skills Fields
 
+**Table 5:** Parsed skill lists by posting
+
 ```{python}
-#| label: tbl-skills
-#| tbl-cap: "Parsed skill lists by posting"
 import json
 
 def clean_skill_list(value):
