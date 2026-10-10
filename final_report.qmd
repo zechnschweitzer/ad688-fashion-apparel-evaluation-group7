@@ -5,7 +5,7 @@ subtitle: |
   MET AD 688
   Professor Padalkar
 author: "Alyssa Quigley, Ankita Roy, Zechariah Schweitzer, Sara Scribner"
-date: "October 5, 2026"
+date: "October 12, 2026"
 
 format:
   docx:
@@ -17,11 +17,20 @@ csl: csl/apa.csl
 
 # Product Framing
 
-Our group developed a solution for students interested in entering the apparel and fashion industry and seeking analytics-related opportunities. Fashion retailers have leaned harder into data analytics in recent years [@oh2020], and the U.S. Bureau of Labor Statistics projects continued growth in analytics-related roles [@blsooh2025]. It helps them identify suitable job opportunities, assess skill gaps, and determine which skills to develop next. This analysis focuses on apparel and fashion employers under the North American Industry Classification System (NAICS) code 458 – Clothing, Clothing Accessories, Shoes, and Jewelry Retailers.
+Our group developed a solution for students interested in entering the apparel and fashion industry and seeking analytics-related opportunities. Fashion retailers have leaned harder into data analytics in recent years [@oh2020], and the U.S. Bureau of Labor Statistics projects continued growth in analytics-related roles [@blsooh2025]. Job postings for these roles frequently call for SQL, Excel, and visualization tools like Tableau or Power BI, alongside analytical and communication skills [@ziprecruiter2026a], and the same postings show a fair amount of spread in pay and remote availability [@ziprecruiter2026b]. It helps them identify suitable job opportunities, assess skill gaps, and determine which skills to develop next. This analysis focuses on apparel and fashion employers under the North American Industry Classification System (NAICS) code 458 – Clothing, Clothing Accessories, Shoes, and Jewelry Retailers.
 
 # Scope and Data
 
 Although the dataset included 504,208 job postings extracted from 21 parquet parts, only 19 were usable for this evaluation after combining the NAICS 458 filter with a list of known apparel and fashion employers and a role-title match, making this analysis fashion analytics market-focused rather than an assessment of the broader analytics industry. The dataset uses the following columns in this evaluation: ID, TITLE_CLEAN, COMPANY_NAME, COMPANY_CLEAN, SALARY_FROM, SALARY_TO, MIN_YEARS_EXPERIENCE, MAX_YEARS_EXPERIENCE, CITY_NAME, STATE_NAME, REMOTE_TYPE_NAME, SKILLS_LIST, SOFTWARE_SKILLS_LIST, NAICS_2022_3.
+
+| Step | Postings |
+|---|---|
+| Raw source (21 parquet parts) | 504,208 |
+| NAICS 458 only | 18 |
+| Known apparel/fashion employer only | 2,387 |
+| NAICS 458 OR known employer (industry match) | 2,405 |
+| Role title keyword match, any industry | 13,841 |
+| Final filtered set (industry match AND role match) | 19 |
 
 # Market Baseline
 
@@ -51,7 +60,20 @@ Our findings suggest opportunities for analytics professionals across multiple a
 
 # Skill-Gap Analysis
 
-The Skill-Gap Analysis compares required employer skills with the current capabilities of the student, which our group used to test the model and assess our own skills. Skills are rated from 1 (Beginner) to 5 (Expert); each skill is then compared against market demand, which is used to set the “Target Level”. From there, the user can see the gap between their skill level and the target level, and is given a priority level for improvement. Power BI and SQL were the most frequently requested technical skills, each appearing in 7 of 19 job postings. Excel and Python each appeared in 5 postings, although the team demonstrated stronger proficiency in Excel than Python.  
+The Skill-Gap Analysis compares required employer skills with the current capabilities of the student, which our group used to test the model and assess our own skills. Skills are rated from 1 (Beginner) to 5 (Expert); each skill is then compared against market demand, which is used to set the “Target Level”. From there, the user can see the gap between their skill level and the target level, and is given a priority level for improvement. Power BI and SQL were the most frequently requested technical skills, each appearing in 7 of 19 postings, followed by Python and Microsoft Excel with 5 each and Digital Marketing with 4. The remaining skills, including Stakeholder Management, Project Management, and Data Analysis, each appeared in 2 to 3 postings.
+
+| Skill | Market Demand | Target Level | Team Average | Gap | Priority |
+|---|---|---|---|---|---|
+| Power BI | 36.8% | 5 | 2.75 | 2.25 | High |
+| SQL | 36.8% | 5 | 3.25 | 1.75 | High |
+| Python | 26.3% | 4 | 2.75 | 1.25 | Moderate |
+| Digital Marketing | 21.1% | 4 | 2.75 | 1.25 | Moderate |
+| Excel | 26.3% | 4 | 4.25 | -0.25 | Low |
+| Stakeholder Mgmt | 15.8% | 3 | 3.50 | -0.50 | Low |
+| Project Mgmt | 15.8% | 3 | 3.50 | -0.50 | Low |
+| Data Analysis | 15.8% | 3 | 4.00 | -1.00 | Low |
+
+<!-- -->  
 
 [![Skills Gap-Top Skills](figures/skill_gap_analysis/top_skills.png)](https://zechnschweitzer.github.io/ad688-fashion-apparel-evaluation-group7/skill_gap_analysis.html)
 
@@ -77,9 +99,37 @@ The 19 postings in our filtered dataset do not represent equally strong opportun
 
 The final analysis uses a rule-based Opportunity Scorecard to rank job postings according to skill fit, experience accessibility, and employer signal score. A scorecard was selected over a predictive model because the final dataset had only 19 postings, making it more vulnerable to overfitting. We found the highest-ranked position was the Senior Manager, Ecommerce Analytics role at Vuori, with an opportunity score of 10. The second and third highly ranked positions were Sr. FP&A Manager, Systems & Analytics at Vuori and Director, Wholesale Sales Planning & Analytics at Adidas.
 
-[![Final_Analytics-Assessment](figures/opportunity_scorecard/opportunity_scorecard_assessment.png)](https://zechnschweitzer.github.io/ad688-fashion-apparel-evaluation-group7/final_analytics.html)
+| Title | Company | Skill Fit | Accessibility | Employer Signal | Opportunity Score |
+|---|---|---|---|---|---|
+| Sr. Manager, Ecommerce Analytics | Vuori | 2 | 3 | 5 | 10 |
+| Sr. FP&A Manager, Systems & Analytics | Vuori | 1 | 3 | 5 | 9 |
+| Director, Wholesale Sales Planning & Analytics | Vuori | 1 | 3 | 5 | 9 |
+| Manager, Digital Marketing Analytics | Adidas | 2 | 3 | 3 | 8 |
+| Sr. Manager, Global Finance Business Analyst | Vuori | 0 | 3 | 5 | 8 |
+| Product Manager, Enterprise Analytics | Vuori | 1 | 1 | 5 | 7 |
+| Sr Region Operations Analyst - Sierra | TJX | 0 | 3 | 3 | 6 |
+| Sr. Data Analyst | Foot Locker | 2 | 3 | 1 | 6 |
+| Senior Analyst, Merchandise Flow & Analytics | TJX | 0 | 3 | 3 | 6 |
+| Manager, Digital Consumer Analytics | Adidas | 2 | 1 | 3 | 6 |
+| Media Marketing Sr. Manager, Analytics | Ralph Lauren | 1 | 3 | 2 | 6 |
+| Sr Region Operations Analyst - Sierra | TJX | 0 | 3 | 3 | 6 |
+| Media Marketing Sr. Manager, Analytics | Ralph Lauren | 1 | 3 | 2 | 6 |
+| Manager, Digital Analytics | Adidas | 0 | 3 | 3 | 6 |
+| Senior Business Intelligence & Data Analyst - Data Governance | TJX | 0 | 3 | 2 | 5 |
+| Senior Business Intelligence & Data Analyst - Data Governance | TJX | 0 | 3 | 2 | 5 |
+| Merchandising Data Analyst | Michaels | 1 | 3 | 1 | 5 |
+| Data Analyst 3 - Store Operations | Nordstrom | 1 | 3 | 1 | 5 |
+| Principal, Data Analytics and Engineering | Macy's | 0 | 3 | 1 | 4 |
+
+
 
 The scorecard provides an intuitive method for prioritizing opportunities based on the student's current skill levels and the characteristics found in the job postings. To check the model's internal consistency, we computed the rank correlation between each component and the final Opportunity Score. Employer signal correlates most strongly (0.87), skill fit correlates moderately (0.42), and accessibility correlates essentially not at all (-0.11), confirming that employer signal currently has more influence on the ranking than the other two components, since it is an uncapped raw count rather than a capped 0-to-3 or 0-to-4 score. With this in mind, and considering this is not a predictive model, the scorecard is best interpreted as a career prioritization tool rather than a precise ranking.
+
+| Component | Min | Max | Mean | Correlation with Opportunity Score |
+|---|---|---|---|---|
+| Skill Fit | 0.00 | 2.00 | 0.79 | 0.42 |
+| Accessibility | 1.00 | 3.00 | 2.79 | -0.11 |
+| Employer Signal | 1.00 | 5.00 | 2.89 | 0.87 |
 
 # Recommendations 
 
@@ -108,6 +158,13 @@ This project was a collaborative effort across all four team members. Each perso
 
 ::: {#refs}
 :::
+
+
+
+
+
+
+
 
 
 
