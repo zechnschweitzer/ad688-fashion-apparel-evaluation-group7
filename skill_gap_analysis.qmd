@@ -23,6 +23,7 @@ Skill fields were parsed from each posting's listed skills. Counts reflect how m
 
 import ast
 import os
+import brand
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
@@ -32,8 +33,8 @@ clean_df = pd.read_csv("data/processed/apparel_analyst_clean.csv")
 
 os.makedirs("figures/skill_gap_analysis", exist_ok=True)
 
-PLOTLY_TEMPLATE = "plotly_white"
-PLOTLY_COLOR = "#2C6E8C"
+PLOTLY_TEMPLATE = "group7"
+PLOTLY_COLOR = "#69558E"
 ```
 
 ```{python}
@@ -106,7 +107,7 @@ df_skills.set_index("Name", inplace=True)
 fig_heatmap = px.imshow(
     df_skills,
     text_auto=True,
-    color_continuous_scale="RdBu_r",
+    color_continuous_scale=brand.PROFICIENCY_SCALE,
     zmin=1,
     zmax=5,
     template=PLOTLY_TEMPLATE,
@@ -221,7 +222,7 @@ fig_gap = px.bar(
     y="Skill",
     orientation="h",
     color="Gap",
-    color_continuous_scale="RdBu_r",
+    color_continuous_scale=brand.GAP_SCALE,
     color_continuous_midpoint=0,
     template=PLOTLY_TEMPLATE,
     labels={

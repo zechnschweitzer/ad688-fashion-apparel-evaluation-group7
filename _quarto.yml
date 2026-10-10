@@ -34,8 +34,9 @@ website:
 
 format:
   html:
-    theme: yeti
+    theme: [yeti, theme.scss]
     css: styles.css
+    include-after-body: rack.html
     toc: true
     code-fold: true
     title-block-banner: "images/banner_background.jpg"
