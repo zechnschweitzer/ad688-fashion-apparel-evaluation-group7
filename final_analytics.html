@@ -216,6 +216,7 @@ background-size: cover;
   <li><a href="#opportunity-scorecard-methodology" id="toc-opportunity-scorecard-methodology" class="nav-link active" data-scroll-target="#opportunity-scorecard-methodology">Opportunity Scorecard Methodology</a></li>
   <li><a href="#opportunity-scorecard" id="toc-opportunity-scorecard" class="nav-link" data-scroll-target="#opportunity-scorecard">Opportunity Scorecard</a></li>
   <li><a href="#scoring-model-diagnostics" id="toc-scoring-model-diagnostics" class="nav-link" data-scroll-target="#scoring-model-diagnostics">Scoring Model Diagnostics</a></li>
+  <li><a href="#does-the-score-predict-pay" id="toc-does-the-score-predict-pay" class="nav-link" data-scroll-target="#does-the-score-predict-pay">Does the Score Predict Pay?</a></li>
   <li><a href="#what-the-scores-show" id="toc-what-the-scores-show" class="nav-link" data-scroll-target="#what-the-scores-show">What the Scores Show</a></li>
   <li><a href="#evaluating-the-score" id="toc-evaluating-the-score" class="nav-link" data-scroll-target="#evaluating-the-score">Evaluating the Score</a></li>
   <li><a href="#what-this-means-for-our-team" id="toc-what-this-means-for-our-team" class="nav-link" data-scroll-target="#what-this-means-for-our-team">What This Means for Our Team</a></li>
@@ -243,7 +244,8 @@ background-size: cover;
 </section>
 <section id="opportunity-scorecard" class="level2">
 <h2 class="anchored" data-anchor-id="opportunity-scorecard">Opportunity Scorecard</h2>
-<div id="d91330ba" class="cell" data-execution_count="1">
+<p><strong>Table 7:</strong> Opportunity Scorecard, ranked by skill fit, accessibility, and employer signal</p>
+<div id="7f2b1872" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -482,7 +484,8 @@ background-size: cover;
 <section id="scoring-model-diagnostics" class="level2">
 <h2 class="anchored" data-anchor-id="scoring-model-diagnostics">Scoring Model Diagnostics</h2>
 <p>A rule-based scoring model still needs to be checked, not just described. Since we have no real hiring outcomes to validate the Opportunity Score against, we instead check its internal consistency: how much each component actually drives the final score, and whether any single component is quietly dominating the ranking.</p>
-<div id="f346f12b" class="cell" data-execution_count="2">
+<p><strong>Table 8:</strong> Scoring model diagnostics: component ranges and rank correlation with Opportunity Score</p>
+<div id="64101e44" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>component_correlations <span class="op">=</span> df[[</span>
@@ -551,6 +554,77 @@ background-size: cover;
 </div>
 </div>
 <p>Employer signal score has the widest range (1 to 5, uncapped) of the three components, and the table above shows it also carries by far the strongest rank correlation with the final Opportunity Score (0.87). Skill fit correlates more moderately (0.42), and accessibility correlates essentially not at all, slightly negative at -0.11. That confirms what the methodology note above flags: employer signal has more influence on the ranking than skill fit or accessibility, because it is a raw count rather than a capped 0-to-3 or 0-to-4 score, and it also means accessibility is currently closer to a tiebreaker than a real driver of the ranking. That is a property of this specific weighting choice, not a bug, but it is exactly the kind of thing a scoring model needs to disclose rather than hide behind a single combined number. A future version of this model could cap employer signal the same way the other two components are capped, or weight the three components unevenly on purpose, once there is outcome data to justify that choice.</p>
+</section>
+<section id="does-the-score-predict-pay" class="level2">
+<h2 class="anchored" data-anchor-id="does-the-score-predict-pay">Does the Score Predict Pay?</h2>
+<p>The correlations above show how each component relates to the final Opportunity Score. A separate question is whether those same components relate to actual advertised pay. We fit a simple linear regression predicting salary midpoint from the three scorecard components.</p>
+<p><strong>Table 9:</strong> Linear regression of salary midpoint on scorecard components</p>
+<div id="5fc3b08e" class="cell" data-execution_count="3">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"SALARY_MID"</span>] <span class="op">=</span> (df[<span class="st">"SALARY_FROM"</span>] <span class="op">+</span> df[<span class="st">"SALARY_TO"</span>]) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> df[[<span class="st">"SKILL_FIT_SCORE"</span>, <span class="st">"ACCESSIBILITY_SCORE"</span>, <span class="st">"EMPLOYER_SIGNAL_SCORE"</span>]]</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> sm.add_constant(X)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> df[<span class="st">"SALARY_MID"</span>]</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>pay_model <span class="op">=</span> sm.OLS(y, X).fit()</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>regression_table <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Coefficient"</span>: pay_model.params.<span class="bu">round</span>(<span class="dv">0</span>),</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Std. Error"</span>: pay_model.bse.<span class="bu">round</span>(<span class="dv">0</span>),</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">"p-value"</span>: pay_model.pvalues.<span class="bu">round</span>(<span class="dv">3</span>)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>regression_table.index <span class="op">=</span> [<span class="st">"Intercept"</span>, <span class="st">"Skill Fit"</span>, <span class="st">"Accessibility"</span>, <span class="st">"Employer Signal"</span>]</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>regression_table</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Coefficient</th>
+<th data-quarto-table-cell-role="th">Std. Error</th>
+<th data-quarto-table-cell-role="th">p-value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">Intercept</th>
+<td>111279.0</td>
+<td>8379.0</td>
+<td>0.000</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">Skill Fit</th>
+<td>806.0</td>
+<td>1834.0</td>
+<td>0.666</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">Accessibility</th>
+<td>226.0</td>
+<td>2366.0</td>
+<td>0.925</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">Employer Signal</th>
+<td>-238.0</td>
+<td>954.0</td>
+<td>0.806</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>Only 4 of our 19 postings listed an actual salary. The other 15 were filled with the sample median during data cleaning, so this regression does not have 19 independent salary observations, it has 4 real ones and 15 copies of the same imputed value. Treat the results below as illustrative of the method, not as a real pay-prediction signal. With that caveat, this model is exploratory rather than a reliable predictive tool. It explains np.float64(2.0)% of the variation in salary midpoint across our sample (R-squared = np.float64(0.02)), a figure driven mostly by how the three predictors happen to relate to the repeated median value rather than genuine pay variation. None of the three components reach standard statistical significance at this sample size, so the coefficients above are directional at best: employer signal and skill fit move in the same direction as pay, consistent with the correlation pattern above, while accessibility shows the weakest relationship. A real test of this question would need a larger sample with actual reported salaries, not an imputed one.</p>
 </section>
 <section id="what-the-scores-show" class="level2">
 <h2 class="anchored" data-anchor-id="what-the-scores-show">What the Scores Show</h2>

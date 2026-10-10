@@ -236,13 +236,8 @@ background-size: cover;
 <section id="filter-funnel" class="level2">
 <h2 class="anchored" data-anchor-id="filter-funnel">Filter Funnel</h2>
 <p>Our team started from the full MET Employability raw dataset, loaded across 21 parquet files, and narrowed it down in two stages before any cleaning happened.</p>
-<div id="tbl-funnel" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-funnel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: Filter funnel from raw dataset to final analytical sample
-</figcaption>
-<div aria-describedby="tbl-funnel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
+<caption><strong>Table 1:</strong> Filter funnel from raw dataset to final analytical sample</caption>
 <thead>
 <tr class="header">
 <th>Stage</th>
@@ -276,9 +271,6 @@ Table&nbsp;1: Filter funnel from raw dataset to final analytical sample
 </tr>
 </tbody>
 </table>
-</div>
-</figure>
-</div>
 <p>NAICS 458 alone matched only 18 postings in the entire 504,208 posting dataset. That number confirms the limitation noted at the bottom of this page: most apparel and fashion retail analytics roles are not tagged under clothing retail NAICS codes at all. Widening the industry filter to also match a list of known apparel and fashion employer names raised that count to 2,405, which is the number actually carried forward. From there, filtering to postings whose title contains an analyst or analytics related keyword narrowed the set to our final 19 verified postings.</p>
 <p>This funnel is reproducible from <code>explore_naics.py</code>, which logs each stage and writes the table above to <code>outputs/filter_funnel.md</code>.</p>
 </section>
@@ -354,7 +346,7 @@ Table&nbsp;1: Filter funnel from raw dataset to final analytical sample
 </section>
 <section id="load-the-filtered-dataset" class="level2">
 <h2 class="anchored" data-anchor-id="load-the-filtered-dataset">Load the Filtered Dataset</h2>
-<div id="fb2590ff" class="cell" data-execution_count="1">
+<div id="fbf3a3b4" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -375,7 +367,8 @@ memory usage: 18.7 KB</code></pre>
 </section>
 <section id="clean-salary-fields" class="level2">
 <h2 class="anchored" data-anchor-id="clean-salary-fields">Clean Salary Fields</h2>
-<div class="cell" data-execution_count="2">
+<p><strong>Table 2:</strong> Cleaned salary fields by posting</p>
+<div id="0269df92" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"SALARY_FROM"</span>] <span class="op">=</span> pd.to_numeric(df[<span class="st">"SALARY_FROM"</span>], errors<span class="op">=</span><span class="st">"coerce"</span>)</span>
@@ -394,17 +387,11 @@ memory usage: 18.7 KB</code></pre>
 <pre><code>Median SALARY_FROM used for fill: 85300.0
 Median SALARY_TO used for fill: 138222.0</code></pre>
 </div>
-<div id="tbl-salary" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="2">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-salary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;2: Cleaned salary fields by posting
-</figcaption>
-<div aria-describedby="tbl-salary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output cell-output-display" data-execution_count="2">
 <div>
 
 
-<table class="dataframe cell caption-top table table-sm table-striped small" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -554,13 +541,11 @@ Table&nbsp;2: Cleaned salary fields by posting
 </div>
 </div>
 </div>
-</figure>
-</div>
-</div>
 </section>
 <section id="clean-experience-fields" class="level2">
 <h2 class="anchored" data-anchor-id="clean-experience-fields">Clean Experience Fields</h2>
-<div class="cell" data-execution_count="3">
+<p><strong>Table 3:</strong> Cleaned experience fields by posting</p>
+<div id="44b773e9" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"MIN_YEARS_EXPERIENCE"</span>] <span class="op">=</span> pd.to_numeric(df[<span class="st">"MIN_YEARS_EXPERIENCE"</span>], errors<span class="op">=</span><span class="st">"coerce"</span>)</span>
@@ -571,17 +556,11 @@ Table&nbsp;2: Cleaned salary fields by posting
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>df[[<span class="st">"TITLE_CLEAN"</span>, <span class="st">"MIN_YEARS_EXPERIENCE"</span>, <span class="st">"MAX_YEARS_EXPERIENCE"</span>]]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-<div id="tbl-experience" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="3">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-experience-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;3: Cleaned experience fields by posting
-</figcaption>
-<div aria-describedby="tbl-experience-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output cell-output-display" data-execution_count="3">
 <div>
 
 
-<table class="dataframe cell caption-top table table-sm table-striped small" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -711,14 +690,12 @@ Table&nbsp;3: Cleaned experience fields by posting
 </div>
 </div>
 </div>
-</figure>
-</div>
-</div>
 <p>Missing minimum-experience values were filled with 0 rather than left blank. This means a posting that did not report an experience requirement cannot be distinguished from one that genuinely requires 0 years, which should be kept in mind when interpreting accessibility scores later in the project.</p>
 </section>
 <section id="clean-geography-fields" class="level2">
 <h2 class="anchored" data-anchor-id="clean-geography-fields">Clean Geography Fields</h2>
-<div class="cell" data-execution_count="4">
+<p><strong>Table 4:</strong> Cleaned location fields by posting</p>
+<div id="ba8c20eb" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> col <span class="kw">in</span> [<span class="st">"CITY_NAME"</span>, <span class="st">"STATE_NAME"</span>]:</span>
@@ -733,17 +710,11 @@ Table&nbsp;3: Cleaned experience fields by posting
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>df[[<span class="st">"TITLE_CLEAN"</span>, <span class="st">"COMPANY_NAME"</span>, <span class="st">"CITY_NAME"</span>, <span class="st">"STATE_NAME"</span>]]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-<div id="tbl-geography" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="4">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-geography-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;4: Cleaned location fields by posting
-</figcaption>
-<div aria-describedby="tbl-geography-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output cell-output-display" data-execution_count="4">
 <div>
 
 
-<table class="dataframe cell caption-top table table-sm table-striped small" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -893,13 +864,11 @@ Table&nbsp;4: Cleaned location fields by posting
 </div>
 </div>
 </div>
-</figure>
-</div>
-</div>
 </section>
 <section id="clean-skills-fields" class="level2">
 <h2 class="anchored" data-anchor-id="clean-skills-fields">Clean Skills Fields</h2>
-<div class="cell" data-execution_count="5">
+<p><strong>Table 5:</strong> Parsed skill lists by posting</p>
+<div id="fecb8f6c" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
@@ -921,17 +890,11 @@ Table&nbsp;4: Cleaned location fields by posting
 <div class="cell-output cell-output-stdout">
 <pre><code>Postings with at least one listed skill: 15</code></pre>
 </div>
-<div id="tbl-skills" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="5">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-skills-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;5: Parsed skill lists by posting
-</figcaption>
-<div aria-describedby="tbl-skills-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output cell-output-display" data-execution_count="5">
 <div>
 
 
-<table class="dataframe cell caption-top table table-sm table-striped small" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -1061,13 +1024,10 @@ Table&nbsp;5: Parsed skill lists by posting
 </div>
 </div>
 </div>
-</figure>
-</div>
-</div>
 </section>
 <section id="save-the-cleaned-dataset" class="level2">
 <h2 class="anchored" data-anchor-id="save-the-cleaned-dataset">Save the Cleaned Dataset</h2>
-<div id="4803e366" class="cell" data-execution_count="6">
+<div id="5823a062" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
