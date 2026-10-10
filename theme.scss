@@ -1,0 +1,348 @@
+/*-- scss:defaults --*/
+
+// Site palette
+$g7-plum: #33213B;        // Dark 1  - deep plum
+$g7-warm-white: #FFFCF7;  // Light 1 - warm white
+$g7-purple: #69558E;      // Dark 2 / Accent 2 - muted purple
+$g7-cream: #F8F4EC;       // Light 2 - cream
+$g7-mauve: #79445F;       // Accent 1 - dusty mauve
+$g7-lavender: #BBA7C9;    // Accent 3 - soft lavender
+$g7-lilac: #C9ACDD;       // Accent 4 - light lilac
+$g7-berry: #6C3656;       // Accent 5 - dark berry
+$g7-plum-gray: #66566C;   // Accent 6 - plum gray
+
+// Derived tints
+$g7-tint: #F1EAF2;
+$g7-rule: #E2D8E6;
+$g7-on-dark: #DCD0E4;
+
+$primary: $g7-mauve;
+$secondary: $g7-purple;
+$body-bg: $g7-cream;
+$body-color: $g7-plum;
+$link-color: $g7-berry;
+$link-hover-color: $g7-mauve;
+
+$font-family-sans-serif: "DM Sans", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+$headings-font-family: "Cormorant Garamond", Georgia, serif;
+$headings-font-weight: 600;
+$font-size-root: 17px;
+
+$navbar-bg: $g7-plum;
+$navbar-fg: $g7-cream;
+$navbar-hl: $g7-lilac;
+
+$code-color: $g7-berry;
+$border-radius: 10px;
+$table-border-color: $g7-rule;
+
+/*-- scss:rules --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap');
+
+// ---------- Base ----------
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .h1, .h2, .h3 {
+  letter-spacing: -0.01em;
+  color: $g7-plum;
+}
+
+h2 {
+  font-size: 2.1rem;
+  padding-bottom: 0.5rem;
+  // Stitched seam under section headings
+  background-image: linear-gradient(to right, $g7-mauve 55%, transparent 0%);
+  background-position: bottom left;
+  background-size: 14px 2px;
+  background-repeat: repeat-x;
+}
+
+h3 {
+  font-size: 1.55rem;
+}
+
+::selection {
+  background: rgba($g7-lilac, 0.45);
+}
+
+// ---------- Navbar ----------
+.navbar {
+  box-shadow: none;
+  border-bottom: 3px solid $g7-mauve;
+}
+
+.navbar-brand .navbar-title {
+  font-family: $headings-font-family;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.navbar .nav-link {
+  font-weight: 500;
+  border-radius: 999px;
+  padding: 0.35rem 0.85rem !important;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  background: rgba($g7-cream, 0.1);
+  color: $g7-lilac !important;
+}
+
+.navbar .dropdown-menu {
+  background: $g7-plum;
+  border: 1px solid rgba($g7-cream, 0.12);
+  border-radius: 12px;
+  padding: 0.4rem;
+}
+
+.navbar .dropdown-item {
+  color: $g7-cream;
+  border-radius: 8px;
+}
+
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus {
+  background: $g7-mauve;
+  color: $g7-warm-white;
+}
+
+// ---------- Title banner ----------
+.quarto-title-banner {
+  background: linear-gradient(90deg, $g7-plum 0 84%, $g7-mauve 84% 100%) !important;
+  color: $g7-cream !important;
+  padding-top: 3.25rem;
+  padding-bottom: 2.75rem;
+  position: relative;
+  overflow: hidden !important;
+}
+
+.quarto-title-banner::after {
+  // Woven texture over the accent panel
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 16%;
+  background-image:
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.08) 0 2px, transparent 2px 10px),
+    repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0.07) 0 2px, transparent 2px 10px);
+  pointer-events: none;
+}
+
+@media (max-width: 991.98px) {
+  .quarto-title-banner {
+    background: $g7-plum !important;
+    border-bottom: 6px solid $g7-mauve;
+  }
+  .quarto-title-banner::after { display: none; }
+}
+
+.quarto-title-banner .quarto-title .title {
+  font-size: clamp(2.2rem, 4.2vw, 3.6rem);
+  font-weight: 700;
+  line-height: 1.05;
+  color: $g7-warm-white;
+}
+
+.quarto-title-banner .subtitle {
+  font-family: $font-family-sans-serif;
+  color: $g7-on-dark;
+  font-size: 1.1rem;
+  margin-top: 0.75rem;
+}
+
+.quarto-title-meta-heading {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  color: $g7-mauve;
+}
+
+// ---------- Table of contents ----------
+#TOC .nav-link.active,
+nav[role="doc-toc"] .nav-link.active {
+  color: $g7-berry;
+  border-left-color: $g7-mauve;
+  font-weight: 600;
+}
+
+#toc-title, h2#toc-title {
+  background-image: none;
+  padding-bottom: 0;
+  font-family: $font-family-sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: $g7-plum-gray;
+}
+
+// ---------- Tables ----------
+.table, table {
+  background: $g7-warm-white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.table > thead, table > thead {
+  background: $g7-plum;
+}
+
+.table > thead th, table > thead th {
+  color: $g7-cream !important;
+  border-bottom: none !important;
+}
+
+.table > tbody > tr:nth-of-type(even) > *,
+table.dataframe tbody tr:nth-of-type(even) {
+  background: $g7-tint;
+}
+
+caption, .table-caption {
+  color: $g7-plum-gray;
+}
+
+// ---------- Code ----------
+details.code-fold > summary {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: $g7-plum-gray;
+  background: $g7-tint;
+  padding: 0.25rem 0.8rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+div.sourceCode, pre.sourceCode {
+  background: $g7-warm-white !important;
+  border: 1px solid $g7-rule;
+  border-radius: 12px;
+}
+
+code {
+  font-family: "DM Mono", ui-monospace, monospace;
+}
+
+// ---------- Figures ----------
+.quarto-figure img, .cell-output-display img {
+  border-radius: 12px;
+}
+
+.cell-output-display .plotly-graph-div,
+.cell-output-display .js-plotly-plot {
+  background: $g7-warm-white;
+  border-radius: 14px;
+  padding: 0.5rem;
+  border: 1px solid $g7-rule;
+}
+
+// ============================================================
+// Home page: clothing rack that slides away to reveal the title.
+// rack.html adds the rail and garments to the home page banner.
+// ============================================================
+
+.quarto-title-banner.g7-rack {
+  --g7-gw: clamp(84px, 9vw, 124px);
+  background: $g7-plum !important;
+  padding-top: 8.5rem;
+  padding-bottom: 3rem;
+  min-height: clamp(360px, 40vw, 460px);
+}
+
+.quarto-title-banner.g7-rack::after {
+  display: none;
+}
+
+.g7-rack__rail,
+.g7-garment {
+  // span the full banner, not just the text column of Quarto's page grid
+  grid-column: 1 / -1 !important;
+}
+
+.g7-rack__rail {
+  position: absolute;
+  left: 0;
+  right: 0;
+  // the hook interior sits 9 units down a 100-unit-wide hanger
+  top: calc(26px + var(--g7-gw) * 0.09 - 3px);
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(180deg, $g7-lilac, $g7-lavender 60%, $g7-purple);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+
+.g7-garment {
+  position: absolute;
+  top: 26px;
+  width: var(--g7-gw);
+  z-index: 3;
+  left: var(--end);
+  animation: g7-slide 2.4s cubic-bezier(.55, .05, .25, 1) both;
+  animation-delay: var(--delay, 0.35s);
+  pointer-events: none;
+}
+
+.g7-garment svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform-origin: 50% 6%;
+  animation: g7-swing 2.9s ease-out both;
+  animation-delay: var(--delay, 0.35s);
+  filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.28));
+}
+
+.g7-rack .quarto-title > * {
+  position: relative;
+  z-index: 1;
+  animation: g7-reveal 0.9s ease-out both;
+  animation-delay: 1.5s;
+}
+
+.g7-rack .quarto-title > *:nth-child(2) { animation-delay: 1.7s; }
+.g7-rack .quarto-title > *:nth-child(3) { animation-delay: 1.9s; }
+
+@keyframes g7-slide {
+  from { left: var(--start); }
+  to { left: var(--end); }
+}
+
+@keyframes g7-swing {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(-7deg); }
+  55% { transform: rotate(5deg); }
+  75% { transform: rotate(-2.5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes g7-reveal {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
+}
+
+// Below desktop width the title spans the banner, so the garments slide off the rail
+@media (max-width: 991.98px) {
+  .g7-garment { --end: 120% !important; }
+  .quarto-title-banner.g7-rack { border-bottom: 6px solid $g7-mauve; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .g7-garment, .g7-garment svg, .g7-rack .quarto-title > * {
+    animation: none !important;
+  }
+}
+
+// Let the author line wrap on small screens instead of widening the page
+@media (max-width: 991.98px) {
+  .quarto-title-meta .quarto-title-meta-contents p {
+    white-space: normal;
+  }
+}

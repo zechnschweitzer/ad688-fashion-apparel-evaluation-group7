@@ -20,6 +20,7 @@ Since the sample is intentionally narrow, the results are best used to understan
 #| output: false
 
 import os
+import brand
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -86,7 +87,7 @@ fig = px.bar(
     x="Number of Job Postings",
     y="Job Title",
     orientation="h",
-    color_discrete_sequence=["#2C6E8C"],
+    color_discrete_sequence=["#69558E"],
     title="Top Job Titles in Apparel Analytics"
 )
 
@@ -217,8 +218,8 @@ fig_role_segments = px.bar(
     x="Number of Job Postings",
     y="Functional Area",
     orientation="h",
-    template="plotly_white",
-    color_discrete_sequence=["#2C6E8C"],
+    template="group7",
+    color_discrete_sequence=["#69558E"],
     title="Job Postings by Functional Analytics Area"
 )
 
@@ -305,8 +306,8 @@ fig_coverage = px.bar(
     y="Attribute",
     orientation="h",
     text="Coverage Percentage",
-    template="plotly_white",
-    color_discrete_sequence=["#2C6E8C"],
+    template="group7",
+    color_discrete_sequence=["#69558E"],
     title="Coverage of Key Job-Posting Attributes"
 )
 
@@ -507,7 +508,7 @@ fig = px.bar(
     x="Number of Job Postings",
     y="State",
     orientation="h",
-    color_discrete_sequence=["#2C6E8C"],
+    color_discrete_sequence=["#69558E"],
     title="Job Postings by State"
 )
 
@@ -554,7 +555,7 @@ fig = px.choropleth(
     locationmode="USA-states",
     color="Number of Job Postings",
     scope="usa",
-    color_continuous_scale="Blues",
+    color_continuous_scale=[[0, "#F1EAF2"], [1, "#69558E"]],
     hover_name="State",
     title="Geographic Concentration of Job Postings"
 )
@@ -620,7 +621,7 @@ fig = px.bar(
     experience_counts,
     x="Minimum Years of Experience",
     y="Number of Job Postings",
-    color_discrete_sequence=["#2C6E8C"],
+    color_discrete_sequence=["#69558E"],
     title="Observed Minimum Experience Requirements"
 )
 
@@ -701,7 +702,7 @@ fig = px.bar(
     x="Number of Job Postings",
     y="Work Arrangement",
     orientation="h",
-    color_discrete_sequence=["#2C6E8C"],
+    color_discrete_sequence=["#69558E"],
     title="Reported Work Arrangement"
 )
 
@@ -785,7 +786,7 @@ fig = px.bar(
     x="Number of Job Postings",
     y="Employer",
     orientation="h",
-    color_discrete_sequence=["#2C6E8C"],
+    color_discrete_sequence=["#69558E"],
     title="Top Employers in the Selected Market"
 )
 
@@ -824,7 +825,7 @@ fig_dropdown.add_trace(go.Bar(
     x=employer_counts["Number of Job Postings"],
     y=employer_counts["Employer"],
     orientation="h",
-    marker_color="#2C6E8C",
+    marker_color="#69558E",
     visible=True,
     name="By Employer"
 ))
@@ -833,7 +834,7 @@ fig_dropdown.add_trace(go.Bar(
     x=state_counts["Number of Job Postings"],
     y=state_counts["State"],
     orientation="h",
-    marker_color="#2C6E8C",
+    marker_color="#69558E",
     visible=False,
     name="By State"
 ))
