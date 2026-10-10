@@ -15,9 +15,13 @@ bibliography: references.bib
 csl: csl/apa.csl
 ---
 
+
+**Project website:** [https://zechnschweitzer.github.io/ad688-fashion-apparel-evaluation-group7/](https://zechnschweitzer.github.io/ad688-fashion-apparel-evaluation-group7/)\
+**GitHub repository:** [https://github.com/zechnschweitzer/ad688-fashion-apparel-evaluation-group7](https://github.com/zechnschweitzer/ad688-fashion-apparel-evaluation-group7)
+
 # Product Framing
 
-Our group developed a solution for students interested in entering the apparel and fashion industry and seeking analytics-related opportunities. Fashion retailers have leaned harder into data analytics in recent years [@oh2020], and the U.S. Bureau of Labor Statistics projects continued growth in analytics-related roles [@blsooh2025]. Job postings for these roles frequently call for SQL, Excel, and visualization tools like Tableau or Power BI, alongside analytical and communication skills [@ziprecruiter2026a], and the same postings show a fair amount of spread in pay and remote availability [@ziprecruiter2026b]. A broader literature review on business analytics hiring shows a consistent pattern. Umamaheswaran et al. (2023) found business analytics postings ask for a mix of big data, business intelligence, and analytical technique alongside communication and stakeholder management [@umamaheswaran2023]. Alshameri and Adhikari (2025) identified a similar mix of general tools and field-specific skills in business postings, describing a growing disconnect between what schools teach and what employers actually look for [@alshameri2025]. Debortoli et al. (2014) found that business intelligence and big data postings separate technical tool skills from broader analytical thinking, with the strongest candidates showing both [@debortoli2014]. Apparel retail is a fitting test case for that combination: IBISWorld (2025) backs forecasting, inventory, pricing, and supply chain decisions as recurring analytical needs in clothing and accessory retail [@ibisworld2025], and The Planet Group (2025) found retail hiring has grown more selective even as it leans harder into technology, analytics, and customer experience [@planetgroup2025]. This project is aimed at BU MET students exploring analytics career paths in apparel retail, and asks which skills are most valued for business and data analyst roles in apparel retail, and how well our own team's current skill set matches those demands. It helps them identify suitable job opportunities, assess skill gaps, and determine which skills to develop next. This analysis focuses on apparel and fashion employers under the North American Industry Classification System (NAICS) code 458 – Clothing, Clothing Accessories, Shoes, and Jewelry Retailers.
+Our group developed a solution for students interested in entering the apparel and fashion industry and seeking analytics-related opportunities. Fashion retailers have leaned harder into data analytics in recent years [@oh2020], and the U.S. Bureau of Labor Statistics projects continued growth in analytics-related roles [@blsooh2025]. Job postings for these roles frequently call for SQL, Excel, and visualization tools like Tableau or Power BI, alongside analytical and communication skills [@ziprecruiter2026a], and the same postings show a fair amount of spread in pay and remote availability [@ziprecruiter2026b]. A broader literature review on business analytics hiring shows a consistent pattern. Umamaheswaran et al. (2023) found business analytics postings ask for a mix of big data, business intelligence, and analytical technique alongside communication and stakeholder management [@umamaheswaran2023]. Alshameri and Adhikari (2025) identified a similar mix of general tools and field-specific skills in business postings, describing a growing disconnect between what schools teach and what employers actually look for [@alshameri2025]. Debortoli et al. (2014) found that business intelligence and big data postings separate technical tool skills from broader analytical thinking, with the strongest candidates showing both [@debortoli2014]. Apparel retail is a fitting test case for that combination: IBISWorld (2025) backs forecasting, inventory, pricing, and supply chain decisions as recurring analytical needs in clothing and accessory retail [@ibisworld2025], and The Planet Group (2025) found retail hiring has grown more selective even as it leans harder into technology, analytics, and customer experience [@planetgroup2025]. This project is aimed at BU MET students exploring analytics career paths in apparel retail, and asks which skills are most valued for business and data analyst roles in apparel retail, and how well our own team's current skill set matches those demands. It helps them identify suitable job opportunities, assess skill gaps, and determine which skills to develop next. This analysis focuses on apparel and fashion employers under the North American Industry Classification System (NAICS) code 458, Clothing, Clothing Accessories, Shoes, and Jewelry Retailers.
 
 # Scope and Data
 
@@ -32,7 +36,7 @@ Although the dataset included 504,208 job postings extracted from 21 parquet par
 | Role title keyword match, any industry | 13,841 |
 | Final filtered set (industry match AND role match) | 19 |
 
-: {tbl-colwidths="[65,35]"}
+: **Table 1:** Filter funnel from raw dataset to final analytical sample {tbl-colwidths="[65,35]"}
 
 # Market Baseline
 
@@ -40,29 +44,41 @@ The market baseline examines the apparel and fashion industry demand, salary, lo
 
 [![Market Baseline-Job Titles](figures/market_baseline/job_volume_by_title.png)](https://zechnschweitzer.github.io/ad688-fashion-apparel-evaluation-group7/market_baseline.html)
 
+*Figure 1: Top job titles in the apparel analytics sample*
+
 Grouping the 19 postings by functional focus shows BI and data analytics roles make up the largest share at 6 postings, followed by marketing and customer analytics with 5, merchandising and ecommerce with 3, finance and strategy analytics and operations analytics with 2 each, and product or engineering analytics with 1. Job opportunities were also concentrated among a small number of employers: Vuori and TJX each account for 5 postings, Adidas accounts for 3, and Ralph Lauren accounts for 2, while Nordstrom, Foot Locker, Michaels, and Macy's each contribute 1.
 
 [![Market Baseline-Employers](figures/market_baseline/top_employers.png)](https://zechnschweitzer.github.io/ad688-fashion-apparel-evaluation-group7/market_baseline.html)
 
-Geographically, California and Massachusetts each account for 5 postings, followed by New York with 4 and Oregon with 3. 
+*Figure 2: Top employers in the selected market*
+
+Geographically, California and Massachusetts each account for 5 postings, followed by New York with 4 and Oregon with 3.
 
 [![Market Baseline-Location](figures/market_baseline/location_patterns.png)](https://zechnschweitzer.github.io/ad688-fashion-apparel-evaluation-group7/market_baseline.html)
+
+*Figure 3: Job postings by state*
 
 Salary data was limited to 4 of the 19 postings, with a range of approximately $85,000 to $161,000. Work arrangement data was also limited to 4 postings: 3 are classified as hybrid and 1 as fully remote, and no posting in the sample is explicitly classified as onsite.
 
 [![Market Baseline-Remote vs Onsite](figures/market_baseline/remote_onsite_patterns.png)](https://zechnschweitzer.github.io/ad688-fashion-apparel-evaluation-group7/market_baseline.html)
 
+*Figure 4: Reported work arrangement*
+
 [![Market Baseline-Salary](figures/market_baseline/salary_distribution.png)](https://zechnschweitzer.github.io/ad688-fashion-apparel-evaluation-group7/market_baseline.html)
 
-Minimum experience information is available for 9 of the 19 postings. Of those, 7 show a recorded minimum of 0 years and 2 show a minimum of 5 years, so most opportunities with a reported requirement do not require prior experience. 
+*Figure 5: Observed salary ranges*
+
+Minimum experience information is available for 9 of the 19 postings. Of those, 7 show a recorded minimum of 0 years and 2 show a minimum of 5 years, so most opportunities with a reported requirement do not require prior experience.
 
 [![Market Baseline-Experience](figures/market_baseline/experience_distribution.png)](https://zechnschweitzer.github.io/ad688-fashion-apparel-evaluation-group7/market_baseline.html)
+
+*Figure 6: Observed minimum experience requirements*
 
 Our findings suggest opportunities for analytics professionals across multiple areas within the fashion and apparel industry, while the dataset size and incomplete job posting information limit the ability to generalize these results to the broader fashion and apparel industry.
 
 # Skill-Gap Analysis
 
-The Skill-Gap Analysis compares required employer skills with the current capabilities of the student, which our group used to test the model and assess our own skills. Skills are rated from 1 (Beginner) to 5 (Expert); each skill is then compared against market demand, which is used to set the “Target Level”. From there, the user can see the gap between their skill level and the target level, and is given a priority level for improvement. Power BI and SQL were the most frequently requested technical skills, each appearing in 7 of 19 postings, followed by Python and Microsoft Excel with 5 each and Digital Marketing with 4. The remaining skills, including Stakeholder Management, Project Management, and Data Analysis, each appeared in 2 to 3 postings.
+The Skill-Gap Analysis compares required employer skills with the current capabilities of the student, which our group used to test the model and assess our own skills. Skills are rated from 1 (Beginner) to 5 (Expert); each skill is then compared against market demand, which is used to set the "Target Level". From there, the user can see the gap between their skill level and the target level, and is given a priority level for improvement. Power BI and SQL were the most frequently requested technical skills, each appearing in 7 of 19 postings, followed by Python and Microsoft Excel with 5 each and Digital Marketing with 4. The remaining skills, including Stakeholder Management, Project Management, and Data Analysis, each appeared in 2 to 3 postings.
 
 | Skill | Market Demand | Target Level | Team Average | Gap | Priority |
 |---|---|---|---|---|---|
@@ -75,25 +91,31 @@ The Skill-Gap Analysis compares required employer skills with the current capabi
 | Project Mgmt | 15.8% | 3 | 3.50 | -0.50 | Low |
 | Data Analysis | 15.8% | 3 | 4.00 | -1.00 | Low |
 
-: {tbl-colwidths="[26,16,14,14,12,18]"}
+: **Table 2:** Skill gap summary: market demand, target level, team average, and priority {tbl-colwidths="[26,16,14,14,12,18]"}
 
-<!-- -->  
+<!-- -->
 
 [![Skills Gap-Top Skills](figures/skill_gap_analysis/top_skills.png)](https://zechnschweitzer.github.io/ad688-fashion-apparel-evaluation-group7/skill_gap_analysis.html)
+
+*Figure 7: Most in-demand skills in apparel analytics postings*
 
 The team rated itself strongest in Excel (4.25) and Data Analysis (4.0), and weakest in Power BI (2.75), Python (2.75), and Digital Marketing (2.75).
 
 [![Skill Gap-Team Heatmap](figures/skill_gap_analysis/team_skill_heatmap.png)](https://zechnschweitzer.github.io/ad688-fashion-apparel-evaluation-group7/skill_gap_analysis.html)
 
+*Figure 8: Team skill levels (1 = Beginner, 5 = Expert)*
+
 Comparing these averages against market-based targets set Power BI (2.25 gap) and SQL (1.75 gap) as high priority, and Python and Digital Marketing as moderate priority. Excel, Stakeholder Management, Project Management, and Data Analysis all came back as low priority, since the team's average proficiency already meets or exceeds the market-based target for each.
 
 [![Skill Gap-Average Proficiency](figures/skill_gap_analysis/team_average_proficiency.png)](https://zechnschweitzer.github.io/ad688-fashion-apparel-evaluation-group7/skill_gap_analysis.html)
+
+*Figure 9: Average team proficiency by skill*
 
 Power BI is the most consistent gap across the team: every member rated it at 3 or below despite it tying for the highest market demand.
 
 [![Skill Gap-Priority Diverging Chart](figures/skill_gap_analysis/skill_gap_diverging.png)](https://zechnschweitzer.github.io/ad688-fashion-apparel-evaluation-group7/skill_gap_analysis.html)
 
-[![Skills Gap-Summary](figures/skill_gap_analysis/skill_gap_summary.png)](https://zechnschweitzer.github.io/ad688-fashion-apparel-evaluation-group7/skill_gap_analysis.html)
+*Figure 10: Skill gap, market target vs. team average*
 
 # Career Evaluation
 
@@ -125,11 +147,9 @@ The final analysis uses a rule-based Opportunity Scorecard to rank job postings 
 | Data Analyst 3 - Store Operations | Nordstrom | 1 | 3 | 1 | 5 |
 | Principal, Data Analytics and Engineering | Macy's | 0 | 3 | 1 | 4 |
 
-: {tbl-colwidths="[38,14,10,12,13,13]"}
+: **Table 3:** Opportunity Scorecard, ranked by skill fit, accessibility, and employer signal {tbl-colwidths="[38,14,10,12,13,13]"}
 
 <!-- -->
-
-
 
 The scorecard provides an intuitive method for prioritizing opportunities based on the student's current skill levels and the characteristics found in the job postings. To check the model's internal consistency, we computed the rank correlation between each component and the final Opportunity Score. Employer signal correlates most strongly (0.87), skill fit correlates moderately (0.42), and accessibility correlates essentially not at all (-0.11), confirming that employer signal currently has more influence on the ranking than the other two components, since it is an uncapped raw count rather than a capped 0-to-3 or 0-to-4 score. With this in mind, and considering this is not a predictive model, the scorecard is best interpreted as a career prioritization tool rather than a precise ranking.
 
@@ -139,25 +159,36 @@ The scorecard provides an intuitive method for prioritizing opportunities based 
 | Accessibility | 1.00 | 3.00 | 2.79 | -0.11 |
 | Employer Signal | 1.00 | 5.00 | 2.89 | 0.87 |
 
-: {tbl-colwidths="[22,12,12,12,42]"}
+: **Table 4:** Scoring model diagnostics: component ranges and rank correlation with Opportunity Score {tbl-colwidths="[22,12,12,12,42]"}
 
-# Recommendations 
+## Does the Score Predict Pay?
 
-Given this dataset and our Opportunity Scorecard, we recommend students focus their job search on Vuori and TJX, as they had multiple analytics-adjacent postings, making them the most attainable by volume. Adidas ranked third in posting volume, with positions relying more on skill fit rather than application volume. For location, students have the best chance of finding opportunities in California, Massachusetts, and New York. Students should also focus on developing their Power BI and SQL skills, as they are the most in-demand skills. The third most important skill is Python, though less than half of these postings required it. By person, Alyssa and Ankita should complete a Power BI learning path before the Module 5 deadline, then move to SQL practice against our own filtered dataset. Sara should prioritize Power BI first given her lowest team rating on it, building on her existing Excel strength. Zech should focus on Power BI's data modeling features, building on his existing SQL proficiency.
+The correlations above show how each component relates to the final Opportunity Score. A separate question is whether those same components relate to actual advertised pay. We fit a simple linear regression predicting salary midpoint from the three scorecard components. Only 4 of our 19 postings listed an actual salary; the other 15 were filled with the sample median during data cleaning, so this regression does not have 19 independent salary observations, it has 4 real ones and 15 copies of the same imputed value. Treat the results below as illustrative of the method, not as a real pay-prediction signal.
+
+| Term | Coefficient | Std. Error | p-value |
+|---|---|---|---|
+| Intercept | 111,300 | 8,379 | <0.001 |
+| Skill Fit | 806 | 1,834 | 0.666 |
+| Accessibility | 226 | 2,366 | 0.925 |
+| Employer Signal | -238 | 954 | 0.806 |
+
+: **Table 5:** Linear regression of salary midpoint on scorecard components {tbl-colwidths="[28,24,24,24]"}
+
+The model explains about 2 percent of the variation in salary midpoint across our sample (R-squared = 0.017), a figure driven mostly by how the three predictors happen to relate to the repeated median value rather than genuine pay variation. None of the three components reach standard statistical significance at this sample size: skill fit and accessibility are both weakly positive, while employer signal is weakly negative, the opposite direction from its strong positive correlation with the Opportunity Score itself. That mismatch is further evidence the regression is reacting to noise from the imputed values rather than a real pay relationship. A real test of this question would need a larger sample with actual reported salaries, not an imputed one.
+
+# Recommendations
+
+Given this dataset and our Opportunity Scorecard (Table 3), we recommend students focus their job search on Vuori and TJX, as they had multiple analytics-adjacent postings and dominate the top employers in Market Baseline (Figure 2), making them the most attainable by volume. Adidas ranked third in posting volume, with positions relying more on skill fit rather than application volume. For location, students have the best chance of finding opportunities in California, Massachusetts, and New York, consistent with the state-level concentration in Market Baseline (Figure 3). Students should also focus on developing their Power BI and SQL skills, as they are the most in-demand skills (Figure 7) and the two largest gaps in the Skill Gap Summary (Table 2) and gap chart (Figure 10). The third most important skill is Python, though less than half of these postings required it. By person, Alyssa and Ankita should complete a Power BI learning path before the Module 5 deadline, then move to SQL practice against our own filtered dataset. Sara should prioritize Power BI first given her lowest team rating on it, building on her existing Excel strength. Zech should focus on Power BI's data modeling features, building on his existing SQL proficiency.
 
 ## How to Use This Product Going Forward
 
 1. Re-run the Opportunity Scorecard as new postings come in, since employer signal and skill demand can shift as hiring continues.
-2. Treat the Opportunity Score as a starting point, not a verdict, since it has not been checked against real hiring outcomes, and its three components should be read individually rather than only as one combined number.
+2. Treat the Opportunity Score as a starting point, not a verdict, since it has not been checked against real hiring outcomes. The diagnostics (Table 4) show employer signal drives the ranking more than skill fit or accessibility, and the salary regression (Table 5) found none of the three components reach statistical significance at this sample size, so its three components should be read individually rather than only as one combined number.
 3. Use the skill priorities above, Power BI, then SQL, then Python, to guide coursework and self-study for the rest of the semester, since those are the skills most likely to move a posting from low-scoring to high-scoring.
 
-# Limitations 
+# Limitations
 
-As stated before, our working sample is 19 postings from a narrowly filtered search. These recommendations describe this specific sample, not the broader apparel analytics job market. Salary and remote work data were usable for only 4 of 19 postings each, so neither recommendation above can account for compensation or remote work preferences with much confidence. Lastly, the scorecard’s equal weighting of skill fit, accessibility, and employer signal is a modeling choice, not a validated weighting scheme.
-
-
-
-
+As stated before, our working sample is 19 postings from a narrowly filtered search. These recommendations describe this specific sample, not the broader apparel analytics job market. Salary and remote work data were usable for only 4 of 19 postings each, so neither recommendation above can account for compensation or remote work preferences with much confidence. The salary regression in Final Analytics (Table 5) reflects this same limitation: with only 4 real salary values and 15 median-imputed ones, it is exploratory, not a reliable predictive tool. Lastly, the scorecard's equal weighting of skill fit, accessibility, and employer signal is a modeling choice, not a validated weighting scheme.
 
 # Team Contributions
 
@@ -175,32 +206,6 @@ This project was a collaborative effort across all four team members. Each perso
 ::: {#refs}
 :::
 
+# Appendix: AI Use Disclosure
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+In compliance with course guidelines, our team discloses that we used generative AI tools, including Claude and ChatGPT, throughout this project. We used these tools as a tutor and collaborator: to explain unfamiliar functions and statistical concepts, help debug code, brainstorm approaches, draft and revise written sections, and review our analysis for errors and gaps. All final analysis, writing, and conclusions were reviewed and approved by the team.

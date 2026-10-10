@@ -88,6 +88,7 @@ fig = px.bar(
     y="Job Title",
     orientation="h",
     color_discrete_sequence=["#69558E"],
+    template="group7",
     title="Top Job Titles in Apparel Analytics"
 )
 
@@ -100,6 +101,11 @@ fig.update_layout(
 
 fig.update_xaxes(
     dtick=1
+)
+
+fig.write_image(
+    "figures/market_baseline/job_volume_by_title.png",
+    scale=2
 )
 
 fig.show()
@@ -432,6 +438,7 @@ for _, row in salary_observed.iterrows():
     )
 
 fig.update_layout(
+    template="group7",
     title="Observed Salary Ranges",
     xaxis_title="Annual Salary ($)",
     yaxis_title="",
@@ -447,6 +454,11 @@ fig.update_layout(
 fig.update_xaxes(
     tickprefix="$",
     tickformat="~s"
+)
+
+fig.write_image(
+    "figures/market_baseline/salary_distribution.png",
+    scale=2
 )
 
 fig.show()
@@ -513,6 +525,7 @@ fig = px.bar(
     y="State",
     orientation="h",
     color_discrete_sequence=["#69558E"],
+    template="group7",
     title="Job Postings by State"
 )
 
@@ -530,6 +543,11 @@ fig.update_layout(
 
 fig.update_xaxes(
     dtick=1
+)
+
+fig.write_image(
+    "figures/market_baseline/location_patterns.png",
+    scale=2
 )
 
 fig.show()
@@ -628,6 +646,7 @@ fig = px.bar(
     x="Minimum Years of Experience",
     y="Number of Job Postings",
     color_discrete_sequence=["#69558E"],
+    template="group7",
     title="Observed Minimum Experience Requirements"
 )
 
@@ -645,6 +664,11 @@ fig.update_layout(
 
 fig.update_yaxes(
     dtick=1
+)
+
+fig.write_image(
+    "figures/market_baseline/experience_distribution.png",
+    scale=2
 )
 
 fig.show()
@@ -710,6 +734,7 @@ fig = px.bar(
     y="Work Arrangement",
     orientation="h",
     color_discrete_sequence=["#69558E"],
+    template="group7",
     title="Reported Work Arrangement"
 )
 
@@ -727,6 +752,11 @@ fig.update_layout(
 
 fig.update_xaxes(
     dtick=1
+)
+
+fig.write_image(
+    "figures/market_baseline/remote_onsite_patterns.png",
+    scale=2
 )
 
 fig.show()
@@ -795,6 +825,7 @@ fig = px.bar(
     y="Employer",
     orientation="h",
     color_discrete_sequence=["#69558E"],
+    template="group7",
     title="Top Employers in the Selected Market"
 )
 
@@ -812,6 +843,11 @@ fig.update_layout(
 
 fig.update_xaxes(
     dtick=1
+)
+
+fig.write_image(
+    "figures/market_baseline/top_employers.png",
+    scale=2
 )
 
 fig.show()
