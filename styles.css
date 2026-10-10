@@ -44,8 +44,6 @@ h1 {
 h2 {
   font-weight: 650;
   margin-top: 2.5rem;
-  padding-bottom: 0.4rem;
-  border-bottom: 1px solid #e5e5e5;
 }
 
 h3 {
@@ -64,35 +62,6 @@ p {
 
 .content p {
   margin-bottom: 1rem;
-}
-
-
-/* -----------------------------
-   Navbar
------------------------------- */
-
-.navbar {
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-  background-color: #0b3d59 !important;
-}
-
-.navbar-brand,
-.navbar-nav .nav-link,
-.navbar .dropdown-item {
-  color: #ffffff !important;
-}
-
-.navbar-nav .nav-link:hover,
-.navbar .dropdown-item:hover {
-  color: #cfe3f0 !important;
-}
-
-.navbar .dropdown-menu {
-  background-color: #0b3d59;
-}
-
-.navbar-brand {
-  font-weight: 600;
 }
 
 

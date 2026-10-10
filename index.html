@@ -42,7 +42,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-38838b12d2c25e08a8e0512b421f47c2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-590df7820f31b480a995d5188cfc1e0c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -256,6 +256,34 @@ background-size: cover;
 </section>
 
 </main> <!-- /main -->
+<script>
+// Home page only: hang a clothing rack across the title banner. The garments
+// slide along the rail to reveal the title. Purely decorative: no text added.
+(function () {
+  var banner = document.querySelector(".quarto-title-banner");
+  if (!banner) return;
+  var path = window.location.pathname;
+  var isHome = /(^|\/)(index\.html)?$/.test(path) ||
+    !!document.querySelector('.navbar .nav-link.active[href$="index.html"]');
+  if (!isHome) return;
+  var garments = [{"start": 2, "end": 76, "delay": 0.75, "svg": "<svg viewBox=\"0 0 100 150\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M50 18 V9 A4 4 0 0 0 42 9 V11.5\" fill=\"none\" stroke=\"#BBA7C9\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M50 17 L12 32 H88 Z\" fill=\"none\" stroke=\"#BBA7C9\" stroke-width=\"3\" stroke-linejoin=\"round\"/><g fill=\"#79445F\"><path d=\"M33 30 L14 40 L8 128 H22 L28 66 V146 H72 V66 L78 128 H92 L86 40 L67 30 L56 52 H44 Z\"/></g><path d=\"M50 52 V146\" stroke=\"rgba(51,33,59,.35)\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"56\" cy=\"74\" r=\"2.6\" fill=\"rgba(51,33,59,.45)\"/><circle cx=\"56\" cy=\"98\" r=\"2.6\" fill=\"rgba(51,33,59,.45)\"/><circle cx=\"56\" cy=\"122\" r=\"2.6\" fill=\"rgba(51,33,59,.45)\"/></svg>"}, {"start": 13, "end": 78, "delay": 0.7, "svg": "<svg viewBox=\"0 0 100 150\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M50 18 V9 A4 4 0 0 0 42 9 V11.5\" fill=\"none\" stroke=\"#BBA7C9\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M50 17 L12 32 H88 Z\" fill=\"none\" stroke=\"#BBA7C9\" stroke-width=\"3\" stroke-linejoin=\"round\"/><g fill=\"#FFFCF7\"><path d=\"M32 30 L12 44 L20 62 L30 57 V140 H70 V57 L80 62 L88 44 L68 30 Q60 40 50 40 Q40 40 32 30 Z\"/></g></svg>"}, {"start": 24, "end": 80, "delay": 0.65, "svg": "<svg viewBox=\"0 0 100 150\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M50 18 V9 A4 4 0 0 0 42 9 V11.5\" fill=\"none\" stroke=\"#BBA7C9\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M50 17 L12 32 H88 Z\" fill=\"none\" stroke=\"#BBA7C9\" stroke-width=\"3\" stroke-linejoin=\"round\"/><g fill=\"#C9ACDD\"><path d=\"M38 30 Q50 42 62 30 L64 62 Q60 70 66 74 L88 144 H12 L34 74 Q40 70 36 62 Z\"/></g><path d=\"M35 70 H65\" stroke=\"rgba(51,33,59,.35)\" stroke-width=\"3\" fill=\"none\"/></svg>"}, {"start": 35, "end": 82, "delay": 0.6, "svg": "<svg viewBox=\"0 0 100 150\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M50 18 V9 A4 4 0 0 0 42 9 V11.5\" fill=\"none\" stroke=\"#BBA7C9\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M50 17 L12 32 H88 Z\" fill=\"none\" stroke=\"#BBA7C9\" stroke-width=\"3\" stroke-linejoin=\"round\"/><g fill=\"#69558E\"><path d=\"M30 30 L12 44 L6 116 H20 L26 64 V134 H74 V64 L80 116 H94 L88 44 L70 30 Q50 44 30 30 Z\"/></g><path d=\"M26 124 H74 M26 129 H74\" stroke=\"rgba(51,33,59,.3)\" stroke-width=\"2\" fill=\"none\"/></svg>"}, {"start": 46, "end": 84, "delay": 0.55, "svg": "<svg viewBox=\"0 0 100 150\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M50 18 V9 A4 4 0 0 0 42 9 V11.5\" fill=\"none\" stroke=\"#BBA7C9\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M50 17 L12 32 H88 Z\" fill=\"none\" stroke=\"#BBA7C9\" stroke-width=\"3\" stroke-linejoin=\"round\"/><g fill=\"#BBA7C9\"><path d=\"M32 30 L12 44 L20 62 L30 57 V140 H70 V57 L80 62 L88 44 L68 30 Q60 40 50 40 Q40 40 32 30 Z\"/></g></svg>"}, {"start": 57, "end": 86, "delay": 0.5, "svg": "<svg viewBox=\"0 0 100 150\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M50 18 V9 A4 4 0 0 0 42 9 V11.5\" fill=\"none\" stroke=\"#BBA7C9\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M50 17 L12 32 H88 Z\" fill=\"none\" stroke=\"#BBA7C9\" stroke-width=\"3\" stroke-linejoin=\"round\"/><g fill=\"#6C3656\"><path d=\"M33 30 L14 40 L8 128 H22 L28 66 V146 H72 V66 L78 128 H92 L86 40 L67 30 L56 52 H44 Z\"/></g><path d=\"M50 52 V146\" stroke=\"rgba(51,33,59,.35)\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"56\" cy=\"74\" r=\"2.6\" fill=\"rgba(51,33,59,.45)\"/><circle cx=\"56\" cy=\"98\" r=\"2.6\" fill=\"rgba(51,33,59,.45)\"/><circle cx=\"56\" cy=\"122\" r=\"2.6\" fill=\"rgba(51,33,59,.45)\"/></svg>"}, {"start": 68, "end": 88, "delay": 0.45, "svg": "<svg viewBox=\"0 0 100 150\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M50 18 V9 A4 4 0 0 0 42 9 V11.5\" fill=\"none\" stroke=\"#BBA7C9\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M50 17 L12 32 H88 Z\" fill=\"none\" stroke=\"#BBA7C9\" stroke-width=\"3\" stroke-linejoin=\"round\"/><g fill=\"#F8F4EC\"><path d=\"M38 30 Q50 42 62 30 L64 62 Q60 70 66 74 L88 144 H12 L34 74 Q40 70 36 62 Z\"/></g><path d=\"M35 70 H65\" stroke=\"rgba(51,33,59,.35)\" stroke-width=\"3\" fill=\"none\"/></svg>"}, {"start": 79, "end": 90, "delay": 0.4, "svg": "<svg viewBox=\"0 0 100 150\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M50 18 V9 A4 4 0 0 0 42 9 V11.5\" fill=\"none\" stroke=\"#BBA7C9\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M50 17 L12 32 H88 Z\" fill=\"none\" stroke=\"#BBA7C9\" stroke-width=\"3\" stroke-linejoin=\"round\"/><g fill=\"#79445F\"><path d=\"M30 30 L12 44 L6 116 H20 L26 64 V134 H74 V64 L80 116 H94 L88 44 L70 30 Q50 44 30 30 Z\"/></g><path d=\"M26 124 H74 M26 129 H74\" stroke=\"rgba(51,33,59,.3)\" stroke-width=\"2\" fill=\"none\"/></svg>"}, {"start": 90, "end": 92, "delay": 0.35, "svg": "<svg viewBox=\"0 0 100 150\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M50 18 V9 A4 4 0 0 0 42 9 V11.5\" fill=\"none\" stroke=\"#BBA7C9\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M50 17 L12 32 H88 Z\" fill=\"none\" stroke=\"#BBA7C9\" stroke-width=\"3\" stroke-linejoin=\"round\"/><g fill=\"#C9ACDD\"><path d=\"M32 30 L12 44 L20 62 L30 57 V140 H70 V57 L80 62 L88 44 L68 30 Q60 40 50 40 Q40 40 32 30 Z\"/></g></svg>"}];
+  banner.classList.add("g7-rack");
+  var rail = document.createElement("div");
+  rail.className = "g7-rack__rail";
+  rail.setAttribute("aria-hidden", "true");
+  banner.appendChild(rail);
+  garments.forEach(function (g) {
+    var el = document.createElement("div");
+    el.className = "g7-garment";
+    el.setAttribute("aria-hidden", "true");
+    el.style.setProperty("--start", g.start + "%");
+    el.style.setProperty("--end", g.end + "%");
+    el.style.setProperty("--delay", g.delay + "s");
+    el.innerHTML = g.svg;
+    banner.appendChild(el);
+  });
+})();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
