@@ -104,6 +104,7 @@ fig.update_xaxes(
 
 fig.show()
 ```
+*Figure 1: Top Job Titles in Apparel Analytics*
 
 The 19 postings cover a fairly wide mix of roles, including analyst, business intelligence, ecommerce, merchandise, and senior analytics positions. Most titles appear only once, so there is not one dominant job title in the sample. Instead, analytics work seems to be spread across several business functions in apparel and fashion retail.
 
@@ -236,6 +237,7 @@ fig_role_segments.update_xaxes(
 
 fig_role_segments.show()
 ```
+*Figure 2: Job Postings by Functional Analytics Area*
 
 The functional segmentation shows that BI and data analytics roles represent the largest share of the selected sample, with 6 of the 19 postings. Marketing and customer analytics follows closely with 5 postings, while merchandising and ecommerce account for 3. Finance and strategy analytics and operations analytics each contribute 2 postings, and product or engineering analytics contributes 1.
 
@@ -330,6 +332,7 @@ fig_coverage.update_xaxes(
 
 fig_coverage.show()
 ```
+*Figure 3: Coverage of Key Job-Posting Attributes*
 
 Job title, employer, and location are available for all 19 postings. Experience data is less complete, with usable minimum-experience information for 9 postings. Salary and work-arrangement data are the most limited, with only 4 usable records for each.
 
@@ -448,6 +451,7 @@ fig.update_xaxes(
 
 fig.show()
 ```
+*Figure 4: Observed Salary Ranges*
 
 Only 4 of the 19 postings contain an observed salary range, so the salary findings should be interpreted cautiously. The available postings show variation in both the lower and upper ends of reported compensation, but the small number of observations is not sufficient to characterize salary levels across the full selected apparel and fashion analytics market. The chart therefore presents only compensation that was explicitly reported in the source postings.
 
@@ -530,6 +534,7 @@ fig.update_xaxes(
 
 fig.show()
 ```
+*Figure 5: Job Postings by State*
 
 ```{python}
 
@@ -572,6 +577,7 @@ fig.update_layout(
 
 fig.show()
 ```
+*Figure 6: Geographic Concentration of Job Postings*
 
 The 19-posting sample is concentrated in a small number of states. California and Massachusetts each account for 5 postings, followed by New York with 4 and Oregon with 3. Texas contributes 1 posting, while 1 record does not contain a usable state value. This geographic concentration appears to reflect the locations of the apparel and fashion employers represented in the filtered sample rather than a geographically representative view of the broader analytics labor market.
 
@@ -643,6 +649,7 @@ fig.update_yaxes(
 
 fig.show()
 ```
+*Figure 7: Observed Minimum Experience Requirements*
 
 Minimum experience information is available for 9 of the 19 postings. Among those records, 7 postings show a recorded minimum of 0 years and 2 postings show a minimum of 5 years. Because experience information is missing for more than half of the sample, these values should be interpreted as the requirements recorded in the available source data rather than as a complete representation of experience expectations across the selected market.
 
@@ -724,6 +731,7 @@ fig.update_xaxes(
 
 fig.show()
 ```
+*Figure 8: Reported Work Arrangement*
 
 An identifiable work arrangement is available for only 4 of the 19 postings. Three postings are classified as hybrid and one as fully remote. The remaining 15 postings either do not report a work arrangement or contain an unknown value. No posting in the available sample is explicitly classified as onsite. Because work-arrangement information is unavailable for most of the sample, these results should not be used to infer the overall prevalence of remote, hybrid, or onsite work in the selected market.
 
@@ -808,6 +816,7 @@ fig.update_xaxes(
 
 fig.show()
 ```
+*Figure 9: Top Employers in the Selected Market*
 
 Hiring activity in the selected sample is concentrated among a small number of apparel and retail employers. Vuori and TJX each account for 5 postings, followed by Adidas with 3 and Ralph Lauren with 2. Nordstrom, Foot Locker, Michaels, and Macy’s each contribute 1 posting. These counts should be interpreted within the context of the small, intentionally filtered dataset rather than as a ranking of overall hiring activity across the apparel and fashion industry.
 
@@ -911,6 +920,7 @@ fig_dropdown.update_layout(
 
 fig_dropdown.show()
 ```
+*Figure 10: Posting Concentration, By Employer or By State*
 
 Both views tell a version of the same story: a handful of employers and a handful of states account for most of this sample, which is why Final Recommendations treats Vuori, TJX, and the California/Massachusetts/New York corridor as the most concentrated near-term targets rather than treating the 19 postings as evenly spread.
 
@@ -923,4 +933,6 @@ Hiring activity is concentrated among a small group of employers and locations. 
 Several variables have substantial missing information. Only 4 postings contain observed salary ranges, 9 contain recorded minimum experience requirements, and 4 contain an identifiable work arrangement. These limitations are retained explicitly in the analysis rather than treating imputed or missing values as if they were directly reported by employers.
 
 Overall, the findings should be interpreted as a baseline for this narrowly defined apparel and fashion analytics market rather than as estimates of the broader analytics labor market. The results provide a foundation for the later skill-gap and career-evaluation stages of the project.
+
+
 

@@ -80,6 +80,7 @@ fig_top_skills.write_image(
 
 fig_top_skills.show()
 ```
+*Figure 11: Most In-Demand Skills in Apparel Analytics Postings*
 
 We pulled the skills listed in each posting and counted how often each one showed up across our 19 filtered postings. Power BI and SQL came out on top with 7 postings each. Python and Microsoft Excel followed with 5 postings each and Digital Marketing appeared in 4. The remaining skills each appeared in 2 to 3 postings, reflecting a mix of technical, analytical, and communication skills expected across these roles.
 
@@ -127,6 +128,7 @@ fig_heatmap.write_image(
 
 fig_heatmap.show()
 ```
+*Figure 12: Team Skill Levels (1 = Beginner, 5 = Expert)*
 
 ```{python}
 
@@ -158,6 +160,7 @@ fig_avg.write_image(
 
 fig_avg.show()
 ```
+*Figure 13: Average Team Proficiency by Skill*
 
 As a team we rated ourselves strongest in Data Analysis and Excel with average scores of 4.0 and 4.25 which reflects consistent comfort across all four members. Power BI and Python came in lowest at an average of 2.75 each putting both just below Intermediate as a team. Digital Marketing showed the widest range of any skill running from 2 (Beginner) to 4 (Advanced) which reflects how varied our backgrounds are on that front.
 
@@ -247,6 +250,7 @@ fig_gap.write_image(
 
 fig_gap.show()
 ```
+*Figure 14: Skill Gap, Market Target vs. Team Average*
 
 Bars to the right of zero are skills where the market's target level outruns the team's current average, the priority list above in table form. Bars to the left are skills where the team already meets or exceeds what the market asks for. Power BI and SQL sit furthest to the right, Data Analysis furthest to the left, the same story the table tells, just faster to read at a glance.
 
@@ -270,6 +274,9 @@ Based on the gaps above our individual priorities are:
 - **Zech** should prioritize Power BI before the Module 5 deadline, the one skill where his rating trails his otherwise strong technical profile. Given his existing SQL proficiency focusing on Power BI's data modeling features is a natural next step since those build on relational concepts he already knows.
 
 Across the team Power BI is the most consistent gap since every member rated it at 3 or below while it ties for the highest market demand. Team members with relatively higher proficiency in a given skill (for example Zech in SQL and Sara in Excel) can informally support others when related project tasks come up rather than treating skill-building as separate from the coursework itself.
+
+
+
 
 
 

@@ -17,6 +17,8 @@ execute:
 These employer names, matched against `COMPANY_CLEAN`, were used alongside NAICS 458 to build the industry match in [Data Preparation](data_preparation.qmd).
 
 ```{python}
+#| label: tbl-employers
+#| tbl-cap: "Known apparel and fashion employers used for industry matching"
 known_apparel_companies = [
     "adidas", "vuoriinc", "tjx", "jobs.tjx.com", "careers.michaels.com",
     "ralph lauren", "macy's", "macys", "nordstrom", "kohl's", "kohls",
@@ -37,6 +39,8 @@ pd.DataFrame({"Known Employer": known_apparel_companies})
 A posting's `TITLE_CLEAN` had to contain at least one of these terms to pass the role-title filter.
 
 ```{python}
+#| label: tbl-roles
+#| tbl-cap: "Role-title keywords used for the role-title filter"
 role_terms = [
     "business analyst", "data analyst", "business intelligence",
     "analytics", "insights analyst", "merchandising analyst",
