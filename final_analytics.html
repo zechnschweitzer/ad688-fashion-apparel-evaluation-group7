@@ -245,7 +245,7 @@ background-size: cover;
 <section id="opportunity-scorecard" class="level2">
 <h2 class="anchored" data-anchor-id="opportunity-scorecard">Opportunity Scorecard</h2>
 <p><strong>Table 7:</strong> Opportunity Scorecard, ranked by skill fit, accessibility, and employer signal</p>
-<div id="ad04740f" class="cell" data-execution_count="1">
+<div id="acad2a81" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -485,7 +485,7 @@ background-size: cover;
 <h2 class="anchored" data-anchor-id="scoring-model-diagnostics">Scoring Model Diagnostics</h2>
 <p>A rule-based scoring model still needs to be checked, not just described. Since we have no real hiring outcomes to validate the Opportunity Score against, we instead check its internal consistency: how much each component actually drives the final score, and whether any single component is quietly dominating the ranking.</p>
 <p><strong>Table 8:</strong> Scoring model diagnostics: component ranges and rank correlation with Opportunity Score</p>
-<div id="4beac7c3" class="cell" data-execution_count="2">
+<div id="d281f20a" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>component_correlations <span class="op">=</span> df[[</span>
@@ -559,7 +559,7 @@ background-size: cover;
 <h2 class="anchored" data-anchor-id="does-the-score-predict-pay">Does the Score Predict Pay?</h2>
 <p>The correlations above show how each component relates to the final Opportunity Score. A separate question is whether those same components relate to actual advertised pay. We fit a simple linear regression predicting salary midpoint from the three scorecard components.</p>
 <p><strong>Table 9:</strong> Linear regression of salary midpoint on scorecard components</p>
-<div id="2f1b28df" class="cell" data-execution_count="3">
+<div id="7974f4ae" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"SALARY_MID"</span>] <span class="op">=</span> (df[<span class="st">"SALARY_FROM"</span>] <span class="op">+</span> df[<span class="st">"SALARY_TO"</span>]) <span class="op">/</span> <span class="dv">2</span></span>
