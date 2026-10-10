@@ -17,7 +17,7 @@ csl: csl/apa.csl
 
 # Product Framing
 
-Our group developed a solution for students interested in entering the apparel and fashion industry and seeking analytics-related opportunities. Fashion retailers have leaned harder into data analytics in recent years [@oh2020], and the U.S. Bureau of Labor Statistics projects continued growth in analytics-related roles [@blsooh2025]. Job postings for these roles frequently call for SQL, Excel, and visualization tools like Tableau or Power BI, alongside analytical and communication skills [@ziprecruiter2026a], and the same postings show a fair amount of spread in pay and remote availability [@ziprecruiter2026b]. It helps them identify suitable job opportunities, assess skill gaps, and determine which skills to develop next. This analysis focuses on apparel and fashion employers under the North American Industry Classification System (NAICS) code 458 – Clothing, Clothing Accessories, Shoes, and Jewelry Retailers.
+Our group developed a solution for students interested in entering the apparel and fashion industry and seeking analytics-related opportunities. Fashion retailers have leaned harder into data analytics in recent years [@oh2020], and the U.S. Bureau of Labor Statistics projects continued growth in analytics-related roles [@blsooh2025]. Job postings for these roles frequently call for SQL, Excel, and visualization tools like Tableau or Power BI, alongside analytical and communication skills [@ziprecruiter2026a], and the same postings show a fair amount of spread in pay and remote availability [@ziprecruiter2026b]. A broader literature review on business analytics hiring shows a consistent pattern. Umamaheswaran et al. (2023) found business analytics postings ask for a mix of big data, business intelligence, and analytical technique alongside communication and stakeholder management [@umamaheswaran2023]. Alshameri and Adhikari (2025) identified a similar mix of general tools and field-specific skills in business postings, describing a growing disconnect between what schools teach and what employers actually look for [@alshameri2025]. Debortoli et al. (2014) found that business intelligence and big data postings separate technical tool skills from broader analytical thinking, with the strongest candidates showing both [@debortoli2014]. Apparel retail is a fitting test case for that combination: IBISWorld (2025) backs forecasting, inventory, pricing, and supply chain decisions as recurring analytical needs in clothing and accessory retail [@ibisworld2025], and The Planet Group (2025) found retail hiring has grown more selective even as it leans harder into technology, analytics, and customer experience [@planetgroup2025]. This project is aimed at BU MET students exploring analytics career paths in apparel retail, and asks which skills are most valued for business and data analyst roles in apparel retail, and how well our own team's current skill set matches those demands. It helps them identify suitable job opportunities, assess skill gaps, and determine which skills to develop next. This analysis focuses on apparel and fashion employers under the North American Industry Classification System (NAICS) code 458 – Clothing, Clothing Accessories, Shoes, and Jewelry Retailers.
 
 # Scope and Data
 
@@ -145,6 +145,12 @@ The scorecard provides an intuitive method for prioritizing opportunities based 
 
 Given this dataset and our Opportunity Scorecard, we recommend students focus their job search on Vuori and TJX, as they had multiple analytics-adjacent postings, making them the most attainable by volume. Adidas ranked third in posting volume, with positions relying more on skill fit rather than application volume. For location, students have the best chance of finding opportunities in California, Massachusetts, and New York. Students should also focus on developing their Power BI and SQL skills, as they are the most in-demand skills. The third most important skill is Python, though less than half of these postings required it. By person, Alyssa and Ankita should complete a Power BI learning path before the Module 5 deadline, then move to SQL practice against our own filtered dataset. Sara should prioritize Power BI first given her lowest team rating on it, building on her existing Excel strength. Zech should focus on Power BI's data modeling features, building on his existing SQL proficiency.
 
+## How to Use This Product Going Forward
+
+1. Re-run the Opportunity Scorecard as new postings come in, since employer signal and skill demand can shift as hiring continues.
+2. Treat the Opportunity Score as a starting point, not a verdict, since it has not been checked against real hiring outcomes, and its three components should be read individually rather than only as one combined number.
+3. Use the skill priorities above, Power BI, then SQL, then Python, to guide coursework and self-study for the rest of the semester, since those are the skills most likely to move a posting from low-scoring to high-scoring.
+
 # Limitations 
 
 As stated before, our working sample is 19 postings from a narrowly filtered search. These recommendations describe this specific sample, not the broader apparel analytics job market. Salary and remote work data were usable for only 4 of 19 postings each, so neither recommendation above can account for compensation or remote work preferences with much confidence. Lastly, the scorecard’s equal weighting of skill fit, accessibility, and employer signal is a modeling choice, not a validated weighting scheme.
@@ -168,6 +174,8 @@ This project was a collaborative effort across all four team members. Each perso
 
 ::: {#refs}
 :::
+
+
 
 
 
