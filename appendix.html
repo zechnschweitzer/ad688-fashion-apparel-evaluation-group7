@@ -237,7 +237,7 @@ background-size: cover;
 <section id="known-apparelfashion-employers" class="level3">
 <h3 class="anchored" data-anchor-id="known-apparelfashion-employers">Known Apparel/Fashion Employers</h3>
 <p>These employer names, matched against <code>COMPANY_CLEAN</code>, were used alongside NAICS 458 to build the industry match in <a href="./data_preparation.html">Data Preparation</a>.</p>
-<div id="70389aba" class="cell" data-execution_count="1">
+<div class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>known_apparel_companies <span class="op">=</span> [</span>
@@ -254,11 +254,17 @@ background-size: cover;
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>pd.DataFrame({<span class="st">"Known Employer"</span>: known_apparel_companies})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
+<div id="tbl-employers" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="1">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-employers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Known apparel and fashion employers used for industry matching
+</figcaption>
+<div aria-describedby="tbl-employers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output cell-output-display" data-execution_count="1">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<table class="dataframe cell caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -412,11 +418,14 @@ background-size: cover;
 </div>
 </div>
 </div>
+</figure>
+</div>
+</div>
 </section>
 <section id="role-title-keywords" class="level3">
 <h3 class="anchored" data-anchor-id="role-title-keywords">Role-Title Keywords</h3>
 <p>A posting’s <code>TITLE_CLEAN</code> had to contain at least one of these terms to pass the role-title filter.</p>
-<div id="f74ff127" class="cell" data-execution_count="2">
+<div class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>role_terms <span class="op">=</span> [</span>
@@ -426,11 +435,17 @@ background-size: cover;
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>]</span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>pd.DataFrame({<span class="st">"Role-Title Keyword"</span>: role_terms})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
+<div id="tbl-roles" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="2">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-roles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Role-title keywords used for the role-title filter
+</figcaption>
+<div aria-describedby="tbl-roles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output cell-output-display" data-execution_count="2">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<table class="dataframe cell caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -476,6 +491,9 @@ background-size: cover;
 </div>
 </div>
 </div>
+</figure>
+</div>
+</div>
 </section>
 </section>
 <section id="opportunity-scorecard-reference" class="level2">
@@ -484,7 +502,7 @@ background-size: cover;
 <div id="tbl-score-tiers" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-score-tiers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: Scoring tiers behind the Opportunity Score
+Table&nbsp;3: Scoring tiers behind the Opportunity Score
 </figcaption>
 <div aria-describedby="tbl-score-tiers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -553,7 +571,7 @@ Table&nbsp;1: Scoring tiers behind the Opportunity Score
 <div id="tbl-full-postings" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="3">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-full-postings-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;2: All postings in the final analytical sample
+Table&nbsp;4: All postings in the final analytical sample
 </figcaption>
 <div aria-describedby="tbl-full-postings-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output cell-output-display" data-execution_count="3">
