@@ -29,6 +29,8 @@ website:
         text: Final Recommendations
       - href: appendix.qmd
         text: Appendix
+      - href: final_report.docx
+        text: Final Report
 
 format:
   html:
@@ -42,3 +44,4 @@ format:
 execute:
   echo: true
   eval: true
+
