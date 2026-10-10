@@ -9,6 +9,32 @@ execute:
   eval: true
 ---
 
+```{=html}
+<div class="g7-receipt" role="group" aria-label="Summary of recommendations">
+  <div class="g7-receipt__head">
+    <strong>AD 688 · GROUP 7</strong><br>
+    Final Recommendations<br>
+    19 postings · NAICS 458
+  </div>
+  <div class="g7-receipt__rule"></div>
+  <div class="g7-receipt__section">Employers</div>
+  <div class="g7-receipt__line"><span>Vuori</span><span>5 postings</span></div>
+  <div class="g7-receipt__line"><span>TJX</span><span>5 postings</span></div>
+  <div class="g7-receipt__line"><span>Adidas</span><span>3 postings</span></div>
+  <div class="g7-receipt__section">Locations</div>
+  <div class="g7-receipt__line"><span>CA · MA · NY</span><span>14 of 19</span></div>
+  <div class="g7-receipt__rule"></div>
+  <div class="g7-receipt__section">Skills to build</div>
+  <div class="g7-receipt__line"><span>1 Power BI</span><span>7 of 19</span></div>
+  <div class="g7-receipt__line"><span>2 SQL</span><span>7 of 19</span></div>
+  <div class="g7-receipt__line"><span>3 Python</span><span>5 of 19</span></div>
+  <div class="g7-receipt__rule"></div>
+  <div class="g7-receipt__line g7-receipt__total"><span>Top Opportunity Score</span><span>10 / 12</span></div>
+  <div class="g7-receipt__line"><span>Sr. Manager, Ecommerce Analytics, Vuori</span><span></span></div>
+  <div class="g7-receipt__barcode" aria-hidden="true"></div>
+</div>
+```
+
 ## Where to Focus the Job Search
 
 Vuori and TJX each account for 5 of our 19 sample postings, and both dominate the top of the Opportunity Scorecard. They are repeatedly posting for adjacent analytics roles, which makes them the most attainable near-term targets, not just the highest scorers in a one-time snapshot.
