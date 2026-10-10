@@ -9,3 +9,5 @@ MET_CareerCompass_2026/
 
 _site/
 _freeze/
+
+__pycache__/
