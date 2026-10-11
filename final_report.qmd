@@ -11,6 +11,8 @@ format:
   docx:
     toc: false
     number-sections: true
+    tbl-cap-location: top
+
     output-file: FinalReport_Group7
 bibliography: references.bib
 csl: csl/apa.csl
