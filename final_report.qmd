@@ -8,6 +8,9 @@ author: "Alyssa Quigley, Ankita Roy, Zechariah Schweitzer, Sara Scribner"
 date: "October 12, 2026"
 
 format:
+  pdf:
+    toc: false
+    number-sections: true
   docx:
     toc: false
     number-sections: true
