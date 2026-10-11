@@ -29,7 +29,7 @@ website:
         text: Final Recommendations
       - href: appendix.qmd
         text: Appendix
-      - href: FinalReport_Group7.pdf
+      - href: FinalReport_Group7.docx
         text: Final Report
 
 format:
