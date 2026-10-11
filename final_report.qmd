@@ -5,7 +5,7 @@ subtitle: |
   MET AD 688
   Professor Padalkar
 author: "Alyssa Quigley, Ankita Roy, Zechariah Schweitzer, Sara Scribner"
-date: "October 12, 2026"
+date: "October 11, 2026"
 
 format:
   docx:
